@@ -1,0 +1,58 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="BusquedaDetalleTipoContenedorExternoController">
+        <!-- BOTONERA -->
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_Botonera_Nuevo_Salir.cshtml")
+        </div>
+        <!-- BOTONERA -->
+        
+        <!-- RESULTADO BUSQUEDA -->
+        <div id="seccion-2">
+            <div style="width:100%;float:left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+
+
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListadob5aa03d4-3e30-4f54-91f5-32c887c8feed" class="block_content">
+                    <div class="form_section" style="width:100%">
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+                                <ng-jqgrid config="config" 
+                                           addnew="true" 
+                                           modeldata="$root.DatosFormulario.BusquedaDetalleTipoContenedorExterno.ListaMaestroDetalleTipoContenedorExterno" 
+                                           gridid="grillaListaMaestroDetalleTipoContenedorExterno" 
+                                           pagerid="grillaListaMaestroDetalleTipoContenedorExterno_pager" 
+                                           api="gridapigrillaListaMaestroDetalleTipoContenedorExterno" 
+                                           flgocultarbarrapaginado="0" 
+                                           idgrilla="b5aa03d4-3e30-4f54-91f5-32c887c8feed" 
+                                           titulosinresultados="" 
+                                           ocultarexportar="0" 
+                                           altogrilla="150px" 
+                                           idmarcarprimerresgistro="0" 
+                                           ngclickagregar="" 
+                                           urllistar="/DetalleTipoContenedorExterno/ConsultarDetalleTipoContenedorExterno" 
+                                           flgcargargrilla="0" 
+                                           class="ng-isolate-scope">
+                                    <table id="grillaListaMaestroDetalleTipoContenedorExterno"></table>
+                                    <div id="grillaListaMaestroDetalleTipoContenedorExterno_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- RESULTADO BUSQUEDA -->
+    </div>
+</div>

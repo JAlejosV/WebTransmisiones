@@ -1,0 +1,60 @@
+@using Viatecla.Factory.Scriptor
+
+@model ScriptorContent
+
+@{
+  
+  var canalId=Model.Channel.Parent.Id;
+}
+
+  	<span class="idCanalBlogExperto" style="display:none">@canalId</span>
+<div class="row nosotros page-blog-experto">
+  <!-- quienes somos-->
+  <div class="col-md-8">
+    <div>
+         <span class="titulo-pagina"><h3><strong>@Model.Parts.TituloPagina</strong></h3></span> 
+      <p>@Model.Parts.descripcion</p>
+    </div>
+  
+    <!--Entradas de blog -->
+    <div class="row section-entradas-blog">
+  			
+  
+  			<!-- <div id="load" class="row"></div> -->
+  		 	
+  		
+    </div>
+                         
+	</div>
+      
+  
+<div class="col-md-4">
+  	<div class="row rowDirectorio">
+
+	<div class="col-md-1 "></div>
+	<div class="col-md-11 borderLeft">
+		
+		<div class="margen">
+            <h4>@Model.Parts.TextoDocumentos</h4>
+  				 @helper DocumentosReferencia(ScriptorContent content)
+                   {
+                                      
+                                      
+                        <a target="_blank" href="@content.Parts.Documento">@content.Parts.NombreDocumento</a> 
+  						
+                      
+                    }
+
+                    @Html.ScriptorContentInsert(
+                        @Model.Parts.DocumentosReferencia as ScriptorContentInsert,
+                        DocumentosReferencia,  new { @class = "docsutilidad"}, "ul",null, "li"
+                        )
+                          
+                 
+		</div>
+		
+	</div>
+  </div>
+  </div>
+ 
+               </div>

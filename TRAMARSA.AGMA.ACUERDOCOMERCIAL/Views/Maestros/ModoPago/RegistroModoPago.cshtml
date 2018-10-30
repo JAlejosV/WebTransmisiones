@@ -1,0 +1,70 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="RegistroModoPagoController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraGrabarMaestro.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos ModoPago</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarModoPagoFrm" name="AdministrarModoPagoFrm">
+                    <div class="block_content" style="width:100%">
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Codigo Modo de Pago Sunat
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05"
+                                       type="text" ng-enter="Enter()" maxlength="2"
+                                       ng-model="$root.DatosFormulario.AdministrarModoPago.RegistroDatos.CodigoModoPagoSunat" />
+                                <div class="caja11 msgerror CodigoModoPagoSunat">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarModoPago.RegistroDatos.CodigoModoPagoSunat" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Nombre Modo de Pago
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_01" maxlength="80"
+                                       type="text" ng-enter="Enter()"
+                                       ng-model="$root.DatosFormulario.AdministrarModoPago.RegistroDatos.NombreModoPago" />
+                                <div class="caja11 msgerror NombreModoPago">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarModoPago.RegistroDatos.NombreModoPago" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Codigo de Equivalencia
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05" maxlength="4"
+                                       type="text" ng-enter="Enter()"
+                                       ng-model="$root.DatosFormulario.AdministrarModoPago.RegistroDatos.CodigoEquivalencia" />
+                                <div class="caja11 msgerror CodigoEquivalencia">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarModoPago.RegistroDatos.CodigoEquivalencia" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

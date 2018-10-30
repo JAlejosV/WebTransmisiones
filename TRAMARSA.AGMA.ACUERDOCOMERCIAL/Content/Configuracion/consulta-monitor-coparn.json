@@ -1,0 +1,470 @@
+{
+  "Data": [
+    {
+      "Id": "ab2d7360-db62-4b07-b1e7-a7a8eb9bfc89",
+      "Title": "n.d.",
+      "State": "Publicado",
+      "ChannelPath": "/tramarsa/portales_agma/calculador_web/sistema/monitorcoparn/consulta_monitor_coparn/props_consulta_monitor_coparn",
+      "Path": "/tramarsa/portales_agma/calculador_web/sistema/monitorcoparn/consulta_monitor_coparn/props_consulta_monitor_coparn/_237",
+      "Parts": {
+        "es_pe__Titulo": "Consulta Monitor Coparn",
+        "Secciones": [
+          {
+            "Id": "f781d200-8f72-4078-9dad-6cf26b2947ba",
+            "Title": "Administrar Consulta Monitor Coparn",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/administrar_consulta_monitor_coparn",
+            "Parts": {
+              "es_pe__Nombre": "Administrar Consulta Monitor Coparn",
+              "CrearSeccion": "0",
+              "Titulo": "Monitor Coparn",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "30a47370-74e8-4faf-9240-f8cd8f69d600",
+                  "Title": "Botonera Consulta Monitor Coparn",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/botonera",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/botonera/botonera_consulta_monitor_coparn",
+                  "Parts": {
+                    "Titulo": "Botonera Consulta Monitor Coparn"
+                  }
+                },
+                {
+                  "Id": "e57fc4e7-8305-4abf-88bc-ea331eb22a95",
+                  "Title": "Consulta Monitor Coparn: Criterios de busqueda",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos/consulta_monitor_coparn__criterios_de_busqueda",
+                  "Parts": {
+                    "es_pe__Titulo": "Consulta Monitor Coparn: Criterios de busqueda",
+                    "en_gb__Titulo": "Consulta Monitor Coparn: Criterios de busqueda"
+                  }
+                },
+                {
+                  "Id": "02d9bb68-8228-4742-a825-638b4caf33fa",
+                  "Title": "grillaListaMonitorCoparn",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/_238",
+                  "Parts": {
+                    "objgrilla": "grillaListaMonitorCoparn",
+                    "ModelData": "",
+                    "es_pe__Nombre": "grillaListaMonitorCoparn",
+                    "FlgMostrarTitulo": "1",
+                    "es_pe__TituloSeccion": "RESULTADO DE BUSQUEDA",
+                    "columnas": [
+                      {
+                        "Id": "5e8c3619-e312-48a3-9e00-7badfd33dc7c",
+                        "Title": "Id",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/id_3",
+                        "Parts": {
+                          "es_pe__Nombre": "Id",
+                          "IdColumna": "Id",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Id",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "b33d6aa2-857e-47ef-9e68-ddbd82b6be83",
+                        "Title": "Voyage",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/voyage",
+                        "Parts": {
+                          "es_pe__Nombre": "Voyage",
+                          "IdColumna": "Voyage",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "left",
+                            "Title": "Izquierda",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Voyage",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "60b69faa-9067-4228-98cb-dbacc7b85c41",
+                        "Title": "Contenedor",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/contenedor_6",
+                        "Parts": {
+                          "es_pe__Nombre": "Contenedor",
+                          "IdColumna": "Contenedor",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "left",
+                            "Title": "Izquierda",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Contenedor",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "1441ead6-6a1a-4e34-bcb4-fb14a49ee09f",
+                        "Title": "Codigo Deposito",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/codigo_deposito",
+                        "Parts": {
+                          "es_pe__Nombre": "Codigo Deposito",
+                          "IdColumna": "CodigoDeposito",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Deposito",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "e43fa292-7a8f-4851-943a-6dedd2356f80",
+                        "Title": "Deposito",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/deposito_2",
+                        "Parts": {
+                          "es_pe__Nombre": "Deposito",
+                          "IdColumna": "DescripcionDeposito",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "left",
+                            "Title": "Izquierda",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "DescripcionAlmacen",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "35f93591-8a5d-49f8-9ca1-f3f25d383713",
+                        "Title": "Fecha Proceso",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/fecha_proceso",
+                        "Parts": {
+                          "es_pe__Nombre": "Fecha Proceso",
+                          "IdColumna": "FechaProceso",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "left",
+                            "Title": "Izquierda",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Fecha Proceso",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "fba9df8a-8e12-476e-aed8-0f4c8ded11a0",
+                        "Title": "CodigoEstado",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/codigoestado",
+                        "Parts": {
+                          "es_pe__Nombre": "CodigoEstado",
+                          "IdColumna": "CodigoEstado",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "left",
+                            "Title": "Izquierda",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "CodigoEstado",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "7da0ff0a-a4b3-448d-a60f-4ce40b15cb67",
+                        "Title": "Estado",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/estado_9",
+                        "Parts": {
+                          "es_pe__Nombre": "Estado",
+                          "IdColumna": "DescripcionEstado",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "left",
+                            "Title": "Izquierda",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Estado",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "f273b378-5c3f-48b2-903d-dbc3f9a129cd",
+                        "Title": "Observacion",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/observacion",
+                        "Parts": {
+                          "es_pe__Nombre": "Observacion",
+                          "IdColumna": "Observacion",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "left",
+                            "Title": "Izquierda",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Observacion",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "bc01aa96-4b72-44e8-a58c-6dd5f082b9be",
+                        "Title": "Usuario Creacion",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/usuario_creacion_19",
+                        "Parts": {
+                          "es_pe__Nombre": "Usuario Creacion",
+                          "IdColumna": "UsuarioCreacion",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "left",
+                            "Title": "Izquierda",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "UsuarioCreacion",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      }
+                    ],
+                    "es_pe__NombreBotonExportar": "Exportar en Excel",
+                    "es_pe__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MensajeSinResultadoPersonalizado": "",
+                    "urlListar": "/MonitorCoparn/ConsultarMonitorCoparn",
+                    "en_gb__Nombre": "grillaListaMonitorCoparn",
+                    "en_gb__NombreBotonExportar": "Exportar en Excel",
+                    "en_gb__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MarcarRegistroSeleccionado": "0",
+                    "JSFilter": "",
+                    "JSDblClick": "",
+                    "JSOnLoad": "",
+                    "JSOnSelect": "",
+                    "altoGrilla": "150px",
+                    "FlgOcultarBarraPaginado": "0",
+                    "FlgCargarGrilla": "0",
+                    "TituloSinResultados": "",
+                    "FlgOcultarExportar": "0",
+                    "ngClickAgregar": "",
+                    "multiselect": "0"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Administrar Consulta Monitor Coparn"
+            }
+          }
+        ],
+        "ControladorAngular": "ConsultaMonitorCoparnController",
+        "AnchoMaximo": "",
+        "AltoMinimo": "",
+        "en_gb__Titulo": "Consulta Monitor Coparn"
+      }
+    }
+  ],
+  "Error": false,
+  "Message": "OK"
+}

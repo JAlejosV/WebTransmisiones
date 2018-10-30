@@ -1,0 +1,160 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style="">
+    <div ng-app="app" ng-controller="BuscarTarifaLocalController" class="ng-scope">
+
+
+        @Html.Partial("~/Views/Botonera/AC_BotoneraBusquedaTarifa.cshtml")
+        <!-- SECCION CRITERIOS -->
+        <div>
+            <div class="block_cab block_cab_active">
+                <h2>
+                    <span>Administración de Tarifas</span>
+                </h2>
+                <h3></h3>
+                <div class="acordeon">
+                </div>
+            </div>
+            <form id="BusquedaTarifaLocalFrm" name="BusquedaTarifaLocalFrm">
+                <div class="block_content" style="width:100%">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-12 row">
+                                    <div class="col-md-4">
+                                        Línea Naviera
+                                    </div>
+                                    <div class="col-md-8">
+
+                                        <select ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaLocal.Filtro.CodigoLinea"
+                                                ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.FiltrosBusquedaTarifaLocalCargaInicial.Linea"
+                                                class="InputSELECT_01 required"
+                                                id="$root.DatosFormulario.FiltrosBusquedaTarifaLocal.Filtro.CodigoLinea"
+                                                data-val="true"
+                                                data-val-required="Línea naviera es requerido."
+                                                name="$root.DatosFormulario.FiltrosBusquedaTarifaLocal.Filtro.CodigoLinea"
+                                                ng-disabled="$root.DatosFormulario.FiltrosBusquedaTarifaLocal.Filtro.Habilitado=='False'"
+                                                ng-change="CargarSucursal()"
+                                                required>
+                                            <option value="">[Seleccione]</option>
+                                        </select>
+                                        <div class="caja11 msgerror CodigoLinea">
+                                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaTarifaLocal.Filtro.CodigoLinea" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 row">
+                                    <div class="col-md-4">
+                                        Sucursal
+                                    </div>
+                                    <div class="col-md-8">
+                                        <select ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaLocal.Filtro.CodigoSucursal"
+                                                ng-options="sucursal.Codigo as sucursal.Nombre for sucursal in $root.DatosFormulario.FiltrosBusquedaTarifaLocalCargaInicial.Sucursal" class="InputSELECT_01" ng-change="CargarTerminalPortuario()">
+                                            <option value="">[Seleccione]</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 row">
+                                    <div class="col-md-4">
+                                        Terminal Portuario
+                                    </div>
+                                    <div class="col-md-8">
+                                        <select ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaLocal.Filtro.CodigoTerminalPortuario"
+                                                ng-options="terminal.CodigoAlmacen as terminal.NombreAlmacen for terminal in $root.DatosFormulario.FiltrosBusquedaTarifaLocalCargaInicial.TerminalPorturario" class="InputSELECT_01">
+                                            <option value="">[Seleccione]</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        Descripción Tarifa
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input class="InputTEXT_05 " maxlength="70" type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaLocal.Filtro.DescripcionTarifa" />
+                                        <div class="caja11msgerrorRuc">
+                                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaTarifaLocal.Filtro.DescripcionTarifa" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-md-12">
+                                    <input type="checkbox" id="TarifaLigadaLocal" ng-enter="Enter()" ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaLocal.Filtro.FlagTarifaLigada" />Tarifa Ligada
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <input type="checkbox" id="VigenteTarifaLocal" ng-enter="Enter()" ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaLocal.Filtro.FlagVigente" />Vigentes
+                                    </div>
+                                    <div class="col-md-10">
+                                        Fecha de Vigencia
+                                        <input class="InputTEXT_04Fecha"
+                                               maxlength="10" type="text"
+                                               ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaLocal.Filtro.FechaVigencia"
+                                               data-bind="dateValue: $root.DatosFormulario.FiltrosBusquedaTarifaLocal.Filtro.FechaVigencia,datePattern: 'dd/MM/yyyy'"
+                                               data-val="true"
+                                               ng-enter="Enter()"
+                                               data-val-date="El campo Fecha Vigencia debe ser una fecha."
+                                               id="FechaVigencia"
+                                               name="$root.DatosFormulario.FiltrosBusquedaTarifaLocal.Filtro.FechaVigencia"
+                                               required
+                                               control_max_date="FechaFin" />
+                                        <div class="caja11 msgerror FechaVigencia">
+                                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaTarifaLocal.Filtro.FechaVigencia" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- SECCION CRITERIOS -->
+
+        <!-- SECCION RESULTADO-->
+        <div style="width:100%;float:left">
+            <div class="block_cab block_cab_active">
+                <h2>
+                    <span>RESULTADO DE BUSQUEDA</span>
+                </h2>
+                <h3></h3>
+                <div class="acordeon">
+                </div>
+            </div>
+            <div id="ContentListado10e91fe3-09a7-4ace-a9f3-d34d4460b814" class="block_content">
+                <div class="form_section" style="width:100%">
+
+                    <div class='forms2'>
+                        <div class='table-responsive' style="overflow:hidden">
+
+                            <ng-jqgrid config="config"
+                                       addnew="true"
+                                       modeldata="$root.DatosFormulario.FiltrosBusquedaTarifaLocal.ListaTarifaLocal"
+                                       gridid="grillaListaTarifaLocal"
+                                       pagerid="grillaListaTarifaLocal_pager"
+                                       api="gridapigrillaListaTarifaLocal"
+                                       flgocultarbarrapaginado="0"
+                                       idgrilla="10e91fe3-09a7-4ace-a9f3-d34d4460b814"
+                                       titulosinresultados=""
+                                       ocultarexportar="1"
+                                       altogrilla="150px"
+                                       idmarcarprimerresgistro="0"
+                                       ngclickagregar=""
+                                       urllistar="/TarifaPlana/BusquedaTarifaLocal"
+                                       flgcargargrilla="1">
+                                <table id="grillaListaTarifaLocal"></table>
+                                <div id="grillaListaTarifaLocal_pager"></div>
+                            </ng-jqgrid>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- SECCION RESULTADO-->
+    </div>
+</div>

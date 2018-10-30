@@ -1,0 +1,93 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style="max-width: 800px;">
+    <div ng-app="app" ng-controller="BuscarTipoMovimientoController" class="ng-scope">
+        @Html.Partial("~/Views/Botonera/BotoneraBusquedaClásicaconBotonSalir.cshtml")
+
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Administración de Tipo de Movimiento</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="BusquedaTipoMovimientoFrm" name="BusquedaTipoMovimientoFrm">
+                    <div class="block_content" style="width: 100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-12 row">
+                                    <div class="col-md-4">
+                                        Codigo Sunat
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="InputTEXT_05 solonumeros"
+                                            type="text" ng-enter="Enter()" maxlength="2"
+                                            ng-model="$root.DatosFormulario.FiltrosBusquedaTipoMovimiento.Filtro.CodigoTipoMovimientoSunat" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12 row">
+                                    <div class="col-md-4">
+                                        Nombre Tipo de Movimiento
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="InputTEXT_01"
+                                            type="text" ng-enter="Enter()" maxlength="50"
+                                            ng-model="$root.DatosFormulario.FiltrosBusquedaTipoMovimiento.Filtro.NombreTipoMovimiento" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="caja11 msgerror Objeto"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="seccion-3">
+                <div style="width: 100%; float: left">
+                    <div class="block_cab block_cab_active">
+                        <h2>
+                            <span>RESULTADO DE BUSQUEDA</span>
+                        </h2>
+                        <h3></h3>
+                        <div class="acordeon">
+                        </div>
+                    </div>
+                    <div id="ContentListadof478bbe4-1dd1-4f5d-a484-fb4d7d030208" class="block_content">
+                        <div class="form_section" style="width: 100%">
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow: hidden">
+                                    <ng-jqgrid config="config"
+                                        addnew="true"
+                                        modeldata="$root.DatosFormulario.grillaListaTipoMovimiento"
+                                        gridid="grillaListaTipoMovimiento"
+                                        pagerid="grillaListaTipoMovimiento_pager"
+                                        api="gridapigrillaListaTipoMovimiento"
+                                        flgocultarbarrapaginado="0"
+                                        idgrilla="f478bbe4-1dd1-4f5d-a484-fb4d7d030208"
+                                        titulosinresultados=""
+                                        ocultarexportar="0"
+                                        altogrilla="200px"
+                                        idmarcarprimerresgistro="0"
+                                        ngclickagregar=""
+                                        urllistar="/TipoMovimiento/ConsultaTipoMovimiento"
+                                        flgcargargrilla="1">
+                                        <table id="grillaListaTipoMovimiento"></table>
+                                        <div id="grillaListaTipoMovimiento_pager"></div>
+                                    </ng-jqgrid>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

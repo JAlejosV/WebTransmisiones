@@ -1,0 +1,133 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="RegistroNotificacionIntegracionController">
+        <!-- BOTONERA -->
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_Botonera_Guardar_Modif_Deshab_Salir.cshtml")
+        </div>
+        <!-- BOTONERA -->
+        <!-- seccion 2 -->
+        <div id="seccion-2">
+            <form id="frmProgramacion">
+                <div class="block_content" style="width:100%">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-12 row rowAlto2">
+                                    <div class="col-md-3 ">
+                                        Línea Naviera:
+                                    </div>
+                                    <div class="col-md-9">
+                                        <select ng-model="$root.DatosFormulario.RegistroNotificacion.DatosRegistro.CodigoLinea"
+                                                ng-change="ChangeLinea()"
+                                                ng-disabled="$root.DatosFormulario.RegistroNotificacion.DatosView.Habilitado=='False' || FlagEditing==false"
+                                                ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.RegistroNotificacion.DatosView.ListLinea" class="InputSELECT_01">
+                                            <option value="">[Seleccione]</option>
+                                        </select>
+                                        <div class="caja11 msgerror CodigoLinea">
+                                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroNotificacion.DatosRegistro.CodigoLinea" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 row rowAlto2">
+                                    <div class="col-md-3">
+                                        Nombre:
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input class="InputTEXT_01" max="250" maxlength="250"
+                                               type="text" ng-enter="Enter()"
+                                               ng-disabled="$root.DatosFormulario.RegistroNotificacion.DatosView.Habilitado=='False' || FlagEditing==false"
+                                               ng-model="$root.DatosFormulario.RegistroNotificacion.DatosRegistro.Nombre" />
+                                        <div class="caja11 msgerror Nombre">
+                                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroNotificacion.DatosRegistro.Nombre" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-12 row rowAlto2">
+                                    <div class="col-md-3">
+                                        Asunto:
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input class="InputTEXT_01" max="250" maxlength="250"
+                                               type="text" ng-enter="Enter()"
+                                               ng-disabled="$root.DatosFormulario.RegistroNotificacion.DatosView.Habilitado=='False' || FlagEditing==false"
+                                               ng-model="$root.DatosFormulario.RegistroNotificacion.DatosRegistro.Asunto" />
+                                        <div class="caja11 msgerror Asunto">
+                                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroNotificacion.DatosRegistro.Asunto" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-12 row rowAlto2">
+                                    <div class="col-md-3 ">
+                                        Destinatario:
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input class="InputTEXT_06" max="250" maxlength="250"
+                                               type="text" ng-enter="Enter()"
+                                               ng-disabled="$root.DatosFormulario.RegistroNotificacion.DatosView.Habilitado=='False' || FlagEditing==false"
+                                               ng-model="$root.DatosFormulario.RegistroNotificacion.DatosRegistro.Destinatario" />
+                                        <div class="caja11 msgerror Destinatario">
+                                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroNotificacion.DatosRegistro.Destinatario" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="col-md-12 row rowAlto2">
+                                    <div class="col-md-3 ">
+                                        Con Copia:
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input class="InputTEXT_01" max="250" maxlength="250"
+                                               type="text" ng-enter="Enter()"
+                                               ng-disabled="$root.DatosFormulario.RegistroNotificacion.DatosView.Habilitado=='False' || FlagEditing==false"
+                                               ng-model="$root.DatosFormulario.RegistroNotificacion.DatosRegistro.ConCopia" />
+                                        <div class="caja11 msgerror ConCopia">
+                                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroNotificacion.DatosRegistro.ConCopia" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <!-- seccion 2 -->
+
+        <div id="seccion-3">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Detalle de Correo</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width:100%">
+                    <form id="frmDetalle">
+                        <div class="row">
+                            <div class="col-md-12" id="DetalleCorreoBody">
+                                <textarea name="textarea" id="detalleNotificacion"></textarea>
+                                <div class="caja11 msgerror DetalleCorreo">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroNotificacion.DatosRegistro.DetalleCorreo" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

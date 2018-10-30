@@ -1,0 +1,219 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="max-width:800px;">
+    <div ng-app="app" ng-controller="BuscarPuertoController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/BotoneraBusquedaClásicaconBotonSalir.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Criterios de Búsqueda</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="BusquedaPuertoFrm" name="BusquedaPuertoFrm">
+                    <div class="block_content">
+                        <div style="max-width: 100%; height: 100%">
+                            <div class="col-md-12 row">
+                                <div class="row">
+                                    <div class="col-md-2" style="padding-right: 0px !important; width:150px;">
+                                        <input type="radio"
+                                               name="Puerto"
+                                               value="Puerto"
+                                               ng-enter="Enter()"
+                                               ng-model="$root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoSeccionPuerto"
+                                               class="ng-valid ng-dirty" checked ng-disabled="FlagEditing==false" />
+                                        <label class="ng-binding">Código Puerto</label>
+                                    </div>
+                                    <div class="col-md-2" style="padding-right: 0px !important;">
+                                        <input class="InputTEXT_05"
+                                               type="text"
+                                               maxlength="5"
+                                               ng-model="$root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoPuerto"
+                                               data-bind="value: $root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoPuerto"
+                                               data-val="true"
+                                               ng-enter="Enter()"
+                                               ng-disabled="FlagEditingCodigoPuerto==false"
+                                               id="$root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoPuerto"
+                                               name="$root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoPuerto" />
+                                        <div class="caja11 msgerror CodigoPuerto">
+                                            <span class="field-validation-valid msgerror"
+                                                  data-valmsg-for="$root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoPuerto" data-valmsg-replace="true">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding-right: 0px !important;">
+                                        Nombre Puerto
+                                    </div>
+                                    <div class="col-md-2" style="padding-right: 0px !important;">
+                                        <input class="InputTEXT_05"
+                                               type="text"
+                                               maxlength="40"
+                                               ng-enter="Enter()"
+                                               ng-model="$root.DatosFormulario.DataFiltroBusquedaPuerto.NombrePuerto"
+                                               data-bind="value: $root.DatosFormulario.DataFiltroBusquedaPuerto.NombrePuerto"
+                                               data-val="true"
+                                               ng-disabled="FlagEditingNombrePuerto==false"
+                                               id="$root.DatosFormulario.DataFiltroBusquedaPuerto.NombrePuerto"
+                                               name="$root.DatosFormulario.DataFiltroBusquedaPuerto.NombrePuerto" />
+                                        <div class="caja11 msgerror NombrePuerto"></div>
+                                    </div>
+                                    <div class="col-md-2" style="padding-right: 0px !important; width:100px;">
+                                        País
+                                    </div>
+                                    <div class="col-md-2" style="padding-right: 0px !important;">
+                                        <input class="InputTEXT_05"
+                                               type="text"
+                                               maxlength="3"
+                                               ng-enter="Enter()"
+                                               ng-model="$root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoLineaNaviera"
+                                               data-bind="value: $root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoLineaNaviera"
+                                               data-val="true"
+                                               ng-disabled="FlagEditingLineaNaviera==false"
+                                               id="$root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoLineaNaviera"
+                                               name="$root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoLineaNaviera" />
+                                        <div class="caja11 msgerror CodigoLineaNaviera"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2" style="padding-right: 0px !important;width:150px;">
+                                        <input type="radio"
+                                               name="GrupoPuerto"
+                                               value="GrupoPuerto"
+                                               ng-enter="Enter()"
+                                               ng-model="$root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoSeccionPuerto"
+                                               class="ng-valid ng-dirty" ng-disabled="FlagEditing==false" />
+                                        <label class="ng-binding">Código Grupo Puerto</label>
+                                    </div>
+                                    <div class="col-md-2" style="padding-right: 0px !important;">
+                                        <input class="InputTEXT_05"
+                                               type="text"
+                                               maxlength="5"
+                                               ng-model="$root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoGrupoPuerto"
+                                               data-bind="value: $root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoGrupoPuerto"
+                                               data-val="true"
+                                               ng-enter="Enter()"
+                                               ng-disabled="FlagEditingCodigoGrupoPuerto==false"
+                                               id="$root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoGrupoPuerto"
+                                               name="$root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoGrupoPuerto" />
+                                        <div class="caja11 msgerror CodigoGrupoPuerto">
+                                            <span class="field-validation-valid msgerror"
+                                                  data-valmsg-for="$root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoGrupoPuerto" data-valmsg-replace="true">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding-right: 0px !important;">
+                                        Nombre Grupo Puerto
+                                    </div>
+                                    <div class="col-md-2" style="padding-right: 0px !important;">
+                                        <input class="InputTEXT_05"
+                                               type="text"
+                                               maxlength="40"
+                                               ng-model="$root.DatosFormulario.DataFiltroBusquedaPuerto.NombreGrupoPuerto"
+                                               data-bind="value: $root.DatosFormulario.DataFiltroBusquedaPuerto.NombreGrupoPuerto"
+                                               data-val="true"
+                                               ng-enter="Enter()"
+                                               ng-disabled="FlagEditingNombreGrupoPuerto==false"
+                                               id="$root.DatosFormulario.DataFiltroBusquedaPuerto.NombreGrupoPuerto"
+                                               name="$root.DatosFormulario.DataFiltroBusquedaPuerto.NombreGrupoPuerto" />
+                                        <div class="caja11 msgerror NombreGrupoPuerto">
+                                            <span class="field-validation-valid msgerror"
+                                                  data-valmsg-for="$root.DatosFormulario.DataFiltroBusquedaPuerto.NombreGrupoPuerto" data-valmsg-replace="true">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="col-md-3">
+                                            Línea
+                                        </div>
+                                        <div class="col-md-9">
+                                            <select ng-model="$root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoLinea"
+                                                    data-val="true"
+                                                    data-bind="value: $root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoLinea"
+                                                    ng-disabled="$root.DatosFormulario.DataFiltroBusquedaPuerto.DatosCombo.Habilitado=='False'"
+                                                    ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.DataFiltroBusquedaPuerto.DatosCombo.Linea" class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoLinea">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DataFiltroBusquedaPuerto.CodigoLinea" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="col-md-3">
+                                            Tipo
+                                        </div>
+                                        <div class="col-md-9">
+                                            <select ng-model="$root.DatosFormulario.DataFiltroBusquedaPuerto.Tipo"
+                                                    data-val="true"
+                                                    data-bind="value: $root.DatosFormulario.DataFiltroBusquedaPuerto.Tipo"
+                                                    ng-disabled="FlagEditingTipo==false"
+                                                    ng-options="tipo.Codigo as tipo.Descripcion for tipo in $root.DatosFormulario.DataFiltroBusquedaPuerto.DatosCombo.Tipos" class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror Tipo">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DataFiltroBusquedaPuerto.Tipo" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caja11 msgerror Objeto"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListadofe65f132-8a28-4ba1-8d16-d1cade8afb99" class="block_content">
+                    <div class="form_section" style="width:100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata="$root.DatosFormulario.grillaListaBusquedaPuertos"
+                                           gridid="grillaListaBusquedaPuertos"
+                                           pagerid="grillaListaBusquedaPuertos_pager"
+                                           api="gridapigrillaListaBusquedaPuertos"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="fe65f132-8a28-4ba1-8d16-d1cade8afb99"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="150px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/Puerto/ConsultaPuerto"
+                                           flgcargargrilla="1">
+                                    <table id="grillaListaBusquedaPuertos"></table>
+                                    <div id="grillaListaBusquedaPuertos_pager"></div>
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

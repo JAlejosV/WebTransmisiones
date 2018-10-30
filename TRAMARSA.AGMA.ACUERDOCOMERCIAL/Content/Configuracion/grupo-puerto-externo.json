@@ -1,0 +1,588 @@
+{
+  "Data": [
+    {
+      "Id": "2f90a684-1a50-4ef1-96a5-80ad2ba25395",
+      "Title": "n.d.",
+      "State": "Publicado",
+      "ChannelPath": "/tramarsa/portales_agma/calculador_web/sistema/maestros/grupo_puerto_externo/props_grupo_puerto_externo",
+      "Path": "/tramarsa/portales_agma/calculador_web/sistema/maestros/grupo_puerto_externo/props_grupo_puerto_externo/_190",
+      "Parts": {
+        "es_pe__Titulo": "Grupo Puerto Externo",
+        "Secciones": [
+          {
+            "Id": "c1c010ce-02fd-4b2f-bbfd-9afeb8721ca0",
+            "Title": "Botonera Maestos Nuevo",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/botonera_maestos_nuevo_2",
+            "Parts": {
+              "es_pe__Nombre": "Botonera Maestos Nuevo",
+              "CrearSeccion": "0",
+              "Titulo": "Botonera Maestos Nuevo",
+              "TipoControlContenedor": {
+                "Value": "06",
+                "Title": "Botonera",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "ec3d05c3-43d0-4a5a-a427-7ca9f45b86f7",
+                  "Title": "Botonera Maestos Nuevo",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/botonera",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/botonera/botonera_maestos_nuevo",
+                  "Parts": {
+                    "Titulo": "Botonera Maestos Nuevo"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Botonera Maestos Nuevo"
+            }
+          },
+          {
+            "Id": "55955428-1035-47b5-990f-71b1bef14067",
+            "Title": "Administrar Maestro Grupo Puerto: Filtro",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/administrar_maestro_grupo_puerto__filtro_2",
+            "Parts": {
+              "es_pe__Nombre": "Administrar Maestro Grupo Puerto: Filtro",
+              "CrearSeccion": "0",
+              "Titulo": "",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "4f34c11f-d294-490a-a3bf-956b542d36d7",
+                  "Title": "Administrar Maestro Grupo Puerto: Filtro",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos/administrar_maestro_grupo_puerto__filtro",
+                  "Parts": {
+                    "es_pe__Titulo": "Administrar Maestro Grupo Puerto: Filtro",
+                    "en_gb__Titulo": "Administrar Maestro Grupo Puerto: Filtro"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Administrar Maestro Grupo Puerto: Filtro"
+            }
+          },
+          {
+            "Id": "8921d6e8-3d02-45cd-9180-e386b80e63fe",
+            "Title": "Maestro Grupo Puerto : Resultado de Búsqueda",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/maestro_grupo_puerto___resultado_de_busqueda",
+            "Parts": {
+              "es_pe__Nombre": "Maestro Grupo Puerto : Resultado de Búsqueda",
+              "CrearSeccion": "0",
+              "Titulo": "Resultado de Búsqueda",
+              "TipoControlContenedor": {
+                "Value": "02",
+                "Title": "Grilla",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "aaaf142c-e3b5-4f27-a570-8bb3afeeb493",
+                  "Title": "grillaMaestroGrupoPuertoExterno",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/_192",
+                  "Parts": {
+                    "objgrilla": "grillaMaestroGrupoPuertoExterno",
+                    "ModelData": "AdministrarGrupoPuerto.ListaGrupoPuertoExterno",
+                    "es_pe__Nombre": "grillaMaestroGrupoPuertoExterno",
+                    "FlgMostrarTitulo": "1",
+                    "es_pe__TituloSeccion": "RESULTADO DE BUSQUEDA",
+                    "columnas": [
+                      {
+                        "Id": "e842534d-905c-4cc3-ab43-61a31b0feda0",
+                        "Title": "Código Grupo Puerto",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/codigo_grupo_puerto",
+                        "Parts": {
+                          "es_pe__Nombre": "Código Grupo Puerto",
+                          "IdColumna": "CodigoGrupoPuerto",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "CodigoGrupoPuerto",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "b0c9354f-aa92-4c1f-af6b-be2aa1ae5e8c",
+                        "Title": "Línea",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/linea_5",
+                        "Parts": {
+                          "es_pe__Nombre": "Línea",
+                          "IdColumna": "Linea",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "6e206d27-67ba-4c76-a772-6bafc91c8656",
+                        "Title": "Nombre Grupo Puerto",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/nombre_grupo_puerto",
+                        "Parts": {
+                          "es_pe__Nombre": "Nombre Grupo Puerto",
+                          "IdColumna": "NombreGrupoPuerto",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Nombre Grupo Puerto",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "874d7824-2543-46f8-a164-e98a4217417c",
+                        "Title": "Usuario Creación",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/usuario_creacion_2",
+                        "Parts": {
+                          "es_pe__Nombre": "Usuario Creación",
+                          "IdColumna": "UsuarioCreacion",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Usuario Creacion",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "67172a54-529d-4322-867f-9fecc31a99d5",
+                        "Title": "Fecha Hora Creación",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/fecha_hora_creacion_2",
+                        "Parts": {
+                          "es_pe__Nombre": "Fecha Hora Creación",
+                          "IdColumna": "FechaHoraCreacion",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Fecha Hora Creacion",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "93478069-dd50-4e73-84b7-8dfc306542b5",
+                        "Title": "Usuario Actualización",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/usuario_actualizacion_2",
+                        "Parts": {
+                          "es_pe__Nombre": "Usuario Actualización",
+                          "IdColumna": "UsuarioActualizacion",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Usuario Actualizacion",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "da888b7a-24c6-4190-a35a-bae48ffd3aba",
+                        "Title": "Fecha Hora Actualización",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/fecha_hora_actualizacion_2",
+                        "Parts": {
+                          "es_pe__Nombre": "Fecha Hora Actualización",
+                          "IdColumna": "FechaHoraActualizacion",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Fecha Hora Actualizacion",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "6d3ce98f-0a54-4afd-90a6-88c14c09f4ec",
+                        "Title": "Estado Registro",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/estado_registro_2",
+                        "Parts": {
+                          "es_pe__Nombre": "Estado Registro",
+                          "IdColumna": "EstadoRegistro",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Estado Registro",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "c84d1314-fd42-43f8-9f1f-02479974d276",
+                        "Title": "Editar",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/editar_17",
+                        "Parts": {
+                          "es_pe__Nombre": "Editar",
+                          "IdColumna": "Editar",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "botonEditar",
+                            "Title": "botonEditar",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "center",
+                            "Title": "Centro",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Editar",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "74bbbfbe-b05e-4a37-969d-a1c2bf2f3923",
+                        "Title": "Eliminar",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/eliminar_6",
+                        "Parts": {
+                          "es_pe__Nombre": "Eliminar",
+                          "IdColumna": "Quitar",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "botonQuitar",
+                            "Title": "botonQuitar",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "center",
+                            "Title": "Centro",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Eliminar",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "33f2d489-d055-403e-af8a-2cf60f409d81",
+                        "Title": "Ver Detalle",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/ver_detalle_2",
+                        "Parts": {
+                          "es_pe__Nombre": "Ver Detalle",
+                          "IdColumna": "VerDetalle",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "botonVerDetalle",
+                            "Title": "botonVerDetalle",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "center",
+                            "Title": "Centro",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "f027a9fa-1b50-40a6-ab12-3c84b5836d5a",
+                        "Title": "CodigoLinea",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/codigolinea_7",
+                        "Parts": {
+                          "es_pe__Nombre": "CodigoLinea",
+                          "IdColumna": "CodigoLinea",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      }
+                    ],
+                    "es_pe__NombreBotonExportar": "Exportar en Excel",
+                    "es_pe__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MensajeSinResultadoPersonalizado": "",
+                    "urlListar": "/GrupoPuertoExterno/ConsultarGrupoPuertoExterno",
+                    "en_gb__Nombre": "grillaMaestroGrupoPuertoExterno",
+                    "en_gb__NombreBotonExportar": "Exportar en Excel",
+                    "en_gb__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MarcarRegistroSeleccionado": "0",
+                    "JSFilter": "",
+                    "JSDblClick": "",
+                    "JSOnLoad": "",
+                    "JSOnSelect": "",
+                    "altoGrilla": "150px",
+                    "FlgOcultarBarraPaginado": "0",
+                    "FlgCargarGrilla": "0",
+                    "TituloSinResultados": "",
+                    "FlgOcultarExportar": "0",
+                    "ngClickAgregar": "",
+                    "multiselect": ""
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Maestro Grupo Puerto : Resultado de Búsqueda"
+            }
+          }
+        ],
+        "ControladorAngular": "AdministrarGrupoPuertoController",
+        "AnchoMaximo": "",
+        "AltoMinimo": "",
+        "en_gb__Titulo": "Grupo Puerto Externo"
+      }
+    }
+  ],
+  "Error": false,
+  "Message": "OK"
+}

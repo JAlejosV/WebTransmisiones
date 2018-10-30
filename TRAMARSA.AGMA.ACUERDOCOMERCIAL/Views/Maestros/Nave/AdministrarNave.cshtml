@@ -1,0 +1,130 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+
+    <div ng-app="app" ng-controller="AdministrarNaveController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraBusquedaAcuerdoComercial.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>ADMINISTRAR NAVE</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarNaveFrm" name="AdministrarNaveFrm">
+                    <div class="block_content" style="width: 100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Nombre Nave
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05"
+                                                type="text" ng-enter="Enter()" maxlength="50"
+                                                ng-model="$root.DatosFormulario.AdministrarNave.Filtro.NombreNave" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Pais
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarNave.Filtro.CodigoPais" />
+                                            <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarNave.Datos.NombrePais"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarPais_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Tipo de Nave
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarNave.Filtro.CodigoTipoNave" />
+                                            <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarNave.Datos.NombreTipoNave"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarTipoNave_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                     <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Linea Naviera
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarNave.Filtro.CodigoLineaNaviera" />
+                                            <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarNave.Datos.NombreLineaNaviera"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarLineaNaviera_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width: 100%; float: left">
+
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado1a0b5f06-bb91-4713-aa00-966ef96ad996" class="block_content">
+                    <div class="form_section" style="width: 100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden">
+
+                                <ng-jqgrid config="config"
+                                    addnew="true"
+                                    modeldata="$root.DatosFormulario.AdministrarNave.ListaMaestroNave"
+                                    gridid="grillaListaMaestroNave"
+                                    pagerid="grillaListaMaestroNave_pager"
+                                    api="gridapigrillaListaMaestroNave"
+                                    flgocultarbarrapaginado="0"
+                                    idgrilla="1a0b5f06-bb91-4713-aa00-966ef96ad996"
+                                    titulosinresultados=""
+                                    ocultarexportar="0"
+                                    altogrilla="150px"
+                                    idmarcarprimerresgistro="0"
+                                    ngclickagregar=""
+                                    urllistar="/Nave/ConsultaNave"
+                                    flgcargargrilla="0">
+                                    <table id="grillaListaMaestroNave"></table>
+                                    <div id="grillaListaMaestroNave_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

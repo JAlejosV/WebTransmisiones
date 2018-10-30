@@ -1,0 +1,773 @@
+{
+  "Data": [
+    {
+      "Id": "dd5d572e-f461-4246-9e41-51cd50794762",
+      "Title": "n.d.",
+      "State": "Publicado",
+      "ChannelPath": "/tramarsa/portales_agma/calculador_web/sistema/busqueda/buscar_tarifa_escalonada_general/props_buscar_tarifa_escalonada_general",
+      "Path": "/tramarsa/portales_agma/calculador_web/sistema/busqueda/buscar_tarifa_escalonada_general/props_buscar_tarifa_escalonada_general/_157",
+      "Parts": {
+        "es_pe__Titulo": "Buscar Tarifa Escalonada General",
+        "Secciones": [
+          {
+            "Id": "882cecee-c415-4f27-8271-9a76795fcda8",
+            "Title": "Botonera Busqueda Tarifa Escalonada General",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/botonera_busqueda_tarifa_escalonada_general_2",
+            "Parts": {
+              "es_pe__Nombre": "Botonera Busqueda Tarifa Escalonada General",
+              "CrearSeccion": "0",
+              "Titulo": "",
+              "TipoControlContenedor": {
+                "Value": "06",
+                "Title": "Botonera",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "63fd2927-cfc3-47ca-96fb-fd841df6c55e",
+                  "Title": "Botonera Busqueda Clásica con Boton Salir",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/botonera",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/botonera/botonera_busqueda_clasica_con_boton_salir",
+                  "Parts": {
+                    "Titulo": "Botonera Busqueda Clásica con Boton Salir"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": ""
+            }
+          },
+          {
+            "Id": "e420f1b3-0ac6-452c-8d4f-5ee859b9eb51",
+            "Title": "Tarifa Escalonada: Buscar Tarifas Escalonadas Generales",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/tarifa_escalonada__buscar_tarifas_escalonadas_generales_2",
+            "Parts": {
+              "es_pe__Nombre": "Tarifa Escalonada: Buscar Tarifas Escalonadas Generales",
+              "CrearSeccion": "0",
+              "Titulo": "",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "bafddbea-bae8-4f9d-8705-4988cfce6693",
+                  "Title": "Tarifa Escalonada: Buscar Tarifas Escalonadas Generales",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos/tarifa_escalonada__buscar_tarifas_escalonadas_generales",
+                  "Parts": {
+                    "es_pe__Titulo": "Tarifa Escalonada: Buscar Tarifas Escalonadas Generales",
+                    "en_gb__Titulo": "Tarifa Escalonada: Buscar Tarifas Escalonadas Generales"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Tarifa Escalonada: Buscar Tarifas Escalonadas Generales"
+            }
+          },
+          {
+            "Id": "4c381b9e-b831-4c52-99df-d84549efb2b1",
+            "Title": "Grilla Resultado Búsqueda Tarifa Escalonada General",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/grilla_resultado_busqueda_tarifa_escalonada_general",
+            "Parts": {
+              "es_pe__Nombre": "Grilla Resultado Búsqueda Tarifa Escalonada General",
+              "CrearSeccion": "0",
+              "Titulo": "",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "be48090f-32bb-4395-863e-72e31322e203",
+                  "Title": "grillaListaTarifaEscalonadaGeneral",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/_158",
+                  "Parts": {
+                    "objgrilla": "grillaListaTarifaEscalonadaGeneral",
+                    "ModelData": "ResultadoTarifaEscalonadaGeneral.ListaTarifaEscalonadaGeneral",
+                    "es_pe__Nombre": "grillaListaTarifaEscalonadaGeneral",
+                    "FlgMostrarTitulo": "1",
+                    "es_pe__TituloSeccion": "RESULTADO DE BUSQUEDA",
+                    "columnas": [
+                      {
+                        "Id": "7f141101-c6ea-46d4-bb05-e58314f01066",
+                        "Title": "Marcar",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/marcar_9",
+                        "Parts": {
+                          "es_pe__Nombre": "Marcar",
+                          "IdColumna": "idCheck",
+                          "ancho": "80px",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "checkbox",
+                            "Title": "Checkbox",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "center",
+                            "Title": "Centro",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "41406f99-2f3c-4582-ad0a-ae13881deb5a",
+                        "Title": "CodigoTarifaEscalonada",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/codigotarifaescalonada_5",
+                        "Parts": {
+                          "es_pe__Nombre": "CodigoTarifaEscalonada",
+                          "IdColumna": "CodigoTarifaEscalonada",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "CodigoTarifaEscalonada",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "692f8466-4bbd-4f70-b252-098940d72208",
+                        "Title": "CodigoRegimen",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/codigoregimen_5",
+                        "Parts": {
+                          "es_pe__Nombre": "CodigoRegimen",
+                          "IdColumna": "CodigoRegimen",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "CodigoRegimen",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "2f918c74-6463-47a6-a6d4-1c04d2079a56",
+                        "Title": "CodigoConcepto",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/codigoconcepto_6",
+                        "Parts": {
+                          "es_pe__Nombre": "CodigoConcepto",
+                          "IdColumna": "CodigoConcepto",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "CodigoConcepto",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "6544ce98-69ed-481a-a958-65df7b2f62f7",
+                        "Title": "CodigoTarifa",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/codigotarifa_7",
+                        "Parts": {
+                          "es_pe__Nombre": "CodigoTarifa",
+                          "IdColumna": "CodigoTarifa",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "CodigoTarifa",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "0bc902e2-0033-4f26-994e-830a3fcdb332",
+                        "Title": "Descripción Tarifa",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/descripcion_tarifa_5",
+                        "Parts": {
+                          "es_pe__Nombre": "Descripción Tarifa",
+                          "IdColumna": "DescripcionTarifa",
+                          "ancho": "50%",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "left",
+                            "Title": "Izquierda",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Descripción Tarifa",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "b75ff681-b86b-4ca1-b170-04479223bf5f",
+                        "Title": "Precio",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/precio_5",
+                        "Parts": {
+                          "es_pe__Nombre": "Precio",
+                          "IdColumna": "Precio",
+                          "ancho": "20%",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "right",
+                            "Title": "Derecha",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Precio",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "fd2318fd-39ae-4069-b422-89502b170dd1",
+                        "Title": "CodigoMoneda",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/codigomoneda_9",
+                        "Parts": {
+                          "es_pe__Nombre": "CodigoMoneda",
+                          "IdColumna": "CodigoMoneda",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "CodigoMoneda",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "68a9ad25-a9ea-45f0-b6f0-9febb9ab89bc",
+                        "Title": "Moneda",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/moneda_13",
+                        "Parts": {
+                          "es_pe__Nombre": "Moneda",
+                          "IdColumna": "DescripcionMoneda",
+                          "ancho": "30%",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "left",
+                            "Title": "Izquierda",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Moneda",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "8e78c17f-c681-46b8-8e65-6d7f3395154d",
+                        "Title": "CodigoTipoContenedor",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/codigotipocontenedor_3",
+                        "Parts": {
+                          "es_pe__Nombre": "CodigoTipoContenedor",
+                          "IdColumna": "CodigoTipoContenedor",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "CodigoTipoContenedor",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "5ac2ae57-7c9a-4e17-91ad-44634f45d4d2",
+                        "Title": "EstadoRegistro",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/estadoregistro_3",
+                        "Parts": {
+                          "es_pe__Nombre": "EstadoRegistro",
+                          "IdColumna": "EstadoRegistro",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "EstadoRegistro",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "b49bfd92-7eb4-4767-a1d2-ef51db39458e",
+                        "Title": "FechaHoraCreacion",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/fechahoracreacion_4",
+                        "Parts": {
+                          "es_pe__Nombre": "FechaHoraCreacion",
+                          "IdColumna": "FechaHoraCreacion",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "FechaHoraCreacion",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "2a7f1afe-4f0a-4c47-b378-cce0d4db936f",
+                        "Title": "UsuarioCreacion",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/usuariocreacion_4",
+                        "Parts": {
+                          "es_pe__Nombre": "UsuarioCreacion",
+                          "IdColumna": "UsuarioCreacion",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "UsuarioCreacion",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "ad25e734-4ad0-483c-8f24-1cde7f6368cc",
+                        "Title": "FechaHoraActualizacion",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/fechahoraactualizacion_4",
+                        "Parts": {
+                          "es_pe__Nombre": "FechaHoraActualizacion",
+                          "IdColumna": "FechaHoraActualizacion",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "FechaHoraActualizacion",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "f7367657-4a30-4592-a801-d1e97e1e8d2b",
+                        "Title": "UsuarioActualizacion",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/usuarioactualizacion_4",
+                        "Parts": {
+                          "es_pe__Nombre": "UsuarioActualizacion",
+                          "IdColumna": "UsuarioActualizacion",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "UsuarioActualizacion",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "883c9c0e-ef96-40b2-8dea-050bf406fd03",
+                        "Title": "CodigoUnidadCalculo",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/codigounidadcalculo_2",
+                        "Parts": {
+                          "es_pe__Nombre": "CodigoUnidadCalculo",
+                          "IdColumna": "CodigoUnidadCalculo",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "CodigoUnidadCalculo",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "9d54a8c9-ea96-4783-9921-b14401d3d83a",
+                        "Title": "UnidadCalculo",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/unidadcalculo",
+                        "Parts": {
+                          "es_pe__Nombre": "UnidadCalculo",
+                          "IdColumna": "UnidadCalculo",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "UnidadCalculo",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      }
+                    ],
+                    "es_pe__NombreBotonExportar": "Exportar en Excel",
+                    "es_pe__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MensajeSinResultadoPersonalizado": "",
+                    "urlListar": "/TarifaEscalonada/BusquedaTarifaEscalonada",
+                    "en_gb__Nombre": "grillaListaTarifaEscalonadaGeneral",
+                    "en_gb__NombreBotonExportar": "Exportar en Excel",
+                    "en_gb__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MarcarRegistroSeleccionado": "0",
+                    "JSFilter": "",
+                    "JSDblClick": "",
+                    "JSOnLoad": "",
+                    "JSOnSelect": "",
+                    "altoGrilla": "150px",
+                    "FlgOcultarBarraPaginado": "0",
+                    "FlgCargarGrilla": "0",
+                    "TituloSinResultados": "",
+                    "FlgOcultarExportar": "0",
+                    "ngClickAgregar": "",
+                    "multiselect": ""
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Grilla Resultado Búsqueda Tarifa Escalonada General"
+            }
+          }
+        ],
+        "ControladorAngular": "BuscarTarifaEscalonadaGeneralController",
+        "AnchoMaximo": "1000px",
+        "AltoMinimo": "",
+        "en_gb__Titulo": "Buscar Tarifa Escalonada General"
+      }
+    }
+  ],
+  "Error": false,
+  "Message": "OK"
+}

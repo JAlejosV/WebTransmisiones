@@ -1,0 +1,75 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="RegistroDetalleGrupoPuertoExternoController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraGrabarMaestro.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos Detalle Grupo Puerto Externo</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="RegistroDetalleGrupoPuertoExternoFrm" name="RegistroDetalleGrupoPuertoExternoFrm" style="height: 150px !important;">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Código Puerto
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05" max="5" maxlength="5"
+                                                   type="text" ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.RegistroDetalleGrupoPuertoExterno.RegistroDatos.CodigoPuerto" />
+                                            <div class="caja11 msgerror CodigoPuerto">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDetalleGrupoPuertoExterno.RegistroDatos.CodigoPuerto" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 row" style="display: none">
+                                    <div class="col-md-4">
+                                        Estado Registro
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="col-md-12">
+                                            <div class="col-md-6">
+                                                <input type="radio" name="Activo" ng-enter="Enter()"
+                                                       value={{$root.DatosFormulario.RegistroDetalleGrupoPuertoExterno.RegistroDatos.EstadoRegistroActivo}}
+                                                       ng-model="$root.DatosFormulario.RegistroDetalleGrupoPuertoExterno.RegistroDatos.EstadoRegistro"
+                                                       class="ng-valid ng-dirty"
+                                                       ng-disabled="FlagEditing==false"
+                                                       checked />
+                                                <label>Activo</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="radio" name="Inactivo" ng-enter="Enter()"
+                                                       value={{$root.DatosFormulario.RegistroDetalleGrupoPuertoExterno.RegistroDatos.EstadoRegistroInactivo}}
+                                                       ng-model="$root.DatosFormulario.RegistroDetalleGrupoPuertoExterno.RegistroDatos.EstadoRegistro"
+                                                       ng-disabled="FlagEditing==false"
+                                                       class="ng-valid ng-dirty" />
+                                                <label>Inactivo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>

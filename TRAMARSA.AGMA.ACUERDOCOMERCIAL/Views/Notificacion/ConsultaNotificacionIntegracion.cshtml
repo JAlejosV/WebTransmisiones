@@ -1,0 +1,118 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="ConsultaNotificacionIntegracionController">
+        <!-- BOTONERA -->
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_Botonera_Buscar_Nuevo_Limpiar_Salir.cshtml")
+        </div>
+        <!-- BOTONERA -->
+        <!-- FILTROS BUSQUEDA -->
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Consulta Notifaciones</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="ConsultaNotificacionIntegracionFrm" name="ConsultaNotificacionIntegracionFrm">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Nombre Notificaci&oacute;n
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_01" max="500" maxlength="500"
+                                                   type="text" ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.ConsultaNotificacionIntegracion.Filtro.Nombre" />
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Estado
+                                        </div>
+                                        <div class="col-md-8">
+
+                                            <select ng-model="$root.DatosFormulario.ConsultaNotificacionIntegracion.Filtro.CodigoEstado"
+                                                    ng-options="estado.Codigo as estado.Descripcion for estado in $root.DatosFormulario.ConsultaNotificacionIntegracionCargaInicial.Estados"
+                                                    class="InputSELECT_01"
+                                                    id="$root.DatosFormulario.ConsultaNotificacionIntegracion.Filtro.CodigoEstado"
+                                                    name="$root.DatosFormulario.ConsultaNotificacionIntegracion.Filtro.CodigoEstado">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- FILTROS BUSQUEDA -->
+        <!-- RESULTADO BUSQUEDA -->
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado6b6c4707-d1aa-4a21-be0e-b9fcdbd8bfb6" class="block_content">
+                    <div class="form_section" style="width:100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata=""
+                                           gridid="grillaListaNotifiacionIntegracion"
+                                           pagerid="grillaListaNotifiacionIntegracion_pager"
+                                           api="gridapigrillaListaNotifiacionIntegracion"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="6b6c4707-d1aa-4a21-be0e-b9fcdbd8bfb6"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="150px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/Notificacion/ConsultaBandejaNotificacionIntegracion"
+                                           flgcargargrilla="0">
+                                    <table id="grillaListaNotifiacionIntegracion"></table>
+                                    <div id="grillaListaNotifiacionIntegracion_pager"></div>
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- RESULTADO BUSQUEDA -->
+    </div>
+</div>

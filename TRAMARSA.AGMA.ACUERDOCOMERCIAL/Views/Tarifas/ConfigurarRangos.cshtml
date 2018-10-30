@@ -1,0 +1,208 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="min-height: 600px;">
+    <div ng-app="app" ng-controller="ConfiguracionRangoController">
+       
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_TarifaEscalonada_ConfiguracionPeriodo.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos Generales</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width:100%">
+                    <form id="frmConfigRangosMoneda">
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Moneda
+                            </div>
+                            <div class="col-md-8">
+                                <select class="InputSELECT_01"
+                                        ng-model="$root.DatosFormulario.ConfiguracionPeriodo.CodigoMoneda"
+                                        data-bind="value: $root.DatosFormulario.ConfiguracionPeriodo.CodigoMoneda"
+                                        ng-options="moneda.Codigo as moneda.Nombre for moneda in $root.DatosFormulario.ConfiguracionPeriodo.DataCombos.ListaMoneda"
+                                        id="$root.DatosFormulario.ConfiguracionPeriodo.CodigoMoneda"
+                                        data-val="true"
+                                        data-val-required="Moneda es requerido."
+                                        name="$root.DatosFormulario.ConfiguracionPeriodo.CodigoMoneda"
+                                        ng-disabled="FlagEditing==false"
+                                        required>
+                                    <option value="">[Seleccione]</option>
+                                </select>
+                                <div class="caja11 msgerror CodigoMoneda">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.ConfiguracionPeriodo.CodigoMoneda" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Detalle de Rangos</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width:100%">
+                    <form id="frmDetalleRangos">
+                        <div class="block_menu block_content">
+                            <div style="max-width: 100%; height: 100%">
+
+                                <div class="col-md-12 row">
+                                    <div class="col-xs-2">
+                                        <button class="SeparatorLeft boton1Style boton1" ng-disabled="FlagEditing==false" ng-click="AgregarDetalleRango();" style="">
+                                            <span class="boton1Span">
+                                                <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                            </span>
+                                            <span class="boton1txt">Agregar</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-xs-10">
+                                        <div class="col-xs-12 col-md-12">
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="ContentListado8ff8abc7-82ae-4066-a67d-e40d4a1d3464" class="block_content">
+                            <div class="form_section" style="width:100%">
+                                <div class="forms2">
+                                    <div class="table-responsive" style="overflow:hidden;">
+
+                                        <ng-jqgrid config="config"
+                                                   addnew="true"
+                                                   modeldata="$root.DatosFormulario.ConfiguracionPeriodo.ListaDetalleRango"
+                                                   gridid="grillaListaDetalleRango"
+                                                   pagerid="grillaListaDetalleRango_pager"
+                                                   api="gridapiListaDetalleRango"
+                                                   flgocultarbarrapaginado="1"
+                                                   idgrilla="F6E48A6D-4F43-46BA-BC7B-1D8FC9713603"
+                                                   titulosinresultados=""
+                                                   ocultarexportar="1"
+                                                   altogrilla="80px"
+                                                   idmarcarprimerresgistro="0" url=""
+                                                   flgcargargrilla="0" />
+                                        <table id="grillaListaDetalleRango"></table>
+                                        <div id="grillaListaDetalleRangopager"></div>
+                                        </ng-jqgrid>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="caja11 msgerror listaDetalleRando">
+                            <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                        </div>
+
+                    </form>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-4">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Detalle de Tipo de Contenedor</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width:100%">
+                    <form id="frmDetalleTipoContenedor">
+
+                        <div class="col-md-6 row">
+
+
+                            <div class="block_menu block_content">
+                                <div style="max-width: 100%; height: 100%">
+
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-12 row">
+                                            <div class="col-md-4">
+                                                Clase de Contenedor
+                                            </div>
+                                            <div class="col-md-8">
+                                                <select class="InputSELECT_01"
+                                                        ng-model="$root.DatosFormulario.ConfiguracionPeriodo.CodigoClaseContenedor"
+                                                        data-bind="value: $root.DatosFormulario.ConfiguracionPeriodo.CodigoClaseContenedor"
+                                                        ng-options="moneda.CodigoClaseContenedor as moneda.Descripcion for moneda in $root.DatosFormulario.ConfiguracionPeriodo.DataCombos.ListaCategoriaContenedor"
+                                                        id="$root.DatosFormulario.ConfiguracionPeriodo.CodigoClaseContenedor"
+                                                        data-val="true"
+                                                        data-val-required="Clase de contenedor es requerido."
+                                                        name="$root.DatosFormulario.ConfiguracionPeriodo.CodigoClaseContenedor"
+                                                        ng-disabled="FlagEditing==false"
+                                                        ng-change="CargarTipoContenedor($root.DatosFormulario.ConfiguracionPeriodo.CodigoClaseContenedor)"
+                                                        required>
+                                                    <option value="">[Seleccione]</option>
+                                                </select>
+                                                <div class="caja11 msgerror CodigoClaseContenedor">
+                                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.ConfiguracionPeriodo.CodigoClaseContenedor" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div id="ContentListado_ListaTipoContenedor" class="block_content">
+                                <div class="form_section" style="width:100%">
+                                    <div class="forms2">
+                                        <div class="table-responsive" style="overflow:hidden;">
+
+                                            <ng-jqgrid config="config"
+                                                       addnew="true"
+                                                       modeldata="$root.DatosFormulario.ConfiguracionPeriodo.ListaTipoContenedor"
+                                                       gridid="grillaListaDetalleTipoContenedor"
+                                                       pagerid="grillaListaDetalleTipoContenedor_pager"
+                                                       api="gridapiListaDetalleTipoContenedor"
+                                                       flgocultarbarrapaginado="1"
+                                                       idgrilla="C85BA0D4-1A91-47E8-A265-5B51FFC0A00D"
+                                                       titulosinresultados=""
+                                                       ocultarexportar="1"
+                                                       altogrilla="80px"
+                                                       idmarcarprimerresgistro="0" url=""
+                                                       flgcargargrilla="0">
+
+                                                <table id="grillaListaDetalleTipoContenedor"></table>
+                                                <div id="grillaListaDetalleTipoContenedor_pager"></div>
+                                            </ng-jqgrid>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caja11 msgerror listaSucursal">
+                                <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,283 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="block" style="min-height: 600px;">
+    <div ng-app="app" ng-controller="ConfiguracionTarifaLigadaController">
+        @Html.Partial("~/Views/Botonera/AC_BotonerarConfiguracionTarifaLigada.cshtml")
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Detalle Tarifa Ligada</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="DetalleTarifaLigadaFrm" name="DetalleTarifaLigadaFrm">
+                    <div class="block_content" style="width:100%">
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-2">
+                                Descripción Tarifa
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoTarifa" />
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoTarifaLigadaLocal" />
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.IdConfiguracionTarifaLigada" />
+                                <input class="InputTEXT_06" style="height: 23px;width: 280px;"
+                                       type="text"
+                                       ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.DescripcionTarifa"
+                                       data-bind="value: $root.DatosFormulario.DataConfiguracionTarifaLigada.DescripcionTarifa"
+                                       data-val="true"
+                                       data-val-required="Descripción Tarifa es requerido."
+                                       id="$root.DatosFormulario.DataConfiguracionTarifaLigada.DescripcionTarifa"
+                                       name="$root.DatosFormulario.DataConfiguracionTarifaLigada.DescripcionTarifa"
+                                       ng-disabled="true"
+                                       required />
+                                <input type="image" ng-disabled="FlagEditing==false"
+                                       ng-click="BuscarTarifaLigada_Click();" value="Buscar"
+                                       src="\Images\buscar.png"
+                                       class="" style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                <div class="caja11 msgerror DescripcionTarifa">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DataConfiguracionTarifaLigada.DescripcionTarifa" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-2">
+                                Moneda
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoMonedaTarifaLigada" />
+                                <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                       type="text"
+                                       ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.Moneda"
+                                       data-bind="value: $root.DatosFormulario.DataConfiguracionTarifaLigada.Moneda"
+                                       data-val="true"
+                                       data-val-required="Moneda es requerido."
+                                       id="$root.DatosFormulario.DataConfiguracionTarifaLigada.Moneda"
+                                       name="$root.DatosFormulario.DataConfiguracionTarifaLigada.Moneda"
+                                       ng-disabled="true"
+                                       required />
+                                <div class="caja11 msgerror Moneda">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DataConfiguracionTarifaLigada.Moneda" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-2">
+                                Monto
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05 solodecimal"
+                                       type="text"
+                                       ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.Monto"
+                                       data-bind="value: $root.DatosFormulario.DataConfiguracionTarifaLigada.Monto"
+                                       data-val="true"
+                                       data-val-required="Monto"
+                                       id="$root.DatosFormulario.DataConfiguracionTarifaLigada.Monto"
+                                       name="$root.DatosFormulario.DataConfiguracionTarifaLigada.Monto"
+                                       disabled="disabled"
+                                       required />
+                                <div class="caja11 msgerror Monto">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DataConfiguracionTarifaLigada.Monto" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Configuración Tarifa Ligada</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="ConfiguracionTarifaLigadaFrm" name="ConfiguracionTarifaLigadaFrm">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12 row">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Configuración</th>
+                                            <th>%</th>
+                                            <th style="min-width: 200px !important;">Moneda</th>
+                                            <th style="min-width: 100px !important;">Monto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <input type="radio" name="MF"
+                                                       ng-change="Cofiguration($root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck)"
+                                                       value={{$root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoMontoFijo}}
+                                                       ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck" class="ng-valid ng-dirty" checked
+                                                       ng-disabled="FlagEditing==false" />
+                                                <label>{{$root.DatosFormulario.DataConfiguracionTarifaLigada.DescripcionMontoFijo}}</label>
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                <select ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoMonedaMontoFijo"
+                                                        data-bind="value: $root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoMonedaMontoFijo"
+                                                        ng-disabled="$root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck=='PTL' || $root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck=='PTB' || FlagEditing==false"
+                                                        ng-options="moneda.Codigo as moneda.Nombre for moneda in $root.DatosFormulario.DatosConfiguracionTarifaLigada.Moneda"
+                                                        class="InputSELECT_01 required"
+                                                        id="$root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoMonedaMontoFijo"
+                                                        data-val="true"
+                                                        data-val-required="Campo requerido"
+                                                        name="$root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoMonedaMontoFijo"
+                                                        required>
+                                                    <option value="">[Seleccione]</option>
+                                                </select>
+                                                <div class="caja11 msgerror CodigoMonedaMontoFijo">
+                                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoMonedaMontoFijo" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <input class="InputTEXT_05 solodecimal"
+                                                       maxlength="10"
+                                                       type="text"
+                                                       ng-disabled="$root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck=='PTL' || $root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck=='PTB' || FlagEditing==false"
+                                                       ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.MontoFijo"
+                                                       data-bind="value: $root.DatosFormulario.DataConfiguracionTarifaLigada.MontoFijo"
+                                                       data-val="true"
+                                                       id="$root.DatosFormulario.DataConfiguracionTarifaLigada.MontoFijo"
+                                                       name="$root.DatosFormulario.DataConfiguracionTarifaLigada.MontoFijo"
+                                                       ng-keypress="SoloNumeros($event)"
+                                                       data-val-required="Campo requerido"
+                                                       required />
+                                                <div class="caja11 msgerror MontoFijo">
+                                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DataConfiguracionTarifaLigada.MontoFijo" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr class="active">
+                                            <td>2</td>
+                                            <td>
+                                                <input type="radio" name="PTL"
+                                                       ng-change="Cofiguration($root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck)"
+                                                       value={{$root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoPorTarifaLigada}}
+                                                       ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck" class="ng-valid ng-dirty"
+                                                       ng-disabled="FlagEditing==false" />
+                                                <label>{{$root.DatosFormulario.DataConfiguracionTarifaLigada.DescripcionPorTarifaLigada}}</label>
+                                            </td>
+                                            <td>
+                                                <input type="text" ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.PorcentajeTarifaLigada"
+                                                       data-bind="value: $root.DatosFormulario.DataConfiguracionTarifaLigada.PorcentajeTarifaLigada"
+                                                       ng-disabled="$root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck=='PTB' || $root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck=='MF' || FlagEditing==false"
+                                                       class="InputTEXT_05 solodecimal required"
+                                                       id="PorcentajeTarifaLigada"
+                                                       name="$root.DatosFormulario.DataConfiguracionTarifaLigada.PorcentajeTarifaLigada"
+                                                       data-val="true"
+                                                       ng-maxlength="3"
+                                                       maxlength="3"
+                                                       data-val-required="Campo requerido"
+                                                       ng-keypress="SoloNumeros($event)"
+                                                       required style="width: 50px" />
+                                                <div class="caja11 msgerror PorcentajeTarifaLigada">
+                                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DataConfiguracionTarifaLigada.PorcentajeTarifaLigada" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <select ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoMonedaPorcentajeTarifaLigada"
+                                                        data-bind="value: $root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoMonedaPorcentajeTarifaLigada"
+                                                        ng-disabled="$root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck=='PTB' || $root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck=='MF' || FlagEditing==false"
+                                                        ng-options="moneda.Codigo as moneda.Nombre for moneda in $root.DatosFormulario.DatosConfiguracionTarifaLigada.Moneda"
+                                                        class="InputSELECT_01 required"
+                                                        id="$root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoMonedaPorcentajeTarifaLigada"
+                                                        data-val="true"
+                                                        data-val-required="Campo requerido"
+                                                        name="$root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoMonedaPorcentajeTarifaLigada"
+                                                        required>
+                                                    <option value="">[Seleccione]</option>
+                                                </select>
+                                                <div class="caja11 msgerror CodigoMonedaPorcentajeTarifaLigada">
+                                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoMonedaPorcentajeTarifaLigada" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <input class="InputTEXT_05 solodecimal"
+                                                       type="text"
+                                                       ng-maxlength="10"
+                                                       ng-disabled="$root.DatosFormulario.DataConfiguracionTarifaLigada.Deshabilitada=='False'"
+                                                       ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.MontoTarifaLigada"
+                                                       data-val="true"
+                                                       data-bind="value: $root.DatosFormulario.DataConfiguracionTarifaLigada.MontoTarifaLigada"
+                                                       id="$root.DatosFormulario.DataConfiguracionTarifaLigada.MontoTarifaLigada"
+                                                       name="$root.DatosFormulario.DataConfiguracionTarifaLigada.MontoTarifaLigada"
+                                                       ng-keypress="SoloNumeros($event)"
+                                                       data-val-required="Campo requerido"
+                                                       required />
+                                                <div class="caja11 msgerror MontoTarifaLigada">
+                                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DataConfiguracionTarifaLigada.MontoTarifaLigada" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr class="active">
+                                            <td>3</td>
+                                            <td>
+                                                <input type="radio" name="PTB"
+                                                       ng-change="Cofiguration($root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck)"
+                                                       value={{$root.DatosFormulario.DataConfiguracionTarifaLigada.CodigoPorTarifaBase}}
+                                                       ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck" class="ng-valid ng-dirty"
+                                                       ng-disabled="FlagEditing==false" />
+                                                <label>{{$root.DatosFormulario.DataConfiguracionTarifaLigada.DescripcionPorTarifaBase}}</label>
+                                            </td>
+                                            <td>
+                                                <input type="text" ng-model="$root.DatosFormulario.DataConfiguracionTarifaLigada.PorcentajeTarifaBase"
+                                                       data-bind="value: $root.DatosFormulario.DataConfiguracionTarifaLigada.PorcentajeTarifaBase"
+                                                       ng-disabled="$root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck=='PTL' || $root.DatosFormulario.DataConfiguracionTarifaLigada.ConfigCheck=='MF' || FlagEditing==false"
+                                                       class="InputTEXT_05 solodecimal required"
+                                                       id="PorcentajeTarifaBase"
+                                                       name="$root.DatosFormulario.DataConfiguracionTarifaLigada.PorcentajeTarifaBase"
+                                                       data-val="true"
+                                                       ng-maxlength="3"
+                                                       maxlength="3"
+                                                       data-val-required="Campo requerido"
+                                                       ng-keypress="SoloNumeros($event)"
+                                                       required style="width: 50px">
+                                                <div class="caja11 msgerror PorcentajeTarifaBase">
+                                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DataConfiguracionTarifaLigada.PorcentajeTarifaBase" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="caja11 msgerror TipoCambio">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="TipoCambio" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+<div class="block ng-scope" style="max-width: 400px;">
+    <div ng-app="app" ng-controller="ListarTiposTransmisionNaveController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/BotoneraTipoTransmisionconBotonSalir.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Tipos Transmision Nave</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="ListarTiposTransmisionNaveFrm" name="ListarTiposTransmisionNaveFrm">
+                    <div class="block_content" style="width: 100%">
+                        <div class="col-md-12 row">
+                            <div class="row">
+                                <div class="col-md-6" style="left: 140px;">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.TipoTransmisionNave.Codigo"
+                                                    @*ng-options="tipotransmision.Codigo as tipotransmision.Descripcion for tipotransmision in $root.DatosFormulario.TipoTransmision.TiposTransmision" class="InputSELECT_01">*@
+                                                    ng-options="tipotransmisionnave.Codigo as tipotransmisionnave.Descripcion for tipotransmisionnave in $root.DatosFormulario.TipoTransmisionNave.TiposTransmisionNave" class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoTipoTransmisionNave">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.TipoTransmision.Codigo" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

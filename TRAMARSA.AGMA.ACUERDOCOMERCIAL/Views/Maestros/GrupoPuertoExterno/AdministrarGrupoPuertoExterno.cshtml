@@ -1,0 +1,116 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="AdministrarGrupoPuertoController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraBusquedaAcuerdoComercial.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Administrar Grupo Puerto Externo</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarGrupoPuertoExternoFrm" name="AdministrarGrupoPuertoExternoFrm">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Línea
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.AdministrarGrupoPuerto.Filtro.CodigoLinea"
+                                                    data-val="true"
+                                                    data-bind="value: $root.DatosFormulario.AdministrarGrupoPuerto.Filtro.CodigoLinea"
+                                                    ng-disabled="$root.DatosFormulario.AdministrarGrupoPuerto.Datos.Habilitado=='False'"
+                                                    ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.AdministrarGrupoPuerto.Datos.Lineas"
+                                                    class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoLinea">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarGrupoPuerto.Filtro.CodigoLinea" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Código
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 solonumeros"
+                                                   type="text" ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.AdministrarGrupoPuerto.Filtro.CodigoGrupoPuerto" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Nombre
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05"
+                                                   type="text" maxlength="100" ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.AdministrarGrupoPuerto.Filtro.NombreGrupoPuerto" />
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListadoaaaf142c-e3b5-4f27-a570-8bb3afeeb493" class="block_content">
+                    <div class="form_section" style="width:100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata="$root.DatosFormulario.AdministrarGrupoPuerto.ListaGrupoPuertoExterno"
+                                           gridid="grillaMaestroGrupoPuertoExterno"
+                                           pagerid="grillaMaestroGrupoPuertoExterno_pager"
+                                           api="gridapigrillaMaestroGrupoPuertoExterno"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="aaaf142c-e3b5-4f27-a570-8bb3afeeb493"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="150px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/GrupoPuertoExterno/ConsultarGrupoPuertoExterno"
+                                           flgcargargrilla="0">
+                                    <table id="grillaMaestroGrupoPuertoExterno"></table>
+                                    <div id="grillaMaestroGrupoPuertoExterno_pager"></div>
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

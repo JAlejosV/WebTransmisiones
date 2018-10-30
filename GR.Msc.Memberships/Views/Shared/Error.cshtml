@@ -1,0 +1,31 @@
+@using Viatecla.Factory.Scriptor
+<div class="conteudoInterno">
+    <div class="colunaMeio">
+
+        <div class="noticia">
+            <h3>A página que procura não se encontra disponível</h3>
+            <div id="content">
+                <div class="noticia">
+                   <p>
+  <br/><br/><br/><br/>
+                    	Lamentamos mas a página que procura não se encontra disponível.
+                    </p>
+                   <p>
+                    	Por favor, navegue nos menus ou dirija-se à <a href="@Url.ScriptorChannel(Viatecla.Factory.Scriptor.ModularSite.Models.Common.HomePageChannel)">página inicial</a> para encontrar o conteúdo que procura.
+                    </p>
+                </div>
+            </div>
+<span style="font-size: 50px;"></span>
+        </div>
+
+    </div>
+    <div class="colunaDireita">
+        @helper renderBlock(ScriptorContent block)
+        {
+            @Html.Template(block)
+        }
+
+        @Html.ScriptorContentInsert(Viatecla.Factory.Scriptor.ModularSite.Models.Common.HomePageChannel.Properties.Content.Parts.ZoneC as ScriptorContentInsert,
+            renderBlock)
+    </div>
+</div>

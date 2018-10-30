@@ -1,0 +1,292 @@
+{
+  "Data": [
+    {
+      "Id": "5d13ed8b-4c82-44eb-8f2c-6feb482b1224",
+      "Title": "n.d.",
+      "State": "Publicado",
+      "ChannelPath": "/tramarsa/portales_agma/calculador_web/sistema/busqueda/buscar_cliente_matchcode/props_buscar_cliente_matchcode",
+      "Path": "/tramarsa/portales_agma/calculador_web/sistema/busqueda/buscar_cliente_matchcode/props_buscar_cliente_matchcode/_215",
+      "Parts": {
+        "es_pe__Titulo": "Buscar Cliente MatchCode",
+        "Secciones": [
+          {
+            "Id": "6cb0806b-7029-4190-82b5-4c24aee9cb4b",
+            "Title": "Botonera",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/botonera_12",
+            "Parts": {
+              "es_pe__Nombre": "Botonera",
+              "CrearSeccion": "0",
+              "Titulo": "",
+              "TipoControlContenedor": {
+                "Value": "06",
+                "Title": "Botonera",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "63fd2927-cfc3-47ca-96fb-fd841df6c55e",
+                  "Title": "Botonera Busqueda Clásica con Boton Salir",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/botonera",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/botonera/botonera_busqueda_clasica_con_boton_salir",
+                  "Parts": {
+                    "Titulo": "Botonera Busqueda Clásica con Boton Salir"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": ""
+            }
+          },
+          {
+            "Id": "25d3188a-389b-4e18-841a-da029e59fc23",
+            "Title": "Cliente MatchCode: Búsqueda de Clientes",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/cliente_matchcode__busqueda_de_clientes",
+            "Parts": {
+              "es_pe__Nombre": "Cliente MatchCode: Búsqueda de Clientes",
+              "CrearSeccion": "0",
+              "Titulo": "",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "93c8eb10-45b4-482b-8f53-79c6a5dd1786",
+                  "Title": "Buscar Cliente MatchCode: Criterios de Búsqueda",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos/buscar_cliente_matchcode__criterios_de_busqueda",
+                  "Parts": {
+                    "es_pe__Titulo": "Buscar Cliente MatchCode: Criterios de Búsqueda",
+                    "en_gb__Titulo": "Buscar Cliente MatchCode: Criterios de Búsqueda"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": ""
+            }
+          },
+          {
+            "Id": "8a4d47a5-b6ef-4173-894d-1f0ffb6e5792",
+            "Title": "Cliente MatchCode: Resultado de Búsqueda",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/cliente_matchcode__resultado_de_busqueda",
+            "Parts": {
+              "es_pe__Nombre": "Cliente MatchCode: Resultado de Búsqueda",
+              "CrearSeccion": "0",
+              "Titulo": "Resultado de Búsqueda",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "6afa2882-7bef-4742-b49a-98dfece2c4dd",
+                  "Title": "grillaListaClientesMatchCode",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/_216",
+                  "Parts": {
+                    "objgrilla": "grillaListaClientesMatchCode",
+                    "ModelData": "",
+                    "es_pe__Nombre": "grillaListaClientesMatchCode",
+                    "FlgMostrarTitulo": "1",
+                    "es_pe__TituloSeccion": "RESULTADO DE BUSQUEDA",
+                    "columnas": [
+                      {
+                        "Id": "bc274e08-cf11-44a6-b26f-c499adadbaf0",
+                        "Title": "Marcar",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/marcar_10",
+                        "Parts": {
+                          "es_pe__Nombre": "Marcar",
+                          "IdColumna": "idCheck",
+                          "ancho": "85px",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "checkbox",
+                            "Title": "Checkbox",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "center",
+                            "Title": "Centro",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Marcar",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "94a0b1b2-4d1f-4730-a4a2-98f8df5f8fa6",
+                        "Title": "Cod. Cliente MatchCode",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/cod__cliente_matchcode",
+                        "Parts": {
+                          "es_pe__Nombre": "Cod. Cliente MatchCode",
+                          "IdColumna": "CodigoClienteMatchCode",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Cod. Cliente MatchCode",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "23435564-1a27-4111-8d5b-ea021b8b48f4",
+                        "Title": "Nombre del Cliente",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/nombre_del_cliente",
+                        "Parts": {
+                          "es_pe__Nombre": "Nombre del Cliente",
+                          "IdColumna": "Nombre",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Nombre del Cliente",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "5522f027-152f-4478-acc1-e72abe85c304",
+                        "Title": "RUC",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/ruc_6",
+                        "Parts": {
+                          "es_pe__Nombre": "RUC",
+                          "IdColumna": "Ruc",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      }
+                    ],
+                    "es_pe__NombreBotonExportar": "Exportar en Excel",
+                    "es_pe__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MensajeSinResultadoPersonalizado": "",
+                    "urlListar": "/Cliente/ConsultaClienteMatchCode",
+                    "en_gb__Nombre": "grillaListaClientesMatchCode",
+                    "en_gb__NombreBotonExportar": "Exportar en Excel",
+                    "en_gb__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MarcarRegistroSeleccionado": "0",
+                    "JSFilter": "",
+                    "JSDblClick": "",
+                    "JSOnLoad": "",
+                    "JSOnSelect": "",
+                    "altoGrilla": "150px",
+                    "FlgOcultarBarraPaginado": "0",
+                    "FlgCargarGrilla": "0",
+                    "TituloSinResultados": "",
+                    "FlgOcultarExportar": "0",
+                    "ngClickAgregar": "",
+                    "multiselect": "0"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": ""
+            }
+          }
+        ],
+        "ControladorAngular": "BuscarClienteMatchCodeController",
+        "AnchoMaximo": "800px",
+        "AltoMinimo": "",
+        "en_gb__Titulo": "Buscar Cliente MatchCode"
+      }
+    }
+  ],
+  "Error": false,
+  "Message": "OK"
+}

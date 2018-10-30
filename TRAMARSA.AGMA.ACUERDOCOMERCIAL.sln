@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GR.Frameworks", "GR.Frameworks\GR.Frameworks.csproj", "{0BE99CC0-965C-4002-972C-B5EF0DE4379A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GR.Msc.Memberships", "GR.Msc.Memberships\GR.Msc.Memberships.csproj", "{3FC0D686-442B-4D37-A065-B22F6C5BB6AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRAMARSA.AGMA.ACUERDOCOMERCIAL", "TRAMARSA.AGMA.ACUERDOCOMERCIAL\TRAMARSA.AGMA.ACUERDOCOMERCIAL.csproj", "{9AC9EC12-9A96-4F63-AAF7-9295DD26E377}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BE99CC0-965C-4002-972C-B5EF0DE4379A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BE99CC0-965C-4002-972C-B5EF0DE4379A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BE99CC0-965C-4002-972C-B5EF0DE4379A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BE99CC0-965C-4002-972C-B5EF0DE4379A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FC0D686-442B-4D37-A065-B22F6C5BB6AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FC0D686-442B-4D37-A065-B22F6C5BB6AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FC0D686-442B-4D37-A065-B22F6C5BB6AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FC0D686-442B-4D37-A065-B22F6C5BB6AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC9EC12-9A96-4F63-AAF7-9295DD26E377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC9EC12-9A96-4F63-AAF7-9295DD26E377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC9EC12-9A96-4F63-AAF7-9295DD26E377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AC9EC12-9A96-4F63-AAF7-9295DD26E377}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

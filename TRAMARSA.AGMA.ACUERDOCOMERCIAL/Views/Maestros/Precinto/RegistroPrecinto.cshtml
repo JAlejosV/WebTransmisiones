@@ -1,0 +1,79 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="RegistroPrecintoController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraGrabarMaestro.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos Precinto</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarPrecintoFrm" name="AdministrarPrecintoFrm">
+                    <div class="block_content" style="width: 100%">
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Numero de Precinto
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05"
+                                    type="text" ng-enter="Enter()" maxlength="15"
+                                    ng-model="$root.DatosFormulario.AdministrarPrecinto.RegistroDatos.NumeroPrecinto" />
+                                <div class="caja11 msgerror NumeroPrecinto">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarPrecinto.RegistroDatos.NumeroPrecinto" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Condicion de Precinto
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarPrecinto.RegistroDatos.CodigoCondicionPrecinto" />
+                                <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                    type="text"
+                                    ng-enter="Enter()"
+                                    ng-model="$root.DatosFormulario.AdministrarPrecinto.RegistroDatos.NombreCondicionPrecinto"
+                                    ng-disabled="true" />
+                                <input type="image" ng-click="BuscarCondicionPrecintoRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                    style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+
+                                <div class="caja11 msgerror NombreCondicionPrecinto">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarPrecinto.NombreCondicionPrecinto" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Entidad de Precinto
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarPrecinto.RegistroDatos.CodigoEntidadPrecinto" />
+                                <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                    type="text"
+                                    ng-enter="Enter()"
+                                    ng-model="$root.DatosFormulario.AdministrarPrecinto.RegistroDatos.NombreEntidadPrecinto"
+                                    ng-disabled="true" />
+                                <input type="image" ng-click="BuscarEntidadPrecintoRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                    style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+
+                                <div class="caja11 msgerror NombreEntidadPrecinto">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarPrecinto.NombreEntidadPrecinto" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

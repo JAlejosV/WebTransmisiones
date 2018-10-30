@@ -1,0 +1,107 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="AdministrarConfiguracionLineaController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraBusquedaAcuerdoComercial.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>DATOS GENERALES</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarConfiguracionLineaFrm" name="AdministrarConfiguracionLineaFrm">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Código Línea
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.AdministrarConfiguracionLinea.Filtro.CodigoLinea"
+                                                    data-val="true"
+                                                    data-bind="value: $root.DatosFormulario.AdministrarConfiguracionLinea.Filtro.CodigoLinea"
+                                                    ng-disabled="$root.DatosFormulario.AdministrarConfiguracionLinea.Datos.Habilitado=='False'"
+                                                    ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.AdministrarConfiguracionLinea.Datos.Lineas"
+                                                    class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoLinea">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarConfiguracionLinea.Filtro.CodigoLinea" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Estado
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select class="InputSELECT_01"
+                                                    ng-model="$root.DatosFormulario.AdministrarConfiguracionLinea.Filtro.Estado"
+                                                    ng-options="estado.Codigo as estado.Descripcion for estado  in $root.DatosFormulario.AdministrarConfiguracionLinea.Datos.Estados">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width: 100%; float: left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado0633c936-7de1-465e-8fbb-b5793e9a5610" class="block_content">
+                    <div class="form_section" style="width: 100%">
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden">
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata="$root.DatosFormulario.AdministrarConfiguracionLinea.ListaMaestroConfiguracionLinea"
+                                           gridid="grillaListaMaestroConfiguracionLinea"
+                                           pagerid="grillaListaMaestroConfiguracionLinea_pager"
+                                           api="gridapigrillaListaMaestroConfiguracionLinea"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="0633c936-7de1-465e-8fbb-b5793e9a5610"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="150px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/ConfiguracionLinea/ConsultaConfiguracionLinea"
+                                           flgcargargrilla="0">
+                                    <table id="grillaListaMaestroConfiguracionLinea"></table>
+                                    <div id="grillaListaMaestroConfiguracionLinea_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

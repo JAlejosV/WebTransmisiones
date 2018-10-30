@@ -1,0 +1,119 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+
+    <div ng-app="app" ng-controller="AdministrarPartidaArancelariaController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraBusquedaAcuerdoComercial.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>DATOS GENERALES</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarPartidaArancelariaFrm" name="AdministrarPartidaArancelariaFrm">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Código HS
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05"
+                                                   type="text" ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.AdministrarPartidaArancelaria.Filtro.CodigoPartidaArancelaria" />
+                                            <div class="caja11 msgerror CodigoPartidaArancelaria">
+                                                <!-- <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span> -->
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarPartidaArancelaria.Filtro.CodigoPartidaArancelaria" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Descripción HS
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_01"
+                                                   type="text" ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.AdministrarPartidaArancelaria.Filtro.Nombre" />
+                                            <div class="caja11 msgerror Nombre">
+                                                <!-- <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span> -->
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarPartidaArancelaria.Filtro.Nombre" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!--  <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Nombre Tipo Contenedor
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05"
+                                                   type="text" ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.AdministrarTipoContenedor.Filtro.NombreTipoContenedor" />
+
+                                        </div>
+                                    </div>  -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado1a0b5f06-bb91-4713-aa00-966ef96ad982" class="block_content">
+                    <div class="form_section" style="width:100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata="$root.DatosFormulario.AdministrarPartidaArancelaria.ListaMaestroPartidaArancelaria"
+                                           gridid="grillaListaMaestroPartidaArancelaria"
+                                           pagerid="grillaListaMaestroPartidaArancelaria_pager"
+                                           api="gridapigrillaListaMaestroPartidaArancelaria"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="1a0b5f06-bb91-4713-aa00-966ef96ad982"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="150px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/PartidaArancelaria/ConsultaPartidaArancelaria"
+                                           flgcargargrilla="0">
+                                    <table id="grillaListaMaestroPartidaArancelaria"></table>
+                                    <div id="grillaListaMaestroPartidaArancelaria_pager"></div>
+
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

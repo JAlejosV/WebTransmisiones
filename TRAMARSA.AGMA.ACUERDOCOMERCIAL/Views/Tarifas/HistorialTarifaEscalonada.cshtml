@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style="max-width:800px;">
+    <div ng-app="app" ng-controller="HistorialTarifaEscalonadaController" class="ng-scope">
+        @Html.Partial("~/Views/Botonera/AC_BotoneraHistorial.cshtml")
+        <div id="seccion-2">
+            <div style="width:100%;float:left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListadod9e4324a-f819-4bfa-b028-3100535b0f26" class="block_content">
+                    <div class="form_section" style="width:100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config" 
+                                           addnew="true" 
+                                           modeldata="" 
+                                           gridid="grillaHistorialTarifaEscalonada" 
+                                           pagerid="grillaHistorialTarifaEscalonada_pager" 
+                                           api="gridapigrillaHistorialTarifaEscalonada" 
+                                           flgocultarbarrapaginado="0" 
+                                           idgrilla="d9e4324a-f819-4bfa-b028-3100535b0f26" 
+                                           titulosinresultados=""
+                                           ocultarexportar="0" 
+                                           altogrilla="150px" 
+                                           idmarcarprimerresgistro="0" 
+                                           ngclickagregar="" 
+                                           urllistar="/TarifaEscalonada/ConsultarHistorialTarifaEscalonada" 
+                                           flgcargargrilla="1">
+                                    <table id="grillaHistorialTarifaEscalonada"></table>
+                                    <div id="grillaHistorialTarifaEscalonada_pager"></div>
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

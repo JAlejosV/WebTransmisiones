@@ -1,0 +1,174 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style="max-width:800px;">
+    <div ng-app="app" ng-controller="BuscarTarifaGeneralesController" class="ng-scope">
+        @Html.Partial("~/Views/Botonera/BotoneraBusquedaClásicaconBotonSalir.cshtml")
+
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Administración de Tarifas</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="BusquedaTarifaGeneralFrm" name="BusquedaTarifaGeneralFrm">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Línea Naviera
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.CodigoLinea"
+                                                    ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.FiltrosBusquedaTarifaGeneralCargaInicial.Linea" class="InputSELECT_01 required"
+                                                    id="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.CodigoLinea"
+                                                    data-val="true"
+                                                    data-val-required="Línea es requerido."
+                                                    ng-disabled="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.Habilitado=='False'"
+                                                    name="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.CodigoLinea"
+                                                    ng-change="CargarSucursal()"
+                                                    required>
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoLinea">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.CodigoLinea" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Sucursal
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.CodigoSucursal"
+                                                    ng-options="sucursal.Codigo as sucursal.Nombre for sucursal in $root.DatosFormulario.FiltrosBusquedaTarifaGeneralCargaInicial.Sucursal" class="InputSELECT_01"
+                                                    ng-change="CargarTerminalPortuario()">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Terminal Portuario
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.CodigoTerminalPortuario"
+                                                    ng-options="terminal.CodigoAlmacen as terminal.NombreAlmacen for terminal in $root.DatosFormulario.FiltrosBusquedaTarifaGeneralCargaInicial.TerminalPorturario" class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Descripción Tarifa
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 " maxlength="70" type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.DescripcionTarifa" />
+                                            <div class="caja11msgerrorRuc">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.DescripcionTarifa" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" style="display: none;">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            Descripción Tarifa
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input class="InputTEXT_05 " maxlength="70" type="text" ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.DescripcionTarifa" />
+                                            <div class="caja11msgerrorRuc">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.DescripcionTarifa" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row col-md-12">
+                                        <input type="checkbox" id="TarifaLigadaLocal" ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.FlagTarifaLigada" />Tarifa Ligada
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <input type="checkbox" id="VigenteTarifaLocal" ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.FlagVigente" />Vigentes
+                                        </div>
+                                        <div class="col-md-10">
+                                            Fecha Vigencia
+                                            <input class="InputTEXT_04Fecha"
+                                                   maxlength="10" type="text"
+                                                   ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.FechaVigencia"
+                                                   data-bind="dateValue: $root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.FechaVigencia,datePattern: 'dd/MM/yyyy'"
+                                                   data-val="true"
+                                                   data-val-date="El campo Fecha Vigencia debe ser una fecha."
+                                                   id="FechaVigencia"
+                                                   name="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.FechaVigencia"
+                                                   required
+                                                   control_max_date="FechaFin" />
+                                            <div class="caja11 msgerror FechaVigencia">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaTarifaGeneral.Filtro.FechaVigencia" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="caja11 msgerror Objeto"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="seccion-3">
+                <div style="width:100%;float:left">
+
+
+                    <div class="block_cab block_cab_active">
+                        <h2>
+                            <span>RESULTADO DE BUSQUEDA</span>
+                        </h2>
+                        <h3></h3>
+                        <div class="acordeon">
+                        </div>
+                    </div>
+                    <div id="ContentListadof478bbe4-1dd1-4f5d-a484-fb4d7d030165" class="block_content">
+                        <div class="form_section" style="width:100%">
+
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow:hidden">
+
+                                    <ng-jqgrid config="config"
+                                               addnew="true"
+                                               modeldata="$root.DatosFormulario.grillaListaTarifasGenerales"
+                                               gridid="grillaListaTarifasGenerales"
+                                               pagerid="grillaListaTarifasGenerales_pager"
+                                               api="gridapigrillaListaTarifasGenerales"
+                                               flgocultarbarrapaginado="0"
+                                               idgrilla="f478bbe4-1dd1-4f5d-a484-fb4d7d030165"
+                                               titulosinresultados=""
+                                               ocultarexportar="0"
+                                               altogrilla="200px"
+                                               idmarcarprimerresgistro="0"
+                                               ngclickagregar=""
+                                               urllistar="/TarifaGenerales/ConsultaTarifaGenerales"
+                                               flgcargargrilla="1">
+                                        <table id="grillaListaTarifasGenerales"></table>
+                                        <div id="grillaListaTarifasGenerales_pager"></div>
+                                    </ng-jqgrid>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

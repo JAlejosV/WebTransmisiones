@@ -1,0 +1,222 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="AdministrarTransmisionNaveController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraBusquedaTransmision.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Administrar Transmision Naves</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarTransmisionNaveFrm" name="AdministrarTransmisionNaveFrm">
+                    <div class="block_content" style="width: 100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            Nave
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarTransmisionNave.Filtro.CodigoNave" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.AdministrarTransmisionNave.Datos.NombreNave"
+                                                   ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarNave_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            Viaje
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input class="InputTEXT_05"
+                                                   type="text" ng-enter="Enter()" maxlength="6" onkeyup="mayus(this);"
+                                                   ng-model="$root.DatosFormulario.AdministrarTransmisionNave.Filtro.NumeroViajeItinerario" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            Tipo de Operacion
+                                        </div>
+                                        <div class="col-md-9">
+                                            <select ng-model="$root.DatosFormulario.AdministrarTransmisionNave.Filtro.CodigoTipoOperacion"
+                                                    ng-options="tipooperacion.CodigoTipoOperacion as tipooperacion.NombreTipoOperacion for tipooperacion in $root.DatosFormulario.TransmisionNaveIndex.TiposOperacion" class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            Numero Manifiesto
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input class="InputTEXT_05 solonumeros"
+                                                   type="text" ng-enter="Enter()" maxlength="6"
+                                                   ng-model="$root.DatosFormulario.AdministrarTransmisionNave.Filtro.NumeroManifiestoItinerario" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            Año Manifiesto
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input class="InputTEXT_05 solonumeros"
+                                                   type="text" ng-enter="Enter()" maxlength="4"
+                                                   ng-model="$root.DatosFormulario.AdministrarTransmisionNave.Filtro.AnioManifiestoItinerario" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            Aduana
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarTransmisionNave.Filtro.CodigoAduana" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.AdministrarTransmisionNave.Datos.NombreAduana"
+                                                   ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarAduana_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Enviado Sunat
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="checkbox" ng-enter="Enter()" ng-change="EventoChange_EnvioAduanas();"
+                                                   ng-model="$root.DatosFormulario.AdministrarTransmisionNave.Filtro.EstadoEnvioAduanas" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Transmitido Sunat
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="checkbox" ng-enter="Enter()" ng-change="EventoChange_EstadoTransmision();"
+                                                   ng-model="$root.DatosFormulario.AdministrarTransmisionNave.Filtro.EstadoTransmision" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Todos
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="checkbox" ng-enter="Enter()" ng-change="EventoChange_chkTodos();"
+                                                   ng-model="$root.DatosFormulario.AdministrarTransmisionNave.Filtro.Todos" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Fecha Inicial
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_04Fecha"
+                                                   maxlength="10" type="text"
+                                                   ng-model="$root.DatosFormulario.AdministrarTransmisionNave.Filtro.FechaInicio"
+                                                   data-bind="dateValue: $root.DatosFormulario.AdministrarTransmisionNave.Filtro.FechaInicio, datePattern: 'dd/MM/yyyy'"
+                                                   data-val="true"
+                                                   data-val-date="Fecha Inicio debe ser una fecha."
+                                                   id="FechaInicio"
+                                                   ng-enter="Enter()"
+                                                   name="$root.DatosFormulario.AdministrarTransmisionNave.Filtro.FechaInicio"
+                                                   required />
+                                            <div class="caja11 msgerror FechaInicio">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarTransmisionNave.Filtro.FechaInicio" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Fecha Final
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_04Fecha"
+                                                   maxlength="10" type="text"
+                                                   ng-model="$root.DatosFormulario.AdministrarTransmisionNave.Filtro.FechaFin"
+                                                   data-bind="dateValue: $root.DatosFormulario.AdministrarTransmisionNave.Filtro.FechaFin, datePattern: 'dd/MM/yyyy'"
+                                                   data-val="true"
+                                                   data-val-date="Fecha Fin debe ser una fecha."
+                                                   id="FechaFin"
+                                                   ng-enter="Enter()"
+                                                   name="$root.DatosFormulario.AdministrarTransmisionNave.Filtro.FechaFin"
+                                                   required />
+                                            <div class="caja11 msgerror FechaFin">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarTransmisionNave.Filtro.FechaFin" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="caja11 msgerror listaSeleccionada"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width: 100%; float: left">
+
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado1a0b5f06-bb91-4713-aa00-966ef96a2000" class="block_content">
+                    <div class="form_section" style="width: 100%">
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden">
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata="$root.DatosFormulario.AdministrarTransmisionNave.ListaTransmisionNave"
+                                           gridid="grillaListaTransmisionNave"
+                                           pagerid="grillaListaTransmisionNave_pager"
+                                           api="gridapigrillaListaTransmisionNave"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="1a0b5f06-bb91-4713-aa00-966ef96a2000"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="150px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/TransmisionNave/BusquedaTransmisionNave"
+                                           flgcargargrilla="0">
+                                    <table id="grillaListaTransmisionNave"></table>
+                                    <div id="grillaListaTransmisionNave_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,248 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="SeguimientoACLocalController">
+        <!-- BOTONERA -->
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraSeguimientoAcuerdosComerciales.cshtml")
+        </div>
+        <!-- BOTONERA -->
+
+        <!-- FILTROS BUSQUEDA -->
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Auditoría de Concesiones Locales</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="SeguimientoACLocalFrm" name="SeguimientoACLocalFrm">
+                    <div class="block_content" style="width: 100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Línea Naviera
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.SeguimientoACLocal.Filtro.CodigoLinea"
+                                                ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.SeguimientoACLocalIndex.Linea" class="InputSELECT_01 required"
+                                                id="$root.DatosFormulario.SeguimientoACLocal.Filtro.CodigoLinea"
+                                                data-val="true"
+                                                data-val-required="Línea naviera es requerido."
+                                                name="$root.DatosFormulario.SeguimientoACLocal.Filtro.CodigoLinea"
+                                                ng-disabled="$root.DatosFormulario.SeguimientoACLocalIndex.Habilitado=='False'"
+                                                required>
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoLinea">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.SeguimientoACLocal.Filtro.CodigoLinea" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Número Concesión
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 solonumeros" type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.SeguimientoACLocal.Filtro.CodigoAcuerdoComercialLocal" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Número RA
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 " maxlength="10" type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.SeguimientoACLocal.Filtro.CodigoRA" />
+                                            <div class="caja11 msgerror CodigoRA">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.SeguimientoACLocal.Filtro.CodigoRA" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Número BL
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 " ng-enter="Enter()" type="text" ng-model="$root.DatosFormulario.SeguimientoACLocal.Filtro.NumeroBL" disabled />
+                                            <input type="image" ng-click="BuscarNroBL_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Rol Cliente
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select id="RolCliente" multiple="multiple"></select>
+                                            <!--    <select ng-model="$root.DatosFormulario.SeguimientoACLocal.Filtro.CodigoRol"
+                                        data-bind="value: $root.DatosFormulario.SeguimientoACLocal.Filtro.CodigoRol"
+                                        ng-options="cliente.Codigo as cliente.Descripcion for cliente in $root.DatosFormulario.SeguimientoACLocalIndex.Rol"
+  										class="InputSELECT_01"
+                                        id="$root.DatosFormulario.SeguimientoACLocal.Filtro.CodigoRol"
+                                        data-val="true"
+                                        name="$root.DatosFormulario.SeguimientoACLocal.Filtro.CodigoRol">
+                                    <option value="">[Seleccione]</option>
+                                </select>
+							-->
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Estado
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.SeguimientoACLocal.Filtro.Estado"
+                                                ng-options="estado.Codigo as estado.Descripcion for estado in $root.DatosFormulario.SeguimientoACLocalIndex.Estados" class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Cliente
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="ng-hide" maxlength="70" type="text" ng-model="$root.DatosFormulario.SeguimientoACLocal.Filtro.CodigoCliente" disabled />
+                                            <input class="InputTEXT_05 " ng-enter="Enter()" type="text" ng-model="$root.DatosFormulario.SeguimientoACLocal.SeguimientoDatos.DescripcionCliente" disabled />
+                                            <input type="image" ng-click="BuscarCliente_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Número Contenedor
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 " ng-enter="Enter()" type="text" ng-model="$root.DatosFormulario.SeguimientoACLocal.Filtro.CodigoContenedor" disabled />
+                                            <input type="image" ng-click="BuscarNroCtn_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Usuario Creación
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="ng-hide" type="text" ng-model="$root.DatosFormulario.SeguimientoACLocal.Filtro.UsuarioCreacion" disabled />
+                                            <input class="InputTEXT_05" type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.SeguimientoACLocal.SeguimientoDatos.NombreUsuarioCreacion" disabled />
+                                            <input type="image" ng-click="BuscarUsuarioCreacion_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Usuario Aprobación
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="ng-hide" type="text" ng-model="$root.DatosFormulario.SeguimientoACLocal.Filtro.UsuarioAprobacion" disabled />
+                                            <input class="InputTEXT_05" type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.SeguimientoACLocal.SeguimientoDatos.NombreUsuarioAprobacion" disabled />
+                                            <input type="image" ng-click="BuscarUsuarioAprobacion_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Fecha Inicio
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_04Fecha"
+                                                maxlength="10" type="text"
+                                                ng-model="$root.DatosFormulario.SeguimientoACLocal.Filtro.FechaInicio"
+                                                data-bind="dateValue: $root.DatosFormulario.SeguimientoACLocal.Filtro.FechaInicio, datePattern: 'dd/MM/yyyy'"
+                                                data-val="true"
+                                                data-val-date="Fecha Inicio debe ser una fecha."
+                                                id="FechaInicio"
+                                                ng-enter="Enter()"
+                                                name="$root.DatosFormulario.SeguimientoACLocal.Filtro.FechaInicio"
+                                                required />
+                                            <div class="caja11 msgerror FechaInicio">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.SeguimientoACLocal.Filtro.FechaInicio" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Fecha Termino
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_04Fecha"
+                                                maxlength="10" type="text"
+                                                ng-model="$root.DatosFormulario.SeguimientoACLocal.Filtro.FechaFin"
+                                                data-bind="dateValue: $root.DatosFormulario.SeguimientoACLocal.Filtro.FechaFin, datePattern: 'dd/MM/yyyy'"
+                                                data-val="true"
+                                                ng-enter="Enter()"
+                                                data-val-date="Fecha Fin debe ser una fecha."
+                                                id="FechaFin"
+                                                name="$root.DatosFormulario.SeguimientoACLocal.Filtro.FechaFin"
+                                                required />
+                                            <div class="caja11 msgerror FechaFin">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.SeguimientoACLocal.Filtro.FechaFin" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- FILTROS BUSQUEDA -->
+
+        <!-- RESULTADO BUSQUEDA -->
+        <div id="seccion-3">
+            <div style="width: 100%; float: left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado1f188c36-c1c2-4159-a651-229067043c4c" class="block_content">
+                    <div class="form_section" style="width: 100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden">
+                                <ng-jqgrid
+                                    config="config"
+                                    addnew="true"
+                                    modeldata="$root.DatosFormulario.SeguimientoACLocal.ListaSeguimientoACLocal"
+                                    gridid="grillaListaSeguimientoACLocal"
+                                    pagerid="grillaListaSeguimientoACLocal_pager"
+                                    api="gridapigrillaListaSeguimientoACLocal"
+                                    flgocultarbarrapaginado="0"
+                                    idgrilla="1f188c36-c1c2-4159-a651-229067043c4c"
+                                    titulosinresultados=""
+                                    ocultarexportar="0"
+                                    altogrilla="150px"
+                                    idmarcarprimerresgistro="0"
+                                    ngclickagregar=""
+                                    urllistar="/AcuerdoComercialLocal/SeguimientoAcLocal"
+                                    flgcargargrilla="0">
+                                    <table id="grillaListaSeguimientoACLocal"></table>
+                                    <div id="grillaListaSeguimientoACLocal_pager"></div>
+                    
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- RESULTADO BUSQUEDA -->
+    </div>
+</div>

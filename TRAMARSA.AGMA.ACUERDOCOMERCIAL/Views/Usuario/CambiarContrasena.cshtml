@@ -1,0 +1,81 @@
+﻿@{
+    Layout = null;
+}
+<div class="block ng-scope" style="">
+    <div ng-app="app" ng-controller="AdministrarCuentaContrasenaController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_Cuentas_Botonera_Cambio_Contrasena.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Actualización de Contraseña</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarCuentaFrm" name="AdministrarCuentaFrm">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Contraseña Actual
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05"
+                                                   type="password"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.AdministrarCuenta.ClaveAnterior" />
+                                            <div class="caja11 msgerror ClaveAnterior">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarCuenta.ClaveAnterior" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Nueva Contraseña
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05"
+                                                   type="password"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.AdministrarCuenta.ClaveNueva" />
+                                            <div class="caja11 msgerror ClaveNueva">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarCuenta.ClaveNueva" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Repetir Contraseña
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05"
+                                                   type="password"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.AdministrarCuenta.ClaveNuevaConfirmada" />
+                                            <div class="caja11 msgerror ClaveNuevaConfirmada">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarCuenta.ClaveNuevaConfirmada" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="caja11 msgerror Objecto">
+                                        <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

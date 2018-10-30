@@ -1,0 +1,91 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="RegistroDetalleTipoContenedorExternoController">
+        <!-- BOTONERA -->
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraGrabarMaestro.cshtml")
+        </div>
+        <!-- BOTONERA -->
+
+        <!-- FILTROS REGISTRO -->
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos Detalle Tipo Contenedor Externo</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="RegistroDetalleTipoContenedorExternoFrm" name="RegistroDetalleTipoContenedorExternoFrm">
+                    <div class="block_content" style="width: 100%">
+                        <div class="row">
+                            <div class="col-md-12 row">
+                                <div class="col-md-4">
+                                    Clase Contenedor
+                                </div>
+                                <div class="col-md-8">
+                                    <select ng-model="$root.DatosFormulario.RegistroDetalleTipoContenedorExterno.RegistroDatos.CodigoClaseContenedor"
+                                        ng-change="BuscarTipoContenedor($root.DatosFormulario.RegistroDetalleTipoContenedorExterno.RegistroDatos.CodigoClaseContenedor,null)"
+                                        ng-options="tipocont.CodigoClaseContenedor as tipocont.Descripcion for tipocont in $root.DatosFormulario.RegistroDetalleTipoContenedorExterno.Datos.ClaseContenedorList"
+                                        class="InputSELECT_01">
+                                        <option value="">[Seleccione]</option>
+                                    </select>
+                                    <div class="caja11 msgerror CodigoClaseContenedor">
+                                        <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDetalleTipoContenedorExterno.RegistroDatos.CodigoClaseContenedor" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 row">
+                                <div class="col-md-4">
+                                    Código Tipo Contenedor
+                                </div>
+                                <div class="col-md-8">
+                                    <select ng-model="$root.DatosFormulario.RegistroDetalleTipoContenedorExterno.RegistroDatos.CodigoTipoContenedor"
+                                        ng-options="tipocont.CodigoTipoContenedor as tipocont.Descripcion for tipocont in $root.DatosFormulario.RegistroDetalleTipoContenedorExterno.Datos.TipoContenedorList"
+                                        class="InputSELECT_01">
+                                        <option value="">[Seleccione]</option>
+                                    </select>
+                                    <div class="caja11 msgerror CodigoTipoContenedor">
+                                        <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDetalleTipoContenedorExterno.RegistroDatos.CodigoTipoContenedor" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 row" style="display: none">
+                                <div class="col-md-4">
+                                    Estado Registro
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <input type="radio" name="activo" ng-enter="Enter()"
+                                                value="{{$root.DatosFormulario.RegistroDetalleTipoContenedorExterno.RegistroDatos.EstadoRegistroActivo}}"
+                                                ng-model="$root.DatosFormulario.RegistroDetalleTipoContenedorExterno.RegistroDatos.EstadoRegistro"
+                                                class="ng-valid ng-dirty"
+                                                ng-disabled="FlagEditing==false"
+                                                checked />
+                                            <label>Activo</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="radio" name="inactivo" ng-enter="Enter()"
+                                                value="{{$root.DatosFormulario.RegistroDetalleTipoContenedorExterno.RegistroDatos.EstadoRegistroInactivo}}"
+                                                ng-model="$root.DatosFormulario.RegistroDetalleTipoContenedorExterno.RegistroDatos.EstadoRegistro"
+                                                ng-disabled="FlagEditing==false"
+                                                class="ng-valid ng-dirty" />
+                                            <label>Inactivo</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- FILTROS REGISTRO -->
+    </div>
+</div>

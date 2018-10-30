@@ -1,0 +1,296 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+
+    <div ng-app="app" ng-controller="RegistroConfiguracionLineaController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_Botonera_Guardar_Modif_Deshab_Salir.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos Generales</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width:100%">
+                    <form id="frmAC_ConfiguracionLinea_DatosGenerales">
+                        <div class="col-md-12">
+
+                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarConfiguracionLinea.DatosRegistro.CodigoAcuerdoComercialLocal" />
+                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarConfiguracionLinea.DatosRegistro.Accion" />
+                            <div class="col-md-12 row rowAlto2" style="display:none;">
+                                <div class="col-md-3 ">
+                                    Nro Acuerdo:
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="InputTEXT_04 solonumeros" maxlength="11" type="text" ng-model="$root.DatosFormulario.AdministrarConfiguracionLinea.NroAcuerdo" />
+                                    <div class="caja11 msgerror NroAcuerdo">
+                                        <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarConfiguracionLinea.NroAcuerdo" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 row rowAlto2">
+                                <div class="col-md-2 ">
+                                    Línea Naviera:
+                                </div>
+                                <div class="col-md-4">
+                                    <select ng-model="$root.DatosFormulario.AdministrarConfiguracionLinea.DatosRegistro.CodigoLinea"
+                                            ng-change="ChangeLineaNaviera($root.DatosFormulario.AdministrarConfiguracionLinea.DatosRegistro.CodigoLinea)"
+                                            ng-disabled="$root.DatosFormulario.AdministrarConfiguracionLinea.Habilitado=='False' || FlagEditarLinea==false"
+                                            ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.AdministrarConfiguracionLinea.Lineas" class="InputSELECT_01">
+                                        <option value="">[Seleccione]</option>
+                                    </select>
+                                    <div class="caja11 msgerror CodigoLinea">
+                                        <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarConfiguracionLinea.DatosRegistro.CodigoLinea" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+
+
+                            <div class="col-md-12 row" style="margin-top: 5%; margin-left: 0.3%;">
+                                <div class="block_cab block_cab_active" style="width: 100%">
+                                    <h2>
+                                        <span>Sucursal</span>
+                                    </h2>
+                                    <h3></h3>
+                                    <div class="acordeon">
+                                    </div>
+                                </div>
+                                <div id="ContentListadoListaSucursales" class="block_content" style="width: 100%">
+                                    <div class="form_section" style="width: 100%">
+                                        <div class='forms2'>
+                                            <div class='table-responsive' style="overflow: hidden">
+                                                <ng-jqgrid config="config"
+                                                           addnew="true"
+                                                           modeldata="$root.DatosFormulario.AdministrarConfiguracionLinea.ListaSucursales"
+                                                           gridid="grillaListaSucursales"
+                                                           pagerid="grillaListaSucursales_pager"
+                                                           api="gridapiListaSucursales"
+                                                           flgocultarbarrapaginado="1"
+                                                           idgrilla="2ADD56F7-5319-442F-98A8-E5AA9FA5A866"
+                                                           altogrilla="100px"
+                                                           idmarcarprimerresgistro="0" url=""
+                                                           flgcargargrilla="1">
+
+                                                    <table id="grillaListaSucursales"></table>
+                                                    <div id="grillaListaSucursales_pager"></div>
+                                                </ng-jqgrid>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="caja11 msgerror listaSucursal">
+                                    <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <div class="col-md-12 row" style="margin-top: 5%; margin-left: 0.3%;">
+                                <div class="block_cab block_cab_active" style="width: 100%">
+                                    <h2>
+                                        <span>Terminal Portuario</span>
+                                    </h2>
+                                    <h3></h3>
+                                    <div class="acordeon">
+                                    </div>
+                                </div>
+                                <div id="ContentListadoListaTerminalPortuario" class="block_content" style="width: 100%">
+                                    <div class="form_section" style="width: 100%">
+                                        <div class='forms2'>
+                                            <div class='table-responsive' style="overflow: hidden">
+                                                <ng-jqgrid config="config"
+                                                           addnew="true"
+                                                           modeldata="$root.DatosFormulario.AdministrarConfiguracionLinea.ListaTerminalPortuario"
+                                                           gridid="grillaListaTerminalPortuario"
+                                                           pagerid="grillaListaTerminalPortuario_pager"
+                                                           api="gridapiListaTerminalPortuario"
+                                                           flgocultarbarrapaginado="1"
+                                                           idgrilla="B3276A11-E706-4FD6-ACAA-62569334D411"
+                                                           altogrilla="100px"
+                                                           idmarcarprimerresgistro="0" url=""
+                                                           flgcargargrilla="1">
+
+                                                    <table id="grillaListaTerminalPortuario"></table>
+                                                    <div id="grillaListaTerminalPortuario_pager"></div>
+                                                </ng-jqgrid>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="caja11 msgerror listaTerminalPortuario">
+                                    <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Configuración Administración de Concesiones de Sobrestadia</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width:100%">
+                    <form id="frm_Configuracion_Administracion_ACE" name="frm_Configuracion_Administracion_ACE">
+                        <div class="block_content table-responsive">
+                            <ng-jqgrid config="config"
+                                       addnew="true"
+                                       modeldata="$root.DatosFormulario.AdministrarConfiguracionLinea.DatosRegistro.ListaConfiguracionSeccionAdmConcesionEscalonada"
+                                       gridid="grillaListaConfiguracionLineaAdmAce"
+                                       pagerid="grillaListaConfiguracionLineaAdmAce_pager"
+                                       api="gridapigrillaListaConfiguracionLineaAdmAce"
+                                       flgocultarbarrapaginado="1"
+                                       idgrilla="8770BD39-0B3B-43EC-AD7C-166C55F04D05"
+                                       titulosinresultados=""
+                                       ocultarexportar="1"
+                                       altogrilla="130px"
+                                       idmarcarprimerresgistro="" url=""
+                                       flgcargargrilla="0">
+                                <table id="grillaListaConfiguracionLineaAdmAce"></table>
+                                <div id="grillaListaConfiguracionLineaAdmAce_pager"></div>
+                            </ng-jqgrid>
+                        </div>
+                        <div class="caja11 msgerror ListaConfiguracionSeccionAdmConcesionEscalonada">
+                            <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-4">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Configuración Concesiones de Sobrestadia</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width:100%">
+                    <form id="frm_Configuracion_ACE" name="frm_Configuracion_ACE">
+                        <div class="block_content table-responsive">
+                            <ng-jqgrid config="config"
+                                       addnew="true"
+                                       modeldata="$root.DatosFormulario.AdministrarConfiguracionLinea.DatosRegistro.ListaConfiguracionSeccionConcesionEscalonada"
+                                       gridid="grillaListaConfiguracionLineaAce"
+                                       pagerid="grillaListaConfiguracionLineaAce_pager"
+                                       api="gridapigrillaListaConfiguracionLineaAce"
+                                       flgocultarbarrapaginado="1"
+                                       idgrilla="50287613-1FEE-4356-91FE-28969BB7DD66"
+                                       titulosinresultados=""
+                                       ocultarexportar="1"
+                                       altogrilla="130px"
+                                       idmarcarprimerresgistro="" url=""
+                                       flgcargargrilla="0">
+                                <table id="grillaListaConfiguracionLineaAce"></table>
+                                <div id="grillaListaConfiguracionLineaAce_pager"></div>
+                            </ng-jqgrid>
+                        </div>
+                        <div class="caja11 msgerror ListaConfiguracionSeccionConcesionEscalonada">
+                            <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-5">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Configuración Administración de Concesiones Locales</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width:100%">
+                    <form id="frm_Configuracion_Administracion_AcLocal" name="frm_Configuracion_Administracion_AcLocal">
+                        <div class="block_content table-responsive">
+                            <ng-jqgrid config="config"
+                                       addnew="true"
+                                       modeldata="$root.DatosFormulario.AdministrarConfiguracionLinea.DatosRegistro.ListaConfiguracionSeccionAdmConcesionLocal"
+                                       gridid="grillaListaConfiguracionLineaAdmAcLocal"
+                                       pagerid="grillaListaConfiguracionLineaAdmAcLocal_pager"
+                                       api="gridapigrillaListaConfiguracionLineaAdmAcLocal"
+                                       flgocultarbarrapaginado="1"
+                                       idgrilla="AE033DF8-DA82-456A-BB44-0E1E4DE17EE5"
+                                       titulosinresultados=""
+                                       ocultarexportar="1"
+                                       altogrilla="130px"
+                                       idmarcarprimerresgistro="" url=""
+                                       flgcargargrilla="0">
+                                <table id="grillaListaConfiguracionLineaAdmAcLocal"></table>
+                                <div id="grillaListaConfiguracionLineaAdmAcLocal_pager"></div>
+                            </ng-jqgrid>
+                        </div>
+                        <div class="caja11 msgerror ListaConfiguracionSeccionAdmConcesionLocal">
+                            <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-6">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Configuración Concesiones Local</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width:100%">
+                    <form id="frm_Configuracion_AcLocal" name="frm_Configuracion_AcLocal">
+                        <div class="block_content table-responsive">
+                            <ng-jqgrid config="config"
+                                       addnew="true"
+                                       modeldata="$root.DatosFormulario.AdministrarConfiguracionLinea.DatosRegistro.ListaConfiguracionSeccionConcesionLocal"
+                                       gridid="grillaListaConfiguracionLineaAcLocal"
+                                       pagerid="grillaListaConfiguracionLineaAcLocal_pager"
+                                       api="gridapigrillaListaConfiguracionLineaAcLocal"
+                                       flgocultarbarrapaginado="1"
+                                       idgrilla="F88943B5-24EE-4251-9F0F-4F688E79D678"
+                                       titulosinresultados=""
+                                       ocultarexportar="1"
+                                       altogrilla="130px"
+                                       idmarcarprimerresgistro="" url=""
+                                       flgcargargrilla="0">
+                                <table id="grillaListaConfiguracionLineaAcLocal"></table>
+                                <div id="grillaListaConfiguracionLineaAcLocal_pager"></div>
+                            </ng-jqgrid>
+                        </div>
+                        <div class="caja11 msgerror ListaConfiguracionSeccionConcesionLocal">
+                            <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

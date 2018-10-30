@@ -1,0 +1,135 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="max-width: 800px;">
+    <div ng-app="app" ng-controller="BuscarClienteController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/BotoneraBusquedaClásicaconBotonSalir.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Criterios de Búsqueda</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="BusquedaClienteFrm" name="BusquedaClienteFrm">
+                    <div style="max-width: 100%; height: 100%">
+                        <div class="col-md-12 row">
+                            <input type="text" class="ng-hide" ng-model="$root.FlagCallClientes" />
+                        </div>
+                    </div>
+                    <div class="block_content" style="width:100%">
+                        <div id="RolCliente" class="col-md-12 row">
+                            <div class="col-md-4">
+                                Rol
+                            </div>
+                            <div class="col-md-8">
+                                <select ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarClientes.CodigoRol"
+                                        data-bind="value: $root.DatosFormulario.DatosGenerales.DataBuscarClientes.CodigoRol"
+                                        ng-disabled="$root.DatosFormulario.DatosGenerales.DataBuscarClientes.Habilitado=='False'"
+                                        ng-options="cliente.Codigo as cliente.Descripcion for cliente in $root.DatosFormulario.DatosBusqueda.Rol" class="InputSELECT_01 required"
+                                        id="$root.DatosFormulario.DatosGenerales.DataBuscarClientes.CodigoRol"
+                                        data-val="true"
+                                        name="$root.DatosFormulario.DatosGenerales.DataBuscarClientes.CodigoRol">
+                                    <option value="">[Seleccione]</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Código Cliente SAP
+                            </div>
+                            <div class="col-md-4">
+                                <input class="InputTEXT_05"
+                                       maxlength="10"
+                                       type="text"
+                                       ng-enter="Enter()"
+                                       ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarClientes.CodigoCliente"
+                                       data-bind="value: $root.DatosFormulario.DatosGenerales.DataBuscarClientes.CodigoCliente"
+                                       id="$root.DatosFormulario.DatosGenerales.DataBuscarClientes.CodigoCliente"
+                                       name="$root.DatosFormulario.DatosGenerales.DataBuscarClientes.CodigoCliente" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Cliente
+                            </div>
+                            <div class="col-md-4">
+                                <input class="InputTEXT_05 " maxlength="80" type="text" ng-enter="Enter()"
+                                       id="$root.DatosFormulario.DatosGenerales.DataBuscarClientes.Nombre"
+                                       ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarClientes.Nombre" />
+                                <div class="caja11 msgerror Nombre"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                DNI
+                            </div>
+                            <div class="col-md-4">
+                                <input class="InputTEXT_05 " maxlength="8" type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarClientes.Dni" />
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                RUC
+                            </div>
+                            <div class="col-md-4">
+                                <input class="InputTEXT_05 " maxlength="11" type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarClientes.Ruc" />
+                            </div>
+                        </div>
+                        <div class="caja11 msgerror Objeto"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListadocd2c022a-e498-4a3e-8cdf-c835a0339dc6" class="block_content">
+                    <div class="form_section" style="width:100%">
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata=""
+                                           gridid="grillaListaClientes"
+                                           pagerid="grillaListaClientes_pager"
+                                           api="gridapigrillaListaClientes"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="cd2c022a-e498-4a3e-8cdf-c835a0339dc6"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="150px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/Cliente/ConsultaCliente"
+                                           flgcargargrilla="1">
+                                    <table id="grillaListaClientes"></table>
+                                    <div id="grillaListaClientes_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

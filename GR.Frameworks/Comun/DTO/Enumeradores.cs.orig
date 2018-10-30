@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace GR.Scriptor.Framework
+{
+    //Los que son valores de Catalogo de Tablas, deben coincidir con la columna CodigoTabla de la tabla CatalogoTablas
+    public enum KeyCache
+    {
+        CatalogoTablas,
+        Bancos,
+        TipoDocumento,
+        TipoMoneda,
+        TipoRecargo,
+        Sucursal,
+        TerminalPortuario,
+        Linea,
+        Moneda,
+        Puerto,
+        DetalleCatalogo
+
+    }
+
+    public enum TablaTablas
+    {
+
+        /*CatalogoTablas*/
+        TipoVigencia=1,//-----------------------------------------------
+        TipoValorVigencia=2,//-----------------------------------------------
+        Regimen=3,//-----------------------------------------------
+        Estado=4,//-----------------------------------------------
+        UnidadDeCalculo=5,//-----------------------------------------------
+        TipoFechaCalculo=6,//-----------------------------------------------
+        TipoConfiguracionTarifa=7,//-----------------------------------------------
+        TipoDias=8,//-----------------------------------------------
+        Condicion=9,//-----------------------------------------------
+        TipoConfiguracionTarifaLigada=12,//-----------------------------------------------
+        TipoCriterio = 14,//-----------------------------------------------
+        TipoPuerto = 17,//-----------------------------------------------
+<<<<<<< HEAD
+        TipoDescuento = 13,//-----------------------------------------------
+=======
+        TipoDocumento = 18,//-----------------------------------------------
+>>>>>>> 85c0b2f57d7490490b590e54ee5c11d85423518c
+
+        /*CatalogoTablas*/
+    }
+}

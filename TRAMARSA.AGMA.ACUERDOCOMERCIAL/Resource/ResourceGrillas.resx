@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="IdGrilla_BusquedaUsuarios" xml:space="preserve">
+    <value>7EC38F82-E3B0-4757-B362-5C8F7EBE4FC9</value>
+  </data>
+  <data name="IdGrilla_ConsultaCliente" xml:space="preserve">
+    <value>CD2C022A-E498-4A3E-8CDF-C835A0339DC6</value>
+  </data>
+  <data name="IdGrilla_ConsultaClienteMatchCode" xml:space="preserve">
+    <value>6AFA2882-7BEF-4742-B49A-98DFECE2C4DD</value>
+  </data>
+  <data name="IdGrilla_ConsultaPartidaArancelaria" xml:space="preserve">
+    <value>55539F84-B4C2-446E-884C-27D6899DC15F</value>
+  </data>
+  <data name="IdGrilla_ConsultaACLocal" xml:space="preserve">
+    <value>B36E52FB-1E90-4F77-871A-CCF069D20D42</value>
+  </data>
+  <data name="IdGrilla_ConsultaDocumentoOrigen" xml:space="preserve">
+    <value>18B0EDD8-1287-4ED9-84BF-4FFC9FBFFCC7</value>
+  </data>
+  <data name="IdGrilla_ConsultaHistorialTarifaEscalonada" xml:space="preserve">
+    <value>D9E4324A-F819-4BFA-B028-3100535B0F26</value>
+  </data>
+  <data name="IdGrilla_ConsultaHistorialTarifaLocal" xml:space="preserve">
+    <value>95F77B50-18A0-43F0-9B0C-62505E57F695</value>
+  </data>
+  <data name="IdGrilla_ConsultaNave" xml:space="preserve">
+    <value>77EB45AF-2235-4257-950D-5EB797CE2DDD</value>
+  </data>
+  <data name="IdGrilla_ConsultaPuerto" xml:space="preserve">
+    <value>FE65F132-8A28-4BA1-8D16-D1CADE8AFB99</value>
+  </data>
+  <data name="IdGrilla_ConsultaTarifa" xml:space="preserve">
+    <value>C293C8DE-4D2D-4B54-84F4-39F4F0B4E6CF</value>
+  </data>
+  <data name="IdGrilla_ConsultaTarifaEscalonada" xml:space="preserve">
+    <value>CBA3AF78-2490-4083-97B9-B47ADBC46BE1</value>
+  </data>
+  <data name="IdGrilla_ConsultaTarifaGeneral" xml:space="preserve">
+    <value>F478BBE4-1DD1-4F5D-A484-FB4D7D030165</value>
+  </data>
+  <data name="IdGrilla_ConsultaTarifaLocal" xml:space="preserve">
+    <value>10E91FE3-09A7-4ACE-A9F3-D34D4460B814</value>
+  </data>
+  <data name="IdGrilla_ConsultaServicioBl" xml:space="preserve">
+    <value>EB71C41A-8056-475F-8674-5157DB3B1A77</value>
+  </data>
+  <data name="IdGrilla_ConsultaTipoContenedor" xml:space="preserve">
+    <value>01FD2ABF-68BF-49B0-A0CD-CCFC416418F3</value>
+  </data>
+  <data name="IdGrilla_ConsultaHistorialACLocal" xml:space="preserve">
+    <value>B91C77DB-BCF3-426F-8105-00AA6566194D</value>
+  </data>
+  <data name="IdGrilla_SeguimientoACEscalonado" xml:space="preserve">
+    <value>608211B8-795B-4A7A-A6C1-CEF7862EEFD1</value>
+  </data>
+  <data name="IdGrilla_SeguimientoACLocal" xml:space="preserve">
+    <value>1F188C36-C1C2-4159-A651-229067043C4C</value>
+  </data>
+  <data name="IdGrilla_ConsultaACEscalonado" xml:space="preserve">
+    <value>407A472C-4B7A-4DD5-83A5-19F5B78B6E36</value>
+  </data>
+  <data name="IdGrilla_ConsultaHistorialACEscalonado" xml:space="preserve">
+    <value>FE1D26D5-6DAD-42EB-AB3A-E20A00135C64</value>
+  </data>
+  <data name="IdGrilla_ListaReporteTarifaLocal" xml:space="preserve">
+    <value>7275950D-31EE-44DB-9336-FB5AB8F153E3</value>
+  </data>
+  <data name="IdGrilla_ListaReporteACLocal" xml:space="preserve">
+    <value>7FEE114B-F023-45BE-87B6-233EB1BDFFD1</value>
+  </data>
+  <data name="IdGrilla_ListaReporteACEscalonado" xml:space="preserve">
+    <value>D31FEBD5-D350-4959-BA1B-7ADB6A80492C</value>
+  </data>
+  <data name="IdGrilla_ListaconfiguracionLinea" xml:space="preserve">
+    <value>0633C936-7DE1-465E-8FBB-B5793E9A5610</value>
+  </data>
+  <data name="IdGrilla_ListaReporteTarifaEscalonada" xml:space="preserve">
+    <value>A7BFECE3-7865-406E-AE85-B0D0631F6D85</value>
+  </data>
+  <data name="IdGrilla_AdminTipoContenedor" xml:space="preserve">
+    <value>3832A03A-AA4B-4175-94AF-1E96AD895603</value>
+  </data>
+  <data name="IdGrilla_ConsultarGrupoPuerto" xml:space="preserve">
+    <value>AAAF142C-E3B5-4F27-A570-8BB3AFEEB493</value>
+  </data>
+  <data name="IdGrilla_ReporteContenedorNoDevuelto" xml:space="preserve">
+    <value>2A64C309-04CB-4428-B008-BE08F2B8C548</value>
+  </data>
+  <data name="IdGrilla_PesoVariable" xml:space="preserve">
+    <value>3E51F306-5F4E-4E87-8B00-4890829A63C7</value>
+  </data>
+  <data name="IdGrilla_TipoContenedorExterno" xml:space="preserve">
+    <value>1F128891-EBA6-451C-9917-1123B9ACFFA9</value>
+  </data>
+  <data name="IdGrilla_ConsultarDetalleGrupoPuertoExterno" xml:space="preserve">
+    <value>58E3C1BA-EAA7-499D-993B-554FACB8FE92</value>
+  </data>
+  <data name="IdGrilla_ConsultarDetalleTipoContenedorExterno" xml:space="preserve">
+    <value>B5AA03D4-3E30-4F54-91F5-32C887C8FEED</value>
+  </data>
+  <data name="IdGrilla_ConsultaNoProcesados" xml:space="preserve">
+    <value>3601365D-2DD9-46B6-A021-D38D309DBB0C</value>
+  </data>
+  <data name="IdGrilla_ConsultaMonitorCoparn" xml:space="preserve">
+    <value>02d9bb68-8228-4742-a825-638b4caf33fa</value>
+  </data>
+  <data name="IdGrilla_ConsultaDepositoDefault" xml:space="preserve">
+    <value>69A1584C-D5EF-454F-8476-9F31A959B90A</value>
+  </data>
+  <data name="IdGrilla_ConsultaBandejaNotificacionIntegracion" xml:space="preserve">
+    <value>6B6C4707-D1AA-4A21-BE0E-B9FCDBD8BFB6</value>
+  </data>
+</root>

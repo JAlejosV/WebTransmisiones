@@ -1,0 +1,450 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="RegistroItinerarioController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraGrabarMaestro.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos Itinerario</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarItinerarioFrm" name="AdministrarItinerarioFrm">
+                    <div class="block_content" style="width: 100%">
+                        <div class="col-md-12 row">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Nave
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.CodigoNave" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.NombreNave"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarNaveRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+
+                                            <div class="caja11 msgerror NombreNave">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.NombreNave" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Viaje
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05" maxlength="6"
+                                                type="text" ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.NumeroViajeItinerario" />
+                                            <div class="caja11 msgerror NumeroViajeItinerario">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.NumeroViajeItinerario" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Numero de Manifiesto
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 solonumeros" maxlength="6"
+                                                type="text" ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.NumeroManifiestoItinerario" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Año de Manifiesto
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 solonumeros" maxlength="4"
+                                                type="text" ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.AnioManifiestoItinerario" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Aduana
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.CodigoAduana" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.NombreAduana"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarAduanaRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+
+                                            <div class="caja11 msgerror NombreAduana">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.NombreAduana" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Tipo de Operacion
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.CodigoTipoOperacion"
+                                                ng-options="tipooperacion.CodigoTipoOperacion as tipooperacion.NombreTipoOperacion for tipooperacion in $root.DatosFormulario.AdministrarItinerario.RegistroDatos.TiposOperacion" class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoTipoOperacion">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.CodigoTipoOperacion" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @*                 <div class="row">
+                                        <div class="col-md-4">
+                                            Tipo de Operacion
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05" maxlength="4"
+                                                type="text" ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.CodigoTipoOperacion" />
+                                        </div>
+                                    </div>*@
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Agente Maritimo
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.CodigoAgenteMaritimoItinerario" />
+                                            <input class="InputTEXT_04" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.NombreAgenteMaritimoItinerario"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarAgenteMaritimoItinerarioRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+
+                                            <div class="caja11 msgerror NombreAgenteMaritimoItinerario">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.NombreAgenteMaritimoItinerario" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Operador de Embarque
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.CodigoOperadorEmbarqueItinerario" />
+                                            <input class="InputTEXT_04" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.NombreOperadorEmbarqueItinerario"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarOperadorEmbarqueItinerarioRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+
+                                            <div class="caja11 msgerror NombreOperadorEmbarqueItinerario">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.NombreOperadorEmbarqueItinerario" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Operador de Descarga
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.CodigoOperadorDescargaItinerario" />
+                                            <input class="InputTEXT_04" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.NombreOperadorDescargaItinerario"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarOperadorDescargaItinerarioRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+
+                                            <div class="caja11 msgerror NombreOperadorDescargaItinerario">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.NombreOperadorDescargaItinerario" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Tipo de Lugar de Carga
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.CodigoTipoLugarCarga" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.NombreTipoLugarCarga"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarTipoLugarCargaRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                            <div class="caja11 msgerror NombreTipoLugarCarga">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.NombreTipoLugarCarga" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            Fecha Arribo
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input class="InputTEXT_04Fecha"
+                                                maxlength="10" type="text"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaArriboItinerario"
+                                                data-bind="dateValue: $root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaArriboItinerario, datePattern: 'dd/MM/yyyy'"
+                                                data-val="true"
+                                                data-val-date="Fecha de Arribo debe ser una fecha."
+                                                id="FechaArriboItinerario"
+                                                ng-enter="Enter()"
+                                                name="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaArriboItinerario"
+                                                disabled
+                                                required />
+                                            <div class="caja11 msgerror FechaArriboItinerario">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaArriboItinerario" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="text" ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraArriboItinerario"
+                                                data-bind="value: $root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraArriboItinerario"
+                                                class="InputTEXT_05"
+                                                name="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraArriboItinerario"
+                                                data-val="true"
+                                                ng-enter="Enter()"
+                                                id="HoraArriboItinerario"
+                                                style="width: 100px">
+                                            @*<span style="padding-left: 10px;">(HH:MM)</span>*@
+                                            <div class="caja11 msgerror HoraArriboItinerario">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraArriboItinerario" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            Fecha Zarpe
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input class="InputTEXT_04Fecha"
+                                                maxlength="10" type="text"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaZarpeItinerario"
+                                                data-bind="dateValue: $root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaZarpeItinerario, datePattern: 'dd/MM/yyyy'"
+                                                data-val="true"
+                                                data-val-date="Fecha de Zarpe debe ser una fecha."
+                                                id="FechaZarpeItinerario"
+                                                ng-enter="Enter()"
+                                                name="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaZarpeItinerario"
+                                                disabled
+                                                required />
+                                            <div class="caja11 msgerror FechaZarpeItinerario">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaZarpeItinerario" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="text" ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraZarpeItinerario"
+                                                data-bind="value: $root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraZarpeItinerario"
+                                                class="InputTEXT_05"
+                                                name="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraZarpeItinerario"
+                                                data-val="true"
+                                                ng-enter="Enter()"
+                                                id="HoraZarpeItinerario"
+                                                style="width: 100px">
+                                            @*<span style="padding-left: 10px;">(HH:MM)</span>*@
+                                            <div class="caja11 msgerror HoraZarpeItinerario">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraZarpeItinerario" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            Fecha Atraque
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input class="InputTEXT_04Fecha"
+                                                maxlength="10" type="text"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaAtraqueItinerario"
+                                                data-bind="dateValue: $root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaAtraqueItinerario, datePattern: 'dd/MM/yyyy'"
+                                                data-val="true"
+                                                data-val-date="Fecha de Atraque debe ser una fecha."
+                                                id="FechaAtraqueItinerario"
+                                                ng-enter="Enter()"
+                                                name="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaAtraqueItinerario"
+                                                disabled
+                                                required />
+                                            <div class="caja11 msgerror FechaAtraqueItinerario">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaAtraqueItinerario" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="text" ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraAtraqueItinerario"
+                                                data-bind="value: $root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraAtraqueItinerario"
+                                                class="InputTEXT_05"
+                                                name="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraAtraqueItinerario"
+                                                data-val="true"
+                                                ng-enter="Enter()"
+                                                id="HoraAtraqueItinerario"
+                                                style="width: 100px">
+                                            @*<span style="padding-left: 10px;">(HH:MM)</span>*@
+                                            <div class="caja11 msgerror HoraAtraqueItinerario">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraAtraqueItinerario" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            Fecha Termino Descarga
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input class="InputTEXT_04Fecha"
+                                                maxlength="10" type="text"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaTerminoDescargaItinerario"
+                                                data-bind="dateValue: $root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaTerminoDescargaItinerario, datePattern: 'dd/MM/yyyy'"
+                                                data-val="true"
+                                                data-val-date="Fecha de TerminoDescarga debe ser una fecha."
+                                                id="FechaTerminoDescargaItinerario"
+                                                ng-enter="Enter()"
+                                                name="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaTerminoDescargaItinerario"
+                                                disabled
+                                                required />
+                                            <div class="caja11 msgerror FechaTerminoDescargaItinerario">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaTerminoDescargaItinerario" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="text" ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraTerminoDescargaItinerario"
+                                                data-bind="value: $root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraTerminoDescargaItinerario"
+                                                class="InputTEXT_05"
+                                                name="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraTerminoDescargaItinerario"
+                                                data-val="true"
+                                                ng-enter="Enter()"
+                                                id="HoraTerminoDescargaItinerario"
+                                                style="width: 100px">
+                                            @*<span style="padding-left: 10px;">(HH:MM)</span>*@
+                                            <div class="caja11 msgerror HoraTerminoDescargaItinerario">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraTerminoDescargaItinerario" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            DUE
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input class="InputTEXT_05" maxlength="15"
+                                                type="text" ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.DUEItinerario" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            Capitan
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input class="InputTEXT_05" maxlength="50"
+                                                type="text" ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.CapitanNaveItinerario" />
+                                            <div class="caja11 msgerror CapitanNaveItinerario">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.CapitanNaveItinerario" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            Voyage
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input class="InputTEXT_05" maxlength="10"
+                                                type="text" ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.Voyage" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            Puerto Intermedio
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.CodigoPuertoIntermedio" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.NombrePuertoIntermedio"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarPuertoIntermedioRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+
+                                            <div class="caja11 msgerror NombrePuertoIntermedio">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.NombrePuertoIntermedio" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            Fecha Zarpe Puerto Intermedio
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input class="InputTEXT_04Fecha"
+                                                maxlength="10" type="text"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaZarpePuertoIntermedio"
+                                                data-bind="dateValue: $root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaZarpePuertoIntermedio, datePattern: 'dd/MM/yyyy'"
+                                                data-val="true"
+                                                data-val-date="Fecha de Fecha de Puerto Intermedio debe ser una fecha."
+                                                id="FechaZarpePuertoIntermedio"
+                                                ng-enter="Enter()"
+                                                name="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaZarpePuertoIntermedio"
+                                                disabled
+                                                required />
+                                            <div class="caja11 msgerror FechaZarpePuertoIntermedio">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.FechaZarpePuertoIntermedio" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="text" ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraZarpePuertoIntermedio"
+                                                data-bind="value: $root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraZarpePuertoIntermedio"
+                                                class="InputTEXT_05"
+                                                name="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraZarpePuertoIntermedio"
+                                                data-val="true"
+                                                ng-enter="Enter()"
+                                                id="HoraZarpePuertoIntermedio"
+                                                style="width: 100px">
+                                            @*<span style="padding-left: 10px;">(HH:MM)</span>*@
+                                            <div class="caja11 msgerror HoraZarpePuertoIntermedio">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.HoraZarpePuertoIntermedio" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            Tipo de Lugar de Carga Intermedio
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.CodigoTipoLugarCargaPuertoIntermedio" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.RegistroDatos.NombreTipoLugarCargaPuertoIntermedio"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarTipoLugarCargaPuertoIntermedioRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                            <div class="caja11 msgerror NombreTipoLugarCargaPuertoIntermedio">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.NombreTipoLugarCargaPuertoIntermedio" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

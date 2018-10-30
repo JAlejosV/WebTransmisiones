@@ -1,0 +1,556 @@
+{
+  "Data": [
+    {
+      "Id": "603839de-4d8c-4689-9cc8-d0ab95565ac2",
+      "Title": "n.d.",
+      "State": "Publicado",
+      "ChannelPath": "/tramarsa/portales_agma/calculador_web/sistema/registro_de_acuerdo_comercial_escalonado/cofiguracion_rango/props_cofiguracion_rango",
+      "Path": "/tramarsa/portales_agma/calculador_web/sistema/registro_de_acuerdo_comercial_escalonado/cofiguracion_rango/props_cofiguracion_rango/_178",
+      "Parts": {
+        "es_pe__Titulo": "Cofiguracion Rango",
+        "Secciones": [
+          {
+            "Id": "edd97771-2bd8-451e-8ffe-db052810c179",
+            "Title": "Botonera Configuracion Periodo ACE",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/botonera_configuracion_periodo_ace_2",
+            "Parts": {
+              "es_pe__Nombre": "Botonera Configuracion Periodo ACE",
+              "CrearSeccion": "0",
+              "Titulo": "",
+              "TipoControlContenedor": {
+                "Value": "06",
+                "Title": "Botonera",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "e91e87c4-f135-4210-80d8-17f95ba7bf4d",
+                  "Title": "Botonera Configuracion Periodo ACE",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/botonera",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/botonera/botonera_configuracion_periodo_ace",
+                  "Parts": {
+                    "Titulo": "Botonera Configuracion Periodo ACE"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Botonera Configuracion Periodo ACE"
+            }
+          },
+          {
+            "Id": "6828a0b5-1342-4d31-86ab-019dc2013c8b",
+            "Title": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Datos Generales",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/reg_acuerdo_comercial_escalonado___tarifas___periodos__datos_generales_2",
+            "Parts": {
+              "es_pe__Nombre": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Datos Generales",
+              "CrearSeccion": "1",
+              "Titulo": "Datos Generales",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "39b196af-76a4-4c0c-99f0-39d4855b87ba",
+                  "Title": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Datos Generales",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos/reg_acuerdo_comercial_escalonado___tarifas___periodos__datos_generales",
+                  "Parts": {
+                    "es_pe__Titulo": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Datos Generales",
+                    "en_gb__Titulo": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Datos Generales"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Datos Generales"
+            }
+          },
+          {
+            "Id": "1641cc31-f6a3-4037-9d07-129b64972805",
+            "Title": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Detalle de rangos",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/reg_acuerdo_comercial_escalonado___tarifas___periodos__detalle_de_rangos_2",
+            "Parts": {
+              "es_pe__Nombre": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Detalle de rangos",
+              "CrearSeccion": "1",
+              "Titulo": "Detalle de rangos",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "d27196cf-c858-4e53-aaa4-0ec4f907b026",
+                  "Title": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Detalle de rangos",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos/reg_acuerdo_comercial_escalonado___tarifas___periodos__detalle_de_rangos",
+                  "Parts": {
+                    "es_pe__Titulo": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Detalle de rangos",
+                    "en_gb__Titulo": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Detalle de rangos"
+                  }
+                },
+                {
+                  "Id": "b4c680c3-4368-4217-9417-2da180a79be2",
+                  "Title": "grillaAceListaDetalleRango",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/_179",
+                  "Parts": {
+                    "objgrilla": "grillaAceListaDetalleRango",
+                    "ModelData": "",
+                    "es_pe__Nombre": "grillaAceListaDetalleRango",
+                    "FlgMostrarTitulo": "1",
+                    "es_pe__TituloSeccion": "RESULTADO DE BUSQUEDA",
+                    "columnas": [
+                      {
+                        "Id": "ed995793-89b0-4895-9024-018bce50dce3",
+                        "Title": "IdRango",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/idrango_2",
+                        "Parts": {
+                          "es_pe__Nombre": "IdRango",
+                          "IdColumna": "IdRango",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "IdRango",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "e275438d-33b3-4ca0-8c6c-1f558dbb976a",
+                        "Title": "Periodo",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/periodo_3",
+                        "Parts": {
+                          "es_pe__Nombre": "Periodo",
+                          "IdColumna": "Periodo",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "entero",
+                            "Title": "Entero",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "center",
+                            "Title": "Centro",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Periodo",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "34abe190-9b93-4a9c-88a4-b06fe6455589",
+                        "Title": "Unidad Libres",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/unidad_libres_2",
+                        "Parts": {
+                          "es_pe__Nombre": "Unidad Libres",
+                          "IdColumna": "UnidadLibres",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "4",
+                          "formato": {
+                            "Value": "entero",
+                            "Title": "Entero",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "center",
+                            "Title": "Centro",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "1",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "$parent.UnidadLibres_Change",
+                          "en_gb__Nombre": "Und. Libres",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "4734ef0d-b1d8-43ce-9078-6d6bd30fdb4b",
+                        "Title": "Precio",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/precio_8",
+                        "Parts": {
+                          "es_pe__Nombre": "Precio",
+                          "IdColumna": "Precio",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "decimal",
+                            "Title": "Decimal",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "center",
+                            "Title": "Centro",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "1",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "$parent.Precio_Change",
+                          "en_gb__Nombre": "Precio",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "75018694-0e46-4b79-aeee-465792e15391",
+                        "Title": "Eliminar",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/eliminar_31",
+                        "Parts": {
+                          "es_pe__Nombre": "Eliminar",
+                          "IdColumna": "Quitar",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "botonQuitar",
+                            "Title": "botonQuitar",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "center",
+                            "Title": "Centro",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Quitar",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "37bd95b9-cad7-4699-8e20-350af36efc8d",
+                        "Title": "Accion",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/accion_35",
+                        "Parts": {
+                          "es_pe__Nombre": "Accion",
+                          "IdColumna": "Accion",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Accion",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      }
+                    ],
+                    "es_pe__NombreBotonExportar": "Exportar en Excel",
+                    "es_pe__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MensajeSinResultadoPersonalizado": "",
+                    "urlListar": "",
+                    "en_gb__Nombre": "grillaAceListaDetalleRango",
+                    "en_gb__NombreBotonExportar": "Exportar en Excel",
+                    "en_gb__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MarcarRegistroSeleccionado": "0",
+                    "JSFilter": "",
+                    "JSDblClick": "",
+                    "JSOnLoad": "",
+                    "JSOnSelect": "",
+                    "altoGrilla": "150px",
+                    "FlgOcultarBarraPaginado": "0",
+                    "FlgCargarGrilla": "0",
+                    "TituloSinResultados": "",
+                    "FlgOcultarExportar": "0",
+                    "ngClickAgregar": "",
+                    "multiselect": ""
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Detalle de rangos"
+            }
+          },
+          {
+            "Id": "bfbc6e8e-f5eb-4f8c-bfbd-5c3889c12c9c",
+            "Title": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Detalle de tipo de contenedor",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/reg_acuerdo_comercial_escalonado___tarifas___periodos__detalle_de_tipo_de_contenedor_2",
+            "Parts": {
+              "es_pe__Nombre": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Detalle de tipo de contenedor",
+              "CrearSeccion": "1",
+              "Titulo": "Detalle de tipo de contenedor",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "9f7d1022-0c0a-4702-8f18-652ecb10ab79",
+                  "Title": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Detalle de tipo de contenedor",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos/reg_acuerdo_comercial_escalonado___tarifas___periodos__detalle_de_tipo_de_contenedor",
+                  "Parts": {
+                    "es_pe__Titulo": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Detalle de tipo de contenedor",
+                    "en_gb__Titulo": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Detalle de tipo de contenedor"
+                  }
+                },
+                {
+                  "Id": "4df2b535-ef99-4c65-8068-7ed8244bf73b",
+                  "Title": "grillaAceListaDetalleTipoContenedor",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/_180",
+                  "Parts": {
+                    "objgrilla": "grillaAceListaDetalleTipoContenedor",
+                    "ModelData": "",
+                    "es_pe__Nombre": "grillaAceListaDetalleTipoContenedor",
+                    "FlgMostrarTitulo": "1",
+                    "es_pe__TituloSeccion": "RESULTADO DE BUSQUEDA",
+                    "columnas": [
+                      {
+                        "Id": "c115696d-5ab3-4a21-b94c-0bceca91f52b",
+                        "Title": "Marcar",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/marcar_6",
+                        "Parts": {
+                          "es_pe__Nombre": "Marcar",
+                          "IdColumna": "idCheck",
+                          "ancho": "80px",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "checkbox",
+                            "Title": "Checkbox",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "center",
+                            "Title": "Centro",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "$parent.CheckItem_TipoContenedor",
+                          "en_gb__Nombre": "Marcar",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "9462fbce-d005-4634-b8db-9fb5e1711aad",
+                        "Title": "Tipo de Contenedor",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/tipo_de_contenedor_2",
+                        "Parts": {
+                          "es_pe__Nombre": "Tipo de Contenedor",
+                          "IdColumna": "Descripcion",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Tipo de Contenedor",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "17530bb5-9282-4ecb-9aa3-63ddb2edf9fd",
+                        "Title": "CodigoTipoContenedor",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/codigotipocontenedor_7",
+                        "Parts": {
+                          "es_pe__Nombre": "CodigoTipoContenedor",
+                          "IdColumna": "CodigoTipoContenedor",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "1",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "CodigoTipoContenedor",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      }
+                    ],
+                    "es_pe__NombreBotonExportar": "Exportar en Excel",
+                    "es_pe__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MensajeSinResultadoPersonalizado": "",
+                    "urlListar": "",
+                    "en_gb__Nombre": "grillaAceListaDetalleTipoContenedor",
+                    "en_gb__NombreBotonExportar": "Exportar en Excel",
+                    "en_gb__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MarcarRegistroSeleccionado": "0",
+                    "JSFilter": "",
+                    "JSDblClick": "",
+                    "JSOnLoad": "",
+                    "JSOnSelect": "",
+                    "altoGrilla": "150px",
+                    "FlgOcultarBarraPaginado": "0",
+                    "FlgCargarGrilla": "0",
+                    "TituloSinResultados": "",
+                    "FlgOcultarExportar": "0",
+                    "ngClickAgregar": "",
+                    "multiselect": ""
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Reg Acuerdo Comercial Escalonado - Tarifas - Periodos: Detalle de tipo de contenedor"
+            }
+          }
+        ],
+        "ControladorAngular": "ConfiguracionPeridoACEController",
+        "AnchoMaximo": "",
+        "AltoMinimo": "600px",
+        "en_gb__Titulo": "Cofiguracion Rango"
+      }
+    }
+  ],
+  "Error": false,
+  "Message": "OK"
+}

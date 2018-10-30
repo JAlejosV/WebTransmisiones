@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="BusquedaDetalleGrupoPuertoExternoController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_Botonera_Nuevo_Salir.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div style="width:100%;float:left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado58e3c1ba-eaa7-499d-993b-554facb8fe92" class="block_content">
+                    <div class="form_section" style="width:100%">
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata="$root.DatosFormulario.BusquedaDetalleGrupoPuertoExterno.ListaMaestroDetalleGrupoPuertoExterno"
+                                           gridid="grillaListaMaestroDetalleGrupoPuertoExterno"
+                                           pagerid="grillaListaMaestroDetalleGrupoPuertoExterno_pager"
+                                           api="gridapigrillaListaMaestroDetalleGrupoPuertoExterno"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="58e3c1ba-eaa7-499d-993b-554facb8fe92"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="150px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/DetalleGrupoPuertoExterno/ConsultarDetalleGrupoPuertoExterno"
+                                           flgcargargrilla="0">
+                                    <table id="grillaListaMaestroDetalleGrupoPuertoExterno"></table>
+                                    <div id="grillaListaMaestroDetalleGrupoPuertoExterno_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

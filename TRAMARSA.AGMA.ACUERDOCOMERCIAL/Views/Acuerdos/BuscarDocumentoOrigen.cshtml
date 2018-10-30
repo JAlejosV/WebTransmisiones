@@ -1,0 +1,250 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="BuscarDocumentoOrigenController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraBusquedaDocumentoOrigen.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Criterios de Búsqueda</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="BusquedaDocumentoOrigenFrm" name="BusquedaDocumentoOrigenFrm">
+                    <div style="max-width: 100%; height: 100%">
+                        <div class="col-md-12 row">
+                            <input type="text" class="ng-hide" ng-model="$root.FlagCallDocumentosOrigen" />
+                        </div>
+                    </div>
+                    <div class="block_content" style="width: 100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            Nave
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.CodNave" />
+                                            <input class="InputTEXT_AC_01 " disabled="disabled" type="text"
+                                                   ng-model="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.DescripcionNave" />
+                                            <input type="image" ng-click="BuscarNave_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                            <div class="caja11 msgerror CodNave">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.CodNave" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            Puerto Origen
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input class="InputTEXT_05 " ng-enter="Enter()" maxlength="10" type="text" ng-model="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.PuertoOrigen" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            Puerto Destino
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input class="InputTEXT_05 " ng-enter="Enter()" maxlength="10" type="text" ng-model="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.PuertoDesembarque" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="row ">
+                                        <div class="col-md-5">
+                                            Viaje
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input class="InputTEXT_05 "
+                                                   disabled="disabled"
+                                                   ng-enter="Enter()"
+                                                   type="text" ng-model="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.NumViaje" />
+                                            <div class="caja11 msgerror NumViaje">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.NumViaje" data-valmsg-replace="true"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            Puerto Embarque
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input class="InputTEXT_05 " maxlength="10" ng-enter="Enter()" type="text" ng-model="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.PuertoEmbarque" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            Puerto Final
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input class="InputTEXT_05 " maxlength="11" ng-enter="Enter()" type="text" ng-model="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.DestinoFinal" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Línea Naviera
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.CodLinea"
+                                                    data-val="true"
+                                                    data-bind="value: $root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.CodLinea"
+                                                    id="IdLinea"
+                                                    ng-disabled="$root.DatosFormulario.BusquedaDocumentoOrigenIndex.HabilitadoLinea=='False'"
+                                                    ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.BusquedaDocumentoOrigenIndex.Linea" class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodLinea">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.CodLinea" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Tipo Documento
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.TipoDocumento"
+                                                    data-val="true"
+                                                    data-bind="value: $root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.TipoDocumento"
+                                                    ng-disabled="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.TipoBL=='C'"
+                                                    id="TipoBL"
+                                                    ng-options="tipodocumento.Codigo as tipodocumento.Descripcion for tipodocumento in $root.DatosFormulario.BusquedaDocumentoOrigenIndex.TipoDocumento"
+                                                    class="InputSELECT_01"
+                                                    ng-change="OcultarCampos()">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror TipoDocumento">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.TipoDocumento" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Número Documento
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 " maxlength="25" type="text"
+                                                   id="NroBL"
+                                                   ng-enter="Enter()"
+                                                   data-bind="value: $root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.NroBL"
+                                                   ng-disabled="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.TipoBL=='C'"
+                                                   ng-model="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.NroBL" />
+                                            <div class="caja11 msgerror NroBL">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.NroBL" data-valmsg-replace="true"></span>
+                                            </div>
+                                            <input class="InputTEXT_05 " maxlength="25" type="text"
+                                                   id="NroBkn"
+                                                   ng-enter="Enter()"
+                                                   data-bind="value: $root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.NroBkn"
+                                                   ng-disabled="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.TipoBL=='C'"
+                                                   ng-model="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.NroBkn" />
+                                            <div class="caja11 msgerror NroBkn">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.NroBkn" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Número Contenedor
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 " maxlength="11" type="text" ng-enter="Enter()"
+                                                   data-bind="value: $root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.CodContenedor"
+                                                   ng-disabled="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.TipoBL=='B'"
+                                                   ng-model="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.CodContenedor" />
+                                            <div class="caja11 msgerror CodContenedor">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.CodContenedor" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="radio" name="BL" ng-enter="Enter()"
+                                                   ng-change="Cofiguration($root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.TipoBL)"
+                                                   value={{$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.CodigoBL}}
+                                                   ng-disabled="$root.DatosFormulario.BusquedaDocumentoOrigenIndex.Habilitado=='False'"
+                                                   ng-model="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.TipoBL" class="ng-valid ng-dirty" checked disabled />
+                                            <label>{{$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.DescripcionPorBL}}</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="radio" name="CTN" ng-enter="Enter()"
+                                                   ng-change="Cofiguration($root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.TipoBL)"
+                                                   value={{$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.CodigoCtn}}
+                                                   ng-disabled="$root.DatosFormulario.BusquedaDocumentoOrigenIndex.Habilitado=='False'"
+                                                   ng-model="$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.TipoBL" class="ng-valid ng-dirty" />
+                                            <label>{{$root.DatosFormulario.FiltrosBusquedaDocumentoOrigen.DescripcionPorCtn}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="caja11 msgerror listaSeleccionada">
+                                    <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado18b0edd8-1287-4ed9-84bf-4ffc9fbffcc7" class="block_content">
+                    <div class="form_section" style="width:100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config" 
+                                           addnew="true" 
+                                           modeldata="$root.DatosFormulario.grillaListaDocumentoOrigenResult.ListaDocumentoOrigen" 
+                                           gridid="grillaListaDocumentoOrigen" 
+                                           pagerid="grillaListaDocumentoOrigen_pager" 
+                                           api="gridapigrillaListaDocumentoOrigen" 
+                                           flgocultarbarrapaginado="0" 
+                                           idgrilla="18b0edd8-1287-4ed9-84bf-4ffc9fbffcc7" 
+                                           titulosinresultados="" 
+                                           ocultarexportar="0" 
+                                           altogrilla="150px" 
+                                           idmarcarprimerresgistro="0" 
+                                           ngclickagregar="" 
+                                           urllistar="/DocumentoOrigen/BusquedaDocumnetoOrigen" 
+                                           flgcargargrilla="0">
+                                    <table id="grillaListaDocumentoOrigen"></table>
+                                    <div id="grillaListaDocumentoOrigen_pager"></div>
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

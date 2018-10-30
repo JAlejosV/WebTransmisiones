@@ -1,0 +1,178 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="BuscarACEscalonadaController">
+        <!-- BOTONERA -->
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraBusquedaAcuerdoComercial.cshtml")
+        </div>
+        <!-- BOTONERA -->
+
+        <!-- FILTROS BUSQUEDA -->
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Administración de Concesiones Sobrestadía</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="BusquedaACEscalonadoFrm" name="BusquedaACEscalonadoFrm">
+                    <div class="block_content" style="width: 100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Línea Naviera
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.BusquedaACEscalonado.Filtro.CodigoLinea"
+                                                data-val="true"
+                                                data-bind="value: $root.DatosFormulario.BusquedaACEscalonado.Filtro.CodigoLinea"
+                                                id="IdLinea"
+                                                ng-disabled="$root.DatosFormulario.BusquedaACEscalonado.DatosACE.Habilitado=='False'"
+                                                ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.BusquedaACEscalonado.DatosACE.Linea"
+                                                ng-change="CambiarLinea()"
+                                                class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoLinea">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.BusquedaACEscalonado.Filtro.CodigoLinea" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Número Concesión
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 solonumeros"
+                                                type="text"
+                                                ng-model="$root.DatosFormulario.BusquedaACEscalonado.Filtro.CodigoAcuerdoComercialEscalonado"
+                                                data-bind="value: $root.DatosFormulario.BusquedaACEscalonado.Filtro.CodigoAcuerdoComercialEscalonado"
+                                                data-val="true"
+                                                ng-enter="Enter()"
+                                                id="$root.DatosFormulario.BusquedaACEscalonado.Filtro.CodigoAcuerdoComercialEscalonado"
+                                                name="$root.DatosFormulario.BusquedaACEscalonado.Filtro.CodigoAcuerdoComercialEscalonado" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4" data-codigoseccion="RA">
+                                            Número RA
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 " maxlength="10" type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.BusquedaACEscalonado.Filtro.CodigoRA" />
+                                            <div class="caja11 msgerror CodigoRA">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.BusquedaACEscalonado.Filtro.CodigoRA" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-3">
+                                            Número BL
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input class="InputTEXT_05 " ng-enter="Enter()" type="text" ng-model="$root.DatosFormulario.BusquedaACEscalonado.Filtro.NumeroBL" disabled />
+                                            <input type="image" ng-click="BuscarNroBL_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-3">
+                                            Cliente
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input class="ng-hide" maxlength="10" type="text" ng-model="$root.DatosFormulario.BusquedaACEscalonado.Filtro.CodigoRolSAP" disabled />
+                                            <input class="ng-hide" maxlength="10" type="text" ng-model="$root.DatosFormulario.BusquedaACEscalonado.Filtro.CodigoCliente" disabled />
+                                            <input class="InputTEXT_05 " maxlength="10" type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.BusquedaACEscalonado.DatosACE.DescripcionCliente" disabled />
+                                            <input type="image" ng-click="BuscarCliente_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-3">
+                                            Número Contenedor
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input class="InputTEXT_05 " ng-enter="Enter()" maxlength="11" type="text" ng-model="$root.DatosFormulario.BusquedaACEscalonado.Filtro.CodigoContenedor" disabled />
+                                            <input type="image" ng-click="BuscarNroCtn_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-3">
+                                            Rol cliente
+                                        </div>
+                                        <div class="col-md-9">
+                                            <select id="RolCliente" multiple="multiple"></select>
+                                            <div class="caja11 msgerror RolCliente">
+                                                <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- FILTROS BUSQUEDA -->
+
+        <!-- RESULTADO BUSQUEDA -->
+        <div id="seccion-3">
+            <div style="width: 100%; float: left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado407a472c-4b7a-4dd5-83a5-19f5b78b6e36" class="block_content">
+                    <div class="form_section" style="width: 100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden">
+
+                                <ng-jqgrid
+                                    config="config"
+                                    addnew="true"
+                                    modeldata="$root.DatosFormulario.DatosACE.ListaACEscalonado"
+                                    gridid="grillaListaACEscalonado"
+                                    pagerid="grillaListaACEscalonado_pager"
+                                    api="gridapigrillaListaACEscalonado"
+                                    flgocultarbarrapaginado="0"
+                                    idgrilla="407a472c-4b7a-4dd5-83a5-19f5b78b6e36"
+                                    titulosinresultados=""
+                                    ocultarexportar="0"
+                                    altogrilla="150px"
+                                    idmarcarprimerresgistro="0"
+                                    ngclickagregar=""
+                                    urllistar="/AcuerdoComercialEscalonado/BusquedaAcEscalonado"
+                                    flgcargargrilla="0">
+
+                                    <table id="grillaListaACEscalonado"></table>
+                                    <div id="grillaListaACEscalonado_pager"></div>
+                    
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- RESULTADO BUSQUEDA -->
+    </div>
+</div>

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7" ng-app="api" ng-controller="LayoutController"> <![endif]-->
+<!--[if IE 7]>
+<html lang="es" class="no-js lt-ie9 lt-ie8" ng-app="api" ng-controller="LayoutController"> <![endif]-->
+<!--[if IE 8]>
+<html lang="es" class="no-js lt-ie9" ng-app="api" ng-controller="LayoutController"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html lang="es" class="no-js" ng-app="api" ng-controller="LayoutController">
+<link rel="stylesheet" href="/Content/css/3.2.0/bootstrap.min.css">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+ <link rel="stylesheet" href="/Content/css/3.2.0/bootstrap.min.css">
+ <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+               <style>     .container { width: 100%; } </style>
+<![endif]-->
+
+<head>
+    <base href="/">
+    <meta name="fragment" content="!">
+    <meta http-equiv="x-ua-compatible" content="IE=8,IE=9,IE=10,IE=11">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+
+
+    <title>Acuerdos Comerciales - Home</title>
+    @Html.Partial("Referencias")
+    @Html.Partial("Header")
+</head>
+<body>
+    @Html.AntiForgeryToken()
+
+    @RenderBody()
+
+    @RenderSection("Scripts", false)
+
+    @Html.Partial("Footer")
+</body>
+</html>

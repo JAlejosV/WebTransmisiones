@@ -1,0 +1,109 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="BuscarPersonaController">
+        <!-- BOTONERA -->
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraBusquedaAcuerdoComercial.cshtml")
+        </div>
+        <!-- BOTONERA -->
+
+        <!-- FILTROS BUSQUEDA -->
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Administración de Persona</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="BusquedaPersonaFrm" name="BusquedaPersonaFrm">
+                    <div class="block_content" style="width: 100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Razon Social
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05" maxlength="150"
+                                                type="text"
+                                                ng-model="$root.DatosFormulario.BusquedaPersona.Filtro.RazonSocialPersona"
+                                                data-bind="value: $root.DatosFormulario.BusquedaPersona.Filtro.RazonSocialPersona"
+                                                data-val="true"
+                                                ng-enter="Enter()"
+                                                id="$root.DatosFormulario.BusquedaPersona.Filtro.RazonSocialPersona"
+                                                name="$root.DatosFormulario.BusquedaPersona.Filtro.RazonSocialPersona" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Numero Documento
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 solonumeros" maxlength="11" type="text" ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.BusquedaPersona.Filtro.NumeroDocumentoPersona" />
+                                            <div class="caja11 msgerror NumeroDocumentoPersona">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.BusquedaPersona.Filtro.NumeroDocumentoPersona" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- FILTROS BUSQUEDA -->
+
+        <!-- RESULTADO BUSQUEDA -->
+        <div id="seccion-3">
+            <div style="width: 100%; float: left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado407a472c-4b7a-4dd5-83a5-19f5b78b6e37" class="block_content">
+                    <div class="form_section" style="width: 100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden">
+
+                                <ng-jqgrid
+                                    config="config"
+                                    addnew="true"
+                                    modeldata="$root.DatosFormulario.DatosPersona.ListaPersona"
+                                    gridid="grillaListaPersona"
+                                    pagerid="grillaListaPersona_pager"
+                                    api="gridapigrillaListaPersona"
+                                    flgocultarbarrapaginado="0"
+                                    idgrilla="407a472c-4b7a-4dd5-83a5-19f5b78b6e37"
+                                    titulosinresultados=""
+                                    ocultarexportar="0"
+                                    altogrilla="150px"
+                                    idmarcarprimerresgistro="0"
+                                    ngclickagregar=""
+                                    urllistar="/Persona/BusquedaPersona"
+                                    flgcargargrilla="0">
+
+                                    <table id="grillaListaPersona"></table>
+                                    <div id="grillaListaPersona_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- RESULTADO BUSQUEDA -->
+    </div>
+</div>

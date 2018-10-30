@@ -1,0 +1,146 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="CargaMasivaAcuerdoComercialController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraCargaMasiva.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Carga Masiva</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="ConfiguracionCargaMaisvaFrm" name="ConfiguracionCargaMaisvaFrm">
+                    <div class="block_content" style="width: 100%">
+                        <div class="col-md-5 row">
+                            <div class="col-md-3 ">
+                                Linea Naviera:
+                            </div>
+                            <div class="col-md-9">
+                                <select ng-model="$root.DatosFormulario.CargaMasivaAC.CodigoLinea"
+                                    ng-disabled="$root.DatosFormulario.DatosCargaMasivaAC.Habilitado=='False' || FlagEditing==false"
+                                    ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.DatosCargaMasivaAC.Lineas" class="InputSELECT_01">
+                                    <option value="">[Seleccione]</option>
+                                </select>
+                                <div class="caja11 msgerror CodigoLinea">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.CargaMasivaAC.CodigoLinea" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre de Archivo</th>
+                                            <th>Eliminar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input id="upload" name="upload" type="file" />
+                                                <div class="caja11 msgerror upload">
+                                                    <span class="field-validation-valid msgerror" data-valmsg-for="upload" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="boton">
+                                                    <button id="btnEliminar" class="boton1Style boton1">
+                                                        <span class="boton1Span">
+                                                            <img alt="Eliminar" src="/images/eliminar.png">
+                                                        </span>
+                                                        <span class="boton1txt">Eliminar</span>
+                                                    </button>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+
+
+        <div id="seccion-3">
+            <div>
+                <div class="block_cab block_cab_active" style="width: 100%">
+                    <h2>
+                        <span>Resultado</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <div class="block_content" style="width: 100%">
+                        <textarea class="InputTEXT_06" ng-model="$root.DatosFormulario.CargaMasivaAC.Resultado" ng-disabled="true"></textarea>
+                        <div class="caja11 msgerror Resultado">
+                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.CargaMasivaAC.Resultado" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div id="seccion-4">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>DETALLE DE ERRORES</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado3601365d-2dd9-46b6-a021-d38d309dbb0c" class="block_content">
+                    <div class="form_section" style="width: 100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive">
+
+                                <ng-jqgrid
+                                    config="config"
+                                    addnew="true"
+                                    modeldata="$root.DatosFormulario.grillaListaCargaMasivaError"
+                                    gridid="grillaListaCargaMasivaError"
+                                    pagerid="grillaListaCargaMasivaError_pager"
+                                    api="gridapigrillaListaCargaMasivaError"
+                                    flgocultarbarrapaginado="1"
+                                    idgrilla="3601365d-2dd9-46b6-a021-d38d309dbb0c"
+                                    titulosinresultados=""
+                                    ocultarexportar="0"
+                                    altogrilla="300px"
+                                    idmarcarprimerresgistro="0"
+                                    ngclickagregar=""
+                                    urllistar="/CargaMasiva/RecuperarNoProcesados"
+                                    flgcargargrilla="1">
+                                <table id="grillaListaCargaMasivaError"></table>
+                                <div id="grillaListaCargaMasivaError_pager"></div>
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

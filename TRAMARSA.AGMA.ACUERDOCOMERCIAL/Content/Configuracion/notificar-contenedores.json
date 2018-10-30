@@ -1,0 +1,55 @@
+{
+  "Data": [
+    {
+      "Id": "3306c5fe-7dc2-4ff9-a700-f204dbcaed3a",
+      "Title": "n.d.",
+      "State": "Publicado",
+      "ChannelPath": "/tramarsa/portales_agma/calculador_web/sistema/notificar_contenedores/props_notificar_contenedores",
+      "Path": "/tramarsa/portales_agma/calculador_web/sistema/notificar_contenedores/props_notificar_contenedores/_181",
+      "Parts": {
+        "es_pe__Titulo": "Notificar Contenedore No Devueltos",
+        "Secciones": [
+          {
+            "Id": "5dfc701d-4954-4fa3-a24c-976c5e17959c",
+            "Title": "Sección Enviar Notificación",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/seccion_enviar_notificacion",
+            "Parts": {
+              "es_pe__Nombre": "Sección Enviar Notificación",
+              "CrearSeccion": "1",
+              "Titulo": "Sección Enviar Notificación",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "1520552b-7e30-4aaa-a824-49393dc5624a",
+                  "Title": "Notificar Contenedores",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos/notificar_contenedores",
+                  "Parts": {
+                    "es_pe__Titulo": "Notificar Contenedores",
+                    "en_gb__Titulo": "Notificar Contenedores"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Sección Enviar Notificación"
+            }
+          }
+        ],
+        "ControladorAngular": "NotificarContenedoresController",
+        "AnchoMaximo": "",
+        "AltoMinimo": "",
+        "en_gb__Titulo": "Notificar Contenedore No Devueltos"
+      }
+    }
+  ],
+  "Error": false,
+  "Message": "OK"
+}

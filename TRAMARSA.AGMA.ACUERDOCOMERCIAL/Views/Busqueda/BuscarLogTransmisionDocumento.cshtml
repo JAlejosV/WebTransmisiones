@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style="max-width: 800px;">
+    <div ng-app="app" ng-controller="BuscarLogTransmisionDocumentoController" class="ng-scope">
+        @Html.Partial("~/Views/Botonera/BotoneraBusquedaClásicaconBotonSalir.cshtml")
+        <div id="seccion-3">
+            <div style="width: 100%; float: left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>LOG</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListadof478bbe4-1dd1-4f5d-a484-fb4d7d033001" class="block_content">
+                    <div class="form_section" style="width: 100%">
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden">
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata="$root.DatosFormulario.grillaListaLogTransmisionDocumento"
+                                           gridid="grillaListaLogTransmisionDocumento"
+                                           pagerid="grillaListaLogTransmisionDocumento_pager"
+                                           api="gridapigrillaListaLogTransmisionDocumento"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="f478bbe4-1dd1-4f5d-a484-fb4d7d033001"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="200px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/TransmisionDocumento/ConsultaLogTransmisionDocumento"
+                                           flgcargargrilla="1">
+                                    <table id="grillaListaLogTransmisionDocumento"></table>
+                                    <div id="grillaListaLogTransmisionDocumento_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

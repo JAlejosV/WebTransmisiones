@@ -1,0 +1,16 @@
+{
+  "Data": [
+    {
+      "Id": "4f6c5961-1c78-4f40-b97e-b6919dd9f583",
+      "Title": "Bienvenido",
+      "State": "Publicado",
+      "ChannelPath": "/tramarsa/portales_agma/calculador_web/sistema/bienvenido/props_bienvenido",
+      "Path": "/tramarsa/portales_agma/calculador_web/sistema/bienvenido/props_bienvenido/bienvenido",
+      "Parts": {
+        "texto_de_bienvenida": "Bienvenido"
+      }
+    }
+  ],
+  "Error": false,
+  "Message": "OK"
+}

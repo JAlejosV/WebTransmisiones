@@ -1,0 +1,110 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="BuscarServiciosBLController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/BotoneraBusquedaClásicaconBotonSalir.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Criterios de Búsqueda</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="BusquedaServiciosBLFrm" name="BusquedaServiciosBLFrm">
+                    <div class="block_content">
+                        <div style="max-width: 100%; height: 100%">
+                            <input type="text" class="ng-hide" ng-model="$root.FlagCallServiciosBL" />
+                            <div class="col-md-12 row">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        Código Servicio
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="InputTEXT_05"
+                                            type="text"
+                                            ng-enter="Enter()"
+                                            maxlength="80"
+                                            ng-model="$root.DatosFormulario.DataFiltroBusquedaServicioBL.CodigoServicio"
+                                            data-bind="value: $root.DatosFormulario.DataFiltroBusquedaServicioBL.CodigoServicio"
+                                            data-val="true"
+                                            id="$root.DatosFormulario.DataFiltroBusquedaServicioBL.CodigoServicio"
+                                            name="$root.DatosFormulario.DataFiltroBusquedaServicioBL.CodigoServicio" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        Descripción Servicio
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="InputTEXT_05"
+                                            type="text"
+                                            maxlength="80"
+                                            ng-enter="Enter()"
+                                            ng-model="$root.DatosFormulario.DataFiltroBusquedaServicioBL.NombreServicio"
+                                            data-bind="value: $root.DatosFormulario.DataFiltroBusquedaServicioBL.NombreServicio"
+                                            data-val="true"
+                                            id="$root.DatosFormulario.DataFiltroBusquedaServicioBL.NombreServicio"
+                                            name="$root.DatosFormulario.DataFiltroBusquedaServicioBL.NombreServicio" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 row">
+                                <div class="caja11 msgerror Objeto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="seccion-3">
+            <div style="width: 100%; float: left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado77eb45af-2235-4257-950d-5eb797ce2ddx" class="block_content">
+                    <div class="form_section" style="width: 100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden">
+
+                                <ng-jqgrid
+                                    config="config"
+                                    addnew="true"
+                                    modeldata=""
+                                    gridid="grillaBusquedaListaServiciosBL"
+                                    pagerid="grillaBusquedaListaServiciosBL_pager"
+                                    api="gridapigrillaBusquedaListaServiciosBL"
+                                    flgocultarbarrapaginado="0"
+                                    idgrilla="eb71c41a-8056-475f-8674-5157db3b1a77"
+                                    titulosinresultados=""
+                                    ocultarexportar="0"
+                                    altogrilla="150px"
+                                    idmarcarprimerresgistro="0"
+                                    ngclickagregar=""
+                                    urllistar="/ServicioBl/BusquedaServiciosBl"
+                                    flgcargargrilla="0">
+                                    <table id="grillaBusquedaListaServiciosBL"></table>
+                                    <div id="grillaBusquedaListaServiciosBL_pager"></div>
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

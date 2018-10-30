@@ -1,0 +1,211 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style="">
+    <div ng-app="app" ng-controller="ReporteACEscalonadoController" class="ng-scope">
+
+        @Html.Partial("~/Views/Botonera/AC_Reporte_BotoneraReporte.cshtml")
+
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Reporte de Concesiones Sobrestadía</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="ReporteTarifaEscalonadaFrm" name="ReporteTarifaEscalonadaFrm">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Línea Naviera
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.ReporteACEscalonado.Filtro.CodigoLinea"
+                                                    data-val="true"
+                                                    data-bind="value: $root.DatosFormulario.ReporteACEscalonado.Filtro.CodigoLinea"
+                                                    ng-disabled="$root.DatosFormulario.ReporteACEscalonado.Datos.Habilitado=='False'"
+                                                    ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.ReporteACEscalonado.Datos.Linea"
+                                                    class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoLinea">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.ReporteACEscalonado.Filtro.CodigoLinea" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Sucursal
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.ReporteACEscalonado.Filtro.CodigoSucursal"
+                                                    ng-options="sucursal.Codigo as sucursal.Nombre for sucursal in $root.DatosFormulario.ReporteACEscalonado.Datos.Sucursal"
+                                                    class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Número de RA
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input class="InputTEXT_05 solonumeros" maxlength="80" type="text" ng-enter="Enter()"
+                                                   id="$root.DatosFormulario.ReporteACEscalonado.Filtro.NumeroRA"
+                                                   ng-model="$root.DatosFormulario.ReporteACEscalonado.Filtro.NumeroRA" />
+                                            <div class="caja11 msgerror Nombre"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Número de Concesión
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input class="InputTEXT_05 solonumeros" maxlength="80" type="text" ng-enter="Enter()"
+                                                   id="$root.DatosFormulario.ReporteACEscalonado.Filtro.CodigoAcuerdoComercialEscalonado "
+                                                   ng-model="$root.DatosFormulario.ReporteACEscalonado.Filtro.CodigoAcuerdoComercialEscalonado " />
+                                            <div class="caja11 msgerror Nombre"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Cliente
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="ng-hide" maxlength="70" id="txtCodigoCliente" type="text" ng-model="$root.DatosFormulario.ReporteACEscalonado.Filtro.CodigoCliente" disabled />
+                                            <input class="InputTEXT_05 " type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.ReporteACEscalonado.Datos.NombreCliente" disabled />
+                                            <input type="image" ng-click="BuscarCliente_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-10">
+                                            <input type="checkbox" ng-enter="Enter()" ng-model="$root.DatosFormulario.ReporteACEscalonado.Filtro.FlagVigente" />Vigente
+                                        </div>
+                                        <div class="col-md-2">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5">
+
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Vigencia Hasta
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_04Fecha"
+                                                   maxlength="10" type="text"
+                                                   ng-model="$root.DatosFormulario.ReporteACEscalonado.Filtro.FinVigencia"
+                                                   data-bind="dateValue: $root.DatosFormulario.ReporteACEscalonado.Filtro.FinVigencia,datePattern: 'dd/MM/yyyy'"
+                                                   data-val="true"
+                                                   ng-enter="Enter()"
+                                                   data-val-date="Fecha Fin debe ser una fecha."
+                                                   id="txtFinVigencia"
+                                                   name="$root.DatosFormulario.ReporteACEscalonado.Filtro.FinVigencia"
+                                                   required />
+                                            <div class="caja11 msgerror FinVigencia">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.ReporteACEscalonado.Filtro.FinVigencia" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Número de BL
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 " type="text" id="txtNumeroBL" ng-enter="Enter()" ng-model="$root.DatosFormulario.ReporteACEscalonado.Filtro.NumeroBL" disabled />
+                                            <input type="image" ng-click="BuscarNroBL_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Número de Contenedor
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 " id="txtCodigoCotenedor" type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.ReporteACEscalonado.Filtro.CodigoContenedor" disabled />
+                                            <input type="image" ng-click="BuscarNroCtn_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Tipo de BL
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.ReporteACEscalonado.Filtro.TipoBL"
+                                                    ng-options="TipoBL.Codigo as TipoBL.Descripcion for TipoBL in $root.DatosFormulario.ReporteACEscalonado.Datos.TipoBL"
+                                                    class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+                <div style="width:100%;float:left">
+
+
+                    <div class="block_cab block_cab_active">
+                        <h2>
+                            <span>RESULTADO DE BUSQUEDA</span>
+                        </h2>
+                        <h3></h3>
+                        <div class="acordeon">
+                        </div>
+                    </div>
+                    <div id="ContentListadod31febd5-d350-4959-ba1b-7adb6a80492c" class="block_content">
+                        <div class="form_section" style="width:100%">
+
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow:hidden">
+                                    <ng-jqgrid config="config"
+                                               addnew="true"
+                                               modeldata="$root.DatosFormulario.ReporteACEscalonado.ListaReporteACEscalonado"
+                                               gridid="grillaListaReporteACEscalonado"
+                                               pagerid="grillaListaReporteACEscalonado_pager"
+                                               api="gridapigrillaListaReporteACEscalonado"
+                                               flgocultarbarrapaginado="0"
+                                               idgrilla="d31febd5-d350-4959-ba1b-7adb6a80492c"
+                                               titulosinresultados=""
+                                               ocultarexportar="0"
+                                               altogrilla="150px"
+                                               idmarcarprimerresgistro="0"
+                                               ngclickagregar=""
+                                               urllistar="/ReporteACEscalonado/ConsultarReporteAcEscalonado"
+                                               flgcargargrilla="0">
+                                        <table id="grillaListaReporteACEscalonado"></table>
+                                        <div id="grillaListaReporteACEscalonado_pager"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

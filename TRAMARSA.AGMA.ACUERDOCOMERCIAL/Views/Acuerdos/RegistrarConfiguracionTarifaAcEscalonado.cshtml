@@ -1,0 +1,281 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="ConfiguracionTarifaACEController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraConfiguracionTarifaACE.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Configuración De Tarifa</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+
+                    <div>
+                        <form id="ConfiguracionTarifaFrm" name="ConfiguracionTarifaFrm">
+                            <div style="max-width: 100%; height: 100%">
+                                <div class="col-md-12 row">
+                                    <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.CodigoAcuerdoComercialEscalonado" />
+                                    <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.IdTarifa" />
+                                    <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.CodigoTipoDescuento" />
+                                    <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.CodigoMonedaAcuerdo" />
+                                    <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.MontoAcuerdo" />
+                                    <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.Accion" />
+                                </div>
+                            </div>
+                            <div style="max-width: 100%; height: 100%">
+                                <div class="col-md-12 row">
+                                    <div id="descTarifa" class="row">
+                                        <div class="col-md-4">
+                                            Descripción Tarifa
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.CodigoTarifaEscalonado" />
+                                            <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-model="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.DescripcionTarifa"
+                                                data-bind="value: $root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.DescripcionTarifa"
+                                                data-val="true"
+                                                data-val-required="Descripción Tarifa es requerido"
+                                                id="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.DescripcionTarifa"
+                                                name="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.DescripcionTarifa"
+                                                ng-disabled="true" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Unidad de cálculo
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.CodigoUnidadCalculo" />
+                                            <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-model="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.UnidadCalculo"
+                                                data-bind="value: $root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.UnidadCalculo"
+                                                data-val="true"
+                                                data-val-required="Descripción Tarifa es requerido"
+                                                id="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.UnidadCalculo"
+                                                name="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.UnidadCalculo"
+                                                ng-disabled="true" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Configuración Lógica de Cálculo</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content">
+
+                    <div>
+                        <form id="ConfiguracuionLogicaFrm" name="ConfiguracuionLogicaFrm">
+                            <div class="" style="width: 100%">
+                                <div class="col-md-12 row">
+                                    <div class="col-md-2 caja9">
+                                        Fecha de Cálculo
+                                    </div>
+                                    <div class="col-md-2">
+                                        <select ng-model="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.CodigoTipoFechaCalculo"
+                                            data-bind="value: $root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.CodigoTipoFechaCalculo"
+                                            ng-disabled="FlagEditing==false"
+                                            ng-options="TipoFecha.Codigo as TipoFecha.Descripcion for TipoFecha in $root.DatosFormulario.ConfiguracionTarifaACE.DatosConfiguracion.ListaTipoFechaCalculo" class="InputSELECT_01"
+                                            id="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.CodigoTipoFechaCalculo"
+                                            data-val="true"
+                                            ng-disabled="FlagEditing==false"
+                                            data-val-required="Fecha de cálculo es requerido."
+                                            name="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.CodigoTipoFechaCalculo"
+                                            required>
+                                            <option value="">[Seleccione]</option>
+                                        </select>
+                                        <div class="caja11 msgerror CodigoTipoFechaCalculo">
+                                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.CodigoTipoFechaCalculo" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 caja9">
+                                        Delay
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="text" ng-model="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.DiasDelayCalculo"
+                                            data-bind="value: $root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.DiasDelayCalculo"
+                                            class="InputTEXT_05 solodecimal required"
+                                            id="DiasDelayCalculo"
+                                            name="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.DiasDelayCalculo"
+                                            data-val="true"
+                                            ng-maxlength="3"
+                                            maxlength="3" ng-enter="Enter()"
+                                            ng-disabled="FlagEditing==false"
+                                            data-val-required="Delay es requerido."
+                                            ng-keypress="SoloNumeros($event)"
+                                            required style="width: 50px" />
+                                        <div class="caja11 msgerror DiasDelayCalculo">
+                                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.DiasDelayCalculo" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 caja9">
+                                        Tipo Días
+                                    </div>
+                                    <div class="col-md-2">
+                                        <select ng-model="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.CodigoTipoDiaCalculo"
+                                            data-bind="value: $root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.CodigoTipoDiaCalculo"
+                                            ng-disabled="FlagEditing==false"
+                                            ng-options="TipoDias.Codigo as TipoDias.Descripcion for TipoDias in $root.DatosFormulario.ConfiguracionTarifaACE.DatosConfiguracion.ListaTipoDiaCalculo" class="InputSELECT_01"
+                                            id="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.CodigoTipoDiaCalculo"
+                                            data-val="true"
+                                            ng-disabled="FlagEditing==false"
+                                            data-val-required="Tipo Días es requerido."
+                                            name="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.CodigoTipoDiaCalculo"
+                                            required>
+                                            <option value="">[Seleccione]</option>
+                                        </select>
+                                        <div class="caja11 msgerror CodigoTipoDiaCalculo">
+                                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.ConfiguracionTarifaACE.DatosRegistro.CodigoTipoDiaCalculo" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-4">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Configuración de Periodos</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+                    <form id="ConfiguracuionPeriodoFrm" name="ConfiguracuionPeriodoFrm">
+                        <div class="block_menu block_content">
+                            <div style="max-width: 100%; height: 100%">
+                                <div class="col-md-12 row">
+                                    <div class="col-xs-2">
+                                        <button class="SeparatorLeft boton1Style boton1" ng-disabled="FlagEditing==false" ng-click="AgregarConfiguracionPeriodo_Click();" style="">
+                                            <span class="boton1Span">
+                                                <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                            </span>
+                                            <span class="boton1txt">Agregar</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-xs-10">
+                                        <div class="col-xs-12 col-md-12">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ContentListadogrillaAceListaConfiguracionPeriodo" class="block_content">
+                            <div class="form_section" style="width: 100%">
+                                <div class="forms2">
+                                    <div class="table-responsive" style="overflow: hidden;">
+                                        <ng-jqgrid config="config"
+                                            addnew="true"
+                                            modeldata="$root.DatosFormulario.ConfiguracionTarifaACE.ListaConfiguracionPeriodo"
+                                            gridid="grillaAceListaConfiguracionPeriodo"
+                                            pagerid="grillaAceListaConfiguracionPeriodo_pager"
+                                            api="gridapigrillaAceListaConfiguracionPeriodo"
+                                            flgocultarbarrapaginado="1"
+                                            idgrilla="482E0E58-B6ED-49F9-85F3-1577AE6A2032"
+                                            titulosinresultados=""
+                                            ocultarexportar="1"
+                                            altogrilla="80px"
+                                            idmarcarprimerresgistro="0" url=""
+                                            flgcargargrilla="0" />
+                                        <table id="grillaAceListaConfiguracionPeriodo"></table>
+                                        <div id="grillaAceListaConfiguracionPeriodo_pager"></div>
+                                        </ng-jqgrid>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caja11 msgerror ListaConfiguracionPeriodo">
+                                <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div id="seccion-5">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Tarifa Ligada</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+                    <div class="block_menu block_content">
+                        <div style="max-width: 100%; height: 100%">
+                            <div class="col-md-12 row">
+                                <div class="col-xs-2">
+                                    <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarTarifaLigada_Click();" style="" ng-disabled="FlagEditing==false">
+                                        <span class="boton1Span">
+                                            <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                        </span>
+                                        <span class="boton1txt">Agregar</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="col-xs-12 col-md-12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ContentListadogrillaAceListaConfigTarifaLigada" class="block_content">
+                        <div class="form_section" style="width: 100%">
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow: hidden;">
+                                    <ng-jqgrid config="config"
+                                        addnew="true"
+                                        modeldata="$root.DatosFormulario.ConfiguracionTarifaACE.ListaConfigTarifaLigada"
+                                        gridid="grillaAceListaConfigTarifaLigada"
+                                        pagerid="grillaAceListaConfigTarifaLigada_pager"
+                                        api="gridapigrillaAceListaConfigTarifaLigada"
+                                        flgocultarbarrapaginado="1"
+                                        idgrilla="C820C372-CF9E-4737-985F-4F498A5218EB"
+                                        titulosinresultados=""
+                                        ocultarexportar="1"
+                                        altogrilla="50px"
+                                        idmarcarprimerresgistro="0" url=""
+                                        flgcargargrilla="0">
+                                        <table id="grillaAceListaConfigTarifaLigada"></table>
+                                        <div id="grillaAceListaConfigTarifaLigada_pager"></div>
+                                    </ng-jqgrid>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caja11 msgerror ListaConfigTarifaLigada">
+                            <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

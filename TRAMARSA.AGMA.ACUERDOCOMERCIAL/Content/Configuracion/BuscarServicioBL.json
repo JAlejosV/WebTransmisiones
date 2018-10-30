@@ -1,0 +1,218 @@
+{
+  "Data": [
+    {
+      "Id": "e9bc4aa7-39fe-484e-8f20-baeb3182562c",
+      "Title": "n.d.",
+      "State": "Publicado",
+      "ChannelPath": "/tramarsa/portales_agma/calculador_web/sistema/busqueda/buscar_servicio_bl/props_buscar_servicio_bl",
+      "Path": "/tramarsa/portales_agma/calculador_web/sistema/busqueda/buscar_servicio_bl/props_buscar_servicio_bl/_141",
+      "Parts": {
+        "es_pe__Titulo": "Busqueda de Servicios BL",
+        "Secciones": [
+          {
+            "Id": "3d456445-fb9c-4880-ab32-4a8804e4b588",
+            "Title": "Botonera Búsqueda de Servicios BL",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/botonera_busqueda_de_servicios_bl",
+            "Parts": {
+              "es_pe__Nombre": "Botonera Búsqueda de Servicios BL",
+              "CrearSeccion": "0",
+              "Titulo": "",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "4919a6a3-9ed8-4ce8-b0fd-257305b5af81",
+                  "Title": "Botonera Busqueda Servicios BL",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/botonera",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/botonera/botonera_busqueda_servicios_bl",
+                  "Parts": {
+                    "Titulo": "Botonera Busqueda Servicios BL"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": ""
+            }
+          },
+          {
+            "Id": "34d2b923-96f4-44dd-9cb9-28a7de2a3844",
+            "Title": "filtros búsqueda de servicios BL",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/filtros_busqueda_de_servicios_bl",
+            "Parts": {
+              "es_pe__Nombre": "filtros búsqueda de servicios BL",
+              "CrearSeccion": "0",
+              "Titulo": "",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "7904b2aa-4621-4aee-bc06-cf4bfa09e455",
+                  "Title": "Filtros: Búsqueda documento servicios bl",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos/filtros__busqueda_documento_servicios_bl",
+                  "Parts": {
+                    "es_pe__Titulo": "Filtros: Búsqueda documento servicios bl",
+                    "en_gb__Titulo": "Filtros: Búsqueda documento servicios bl"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": ""
+            }
+          },
+          {
+            "Id": "3f7e364d-3abe-4914-9e42-8da88e3db6e6",
+            "Title": "Servicios BL: Grilla Búsqueda de Servicios BL",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/servicios_bl__grilla_busqueda_de_servicios_bl",
+            "Parts": {
+              "es_pe__Nombre": "Servicios BL: Grilla Búsqueda de Servicios BL",
+              "CrearSeccion": "0",
+              "Titulo": "",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "eb71c41a-8056-475f-8674-5157db3b1a77",
+                  "Title": "grillaBusquedaListaServiciosBL",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/_140",
+                  "Parts": {
+                    "objgrilla": "grillaBusquedaListaServiciosBL",
+                    "ModelData": "",
+                    "es_pe__Nombre": "grillaBusquedaListaServiciosBL",
+                    "FlgMostrarTitulo": "1",
+                    "es_pe__TituloSeccion": "RESULTADO DE BUSQUEDA",
+                    "columnas": [
+                      {
+                        "Id": "ee1374af-b589-401f-ba05-51d9b67e6cb9",
+                        "Title": "Código Servicio",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/codigo_servicio_3",
+                        "Parts": {
+                          "es_pe__Nombre": "Código Servicio",
+                          "IdColumna": "CodigoServicio",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "left",
+                            "Title": "Izquierda",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "e6733db3-8429-45d6-bde7-9d96a7c5f0ae",
+                        "Title": "Nombre Servicio",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/nombre_servicio_3",
+                        "Parts": {
+                          "es_pe__Nombre": "Nombre Servicio",
+                          "IdColumna": "NombreServicio",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "left",
+                            "Title": "Izquierda",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "",
+                          "OtroTextoCombo": ""
+                        }
+                      }
+                    ],
+                    "es_pe__NombreBotonExportar": "Exportar en Excel",
+                    "es_pe__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MensajeSinResultadoPersonalizado": "",
+                    "urlListar": "/ServicioBl/BusquedaServiciosBl",
+                    "en_gb__Nombre": "grillaBusquedaListaServiciosBL",
+                    "en_gb__NombreBotonExportar": "Exportar en Excel",
+                    "en_gb__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MarcarRegistroSeleccionado": "0",
+                    "JSFilter": "",
+                    "JSDblClick": "",
+                    "JSOnLoad": "",
+                    "JSOnSelect": "",
+                    "altoGrilla": "150px",
+                    "FlgOcultarBarraPaginado": "0",
+                    "FlgCargarGrilla": "0",
+                    "TituloSinResultados": "",
+                    "FlgOcultarExportar": "0",
+                    "ngClickAgregar": "",
+                    "multiselect": ""
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": ""
+            }
+          }
+        ],
+        "ControladorAngular": "BuscarServiciosBLController",
+        "AnchoMaximo": "1000px",
+        "AltoMinimo": "",
+        "en_gb__Titulo": "Busqueda de Servicios BL"
+      }
+    }
+  ],
+  "Error": false,
+  "Message": "OK"
+}

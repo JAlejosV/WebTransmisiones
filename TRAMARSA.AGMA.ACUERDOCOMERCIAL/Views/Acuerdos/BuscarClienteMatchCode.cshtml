@@ -1,0 +1,115 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="max-width: 800px;">
+    <div ng-app="app" ng-controller="BuscarClienteMatchCodeController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/BotoneraBusquedaClásicaconBotonSalir.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Criterios de Búsqueda</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="BusquedaClienteFrm" name="BusquedaClienteFrm">
+                    <div style="max-width: 100%; height: 100%">
+                        <div class="col-md-12 row">
+                            <input type="text" class="ng-hide" ng-model="$root.FlagCallClientes" />
+                        </div>
+                    </div>
+                    <div class="block_content" style="width:100%">
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Cód. Cliente MatchCode
+                            </div>
+                            <div class="col-md-4">
+                                <input class="InputTEXT_05"
+                                       maxlength="10"
+                                       type="text"
+                                       ng-enter="Enter()"
+                                       ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarClientesMatchCode.CodigoClienteMatchCode"
+                                       data-bind="value: $root.DatosFormulario.DatosGenerales.DataBuscarClientesMatchCode.CodigoClienteMatchCode"
+                                       id="$root.DatosFormulario.DatosGenerales.DataBuscarClientesMatchCode.CodigoClienteMatchCode"
+                                       name="$root.DatosFormulario.DatosGenerales.DataBuscarClientesMatchCode.CodigoClienteMatchCode" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Nombre del Cliente
+                            </div>
+                            <div class="col-md-4">
+                                <input class="InputTEXT_05 " maxlength="80" type="text" ng-enter="Enter()"
+                                       id="$root.DatosFormulario.DatosGenerales.DataBuscarClientesMatchCode.Nombre"
+                                       ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarClientesMatchCode.Nombre" />
+                                <div class="caja11 msgerror Nombre"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                RUC
+                            </div>
+                            <div class="col-md-4">
+                                <input class="InputTEXT_05 " maxlength="11" type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarClientesMatchCode.Ruc" />
+                            </div>
+                        </div>
+                        <div class="caja11 msgerror Objeto"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+
+
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado6afa2882-7bef-4742-b49a-98dfece2c4dd" class="block_content">
+                    <div class="form_section" style="width:100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata=""
+                                           gridid="grillaListaClientesMatchCode"
+                                           pagerid="grillaListaClientesMatchCode_pager"
+                                           api="gridapigrillaListaClientesMatchCode"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="6afa2882-7bef-4742-b49a-98dfece2c4dd"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="150px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/Cliente/ConsultaClienteMatchCode"
+                                           flgcargargrilla="0">
+                                    <table id="grillaListaClientesMatchCode"></table>
+                                    <div id="grillaListaClientesMatchCode_pager"></div>
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,162 @@
+@using Viatecla.Factory.Scriptor;
+@using GR.Msc.Memberships.Models
+@{
+  Layout = null;
+  
+  
+  var textoCabecera = Model.Channel.Properties.Content.Parts.TextoCabecera;
+  var textoPiePagina = Model.Channel.Properties.Content.Parts.TextoPiePagina;
+  var pagina = Model.Channel.Properties.Content.Parts.Pagina;
+  var correo = Model.Channel.Properties.Content.Parts.Correo;
+  var logo = Model.Channel.Properties.Content.Parts.Logo;
+  
+  var HomePage= Common.ScriptorClient.GetChannel(new Guid("73C88824-358A-4A65-B987-6E2900F5FA7A")).Properties.Content;   
+  var UrlPagina=HomePage.Parts.UrlPagina;
+
+
+  
+  if(Model.Parts.TextoCabecera != "")
+  {
+  textoCabecera = Model.Parts.TextoCabecera;
+  }
+    if(Model.Parts.TextoPiePagina != "")
+  {
+  textoPiePagina = Model.Parts.TextoPiePagina;
+  }
+    if(Model.Parts.Pagina != "")
+  {
+  pagina = Model.Parts.Pagina;
+  }
+    if(Model.Parts.Correo != "")
+  {
+  correo = Model.Parts.Correo;
+  }
+      
+    if(Model.Parts.MostrarEncabezado.ToString() == "0")
+    {
+       textoCabecera = "";
+       
+       logo = "";
+     }
+      
+      if(Model.Parts.MostrarPie.ToString() == "0")
+    {
+       textoPiePagina = "";
+       pagina = "";
+       correo = "";
+     }
+
+}
+ 
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Beneficios</title>
+</head>
+<body style="text-align:center;">
+  
+ 
+  
+	<style>
+	img{
+		display: block;
+		border: none;
+		}
+	</style>
+
+
+	<table width="100%" cellspacing="0" cellpadding="0" border="0">
+		<tr>
+			<td align="center">
+	<table width="" cellspacing="0" cellpadding="0" border="0">
+		<tr>
+			<td></td>
+			<td align="center"><img src="@UrlPagina@logo" alt=""></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td align="center"><span style="font-family:calibri; color:#807D78; font-size:12pt">@textoCabecera</span></td>
+			<td></td>
+		</tr>
+        @for (int i = 0; i < Model.Parts.ListaImagenes.Count; i++)
+        {
+            var contenido = Model.Parts.ListaImagenes[i];
+            <tr>
+                <td></td>
+                @if (contenido.Parts.Tipo.Title != "Vertical")
+                {
+                    if (contenido.Parts.Imagen.Filename != "")
+                    {
+                        var url = "";
+                        if (contenido.Parts.UrlExterna.Length > 7)
+                        {
+                            url = "href=" + contenido.Parts.UrlExterna;
+                        }
+                        <td><a @url><img src="@UrlPagina@contenido.Parts.Imagen" alt=""></a></td>
+                    }
+                }
+                else
+                {
+                    <td>
+                        <table celllpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                @for (int j = i; j < Model.Parts.ListaImagenes.Count; j++)
+                                {
+                                    var content = Model.Parts.ListaImagenes[j];
+                                    if (content.Parts.Tipo.Title == "Vertical")
+                                    {
+                                        if (contenido.Parts.Imagen.Filename != "")
+                                        {
+                                            var url = "";
+                                            if (contenido.Parts.UrlExterna.Length > 7)
+                                            {
+                                                url = "href=" + contenido.Parts.UrlExterna;
+                                            }
+                                            <td><a @url><img src="@UrlPagina@contenido.Parts.Imagen" alt=""></a></td>
+                                        }
+                                        if (j == Model.Parts.ListaImagenes.Count - 1)
+                                        {
+                                            i = j;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        i = j - 1;
+                                        break;
+                                    }
+                                }
+
+                            </tr>
+                        </table>
+                    </td>
+
+                }
+
+                <td></td>
+            </tr>
+        }
+  	
+  
+		<tr>
+			<td></td>
+
+			<td align="center" style="font-family:calibri; font-size:10pt">
+							<span>@textoPiePagina</span><br/>
+							<span>@pagina</span><br/>
+							<span><a href="mailto:@correo">@correo</a></span>
+			
+			</td>
+			<td></td>
+		</tr>
+	</table>
+		</td>
+	</tr>
+</table>
+         
+
+</body>
+</html>
+

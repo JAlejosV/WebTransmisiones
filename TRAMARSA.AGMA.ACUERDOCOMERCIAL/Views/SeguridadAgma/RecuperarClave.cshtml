@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+<div class="block ng-scope" style="">
+    <div ng-app="app" ng-controller="AdministrarRecuperarClaveController" class="ng-scope">
+
+        <!-- SECCION BOTONERA -->
+        <div class="block_menu">
+            <div style="max-width: 100%; height: 100%">
+            </div>
+        </div>
+        <!-- SECCION BOTONERA -->
+        <!-- SECCION CRITERIO CONTENIDO -->
+        <div>
+            <form id="AdministrarRecuperarClaveFrm" name="AdministrarRecuperarClaveFrm">
+                <div class="block_content DivContentForm" style="width: 100%">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-4">
+                                Usuario
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05"
+                                       ng-enter="Enter()"
+                                       ng-model="$root.DatosFormulario.AdministrarRecuperarClave.Email" />
+                                <div class="caja11 msgerror Email">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarRecuperarClave.Email" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-8">
+                                <input type="button" value="Recuperar Clave" id="btnRecuperarClave" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- SECCION CRITERIO CONTENIDO -->
+
+    </div>
+</div>

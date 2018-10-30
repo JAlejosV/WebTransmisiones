@@ -1,0 +1,121 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="BusquedaTipoContenedorExternoController">
+        <!-- BOTONERA -->
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraBusquedaAcuerdoComercial.cshtml")
+        </div>
+        <!-- BOTONERA -->
+        <!-- FILTROS BUSQUEDA -->
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Administrar Tipo Contenedor Externo</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarContenedorExternoFrm" name="AdministrarContenedorExternoFrm">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Línea
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.AdministrarContenedorExterno.Filtro.CodigoLinea"
+                                                    data-val="true"
+                                                    data-bind="value: $root.DatosFormulario.AdministrarContenedorExterno.Filtro.CodigoLinea"
+                                                    ng-disabled="$root.DatosFormulario.AdministrarContenedorExterno.Datos.Habilitado=='False'"
+                                                    ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.AdministrarContenedorExterno.Datos.Lineas"
+                                                    class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoLinea">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarContenedorExterno.Filtro.CodigoLinea" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Código
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 solonumeros"
+                                                   type="text"
+                                                   ng-model="$root.DatosFormulario.AdministrarContenedorExterno.Filtro.CodigoTipoContenedorExterno" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Código Equivalencia
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05"
+                                                   type="text"
+                                                   ng-model="$root.DatosFormulario.AdministrarContenedorExterno.Filtro.CodigoEquivalencia" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- FILTROS BUSQUEDA -->
+        <!-- RESULTADO BUSQUEDA -->
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado1f128891-eba6-451c-9917-1123b9acffa9" class="block_content">
+                    <div class="form_section" style="width:100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata="$root.DatosFormulario.AdministrarContenedorExterno.ListaMaestroContenedorExterno"
+                                           gridid="grillaListaMaestroTipoContenedorExterno" 
+                                           pagerid="grillaListaMaestroTipoContenedorExterno_pager"
+                                           api="gridapigrillaListaMaestroTipoContenedorExterno"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="1f128891-eba6-451c-9917-1123b9acffa9"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="150px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/TipoContenedorExterno/ConsultarTipoContenedorExterno"
+                                           flgcargargrilla="0">
+                                    <table id="grillaListaMaestroTipoContenedorExterno"></table>
+                                    <div id="grillaListaMaestroTipoContenedorExterno_pager"></div>
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- RESULTADO BUSQUEDA -->
+    </div>
+</div>

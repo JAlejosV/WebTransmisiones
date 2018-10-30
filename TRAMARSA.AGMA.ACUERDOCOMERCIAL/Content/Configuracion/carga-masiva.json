@@ -1,0 +1,325 @@
+{
+  "Data": [
+    {
+      "Id": "1669c66d-2760-4194-8113-abc3ecf0b058",
+      "Title": "n.d.",
+      "State": "Publicado",
+      "ChannelPath": "/tramarsa/portales_agma/calculador_web/sistema/carga_masiva/props_carga_masiva",
+      "Path": "/tramarsa/portales_agma/calculador_web/sistema/carga_masiva/props_carga_masiva/_172",
+      "Parts": {
+        "es_pe__Titulo": "Carga Masiva",
+        "Secciones": [
+          {
+            "Id": "87269487-de77-4690-a855-fc08e1f50871",
+            "Title": "Botonera Carga Masiva",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/botonera_carga_masiva_2",
+            "Parts": {
+              "es_pe__Nombre": "Botonera Carga Masiva",
+              "CrearSeccion": "0",
+              "Titulo": "",
+              "TipoControlContenedor": {
+                "Value": "06",
+                "Title": "Botonera",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "5265ab3e-67d9-4b29-97a2-a167d33beaee",
+                  "Title": "Botonera Carga Masiva",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/botonera",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/botonera/botonera_carga_masiva",
+                  "Parts": {
+                    "Titulo": "Botonera Carga Masiva"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Botonera Carga Masiva"
+            }
+          },
+          {
+            "Id": "9041b4e4-ec09-4d23-89f4-63a140b33778",
+            "Title": "Carga Masiva",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/carga_masiva",
+            "Parts": {
+              "es_pe__Nombre": "Carga Masiva",
+              "CrearSeccion": "0",
+              "Titulo": "",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "57536db0-8400-465f-8143-de62f0ea5253",
+                  "Title": "Carga Masiva AC",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos/carga_masiva_ac",
+                  "Parts": {
+                    "es_pe__Titulo": "Carga Masiva AC",
+                    "en_gb__Titulo": "Carga Masiva AC"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Carga Masiva"
+            }
+          },
+          {
+            "Id": "12e139ec-e3d3-4208-b458-15063e5d6ede",
+            "Title": "Carga Masiva Resultado",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/carga_masiva_resultado",
+            "Parts": {
+              "es_pe__Nombre": "Carga Masiva Resultado",
+              "CrearSeccion": "0",
+              "Titulo": "",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "2eae5712-1c53-43e4-9b85-696f3bf5a60c",
+                  "Title": "Carga Masiva AC Resultado",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos/carga_masiva_ac_resultado",
+                  "Parts": {
+                    "es_pe__Titulo": "Carga Masiva AC Resultado",
+                    "en_gb__Titulo": "Carga Masiva AC Resultado"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Carga Masica Resultado"
+            }
+          },
+          {
+            "Id": "d612467c-beb6-4da2-841a-15ed7ff55622",
+            "Title": "Carga Masiva Detalle Errores",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/carga_masiva_detalle_errores",
+            "Parts": {
+              "es_pe__Nombre": "Carga Masiva Detalle Errores",
+              "CrearSeccion": "0",
+              "Titulo": "",
+              "TipoControlContenedor": {
+                "Value": "02",
+                "Title": "Grilla",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "3601365d-2dd9-46b6-a021-d38d309dbb0c",
+                  "Title": "grillaListaCargaMasivaError",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/_173",
+                  "Parts": {
+                    "objgrilla": "grillaListaCargaMasivaError",
+                    "ModelData": "grillaListaCargaMasivaError",
+                    "es_pe__Nombre": "grillaListaCargaMasivaError",
+                    "FlgMostrarTitulo": "1",
+                    "es_pe__TituloSeccion": "DETALLE DE ERRORES",
+                    "columnas": [
+                      {
+                        "Id": "b1cf34e7-477e-4ef9-92d4-29b3a98333b4",
+                        "Title": "Número RA",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/numero_ra_4",
+                        "Parts": {
+                          "es_pe__Nombre": "Número RA",
+                          "IdColumna": "ContractNo",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "left",
+                            "Title": "Izquierda",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Nro. RA",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "f11bbfb2-5ccb-44b0-aec0-87f33803929f",
+                        "Title": "Service ID",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/service_id",
+                        "Parts": {
+                          "es_pe__Nombre": "Service ID",
+                          "IdColumna": "SeriviceID",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "center",
+                            "Title": "Centro",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Service ID",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "97860108-288a-47ec-ad3f-a2bd44140086",
+                        "Title": "Row",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/row",
+                        "Parts": {
+                          "es_pe__Nombre": "Row",
+                          "IdColumna": "Row",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Row",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      },
+                      {
+                        "Id": "fc95d0d4-8bd8-4c64-ac3f-140e1d6d4073",
+                        "Title": "Comentarios",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/comentarios",
+                        "Parts": {
+                          "es_pe__Nombre": "Comentarios",
+                          "IdColumna": "Comentario",
+                          "ancho": "auto",
+                          "CantidadCaracteres": "",
+                          "formato": {
+                            "Value": "1",
+                            "Title": "",
+                            "Content": null
+                          },
+                          "Direction": {
+                            "Value": "left",
+                            "Title": "Izquierda",
+                            "Content": null
+                          },
+                          "oculto": "0",
+                          "llave": "0",
+                          "Editable": "0",
+                          "Parametro": "",
+                          "eventoclick": "",
+                          "eventochange": "",
+                          "en_gb__Nombre": "Comentario",
+                          "OrdenDefecto": "0",
+                          "DataSource": "",
+                          "DisplayMember": "",
+                          "ValueMember": "",
+                          "FlgSeleccioneCombo": "0",
+                          "MultipleSelect": "0",
+                          "OtroTextoCombo": ""
+                        }
+                      }
+                    ],
+                    "es_pe__NombreBotonExportar": "Exportar en Excel",
+                    "es_pe__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MensajeSinResultadoPersonalizado": "",
+                    "urlListar": "/CargaMasiva/RecuperarNoProcesados",
+                    "en_gb__Nombre": "grillaListaCargaMasivaError",
+                    "en_gb__NombreBotonExportar": "Exportar en Excel",
+                    "en_gb__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                    "MarcarRegistroSeleccionado": "0",
+                    "JSFilter": "",
+                    "JSDblClick": "",
+                    "JSOnLoad": "",
+                    "JSOnSelect": "",
+                    "altoGrilla": "300px",
+                    "FlgOcultarBarraPaginado": "1",
+                    "FlgCargarGrilla": "1",
+                    "TituloSinResultados": "",
+                    "FlgOcultarExportar": "0",
+                    "ngClickAgregar": "",
+                    "multiselect": ""
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Carga Masiva Detalle Errores"
+            }
+          }
+        ],
+        "ControladorAngular": "CargaMasivaAcuerdoComercialController",
+        "AnchoMaximo": "",
+        "AltoMinimo": "",
+        "en_gb__Titulo": "Carga Masiva"
+      }
+    }
+  ],
+  "Error": false,
+  "Message": "OK"
+}

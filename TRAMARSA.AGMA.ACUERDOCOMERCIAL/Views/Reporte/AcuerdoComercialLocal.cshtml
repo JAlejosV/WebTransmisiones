@@ -1,0 +1,133 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style="">
+    <div ng-app="app" ng-controller="ReporteACLocalController" class="ng-scope">
+        @Html.Partial("~/Views/Botonera/AC_Reporte_BotoneraReporte.cshtml")
+
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Reporte de Concesión Local</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="ReporteACLocalFrm" name="ReporteACLocalFrm">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Línea Naviera
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.ReporteACLocal.Filtro.CodigoLinea"
+                                                    data-val="true"
+                                                    data-bind="value: $root.DatosFormulario.ReporteACLocal.Filtro.CodigoLinea"
+                                                    ng-disabled="$root.DatosFormulario.ReporteACLocal.Datos.Habilitado=='False'"
+                                                    ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.ReporteACLocal.Datos.Linea"
+                                                    class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoLinea">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.ReporteACLocal.Filtro.CodigoLinea" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Sucursal
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.ReporteACLocal.Filtro.CodigoSucursal"
+                                                    ng-options="sucursal.Codigo as sucursal.Nombre for sucursal in $root.DatosFormulario.ReporteACLocal.Datos.Sucursal"
+                                                    class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoSucursal">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.ReporteACLocal.Filtro.CodigoSucursal" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Moneda
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select class="InputSELECT_01"
+                                                    ng-model="$root.DatosFormulario.ReporteACLocal.Filtro.CodigoMoneda"
+                                                    ng-options="moneda.Codigo as moneda.Nombre for moneda in $root.DatosFormulario.ReporteACLocal.Datos.Moneda">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <!--
+                                                                  <div class="col-md-2">
+                                                                      <input type="checkbox" ng-enter="Enter()" ng-model="$root.DatosFormulario.ReporteACLocal.Filtro.FlagVigente" />Vigentes
+                                                                  </div>
+                                                                  <div class="col-md-10">
+                                                                  </div>
+                                        -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+
+
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado7fee114b-f023-45be-87b6-233eb1bdffd1" class="block_content">
+                    <div class="form_section" style="width:100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata="$root.DatosFormulario.ReporteACLocal.ListaReporteACLocal"
+                                           gridid="grillaListaReporteACLocal"
+                                           pagerid="grillaListaReporteACLocal_pager"
+                                           api="gridapigrillaListaReporteACLocal"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="7fee114b-f023-45be-87b6-233eb1bdffd1"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="150px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/ReporteACLocal/ConsultarReporteAcLocal"
+                                           flgcargargrilla="0">
+                                    <table id="grillaListaReporteACLocal"></table>
+                                    <div id="grillaListaReporteACLocal_pager"></div>
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

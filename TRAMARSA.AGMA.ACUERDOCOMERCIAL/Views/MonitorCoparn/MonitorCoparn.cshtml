@@ -1,0 +1,167 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="ConsultaMonitorCoparnController">
+        <!-- BOTONERA -->
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_Reporte_BotoneraReporte.cshtml")
+        </div>
+        <!-- BOTONERA -->
+        <!-- FILTROS BUSQUEDA -->
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Monitor Coparn</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="ConsultaMonitorCoparnFrm" name="ConsultaMonitorCoparnFrm">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Dep&oacute;sito
+                                        </div>
+                                        <div class="col-md-8">
+
+                                            <select ng-model="$root.DatosFormulario.FiltrosConsultaMonitorCoparn.Filtro.CodigoDeposito"
+                                                    ng-options="deposito.CodigoDeposito as deposito.DescripcionDeposito for deposito in $root.DatosFormulario.FiltrosConsultaMonitorCoparnCargaInicial.Deposito"
+                                                    class="InputSELECT_01"
+                                                    id="$root.DatosFormulario.FiltrosConsultaMonitorCoparn.Filtro.CodigoDeposito"
+                                                    name="$root.DatosFormulario.FiltrosConsultaMonitorCoparn.Filtro.CodigoDeposito">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Estado
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.FiltrosConsultaMonitorCoparn.Filtro.CodigoEstado"
+                                                    ng-options="estado.Codigo as estado.Descripcion for estado in $root.DatosFormulario.FiltrosConsultaMonitorCoparnCargaInicial.Estados" class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Contenedor
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 " maxlength="70" type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.FiltrosConsultaMonitorCoparn.Filtro.Contenedor" />
+                                            <div class="caja11msgerrorRuc">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosConsultaMonitorCoparn.Filtro.Contenedor" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Fecha Inicio
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_04Fecha"
+                                                   maxlength="10" type="text"
+                                                   ng-model="$root.DatosFormulario.FiltrosConsultaMonitorCoparn.Filtro.FechaInicio"
+                                                   data-bind="dateValue: $root.DatosFormulario.FiltrosConsultaMonitorCoparn.Filtro.FechaInicio,datePattern: 'dd/MM/yyyy'"
+                                                   data-val="true"
+                                                   ng-enter="Enter()"
+                                                   data-val-date="El campo Fecha Vigencia debe ser una fecha."
+                                                   id="FechaInicio"
+                                                   name="$root.DatosFormulario.FiltrosConsultaMonitorCoparn.Filtro.FechaInicio"
+                                                   required
+                                                   control_max_date="FechaFin" />
+                                            <div class="caja11 msgerror FechaInicio">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosConsultaMonitorCoparn.Filtro.FechaInicio" data-valmsg-replace="true"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Fecha Fin
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_04Fecha"
+                                                   maxlength="10" type="text"
+                                                   ng-model="$root.DatosFormulario.FiltrosConsultaMonitorCoparn.Filtro.FechaFin"
+                                                   data-bind="dateValue: $root.DatosFormulario.FiltrosConsultaMonitorCoparn.Filtro.FechaFin,datePattern: 'dd/MM/yyyy'"
+                                                   data-val="true"
+                                                   ng-enter="Enter()"
+                                                   data-val-date="El campo Fecha Vigencia debe ser una fecha."
+                                                   id="FechaFin"
+                                                   name="$root.DatosFormulario.FiltrosConsultaMonitorCoparn.Filtro.FechaFin"
+                                                   required />
+                                            <div class="caja11 msgerror FechaFin">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosConsultaMonitorCoparn.Filtro.FechaFin" data-valmsg-replace="true"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- FILTROS BUSQUEDA -->
+        <!-- RESULTADO BUSQUEDA -->
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado02d9bb68-8228-4742-a825-638b4caf33fa" class="block_content">
+                    <div class="form_section" style="width:100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata=""
+                                           gridid="grillaListaMonitorCoparn"
+                                           pagerid="grillaListaMonitorCoparn_pager"
+                                           api="gridapigrillaListaMonitorCoparn"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="02d9bb68-8228-4742-a825-638b4caf33fa"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="150px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/MonitorCoparn/ConsultarMonitorCoparn"
+                                           flgcargargrilla="0">
+                                    <table id="grillaListaMonitorCoparn"></table>
+                                    <div id="grillaListaMonitorCoparn_pager"></div>
+
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- RESULTADO BUSQUEDA -->
+    </div>
+</div>

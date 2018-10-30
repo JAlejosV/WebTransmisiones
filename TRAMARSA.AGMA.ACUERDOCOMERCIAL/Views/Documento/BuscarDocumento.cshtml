@@ -1,0 +1,301 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="BuscarDocumentoController">
+        <!-- BOTONERA -->
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraBusquedaAcuerdoComercial.cshtml")
+        </div>
+        <!-- BOTONERA -->
+
+        <!-- FILTROS BUSQUEDA -->
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Administración de Documento</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="BusquedaDocumentoFrm" name="BusquedaDocumentoFrm">
+                    <div class="block_content" style="width: 100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Itinerario/Nave
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.CodigoItinerario" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.NombreNave"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarItinerario_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Viaje
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.NumeroViajeItinerario"
+                                                ng-disabled="true" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Aduana
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.NombreAduanaNave"
+                                                ng-disabled="true" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Tipo de Operacion
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.NombreTipoOperacion"
+                                                ng-disabled="true" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            N. Documento
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05" maxlength="25" type="text" ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.NumeroDocumento" />
+                                            <div class="caja11 msgerror NumeroDocumentoDocumento">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.BusquedaDocumento.Filtro.NumeroDocumentoDocumento" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Puerto Origen
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.CodigoPuertoOrigenDocumento" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.NombrePuertoOrigen"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarPuertoOrigen_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Puerto Embarque
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.CodigoPuertoEmbarqueDocumento" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.NombrePuertoEmbarque"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarPuertoEmbarque_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Puerto Descarga
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.CodigoPuertoDescargaDocumento" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.NombrePuertoDescarga"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarPuertoDescarga_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Puerto Final
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.CodigoPuertoFinalDocumento" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.NombrePuertoFinal"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarPuertoFinal_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Linea Naviera
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.CodigoLineaNaviera" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.NombreLineaNaviera"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarLineaNaviera_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Aduana
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.CodigoAduana" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.NombreAduana"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarAduana_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Tipo de BL
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.CodigoTipoBL"
+                                                ng-options="tipobl.CodigoTipoBL as tipobl.NombreTipoBL for tipobl in $root.DatosFormulario.DocumentoIndex.TiposBL" class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Tipo de Envio
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.CodigoTipoEnvio"
+                                                ng-options="tipoenvio.CodigoTipoEnvio as tipoenvio.NombreTipoEnvio for tipoenvio in $root.DatosFormulario.DocumentoIndex.TiposEnvio" class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Fecha Emision Inicio
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_04Fecha"
+                                                maxlength="10" type="text"
+                                                ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.FechaEmisionDocumentoInicio"
+                                                data-bind="dateValue: $root.DatosFormulario.BusquedaDocumento.Filtro.FechaEmisionDocumentoInicio, datePattern: 'dd/MM/yyyy'"
+                                                data-val="true"
+                                                data-val-date="Fecha Emision Inicio debe ser una fecha."
+                                                id="FechaEmisionDocumentoInicio"
+                                                ng-enter="Enter()"
+                                                name="$root.DatosFormulario.BusquedaDocumento.Filtro.FechaEmisionDocumentoInicio"
+                                                required />
+                                            <div class="caja11 msgerror FechaEmisionDocumentoInicio">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.BusquedaDocumento.Filtro.FechaEmisionDocumentoInicio" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Fecha Emision Fin
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_04Fecha"
+                                                maxlength="10" type="text"
+                                                ng-model="$root.DatosFormulario.BusquedaDocumento.Filtro.FechaEmisionDocumentoFin"
+                                                data-bind="dateValue: $root.DatosFormulario.BusquedaDocumento.Filtro.FechaEmisionDocumentoFin, datePattern: 'dd/MM/yyyy'"
+                                                data-val="true"
+                                                data-val-date="Fecha Emision Fin debe ser una fecha."
+                                                id="FechaEmisionDocumentoFin"
+                                                ng-enter="Enter()"
+                                                name="$root.DatosFormulario.BusquedaDocumento.Filtro.FechaEmisionDocumentoFin"
+                                                required />
+                                            <div class="caja11 msgerror FechaEmisionDocumentoFin">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.BusquedaDocumento.Filtro.FechaEmisionDocumentoFin" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- FILTROS BUSQUEDA -->
+
+        <!-- RESULTADO BUSQUEDA -->
+        <div id="seccion-3">
+            <div style="width: 100%; float: left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado407a472c-4b7a-4dd5-83a5-19f5b78b6e38" class="block_content">
+                    <div class="form_section" style="width: 100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden">
+
+                                <ng-jqgrid
+                                    config="config"
+                                    addnew="true"
+                                    modeldata="$root.DatosFormulario.DatosDocumento.ListaDocumento"
+                                    gridid="grillaListaDocumento"
+                                    pagerid="grillaListaDocumento_pager"
+                                    api="gridapigrillaListaDocumento"
+                                    flgocultarbarrapaginado="0"
+                                    idgrilla="407a472c-4b7a-4dd5-83a5-19f5b78b6e38"
+                                    titulosinresultados=""
+                                    ocultarexportar="0"
+                                    altogrilla="150px"
+                                    idmarcarprimerresgistro="0"
+                                    ngclickagregar=""
+                                    urllistar="/Documento/BusquedaDocumento"
+                                    flgcargargrilla="0">
+
+                                    <table id="grillaListaDocumento"></table>
+                                    <div id="grillaListaDocumento_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- RESULTADO BUSQUEDA -->
+    </div>
+</div>

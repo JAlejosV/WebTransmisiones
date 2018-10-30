@@ -1,0 +1,176 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="RegistroNaveController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraGrabarMaestro.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos Nave</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarNaveFrm" name="AdministrarNaveFrm">
+                    <div class="block_content" style="width: 100%">
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Nombre Nave
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05"
+                                    type="text" ng-enter="Enter()" maxlength="50"
+                                    ng-model="$root.DatosFormulario.AdministrarNave.RegistroDatos.NombreNave" />
+                                <div class="caja11 msgerror NombreNave">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarNave.RegistroDatos.NombreNave" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Pais
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarNave.RegistroDatos.CodigoPais" />
+                                <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                    type="text"
+                                    ng-enter="Enter()"
+                                    ng-model="$root.DatosFormulario.AdministrarNave.RegistroDatos.NombrePais"
+                                    ng-disabled="true" />
+                                <input type="image" ng-click="BuscarPaisRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                    style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+
+                                <div class="caja11 msgerror NombrePais">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarNave.NombrePais" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Tipo de Nave
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarNave.RegistroDatos.CodigoTipoNave" />
+                                <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                    type="text"
+                                    ng-enter="Enter()"
+                                    ng-model="$root.DatosFormulario.AdministrarNave.RegistroDatos.NombreTipoNave"
+                                    ng-disabled="true" />
+                                <input type="image" ng-click="BuscarTipoNaveRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                    style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+
+                                <div class="caja11 msgerror NombreTipoNave">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarNave.NombreTipoNave" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Linea Naviera
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarNave.RegistroDatos.CodigoLineaNaviera" />
+                                <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                    type="text"
+                                    ng-enter="Enter()"
+                                    ng-model="$root.DatosFormulario.AdministrarNave.RegistroDatos.NombreLineaNaviera"
+                                    ng-disabled="true" />
+                                <input type="image" ng-click="BuscarLineaNavieraRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                    style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+
+                                <div class="caja11 msgerror NombreLineaNaviera">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarNave.NombreLineaNaviera" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Matricula
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05 solonumeros"
+                                    type="text" ng-enter="Enter()" maxlength="20"
+                                    ng-model="$root.DatosFormulario.AdministrarNave.RegistroDatos.MatriculaNave" />
+                                <div class="caja11 msgerror MatriculaNave">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarNave.RegistroDatos.MatriculaNave" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                TRB
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05 solodecimal"
+                                    type="text" ng-enter="Enter()"
+                                    ng-model="$root.DatosFormulario.AdministrarNave.RegistroDatos.TrbNave" />
+                                <div class="caja11 msgerror TrbNave">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarNave.RegistroDatos.TrbNave" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                TRN
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05 solodecimal"
+                                    type="text" ng-enter="Enter()"
+                                    ng-model="$root.DatosFormulario.AdministrarNave.RegistroDatos.TrnNave" />
+                                <div class="caja11 msgerror TrnNave">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarNave.RegistroDatos.TrnNave" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Eslora
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05 solodecimal"
+                                    type="text" ng-enter="Enter()"
+                                    ng-model="$root.DatosFormulario.AdministrarNave.RegistroDatos.EsloraNave" />
+                                <div class="caja11 msgerror EsloraNave">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarNave.RegistroDatos.EsloraNave" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Manga
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05 solodecimal"
+                                    type="text" ng-enter="Enter()"
+                                    ng-model="$root.DatosFormulario.AdministrarNave.RegistroDatos.MangaNave" />
+                                <div class="caja11 msgerror MangaNave">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarNave.RegistroDatos.MangaNave" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Calado
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05 solodecimal"
+                                    type="text" ng-enter="Enter()"
+                                    ng-model="$root.DatosFormulario.AdministrarNave.RegistroDatos.CaladoNave" />
+                                <div class="caja11 msgerror CaladoNave">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarNave.RegistroDatos.CaladoNave" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

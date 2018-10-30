@@ -1,0 +1,111 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="RegistroACLocal_ConTarifaController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/NewCalculadorWeb_BotoneraGrabar.cshtml")
+        </div>
+
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Configuración de Tarifa</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+
+                    <form id="frmAC_RegConfiguracionTarifa">
+                        <div class="col-md-12 row">
+                            <input class="ng-hide" maxlength="10" type="text" ng-model="$root.DatosFormulario.DatosTarifaLigadaAC.IdCount" disabled />
+                            <input class="ng-hide" maxlength="10" type="text" ng-model="$root.DatosFormulario.DatosTarifaLigadaAC.IdConfiguracionTarifa" disabled />
+                            <input class="ng-hide" maxlength="10" type="text" ng-model="$root.DatosFormulario.DatosTarifaLigadaAC.CodigoAcuerdoComercialLocal" disabled />
+                            <input class="ng-hide" maxlength="10" type="text" ng-model="$root.DatosFormulario.DatosTarifaLigadaAC.CodigoTarifaLocal" disabled />
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-2 ">
+                                Descripción de la Tarifa
+                            </div>
+                            <div class="col-md-4">
+                                <input class="InputTEXT_01" maxlength="70" type="text"
+                                    ng-model="$root.DatosFormulario.DatosTarifaLigadaAC.DescripcionTarifa"
+                                    ng-disabled="true" />
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="seccion-3">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Tarifa Ligadas</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+                    <div class="block_menu block_content">
+                        <div style="max-width: 100%; height: 100%">
+                            <div class="col-md-12 row">
+                                <div class="col-xs-2">
+                                    <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarTarifaLigada_Click();" style="" ng-disabled="FlagEditing==false">
+                                        <span class="boton1Span">
+                                            <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                        </span>
+                                        <span class="boton1txt">Agregar</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="col-xs-12 col-md-12">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div style="width: 100%; float: left">
+                        <div id="ContentListado8ab5ef57-0c74-4c53-807e-74d6cfa7c6d8" class="block_content">
+                            <div class="form_section" style="width: 100%">
+
+                                <div class="forms2">
+                                    <div class="table-responsive">
+                                        <ng-jqgrid 
+                                            config="config" 
+                                            addnew="true"
+                                            modeldata="$root.DatosFormulario.DatosTarifaLocal.grillaListaTarifaLigadaMemoria" 
+                                            gridid="grillaEdicionTarifaLigada" 
+                                            pagerid="grillaEdicionTarifaLigada_pager" 
+                                            api="gridapigrillaEdicionTarifaLigada" 
+                                            flgocultarbarrapaginado="0" 
+                                            idgrilla="8ab5ef57-0c74-4c53-807e-74d6cfa7c6d8" 
+                                            titulosinresultados="" 
+                                            ocultarexportar="1" 
+                                            altogrilla="150px" 
+                                            idmarcarprimerresgistro="0" 
+                                            ngclickagregar="" 
+                                            urllistar="" 
+                                            flgcargargrilla="1">
+                                            <table id="grillaEdicionTarifaLigada"></table>
+                                            <div id="grillaEdicionTarifaLigada_pager"></div>
+                                        </ng-jqgrid>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

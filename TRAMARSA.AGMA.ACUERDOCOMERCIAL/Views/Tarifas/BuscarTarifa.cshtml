@@ -1,0 +1,151 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style="max-width:800px;">
+    <div ng-app="app" ng-controller="BuscarTarifaController" class="ng-scope">
+        @Html.Partial("~/Views/Botonera/BotoneraBusquedaClásicaconBotonSalir.cshtml")
+
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Criterios de Búsqueda</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="BusquedaTarifaFrm" name="BusquedaTarifaFrm">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Línea Naviera
+                            </div>
+                            <div class="col-md-8">
+                                <select ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoLinea"
+                                        data-bind="value: $root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoLinea"
+                                        ng-disabled="$root.DatosFormulario.DatosGenerales.DataBuscarTarifas.Habilitado=='False'"
+                                        ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.DatosBusqueda.Linea" class="InputSELECT_01 required"
+                                        id="$root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoLinea"
+                                        data-val="true"
+                                        data-val-required="Línea naviera es requerido."
+                                        name="$root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoLinea"
+                                        required>
+                                    <option value="">[Seleccione]</option>
+                                </select>
+                                <div class="caja11 msgerror CodigoLinea">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoLinea" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Régimen
+                            </div>
+                            <div class="col-md-8">
+                                <select ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoRegimen"
+                                        ng-options="regimen.Codigo as regimen.Descripcion for regimen in $root.DatosFormulario.DatosBusqueda.Regimen" class="InputSELECT_01">
+                                    <option value="">[Seleccione]</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Código Concepto
+                            </div>
+                            <div class="col-md-4">
+                                <input class="InputTEXT_05"
+                                       maxlength="4"
+                                       type="text"
+                                       ng-enter="Enter()"
+                                       ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoConcepto"
+                                       data-bind="value: $root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoConcepto"
+                                       id="$root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoConcepto"
+                                       name="$root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoConcepto" />
+                                <div class="caja11 msgerror CodigoConcepto">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoConcepto" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Código Tarifa
+                            </div>
+                            <div class="col-md-4">
+                                <input class="InputTEXT_05"
+                                       maxlength="3"
+                                       type="text"
+                                       ng-enter="Enter()"
+                                       ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoTarifa"
+                                       data-bind="value: $root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoTarifa"
+                                       id="$root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoTarifa"
+                                       name="$root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoTarifa" />
+                                <div class="caja11 msgerror CodigoTarifa">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DatosGenerales.DataBuscarTarifas.CodigoTarifa" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Descripción Tarifa
+                            </div>
+                            <div class="col-md-4">
+                                <input class="InputTEXT_05 " maxlength="70" type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarTarifas.DescripcionTarifa" />
+                                <div class="caja11msgerrorRuc">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DataBuscarTarifas.DescripcionTarifa" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="caja11 msgerror Objeto"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListadoc293c8de-4d2d-4b54-84f4-39f4f0b4e6cf" class="block_content">
+                    <div class="form_section" style="width:100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata=""
+                                           gridid="grillaListaTarifas"
+                                           pagerid="grillaListaTarifas_pager"
+                                           api="gridapigrillaListaTarifas"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="c293c8de-4d2d-4b54-84f4-39f4f0b4e6cf"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="150px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/BuscarTarifa/ConsultaTarifa"
+                                           flgcargargrilla="1">
+                                    <table id="grillaListaTarifas"></table>
+                                    <div id="grillaListaTarifas_pager"></div>
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

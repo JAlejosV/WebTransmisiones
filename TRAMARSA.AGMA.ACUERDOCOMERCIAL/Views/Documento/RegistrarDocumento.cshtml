@@ -1,0 +1,501 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope">
+    <div ng-app="app" ng-controller="RegistroDocumentoController" class="ng-scope">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraRegAcuerdoComercial.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos del Documento</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+                    <form id="frmDocumento_DatosGenerales">
+                        <div class="col-md-12 row">
+                            <div class="row">
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CodigoDocumento" />
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.Accion" />
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroDocumento.DatosDocumento.DocumentoFlagEditar" />
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Itinerario/Nave
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CodigoItinerario" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombreNave"
+                                                   ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarItinerario_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;" ng-disabled="FlagEditing==false">
+                                            <div class="caja11 msgerror NombreNave">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombreNave" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Viaje
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NumeroViajeItinerario"
+                                                   ng-disabled="true" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Aduana
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombreAduanaNave"
+                                                   ng-disabled="true" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Tipo de Operacion
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombreTipoOperacion"
+                                                   ng-disabled="true" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Puerto Origen
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CodigoPuertoOrigenDocumento" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombrePuertoOrigen"
+                                                   ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarPuertoOrigen_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;" ng-disabled="FlagEditing==false">
+                                            <div class="caja11 msgerror NombrePuertoOrigen">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombrePuertoOrigen" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Puerto Embarque
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CodigoPuertoEmbarqueDocumento" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombrePuertoEmbarque"
+                                                   ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarPuertoEmbarque_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;" ng-disabled="FlagEditing==false">
+                                            <div class="caja11 msgerror NombrePuertoEmbarque">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombrePuertoEmbarque" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Puerto Descarga
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CodigoPuertoDescargaDocumento" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombrePuertoDescarga"
+                                                   ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarPuertoDescarga_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;" ng-disabled="FlagEditing==false">
+                                            <div class="caja11 msgerror NombrePuertoDescarga">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombrePuertoDescarga" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Puerto Final
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CodigoPuertoFinalDocumento" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombrePuertoFinal"
+                                                   ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarPuertoFinal_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;" ng-disabled="FlagEditing==false">
+                                            <div class="caja11 msgerror NombrePuertoFinal">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombrePuertoFinal" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Linea Naviera
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CodigoLineaNaviera" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombreLineaNaviera"
+                                                   ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarLineaNaviera_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;" ng-disabled="FlagEditing==false">
+                                            <div class="caja11 msgerror NombreLineaNaviera">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombreLineaNaviera" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Aduana
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CodigoAduana" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombreAduana"
+                                                   ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarAduana_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;" ng-disabled="FlagEditing==false">
+                                            <div class="caja11 msgerror NombreAduana">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombreAduana" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Tipo de BL
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CodigoTipoBL"
+                                                    ng-options="tipobl.CodigoTipoBL as tipobl.NombreTipoBL for tipobl in $root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.TiposBL"
+                                                    class="InputSELECT_01"
+                                                    ng-disabled="FlagEditing==false">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoTipoBL">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CodigoTipoBL" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Tipo de Envio
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CodigoTipoEnvio"
+                                                    ng-options="tipoenvio.CodigoTipoEnvio as tipoenvio.NombreTipoEnvio for tipoenvio in $root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.TiposEnvio"
+                                                    class="InputSELECT_01"
+                                                    ng-disabled="FlagEditing==false">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoTipoEnvio">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CodigoTipoEnvio" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Condicion de Contrato
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CodigoCondicionContrato"
+                                                    ng-options="condicioncontrato.CodigoCondicionContrato as condicioncontrato.NombreCondicionContrato for condicioncontrato in $root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CondicionesContrato"
+                                                    class="InputSELECT_01"
+                                                    ng-disabled="FlagEditing==false">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoCondicionContrato">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CodigoCondicionContrato" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Requerimiento Servicio
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.CodigoRequerimientoServicio" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombreRequerimientoServicio"
+                                                   ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarRequerimientoServicio_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;" ng-disabled="FlagEditing==false">
+                                            <div class="caja11 msgerror NombreRequerimientoServicio">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NombreRequerimientoServicio" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Numero BL
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_01" maxlength="25" onkeyup="mayus(this);"
+                                                   type="text" ng-enter="Enter()" ng-disabled="FlagEditing==false"
+                                                   ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NumeroDocumento" />
+                                            <div class="caja11 msgerror NumeroDocumento">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.NumeroDocumento" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Fecha Emision
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_04Fecha"
+                                                   maxlength="10" type="text"
+                                                   ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.FechaEmisionDocumento"
+                                                   data-bind="dateValue: $root.DatosFormulario.RegistroDocumento.RegistroDatos.FechaEmisionDocumento, datePattern: 'dd/MM/yyyy'"
+                                                   data-val="true"
+                                                   data-val-date="Fecha de Emision debe ser una fecha."
+                                                   id="FechaEmisionDocumento"
+                                                   ng-enter="Enter()"
+                                                   name="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.FechaEmisionDocumento"
+                                                   ng-disabled="FlagEditing==false"
+                                                   required />
+                                            <div class="caja11 msgerror FechaEmisionDocumento">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.FechaEmisionDocumento" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Fecha Embarque
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_04Fecha"
+                                                   maxlength="10" type="text"
+                                                   ng-model="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.FechaEmbarqueDocumento"
+                                                   data-bind="dateValue: $root.DatosFormulario.RegistroDocumento.RegistroDatos.FechaEmbarqueDocumento, datePattern: 'dd/MM/yyyy'"
+                                                   data-val="true"
+                                                   data-val-date="Fecha de Embarque debe ser una fecha."
+                                                   id="FechaEmbarqueDocumento"
+                                                   ng-enter="Enter()"
+                                                   name="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.FechaEmbarqueDocumento"
+                                                   required
+                                                   ng-disabled="FlagEditing==false" />
+                                            <div class="caja11 msgerror FechaEmbarqueDocumento">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.DatosRegistroDocumento.FechaEmbarqueDocumento" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-12">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos del Carga</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+                    <div class="block_menu block_content" data-codigoseccion="BL">
+                        <div style="max-width: 100%; height: 100%">
+
+                            <div class="col-md-12 row">
+                                <div class="col-xs-2">
+                                    <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarDatosCarga();" style="" ng-disabled="FlagEditing==false">
+                                        <span class="boton1Span">
+                                            <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                        </span>
+                                        <span class="boton1txt">Agregar</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="col-xs-12 col-md-12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ContentListadogrillaListaDatosCarga" class="block_content">
+                        <div class="form_section" style="width: 100%">
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow: hidden;">
+                                    <ng-jqgrid config="config"
+                                               addnew="true"
+                                               modeldata="$root.DatosFormulario.RegistroDocumento.ListaDatosCarga"
+                                               gridid="grillaListaDatosCarga"
+                                               pagerid="grillaListaDatosCarga_pager"
+                                               api="gridapigrillaListaDatosCarga"
+                                               flgocultarbarrapaginado="1"
+                                               idgrilla="F5C12E86-36DF-49E7-8FAA-452F84AEEEFH"
+                                               titulosinresultados=""
+                                               ocultarexportar="1"
+                                               altogrilla="130px"
+                                               idmarcarprimerresgistro="0" url=""
+                                               flgcargargrilla="0" />
+                                    <table id="grillaListaDatosCarga"></table>
+                                    <div id="grillaListaDatosCarga_pager"></div>
+                                    </ng-jqgrid>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caja11 msgerror listaCargas">
+                            <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-14">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos del Cliente</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+                    <div class="block_menu block_content" data-codigoseccion="BL">
+                        <div style="max-width: 100%; height: 100%">
+
+                            <div class="col-md-12 row">
+                                <div class="col-xs-2">
+                                    <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarDatosCliente();" style="" ng-disabled="FlagEditing==false">
+                                        <span class="boton1Span">
+                                            <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                        </span>
+                                        <span class="boton1txt">Agregar</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="col-xs-12 col-md-12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ContentListadogrillaListaDatosCliente" class="block_content">
+                        <div class="form_section" style="width: 100%">
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow: hidden;">
+                                    <ng-jqgrid config="config"
+                                               addnew="true"
+                                               modeldata="$root.DatosFormulario.RegistroDocumento.ListaDatosCliente"
+                                               gridid="grillaListaDatosCliente"
+                                               pagerid="grillaListaDatosCliente_pager"
+                                               api="gridapigrillaListaDatosCliente"
+                                               flgocultarbarrapaginado="1"
+                                               idgrilla="F5C12E86-36DF-49E7-8FAA-452F84AEEEFI"
+                                               titulosinresultados=""
+                                               ocultarexportar="1"
+                                               altogrilla="130px"
+                                               idmarcarprimerresgistro="0" url=""
+                                               flgcargargrilla="0" />
+                                    <table id="grillaListaDatosCliente"></table>
+                                    <div id="grillaListaDatosCliente_pager"></div>
+                                    </ng-jqgrid>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caja11 msgerror listaClientes">
+                            <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-13">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos del Flete</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+                    <div class="block_menu block_content" data-codigoseccion="BL">
+                        <div style="max-width: 100%; height: 100%">
+
+                            <div class="col-md-12 row">
+                                <div class="col-xs-2">
+                                    <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarDatosFlete();" style="" ng-disabled="FlagEditing==false">
+                                        <span class="boton1Span">
+                                            <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                        </span>
+                                        <span class="boton1txt">Agregar</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="col-xs-12 col-md-12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ContentListadogrillaListaDatosFlete" class="block_content">
+                        <div class="form_section" style="width: 100%">
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow: hidden;">
+                                    <ng-jqgrid config="config"
+                                               addnew="true"
+                                               modeldata="$root.DatosFormulario.RegistroDocumento.ListaDatosFlete"
+                                               gridid="grillaListaDatosFlete"
+                                               pagerid="grillaListaDatosFlete_pager"
+                                               api="gridapigrillaListaDatosFlete"
+                                               flgocultarbarrapaginado="1"
+                                               idgrilla="F5C12E86-36DF-49E7-8FAA-452F84AEEEFG"
+                                               titulosinresultados=""
+                                               ocultarexportar="1"
+                                               altogrilla="130px"
+                                               idmarcarprimerresgistro="0" url=""
+                                               flgcargargrilla="0" />
+                                    <table id="grillaListaDatosFlete"></table>
+                                    <div id="grillaListaDatosFlete_pager"></div>
+                                    </ng-jqgrid>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caja11 msgerror listaFletes">
+                            <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

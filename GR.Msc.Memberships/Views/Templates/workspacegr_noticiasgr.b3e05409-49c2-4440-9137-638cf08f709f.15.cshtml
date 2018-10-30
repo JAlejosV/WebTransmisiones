@@ -1,0 +1,20 @@
+@using Viatecla.Factory.Scriptor
+
+@{
+    Layout = null;
+
+}
+  
+
+@if (Model.Count > 0)
+{
+	  		
+    foreach (ScriptorContent contenido in Model)
+    {
+        
+         @Html.Template(contenido as ScriptorContent, "WorkspaceGR_NoticiasGRMini")
+		 
+    }
+	
+
+}

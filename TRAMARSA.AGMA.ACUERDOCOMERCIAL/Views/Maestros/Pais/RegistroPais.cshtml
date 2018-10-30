@@ -1,0 +1,70 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="RegistroPaisController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraGrabarMaestro.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos Pais</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarPaisFrm" name="AdministrarPaisFrm">
+                    <div class="block_content" style="width:100%">
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Codigo Pais Sunat
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05"
+                                       type="text" ng-enter="Enter()" maxlength="2" onkeyup="mayus(this);"
+                                       ng-model="$root.DatosFormulario.AdministrarPais.RegistroDatos.CodigoPaisSunat" />
+                                <div class="caja11 msgerror CodigoPaisSunat">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarPais.RegistroDatos.CodigoPaisSunat" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Nombre Pais
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_01 maxlength="150"
+                                       type="text" ng-enter="Enter()"
+                                       ng-model="$root.DatosFormulario.AdministrarPais.RegistroDatos.NombrePais" />
+                                <div class="caja11 msgerror NombrePais">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarPais.RegistroDatos.NombrePais" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Codigo Alfa Pais
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05" maxlength="3" onkeyup="mayus(this);"
+                                       type="text" ng-enter="Enter()"
+                                       ng-model="$root.DatosFormulario.AdministrarPais.RegistroDatos.CodigoAlfaPais" />
+                                <div class="caja11 msgerror CodigoAlfaPais">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarPais.RegistroDatos.CodigoAlfaPais" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

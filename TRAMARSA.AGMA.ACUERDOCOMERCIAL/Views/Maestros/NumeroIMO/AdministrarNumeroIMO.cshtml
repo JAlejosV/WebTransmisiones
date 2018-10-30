@@ -1,0 +1,124 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+
+    <div ng-app="app" ng-controller="AdministrarNumeroIMOController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraBusquedaAcuerdoComercial.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>ADMINISTRAR NUMERO IMO</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarNumeroIMOFrm" name="AdministrarNumeroIMOFrm">
+                    <div class="block_content" style="width: 100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Nombre Numero IMO
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05"
+                                                type="text" ng-enter="Enter()" maxlength="255"
+                                                ng-model="$root.DatosFormulario.AdministrarNumeroIMO.Filtro.NombreNumeroIMO" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Numero IMO
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_01 solonumeros"
+                                                type="text" ng-enter="Enter()" maxlength="4"
+                                                ng-model="$root.DatosFormulario.AdministrarNumeroIMO.Filtro.NumberIMO" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Pagina Numero IMO
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_01 solonumeros"
+                                                type="text" ng-enter="Enter()" maxlength="4"
+                                                ng-model="$root.DatosFormulario.AdministrarNumeroIMO.Filtro.PaginaNumeroIMO" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Clase IMO
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarNumeroIMO.Filtro.CodigoClaseIMO" />
+                                            <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarNumeroIMO.Datos.NombreClaseIMO"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarClaseIMO_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width: 100%; float: left">
+
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado1a0b5f06-bb91-4713-aa00-966ef96a1013" class="block_content">
+                    <div class="form_section" style="width: 100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden">
+
+                                <ng-jqgrid config="config"
+                                    addnew="true"
+                                    modeldata="$root.DatosFormulario.AdministrarNumeroIMO.ListaMaestroNumeroIMO"
+                                    gridid="grillaListaMaestroNumeroIMO"
+                                    pagerid="grillaListaMaestroNumeroIMO_pager"
+                                    api="gridapigrillaListaMaestroNumeroIMO"
+                                    flgocultarbarrapaginado="0"
+                                    idgrilla="1a0b5f06-bb91-4713-aa00-966ef96a1013"
+                                    titulosinresultados=""
+                                    ocultarexportar="0"
+                                    altogrilla="150px"
+                                    idmarcarprimerresgistro="0"
+                                    ngclickagregar=""
+                                    urllistar="/NumeroIMO/ConsultaNumeroIMO"
+                                    flgcargargrilla="0">
+                                    <table id="grillaListaMaestroNumeroIMO"></table>
+                                    <div id="grillaListaMaestroNumeroIMO_pager"></div>
+
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

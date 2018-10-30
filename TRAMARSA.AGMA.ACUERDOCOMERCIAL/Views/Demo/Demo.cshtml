@@ -1,0 +1,237 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style=" ">
+    <div ng-app="app" ng-controller="GenerarCalcularVBController" class="ng-scope">
+
+
+        @Html.Partial("~/Views/Botonera/BotoneraCalcularVB.cshtml")
+        
+        <!-- SECCION CRITERIOS -->
+        
+        <!-- SECCION CRITERIOS -->
+
+        <!-- SECCION SELECCIONAR BL-->
+        <div>
+            <div class="block_cab block_cab_active" data-codigoseccion="SeleccionarBL">
+                <h2>
+                    <span>Seleccionar BL</span>
+                </h2>
+                <h3></h3>
+                <div class="acordeon">
+                </div>
+            </div>
+
+            <form id="frm_ConsultarBL" name="frm_ConsultarBL" data-codigoseccion="ConsultarBL">
+                <div class="block_content" style="width:100%">
+                    <div class="block_menu block_content">
+                        <div class="col-md-12 row">
+                            <div class="col-xs-12">
+                                <button class="SeparatorLeft boton1Style boton1" ng-click="CalcularServicio_Click();" style="" ng-disabled="FlagEditing==false">
+                                    <span class="boton1Span">
+                                        <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                    </span>
+                                    <span class="boton1txt">Calcular</span>
+                                </button>
+                                <button class="SeparatorLeft boton1Style boton1" ng-click="Carrito_Click();" style="" ng-disabled="FlagEditing==false">
+                                    <span class="boton1Span">
+                                        <img class="boton2Img " alt="Agregar" src="/Images/Botonera/shopping-cart-plus.png">
+                                    </span>
+                                    <span class="boton1txt">Carrito(+)</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="block_content table-responsive">
+                        <ng-jqgrid config="config"
+                                   addnew="true"
+                                   modeldata="$root.DatosFormulario.CalcularVB.ListaConsultaBL"
+                                   gridid="grillaVistoBuenoListarBL"
+                                   pagerid="grillaVistoBuenoListarBL_pager"
+                                   api="gridapigrillaVistoBuenoListarBL"
+                                   flgocultarbarrapaginado="1"
+                                   idgrilla="54C6E62F-0681-45D9-A353-7280E2236363"
+                                   titulosinresultados=""
+                                   ocultarexportar="1"
+                                   altogrilla="130px"
+                                   idmarcarprimerresgistro="" url=""
+                                   flgcargargrilla="0">
+                            <table id="grillaVistoBuenoListarBL"></table>
+                            <div id="grillaVistoBuenoListarBL_pager"></div>
+                        </ng-jqgrid>
+                    </div>
+                    <div class="caja11 msgerror ListaConsultaBL">
+                        <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <!-- SECCION SELECCIONAR BL-->
+
+        <!-- SECCION SERVICIOS -->
+        <div>
+            <div class="block_cab block_cab_active" data-codigoseccion="ServicioBL">
+                <h2>
+                    <span>Servicios</span>
+                </h2>
+                <h3></h3>
+                <div class="acordeon">
+                </div>
+            </div>
+
+            <form id="VistoBuenoServiciosFrm" name="VistoBuenoServiciosFrm" data-codigoseccion="Servicios">
+
+                <div class="block_menu block_content">
+
+                    <div class="block_content table-responsive">
+                        <ng-jqgrid config="config"
+                                   addnew="true"
+                                   modeldata="$root.DatosFormulario.CalcularVB.ListaCalculoVB"
+                                   gridid="grillaVistoBuenoServicios"
+                                   pagerid="grillaVistoBuenoServicios_pager"
+                                   api="gridapigrillaVistoBuenoServicios"
+                                   flgocultarbarrapaginado="1"
+                                   idgrilla="5B90B75D-ACFD-45C4-ADCB-99ED1A33F2F5"
+                                   titulosinresultados=""
+                                   ocultarexportar="1"
+                                   altogrilla="130px"
+                                   idmarcarprimerresgistro="" url=""
+                                   flgcargargrilla="0">
+                            <table id="grillaVistoBuenoServicios"></table>
+                            <div id="grillaVistoBuenoServicios_pager"></div>
+                        </ng-jqgrid>
+                    </div>
+                    <div class="caja11 msgerror ListaCalculoVB">
+                        <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <div class="col-md-12">
+
+                        <div class="row">
+
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <div class="col-md-12 row">
+                                    <div class="col-md-4">
+                                        Total S/.
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="InputTEXT_05 solonumeros " type="text"
+                                               ng-model="$root.DatosFormulario.CalcularVB.TotalSolesMoneda" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="col-md-12 row">
+                                    <div class="col-md-4">
+                                        Total USD
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="InputTEXT_05 solonumeros " type="text"
+                                               ng-model="$root.DatosFormulario.CalcularVB.TotalDolaresMoneda" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- SECCION SERVICIOS -->
+
+        <!-- SECCION SERVICIOS OPCIONALES -->
+        <div>
+            <div class="block_cab block_cab_active" data-codigoseccion="ServiciosOpcionales">
+                <h2>
+                    <span>Servicios Opcionales</span>
+                </h2>
+                <h3></h3>
+                <div class="acordeon">
+                </div>
+            </div>
+
+            <form id="frm_ServiciosOpcionales" name="frm_ConsultarBL" data-codigoseccion="ServiciosOpcionales">
+                <div class="block_content" style="width:100%">
+                    <div class="block_menu block_content">
+
+                        <div class="col-md-12 row">
+                            <div class="col-xs-12">
+                                <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarServicioOpcional();" style="" ng-disabled="FlagEditing==false">
+                                    <span class="boton1Span">
+                                        <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                    </span>
+                                    <span class="boton1txt">Agregar</span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="block_content table-responsive">
+                        <ng-jqgrid config="config"
+                                   addnew="true"
+                                   modeldata="$root.DatosFormulario.CalcularVB.ListaServiciosOpcionales"
+                                   gridid="grillaVistoBuenoServiciosOpcionales"
+                                   pagerid="grillaVistoBuenoServiciosOpcionales_pager"
+                                   api="gridapigrillaVistoBuenoServiciosOpcionales"
+                                   flgocultarbarrapaginado="1"
+                                   idgrilla="B8A16276-A407-4140-B274-217D45E2A2EE"
+                                   titulosinresultados=""
+                                   ocultarexportar="1"
+                                   altogrilla="130px"
+                                   idmarcarprimerresgistro="" url=""
+                                   flgcargargrilla="0">
+                            <table id="grillaVistoBuenoServiciosOpcionales"></table>
+                            <div id="grillaVistoBuenoServiciosOpcionales_pager"></div>
+                        </ng-jqgrid>
+                    </div>
+                    <div class="caja11 msgerror ListaServiciosOpcionales">
+                        <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                    </div>
+
+
+                    <div class="col-md-12">
+
+                        <div class="row">
+
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <div class="col-md-12 row">
+                                    <div class="col-md-4">
+                                        Total S/.
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="InputTEXT_05 solonumeros " type="text"
+                                               ng-model="$root.DatosFormulario.CalcularVB.ServicioOpiconal.TotalSolesMoneda" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="col-md-12 row">
+                                    <div class="col-md-4">
+                                        Total USD
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="InputTEXT_05 solonumeros " type="text"
+                                               ng-model="$root.DatosFormulario.CalcularVB.ServicioOpiconal.TotalDolaresMoneda" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </form>
+
+        </div>
+        <!-- SECCION SERVICIOS OPCIONALES -->
+
+    </div>
+</div>

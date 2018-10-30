@@ -1,0 +1,130 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="BuscarNaveController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/BotoneraBusquedaClásicaconBotonSalir.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Criterios de Búsqueda</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="BusquedaNaveFrm" name="BusquedaNaveFrm">
+                    <div class="block_content">
+                        <div style="max-width: 100%; height: 100%">
+                            <div class="col-md-12 row">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        Código Nave
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="InputTEXT_05"
+                                               type="text"
+                                               maxlength="3"
+                                               ng-model="$root.DatosFormulario.DataFiltroBusquedaNave.Codigo"
+                                               data-bind="value: $root.DatosFormulario.DataFiltroBusquedaNave.Codigo"
+                                               data-val="true"
+                                               ng-enter="Enter()"
+                                               id="$root.DatosFormulario.DataFiltroBusquedaNave.Codigo"
+                                               name="$root.DatosFormulario.DataFiltroBusquedaNave.Codigo" />
+                                        <div class="caja11 msgerror Codigo">
+                                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DataFiltroBusquedaNave.Codigo" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        Nombre Nave
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="InputTEXT_05"
+                                               type="text"
+                                               maxlength="40"
+                                               ng-model="$root.DatosFormulario.DataFiltroBusquedaNave.Nombre"
+                                               data-bind="value: $root.DatosFormulario.DataFiltroBusquedaNave.Nombre"
+                                               data-val="true"
+                                               ng-enter="Enter()"
+                                               id="$root.DatosFormulario.DataFiltroBusquedaNave.Nombre"
+                                               name="$root.DatosFormulario.DataFiltroBusquedaNave.Nombre" />
+                                        <div class="caja11 msgerror Nombre"></div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        Número Viaje
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="InputTEXT_05"
+                                               type="text"
+                                               maxlength="6"
+                                               ng-model="$root.DatosFormulario.DataFiltroBusquedaNave.NumeroViaje"
+                                               data-bind="value: $root.DatosFormulario.DataFiltroBusquedaNave.NumeroViaje"
+                                               data-val="true"
+                                               ng-enter="Enter()"
+                                               id="$root.DatosFormulario.DataFiltroBusquedaNave.NumeroViaje"
+                                               name="$root.DatosFormulario.DataFiltroBusquedaNave.NumeroViaje" />
+                                        <div class="caja11 msgerror NumeroViaje">
+                                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DataFiltroBusquedaNave.NumeroViaje" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="caja11 msgerror Objeto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado77eb45af-2235-4257-950d-5eb797ce2ddd" class="block_content">
+                    <div class="form_section" style="width:100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata=""
+                                           gridid="grillaListaNaves"
+                                           pagerid="grillaListaNaves_pager"
+                                           api="gridapigrillaListaNaves"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="77eb45af-2235-4257-950d-5eb797ce2ddd"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="150px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/Nave/ConsultaNave"
+                                           flgcargargrilla="0">
+                                    <table id="grillaListaNaves"></table>
+                                    <div id="grillaListaNaves_pager"></div>
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

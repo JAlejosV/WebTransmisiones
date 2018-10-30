@@ -1,0 +1,56 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="RegistroPartidaArancelariaController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraGrabarMaestro.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos Partida Arancelaria</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarPartidaArancelariaFrm" name="AdministrarPartidaArancelariaFrm">
+                    <div class="block_content" style="width:100%">
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Código HS
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05"
+                                       type="text" ng-enter="Enter()" max="20" maxlength="20"
+                                       ng-model="$root.DatosFormulario.AdministrarPartidaArancelaria.RegistroDatos.CodigoPartidaArancelaria" />
+                                <div class="caja11 msgerror Codigo">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarTipoContenedor.RegistroDatos.CodigoPartidaArancelaria" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Descripción HS
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_01" max="250" maxlength="250"
+                                       type="text" ng-enter="Enter()"
+                                       ng-model="$root.DatosFormulario.AdministrarPartidaArancelaria.RegistroDatos.DescripcionPartidaArancelaria" />
+                                <div class="caja11 msgerror Descripcion">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarTipoContenedor.RegistroDatos.DescripcionPartidaArancelaria" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

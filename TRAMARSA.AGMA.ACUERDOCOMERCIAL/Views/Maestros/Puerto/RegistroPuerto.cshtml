@@ -1,0 +1,74 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="RegistroPuertoController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraGrabarMaestro.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos Puerto</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarPuertoFrm" name="AdministrarPuertoFrm">
+                    <div class="block_content" style="width: 100%">
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Codigo Sunat
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05"
+                                    type="text" ng-enter="Enter()" maxlength="5" onkeyup="mayus(this);"
+                                    ng-model="$root.DatosFormulario.AdministrarPuerto.RegistroDatos.CodigoPuertoSunat" />
+                                <div class="caja11 msgerror CodigoPuertoSunat">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarPuerto.RegistroDatos.CodigoPuertoSunat" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Nombre Puerto
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_01" maxlength="100"
+                                    type="text" ng-enter="Enter()"
+                                    ng-model="$root.DatosFormulario.AdministrarPuerto.RegistroDatos.NombrePuerto" />
+                                <div class="caja11 msgerror NombrePuerto">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarPuerto.RegistroDatos.NombrePuerto" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Nombre Pais
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarPuerto.RegistroDatos.CodigoPais" />
+                                <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                    type="text"
+                                    ng-enter="Enter()"
+                                    ng-model="$root.DatosFormulario.AdministrarPuerto.RegistroDatos.NombrePais"
+                                    ng-disabled="true" />
+                                <input type="image" ng-click="BuscarPaisRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                    style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+
+                                <div class="caja11 msgerror NombrePais">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarPuerto.NombrePais" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

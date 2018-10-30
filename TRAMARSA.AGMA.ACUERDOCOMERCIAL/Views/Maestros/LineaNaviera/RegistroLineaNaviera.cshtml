@@ -1,0 +1,80 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="RegistroLineaNavieraController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraGrabarMaestro.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos Linea Naviera</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarLineaNavieraFrm" name="AdministrarLineaNavieraFrm">
+                    <div class="block_content" style="width:100%">
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Nombre Linea Naviera
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05"
+                                       type="text" ng-enter="Enter()" maxlength="80"
+                                       ng-model="$root.DatosFormulario.AdministrarLineaNaviera.RegistroDatos.NombreLineaNaviera" />
+                                <div class="caja11 msgerror NombreLineaNaviera">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarLineaNaviera.RegistroDatos.NombreLineaNaviera" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Direccion
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_01 maxlength="150"
+                                       type="text" ng-enter="Enter()"
+                                       ng-model="$root.DatosFormulario.AdministrarLineaNaviera.RegistroDatos.DireccionLineaNaviera" />
+                                <div class="caja11 msgerror DireccionLineaNaviera">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarLineaNaviera.RegistroDatos.DireccionLineaNaviera" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                RUC de Linea Naviera
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05 solonumeros" maxlength="11"
+                                       type="text" ng-enter="Enter()"
+                                       ng-model="$root.DatosFormulario.AdministrarLineaNaviera.RegistroDatos.RucLineaNaviera" />
+                                <div class="caja11 msgerror RucLineaNaviera">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarLineaNaviera.RegistroDatos.RucLineaNaviera" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Codigo de Equivalencia
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05" maxlength="10"
+                                       type="text" ng-enter="Enter()"
+                                       ng-model="$root.DatosFormulario.AdministrarLineaNaviera.RegistroDatos.CodigoEquivalencia" />
+                                <div class="caja11 msgerror CodigoEquivalencia">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarLineaNaviera.RegistroDatos.CodigoEquivalencia" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

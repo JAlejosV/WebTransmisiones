@@ -1,0 +1,120 @@
+{
+  "Data": [
+    {
+      "Id": "548139c3-2cde-48f0-aa7a-d753e1e77f11",
+      "Title": "n.d.",
+      "State": "Publicado",
+      "ChannelPath": "/tramarsa/portales_agma/calculador_web/sistema/registro_de_tarifa_local/configuracion_tarifa_ligada/props_configuracion_tarifa_ligada",
+      "Path": "/tramarsa/portales_agma/calculador_web/sistema/registro_de_tarifa_local/configuracion_tarifa_ligada/props_configuracion_tarifa_ligada/_104",
+      "Parts": {
+        "es_pe__Titulo": "Configuración de Tarifa Ligada",
+        "Secciones": [
+          {
+            "Id": "8ce94abd-db22-421e-bb27-0279bd3b6bd6",
+            "Title": "Botonera",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/botonera_6",
+            "Parts": {
+              "es_pe__Nombre": "Botonera",
+              "CrearSeccion": "0",
+              "Titulo": "",
+              "TipoControlContenedor": {
+                "Value": "",
+                "Title": "",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "38243db2-998f-48b1-bc6f-920d8e5123c4",
+                  "Title": "Botonera Configuración Tarifa Ligada",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/botonera",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/botonera/botonera_configuracion_tarifa_ligada",
+                  "Parts": {
+                    "Titulo": "Botonera Configuración Tarifa Ligada"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Botonera"
+            }
+          },
+          {
+            "Id": "13b8dcf0-3017-4c92-8f81-865023340b16",
+            "Title": "Tarifa: Detalle Tarifa Ligada",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/tarifa__detalle_tarifa_ligada",
+            "Parts": {
+              "es_pe__Nombre": "Tarifa: Detalle Tarifa Ligada",
+              "CrearSeccion": "0",
+              "Titulo": "Detalle Tarifa Ligada",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "83bc516f-40a7-4540-8672-ebe98b02eeea",
+                  "Title": "Tarifa Local : Detalle Tarifa Ligada",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos/tarifa_local___detalle_tarifa_ligada",
+                  "Parts": {
+                    "es_pe__Titulo": "Tarifa Local : Detalle Tarifa Ligada",
+                    "en_gb__Titulo": "Tarifa Local : Detalle Tarifa Ligada"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Tarifa: Detalle Tarifa Ligada"
+            }
+          },
+          {
+            "Id": "40cdde6f-fc40-4e1c-857f-24dc40c66959",
+            "Title": "Tarifa: Configuración Tarifa Ligada",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+            "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/tarifa__configuracion_tarifa_ligada",
+            "Parts": {
+              "es_pe__Nombre": "Tarifa: Configuración Tarifa Ligada",
+              "CrearSeccion": "0",
+              "Titulo": "Configuración Tarifa Ligada",
+              "TipoControlContenedor": {
+                "Value": "01",
+                "Title": "Sección",
+                "Content": null
+              },
+              "Controls": [
+                {
+                  "Id": "df443846-ff1d-4489-8b49-1e68245d5d8f",
+                  "Title": "Tarifa Local : Configuración Tarifa Ligada",
+                  "State": "Publicado",
+                  "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos",
+                  "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos/tarifa_local___configuracion_tarifa_ligada",
+                  "Parts": {
+                    "es_pe__Titulo": "Tarifa Local : Configuración Tarifa Ligada",
+                    "en_gb__Titulo": "Tarifa Local : Configuración Tarifa Ligada"
+                  }
+                }
+              ],
+              "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+              "controlador": "",
+              "en_gb__Nombre": "Tarifa: Configuración Tarifa Ligada"
+            }
+          }
+        ],
+        "ControladorAngular": "ConfiguracionTarifaLigadaController",
+        "AnchoMaximo": "",
+        "AltoMinimo": "600px",
+        "en_gb__Titulo": "Configuración de Tarifa Ligada"
+      }
+    }
+  ],
+  "Error": false,
+  "Message": "OK"
+}

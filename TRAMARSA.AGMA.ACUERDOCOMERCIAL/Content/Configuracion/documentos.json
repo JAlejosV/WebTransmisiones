@@ -1,0 +1,847 @@
+{
+    "Data": [
+        {
+            "Id": "64bce457-c1ad-41dd-975e-52c956931283",
+            "Title": "n.d.",
+            "State": "Publicado",
+            "ChannelPath": "/tramarsa/portales_agma/calculador_web/sistema/busqueda/Administrar_TransmisionDocumento/props_Administrar_TransmisionDocumento",
+            "Path": "/tramarsa/portales_agma/calculador_web/sistema/busqueda/Administrar_TransmisionDocumento/props_Administrar_TransmisionDocumento/_114",
+            "Parts": {
+                "es_pe__Titulo": "Administrar TransmisionDocumento",
+                "Secciones": [
+                    {
+                        "Id": "49cf5930-0656-4caa-a8a5-ffcfeeea3860",
+                        "Title": "Botonera",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/botonera_9",
+                        "Parts": {
+                            "es_pe__Nombre": "Botonera",
+                            "CrearSeccion": "0",
+                            "Titulo": "",
+                            "TipoControlContenedor": {
+                                "Value": "06",
+                                "Title": "Botonera",
+                                "Content": null
+                            },
+                            "Controls": [
+                                {
+                                    "Id": "63fd2927-cfc3-47ca-96fb-fd841df6c55e",
+                                    "Title": "Botonera Busqueda Clásica con Boton Salir",
+                                    "State": "Publicado",
+                                    "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/botonera",
+                                    "Path": "/tramarsa/portales_agma/calculador_web/propiedades/botonera/botonera_busqueda_clasica_con_boton_salir",
+                                    "Parts": {
+                                        "Titulo": "Botonera Busqueda Clásica con Boton Salir"
+                                    }
+                                }
+                            ],
+                            "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+                            "controlador": "",
+                            "en_gb__Nombre": "Botonera"
+                        }
+                    },
+                    {
+                        "Id": "f79f6079-b583-4904-a6bc-0ecd1f3a0cab",
+                        "Title": "Tarifa: Búsqueda de Tarifas Generales",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/tarifa__busqueda_de_TransmisionDocumento",
+                        "Parts": {
+                            "es_pe__Nombre": "Tarifa: Búsqueda de Tarifas Generales",
+                            "CrearSeccion": "0",
+                            "Titulo": "Administrar Tarifas Generales",
+                            "TipoControlContenedor": {
+                                "Value": "01",
+                                "Title": "Sección",
+                                "Content": null
+                            },
+                            "Controls": [
+                                {
+                                    "Id": "a63813b3-3558-4cea-96d3-faed48228458",
+                                    "Title": "Tarifa Local: Administrar Tarifas Generales",
+                                    "State": "Publicado",
+                                    "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos",
+                                    "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenidos/tarifa_local__Administrar_TransmisionDocumento",
+                                    "Parts": {
+                                        "es_pe__Titulo": "Tarifa Local: Administrar Tarifas Generales",
+                                        "en_gb__Titulo": "Tarifa Local: Administrar Tarifas Generales"
+                                    }
+                                }
+                            ],
+                            "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+                            "controlador": "",
+                            "en_gb__Nombre": "Tarifa: Búsqueda de Tarifas Generales"
+                        }
+                    },
+                    {
+                        "Id": "14f6c755-3e6c-4e42-9743-7c1f724a96e7",
+                        "Title": "TransmisionDocumento: Resultado de Búsqueda",
+                        "State": "Publicado",
+                        "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores",
+                        "Path": "/tramarsa/portales_agma/calculador_web/propiedades/contenedores/tarifa_generales__resultado_de_busqueda",
+                        "Parts": {
+                            "es_pe__Nombre": "TransmisionDocumento: Resultado de Búsqueda",
+                            "CrearSeccion": "0",
+                            "Titulo": "Resultado de Búsqueda",
+                            "TipoControlContenedor": {
+                                "Value": "01",
+                                "Title": "Sección",
+                                "Content": null
+                            },
+                            "Controls": [
+                                {
+                                    "Id": "1a0b5f06-bb91-4713-aa00-966ef96a2001",
+                                    "Title": "grillaListaTransmisionDocumento",
+                                    "State": "Publicado",
+                                    "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor",
+                                    "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/_115",
+                                    "Parts": {
+                                        "objgrilla": "grillaListaTransmisionDocumento",
+                                        "ModelData": "grillaListaTransmisionDocumento",
+                                        "es_pe__Nombre": "grillaListaTransmisionDocumento",
+                                        "FlgMostrarTitulo": "1",
+                                        "es_pe__TituloSeccion": "RESULTADO DE BUSQUEDA",
+                                        "columnas": [
+                                            {
+                                                "Id": "f70884cf-bdef-4b5c-a9d7-26b0e7152d9d",
+                                                "Title": "CodigoDocumento",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/CodigoItinerario",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "CodigoDocumento",
+                                                    "IdColumna": "CodigoDocumento",
+                                                    "ancho": "auto",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "left",
+                                                        "Title": "Izquierda",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "1",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "CodigoDocumento",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "f70884cf-bdef-4b5c-a9d7-26b0e7152d9d",
+                                                "Title": "NumeroDocumento",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/NumeroDocumento",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Numero Documento",
+                                                    "IdColumna": "NumeroDocumento",
+                                                    "ancho": "150px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "left",
+                                                        "Title": "Izquierda",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "NumeroDocumento",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "Nave",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/NombreNave",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Nave",
+                                                    "IdColumna": "NombreNave",
+                                                    "ancho": "150px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "left",
+                                                        "Title": "Izquierda",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "NombreNave",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "Viaje",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/NumeroViajeItinerario",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Viaje",
+                                                    "IdColumna": "NumeroViajeItinerario",
+                                                    "ancho": "55px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "center",
+                                                        "Title": "Centro",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "Viaje",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "Anio Man.",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/NumeroViajeItinerario",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Anio Man.",
+                                                    "IdColumna": "AnioManifiestoItinerario",
+                                                    "ancho": "50px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "center",
+                                                        "Title": "Centro",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "NumeroViajeItinerario",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "Numero Man.",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/NumeroManifiestoItinerario",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Numero Man.",
+                                                    "IdColumna": "NumeroManifiestoItinerario",
+                                                    "ancho": "55px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "center",
+                                                        "Title": "Centro",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "NumeroManifiestoItinerario",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "Aduana",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/NombreAduana",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Aduana",
+                                                    "IdColumna": "NombreAduana",
+                                                    "ancho": "150px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "left",
+                                                        "Title": "Izquierda",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "NombreAduana",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "Tipo Envio",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/NombreTipoEnvio",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Tipo Envio",
+                                                    "IdColumna": "NombreTipoEnvio",
+                                                    "ancho": "100px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "left",
+                                                        "Title": "Izquierda",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "NombreTipoEnvio",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "Total Peso Bruto",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/TotalPesoBrutoTransmision",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Total Peso Bruto",
+                                                    "IdColumna": "TotalPesoBrutoTransmision",
+                                                    "ancho": "100px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "center",
+                                                        "Title": "Centro",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "TotalPesoBrutoTransmision",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "Total Peso Bultos",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/TotalBultosTransmision",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Total Peso Bultos",
+                                                    "IdColumna": "TotalBultosTransmision",
+                                                    "ancho": "100px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "center",
+                                                        "Title": "Centro",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "TotalBultosTransmision",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "Total Contenedores",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/TotalContenedoresTransmision",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Total Contenedores",
+                                                    "IdColumna": "TotalContenedoresTransmision",
+                                                    "ancho": "100px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "center",
+                                                        "Title": "Centro",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "TotalContenedoresTransmision",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "Consignatario",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/Consignatario",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Consignatario",
+                                                    "IdColumna": "Consignatario",
+                                                    "ancho": "200px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "left",
+                                                        "Title": "Izquierda",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "TotalContenedoresTransmision",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "Embarcador",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/Embarcador",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Embarcador",
+                                                    "IdColumna": "Embarcador",
+                                                    "ancho": "200px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "left",
+                                                        "Title": "Izquierda",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "Embarcador",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "Puerto Embarque",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/PuertoEmbarque",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Puerto Embarque",
+                                                    "IdColumna": "PuertoEmbarque",
+                                                    "ancho": "80px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "center",
+                                                        "Title": "Centro",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "PuertoEmbarque",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "Puerto Final",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/PuertoFinal",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "PuertoFinal",
+                                                    "IdColumna": "PuertoFinal",
+                                                    "ancho": "80px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "center",
+                                                        "Title": "Centro",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "PuertoFinal",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "EstadoEnvioAduanas",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/EstadoEnvioAduanas",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "EstadoEnvioAduanas",
+                                                    "IdColumna": "EstadoEnvioAduanas",
+                                                    "ancho": "100px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "left",
+                                                        "Title": "Izquierda",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "1",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "EstadoEnvioAduanas",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "Transmision",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/EstadoTransmision",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Transmision",
+                                                    "IdColumna": "EstadoTransmision",
+                                                    "ancho": "100px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "center",
+                                                        "Title": "Centro",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "Transmision",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "af4a292b-58e1-42d8-84a2-320fcd097421",
+                                                "Title": "Fecha",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/FechaHoraCreacion",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Fecha",
+                                                    "IdColumna": "FechaHoraCreacion",
+                                                    "ancho": "140px",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "1",
+                                                        "Title": "",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "left",
+                                                        "Title": "Izquierda",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "FechaHoraCreacion",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            },
+                                            {
+                                                "Id": "667559f5-1735-4e15-b676-7a62bdd4b0bc",
+                                                "Title": "Ver Log",
+                                                "State": "Publicado",
+                                                "ChannelPath": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor",
+                                                "Path": "/tramarsa/portales_agma/calculador_web/propiedades/grillas_contenedor/columnas_contenedor/editar_22",
+                                                "Parts": {
+                                                    "es_pe__Nombre": "Ver Log",
+                                                    "IdColumna": "Editar",
+                                                    "ancho": "auto",
+                                                    "CantidadCaracteres": "",
+                                                    "formato": {
+                                                        "Value": "botonEditar",
+                                                        "Title": "botonEditar",
+                                                        "Content": null
+                                                    },
+                                                    "Direction": {
+                                                        "Value": "center",
+                                                        "Title": "Centro",
+                                                        "Content": null
+                                                    },
+                                                    "oculto": "0",
+                                                    "llave": "0",
+                                                    "Editable": "0",
+                                                    "Parametro": "",
+                                                    "eventoclick": "",
+                                                    "eventochange": "",
+                                                    "en_gb__Nombre": "Ver Log",
+                                                    "OrdenDefecto": "0",
+                                                    "DataSource": "",
+                                                    "DisplayMember": "",
+                                                    "ValueMember": "",
+                                                    "FlgSeleccioneCombo": "0",
+                                                    "MultipleSelect": "0",
+                                                    "OtroTextoCombo": ""
+                                                }
+                                            }
+                                        ],
+                                        "es_pe__NombreBotonExportar": "Exportar en Excel",
+                                        "es_pe__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                                        "MensajeSinResultadoPersonalizado": "",
+                                        "urlListar": "/TransmisionDocumento/ConsultaTransmisionDocumento",
+                                        "en_gb__Nombre": "grillaListaTransmisionDocumento",
+                                        "en_gb__NombreBotonExportar": "Exportar en Excel",
+                                        "en_gb__NombreSinResultados": "BÚSQUEDA SIN RESULTADOS",
+                                        "MarcarRegistroSeleccionado": "0",
+                                        "JSFilter": "",
+                                        "JSDblClick": "",
+                                        "JSOnLoad": "",
+                                        "JSOnSelect": "",
+                                        "altoGrilla": "200px",
+                                        "FlgOcultarBarraPaginado": "0",
+                                        "FlgCargarGrilla": "1",
+                                        "TituloSinResultados": "",
+                                        "FlgOcultarExportar": "0",
+                                        "ngClickAgregar": "",
+                                        "multiselect": "1"
+                                    }
+                                }
+                            ],
+                            "canal": "Viatecla.Factory.Scriptor.ScriptorChannelList",
+                            "controlador": "",
+                            "en_gb__Nombre": "TransmisionDocumento: Resultado de Búsqueda"
+                        }
+                    }
+                ],
+                "ControladorAngular": "AdministrarTransmisionDocumentoController",
+                "AnchoMaximo": "900px",
+                "AltoMinimo": "",
+                "en_gb__Titulo": ""
+            }
+        }
+    ],
+    "Error": false,
+    "Message": "OK"
+}

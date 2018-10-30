@@ -1,0 +1,187 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="AdministrarItinerarioController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraBusquedaAcuerdoComercial.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>ADMINISTRAR ITINERAIO</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarItinerarioFrm" name="AdministrarItinerarioFrm">
+                    <div class="block_content" style="width: 100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Nave
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarItinerario.Filtro.CodigoNave" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.Datos.NombreNave"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarNave_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Viaje
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05"
+                                                type="text" ng-enter="Enter()" maxlength="6" onkeyup="mayus(this);"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.Filtro.NumeroViajeItinerario" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Numero Manifiesto
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 solonumeros"
+                                                type="text" ng-enter="Enter()" maxlength="6"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.Filtro.NumeroManifiestoItinerario" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Año Manifiesto
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 solonumeros"
+                                                type="text" ng-enter="Enter()" maxlength="4"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.Filtro.AnioManifiestoItinerario" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Aduana
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.AdministrarItinerario.Filtro.CodigoAduana" />
+                                            <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                                type="text"
+                                                ng-enter="Enter()"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.Datos.NombreAduana"
+                                                ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarAduana_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Tipo de Operacion
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.AdministrarItinerario.Filtro.CodigoTipoOperacion"
+                                                ng-options="tipooperacion.CodigoTipoOperacion as tipooperacion.NombreTipoOperacion for tipooperacion in $root.DatosFormulario.ItinerarioIndex.TiposOperacion" class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Fecha Arribo Inicio
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_04Fecha"
+                                                maxlength="10" type="text"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.Filtro.FechaArriboItinerarioInicio"
+                                                data-bind="dateValue: $root.DatosFormulario.AdministrarItinerario.Filtro.FechaArriboItinerarioInicio, datePattern: 'dd/MM/yyyy'"
+                                                data-val="true"
+                                                data-val-date="Fecha Arribo Inicio debe ser una fecha."
+                                                id="FechaArriboItinerarioInicio"
+                                                ng-enter="Enter()"
+                                                name="$root.DatosFormulario.AdministrarItinerario.Filtro.FechaArriboItinerarioInicio"
+                                                required />
+                                            <div class="caja11 msgerror FechaArriboItinerarioInicio">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.Filtro.FechaArriboItinerarioInicio" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Fecha Arribo Fin
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_04Fecha"
+                                                maxlength="10" type="text"
+                                                ng-model="$root.DatosFormulario.AdministrarItinerario.Filtro.FechaArriboItinerarioFin"
+                                                data-bind="dateValue: $root.DatosFormulario.AdministrarItinerario.Filtro.FechaArriboItinerarioFin, datePattern: 'dd/MM/yyyy'"
+                                                data-val="true"
+                                                data-val-date="Fecha Arribo Fin debe ser una fecha."
+                                                id="FechaArriboItinerarioFin"
+                                                ng-enter="Enter()"
+                                                name="$root.DatosFormulario.AdministrarItinerario.Filtro.FechaArriboItinerarioFin"
+                                                required />
+                                            <div class="caja11 msgerror FechaArriboItinerarioFin">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarItinerario.Filtro.FechaArriboItinerarioFin" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width: 100%; float: left">
+
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado1a0b5f06-bb91-4713-aa00-966ef96a1015" class="block_content">
+                    <div class="form_section" style="width: 100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden">
+
+                                <ng-jqgrid config="config"
+                                    addnew="true"
+                                    modeldata="$root.DatosFormulario.AdministrarItinerario.ListaMaestroItinerario"
+                                    gridid="grillaListaMaestroItinerario"
+                                    pagerid="grillaListaMaestroItinerario_pager"
+                                    api="gridapigrillaListaMaestroItinerario"
+                                    flgocultarbarrapaginado="0"
+                                    idgrilla="1a0b5f06-bb91-4713-aa00-966ef96a1015"
+                                    titulosinresultados=""
+                                    ocultarexportar="0"
+                                    altogrilla="150px"
+                                    idmarcarprimerresgistro="0"
+                                    ngclickagregar=""
+                                    urllistar="/Itinerario/ConsultaItinerario"
+                                    flgcargargrilla="0">
+                                    <table id="grillaListaMaestroItinerario"></table>
+                                    <div id="grillaListaMaestroItinerario_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,184 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style="max-width: 800px;">
+    <div ng-app="app" ng-controller="BuscarItinerarioController" class="ng-scope">
+        @Html.Partial("~/Views/Botonera/BotoneraBusquedaClásicaconBotonSalir.cshtml")
+
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Administración de Itinerario</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="BusquedaItinerarioFrm" name="BusquedaItinerarioFrm">
+                    <div class="block_content" style="width: 100%">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    Nave
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.CodigoNave" />
+                                    <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                        type="text"
+                                        ng-enter="Enter()"
+                                        ng-model="$root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.NombreNave"
+                                        ng-disabled="true" />
+                                    <input type="image" ng-click="BuscarNave_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                        style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    Viaje
+                                </div>
+                                <div class="col-md-8">
+                                    <input class="InputTEXT_05"
+                                        type="text" ng-enter="Enter()" maxlength="6" onkeyup="mayus(this);"
+                                        ng-model="$root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.NumeroViajeItinerario" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    Num. Manifiesto
+                                </div>
+                                <div class="col-md-8">
+                                    <input class="InputTEXT_05 solonumeros"
+                                        type="text" ng-enter="Enter()" maxlength="6"
+                                        ng-model="$root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.NumeroManifiestoItinerario" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    Año Manifiesto
+                                </div>
+                                <div class="col-md-8">
+                                    <input class="InputTEXT_05 solonumeros"
+                                        type="text" ng-enter="Enter()" maxlength="4"
+                                        ng-model="$root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.AnioManifiestoItinerario" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    Aduana
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.CodigoAduana" />
+                                    <input class="InputTEXT_05" style="height: 23px; width: 280px;"
+                                        type="text"
+                                        ng-enter="Enter()"
+                                        ng-model="$root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.NombreAduana"
+                                        ng-disabled="true" />
+                                    <input type="image" ng-click="BuscarAduana_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                        style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    Tipo de Operacion
+                                </div>
+                                <div class="col-md-8">
+                                    <select ng-model="$root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.CodigoTipoOperacion"
+                                        ng-options="tipooperacion.CodigoTipoOperacion as tipooperacion.NombreTipoOperacion for tipooperacion in $root.DatosFormulario.ItinerarioIndex.TiposOperacion" class="InputSELECT_01">
+                                        <option value="">[Seleccione]</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    F. Arribo Inicio
+                                </div>
+                                <div class="col-md-8">
+                                    <input class="InputTEXT_04Fecha"
+                                        maxlength="10" type="text"
+                                        ng-model="$root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.FechaArriboItinerarioInicio"
+                                        data-bind="dateValue: $root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.FechaArriboItinerarioInicio, datePattern: 'dd/MM/yyyy'"
+                                        data-val="true"
+                                        data-val-date="Fecha Arribo Inicio debe ser una fecha."
+                                        id="FechaArriboItinerarioInicio"
+                                        ng-enter="Enter()"
+                                        name="$root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.FechaArriboItinerarioInicio"
+                                        required />
+                                    <div class="caja11 msgerror FechaArriboItinerarioInicio">
+                                        <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.FechaArriboItinerarioInicio" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    F. Arribo Fin
+                                </div>
+                                <div class="col-md-8">
+                                    <input class="InputTEXT_04Fecha"
+                                        maxlength="10" type="text"
+                                        ng-model="$root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.FechaArriboItinerarioFin"
+                                        data-bind="dateValue: $root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.FechaArriboItinerarioFin, datePattern: 'dd/MM/yyyy'"
+                                        data-val="true"
+                                        data-val-date="Fecha Arribo Fin debe ser una fecha."
+                                        id="FechaArriboItinerarioFin"
+                                        ng-enter="Enter()"
+                                        name="$root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.FechaArriboItinerarioFin"
+                                        required />
+                                    <div class="caja11 msgerror FechaArriboItinerarioFin">
+                                        <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaItinerario.Filtro.FechaArriboItinerarioFin" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="caja11 msgerror Objeto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="seccion-3">
+                <div style="width: 100%; float: left">
+                    <div class="block_cab block_cab_active">
+                        <h2>
+                            <span>RESULTADO DE BUSQUEDA</span>
+                        </h2>
+                        <h3></h3>
+                        <div class="acordeon">
+                        </div>
+                    </div>
+                    <div id="ContentListadof478bbe4-1dd1-4f5d-a484-fb4d7d030188" class="block_content">
+                        <div class="form_section" style="width: 100%">
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow: hidden">
+                                    <ng-jqgrid config="config"
+                                        addnew="true"
+                                        modeldata="$root.DatosFormulario.grillaListaItinerario"
+                                        gridid="grillaListaItinerario"
+                                        pagerid="grillaListaItinerario_pager"
+                                        api="gridapigrillaListaItinerario"
+                                        flgocultarbarrapaginado="0"
+                                        idgrilla="f478bbe4-1dd1-4f5d-a484-fb4d7d030188"
+                                        titulosinresultados=""
+                                        ocultarexportar="0"
+                                        altogrilla="200px"
+                                        idmarcarprimerresgistro="0"
+                                        ngclickagregar=""
+                                        urllistar="/Itinerario/ConsultaItinerario"
+                                        flgcargargrilla="1">
+                                        <table id="grillaListaItinerario"></table>
+                                        <div id="grillaListaItinerario_pager"></div>
+                                    </ng-jqgrid>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

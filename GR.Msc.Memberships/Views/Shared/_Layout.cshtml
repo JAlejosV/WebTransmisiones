@@ -1,0 +1,21 @@
+﻿@using Viatecla.Factory.Scriptor.ModularSite.Models;
+<!DOCTYPE html>
+<html>
+<head>
+    @RenderSection("Meta", false)
+    @Html.Raw(@"@RenderSection(""Meta"", false)")
+    <meta charset="utf-8" />
+    <title>@*Common.WebSiteChannel.Properties.Content.Title - @Html.Raw("@ViewBag.Title")*@</title>
+    @RenderSection("Head", false)
+    @Html.Raw(@"@RenderSection(""Head"", false)")
+
+    @Html.Raw(@"@Html.Raw(StackExchange.Profiling.MiniProfiler.RenderIncludes().ToString().Replace(""/weblib/profiler/"", Viatecla.Factory.Scriptor.ModularSite.Models.Common.GetConfigValue(""PrefixPath"") + ""/weblib/profiler/""))")
+</head>
+<body>
+    @RenderBody()
+    @*Website layout template must have its own @Html.Raw(@"@RenderBody()") *@
+
+    @RenderSection("Scripts", false)
+    @Html.Raw(@"@RenderSection(""Scripts"", false)")
+</body>
+</html>

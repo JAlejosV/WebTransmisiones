@@ -1,0 +1,87 @@
+﻿<div>
+    <div class="block_cab block_cab_active">
+        <h2>
+            <span>Datos Generales</span>
+        </h2>
+        <h3></h3>
+        <div class="acordeon">
+        </div>
+    </div>
+    <form id="RegistroDocumentoFletesFrm" name="RegistroDocumentoFletesFrm">
+        <div class="block_content" style="width: 100%">
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    Tipo de Flete
+                </div>
+                <div class="col-md-9">
+                    <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroDocumento.RegistroFlete.CodigoTipoFlete" />
+                    <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                        type="text"
+                        ng-enter="Enter()"
+                        ng-model="$root.DatosFormulario.RegistroDocumento.RegistroFlete.NombreTipoFlete"
+                        ng-disabled="true" />
+                    <input type="image" ng-click="BuscarTipoFleteRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                        style="border-width: 0px; width: 25px; margin-bottom: -10px;"
+                        ng-disabled="FlagEditing==false">
+
+                    <div class="caja11 msgerror NombreTipoFlete">
+                        <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.RegistroFlete.NombreTipoFlete" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    Moneda
+                </div>
+                <div class="col-md-9">
+                    <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroDocumento.RegistroFlete.CodigoMoneda" />
+                    <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                        type="text"
+                        ng-enter="Enter()"
+                        ng-model="$root.DatosFormulario.RegistroDocumento.RegistroFlete.NombreMoneda"
+                        ng-disabled="true" />
+                    <input type="image" ng-click="BuscarMonedaRegistro_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                        style="border-width: 0px; width: 25px; margin-bottom: -10px;"
+                        ng-disabled="FlagEditing==false">
+
+                    <div class="caja11 msgerror NombreMoneda">
+                        <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.RegistroFlete.NombreMoneda" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    Modo de Pago
+                </div>
+                <div class="col-md-9">
+                    <select ng-model="$root.DatosFormulario.RegistroDocumento.RegistroFlete.CodigoModoPago"
+                        ng-options="modopago.CodigoModoPago as modopago.NombreModoPago for modopago in $root.DatosFormulario.RegistroDocumento.RegistroFlete.ModosPago"
+                        class="InputSELECT_01"
+                        ng-disabled="FlagEditing==false">
+                        <option value="">[Seleccione]</option>
+                    </select>
+                    <div class="caja11 msgerror CodigoModoPago">
+                        <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.RegistroFlete.CodigoModoPago" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    Monto
+                </div>
+                <div class="col-md-9">
+                    <input class="InputTEXT_05 solodecimal"
+                        type="text" ng-enter="Enter()"
+                        ng-model="$root.DatosFormulario.RegistroDocumento.RegistroFlete.MontoDocumentoDetalleFlete" />
+                    <div class="caja11 msgerror MontoDocumentoDetalleFlete">
+                        <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDocumento.RegistroFlete.MontoDocumentoDetalleFlete" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="caja11 msgerror Objeto"></div>
+            </div>
+        </div>
+    </form>
+</div>

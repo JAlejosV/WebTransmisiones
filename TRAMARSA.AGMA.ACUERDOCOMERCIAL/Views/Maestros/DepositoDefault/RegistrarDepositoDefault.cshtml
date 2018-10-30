@@ -1,0 +1,132 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="RegistrarDepositoDefaultController">
+        <!-- BOTONERA -->
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_Botonera_Guardar_Modif_Deshab_Salir.cshtml")
+        </div>
+        <!-- BOTONERA -->
+        <!-- FILTROS REGISTRO -->
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos Deposito Default</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="RegistrarNuevoDepositoDefaultFrm" name="RegistrarNuevoDepositoDefaultFrm" style="height: 200px !important;">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Linea
+                                        </div>
+                                        <div class="col-md-8">
+
+                                            <select ng-model="$root.DatosFormulario.RegistroDepositoDefault.RegistroDatos.CodigoLinea"
+                                                    ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.RegistroDepositoDefaultCargaInicial.Lineas"
+                                                    class="InputSELECT_01"
+                                                    id="$root.DatosFormulario.RegistroDepositoDefault.RegistroDatos.CodigoLinea"
+                                                    name="$root.DatosFormulario.RegistroDepositoDefault.RegistroDatos.CodigoLinea"
+                                                    ng-change="ChangeLineaNaviera($root.DatosFormulario.RegistroDepositoDefault.RegistroDatos.CodigoLinea)"
+                                                    ng-disabled="$root.DatosFormulario.RegistroDepositoDefault.DatosView.Habilitado=='False' || FlagEditing==false">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Tipo Contenedor
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.RegistroDepositoDefault.RegistroDatos.CodigoTipoContenedor"
+                                                    data-val="true"
+                                                    data-bind="value: $root.DatosFormulario.RegistroDepositoDefault.RegistroDatos.CodigoTipoContenedor"
+                                                    ng-options="tipocontenedor.CodigoTipoContenedor as tipocontenedor.Descripcion for tipocontenedor in $root.DatosFormulario.RegistroDepositoDefaultCargaInicial.TipoContenedor"
+                                                    ng-disabled="$root.DatosFormulario.RegistroDepositoDefault.DatosView.Habilitado=='False' || FlagEditing==false"
+                                                    class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoTipoContenedor">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDepositoDefault.RegistroDatos.CodigoTipoContenedor" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Sucursal
+                                        </div>
+                                        <div class="col-md-8">
+
+                                            <select ng-model="$root.DatosFormulario.RegistroDepositoDefault.RegistroDatos.CodigoSucursal"
+                                                    ng-options="sucursal.Codigo as sucursal.Nombre for sucursal in $root.DatosFormulario.RegistroDepositoDefaultCargaInicial.Sucursal"
+                                                    class="InputSELECT_01"
+                                                    id="$root.DatosFormulario.RegistroDepositoDefault.RegistroDatos.CodigoSucursal"
+                                                    name="$root.DatosFormulario.RegistroDepositoDefault.RegistroDatos.CodigoSucursal"
+                                                    ng-disabled="$root.DatosFormulario.RegistroDepositoDefault.DatosView.Habilitado=='False' || FlagEditing==false">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoSucursal">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDepositoDefault.RegistroDatos.CodigoSucursal" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Dep&oacute;sito
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.RegistroDepositoDefault.RegistroDatos.CodigoDeposito"
+                                                    ng-options="deposito.CodigoDeposito as deposito.DescripcionDeposito for deposito in $root.DatosFormulario.RegistroDepositoDefaultCargaInicial.Deposito" class="InputSELECT_01"
+                                                    ng-disabled="$root.DatosFormulario.RegistroDepositoDefault.DatosView.Habilitado=='False' || FlagEditing==false">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoDeposito">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroDepositoDefault.RegistroDatos.CodigoDeposito" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Observaci&oacute;n
+                                        </div>
+                                        <div class="col-md-5">
+                                            <input class="InputTEXT_06" max="500" maxlength="500"
+                                                   type="text" ng-enter="Enter()"
+                                                   ng-disabled="$root.DatosFormulario.RegistroDepositoDefault.DatosView.Habilitado=='False' || FlagEditing==false"
+                                                   ng-model="$root.DatosFormulario.RegistroDepositoDefault.RegistroDatos.Observacion" />
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- FILTROS REGISTRO -->
+
+    </div>
+</div>

@@ -1,0 +1,1024 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope">
+    <div ng-app="app" ng-controller="RegistroAcuerdoComercialEscalonadoController" class="ng-scope">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraRegAcuerdoComercial.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Generales</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+                    <form id="frmACE_DatosGenerales">
+                        <div class="col-md-7">
+                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.CodigoAcuerdoComercialEscalonado" />
+                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.Accion" />
+                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroACEscalonado.DatosACE.AcuerdoComercialFlagEditar" />
+                            <div class="col-md-12 row rowAlto2">
+                                <div class="col-md-3 ">
+                                    Línea Naviera:
+                                </div>
+                                <div class="col-md-9">
+                                    <select ng-model="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.CodigoLinea"
+                                        ng-change="ChangeLineaNaviera($root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.CodigoLinea)"
+                                        ng-disabled="$root.DatosFormulario.RegistroACEscalonado.DatosACE.Habilitado=='False' || FlagEditarLinea==false"
+                                        ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.RegistroACEscalonado.DatosACE.Lineas" class="InputSELECT_01">
+                                        <option value="">[Seleccione]</option>
+                                    </select>
+                                    <div class="caja11 msgerror CodigoLinea">
+                                        <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.CodigoLinea" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 row rowAlto2">
+                                <div class="col-md-3 ">
+                                    Autorización:
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.CodigoUsuarioAutorizador" />
+                                    <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                        type="text"
+                                        ng-model="$root.DatosFormulario.RegistroACEscalonado.DatosACE.Autorizado"
+                                        value="{{$root.DatosFormulario.RegistroACEscalonado.DatosACE.Autorizado}}"
+                                        data-bind="value: $root.DatosFormulario.RegistroACEscalonado.DatosACE.Autorizado"
+                                        data-val="true"
+                                        data-val-required="Autorizado por"
+                                        id="$root.DatosFormulario.RegistroACEscalonado.DatosACE.Autorizado"
+                                        name="$root.DatosFormulario.RegistroACEscalonado.DatosACE.Autorizado"
+                                        disabled="disabled"
+                                        ng-enter="Enter()"
+                                        required />
+                                    <input type="image" ng-disabled="FlagEditing==false" ng-click="BuscarAutorizado_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                        style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                    <div class="caja11 msgerror CodigoUsuarioAutorizador">
+                                        <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroACEscalonado.DatosACE.Autorizado" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 row rowAlto2">
+                                <div class="col-md-3 ">
+                                    Fecha Autorización:
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="InputTEXT_04Fecha" maxlength="10"
+                                        type="text"
+                                        ng-model="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.FechaAutorizacion"
+                                        data-val="true"
+                                        ng-enter="Enter()"
+                                        data-bind="dateValue: $root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.FechaAutorizacion, datePattern: 'dd/MM/yyyy'"
+                                        data-val-required="Fecha Autorización es requerido"
+                                        data-val-date="El campo Fecha Autorización debe ser una fecha."
+                                        id="FechaAutorizacion"
+                                        name="FechaAutorizacion"
+                                        ng-disabled="FlagEditing==false"
+                                        required />
+                                    <div class="caja11 msgerror FechaAutorizacion">
+                                        <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.FechaAutorizacion" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 row rowAlto2" style="display: none;">
+                                <div class="col-md-3 ">
+                                    Tipo:
+                                </div>
+                                <div class="col-md-9">
+                                    <select ng-model="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.CodigoTipoCriterio" ng-disabled="FlagEditing==false"
+                                        ng-options="tipo.Codigo as tipo.Descripcion for tipo in $root.DatosFormulario.RegistroACEscalonado.DatosACE.Tipos" class="InputSELECT_01">
+                                    </select>
+                                    <div class="caja11 msgerror CodigoTipoCriterio">
+                                        <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.CodigoTipoCriterio" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--
+                <div class="col-md-12 row rowAlto2">
+                    <div class="col-md-3 ">
+                        Condición:
+                    </div>
+                    <div class="col-md-9" style="padding-top: -0px !important;padding-bottom: 0px !important;">
+                        <div class="row" style="margin-top: 0px !important;">
+                            <div class="col-md-6">
+                                <input type="radio"
+                                       ng-enter="Enter()"
+                                       name="HBLFCL"
+                                       value={{$root.DatosFormulario.RegistroACEscalonado.DatosACE.CodigoCondicionFCL}}
+                                       ng-model="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.CodigoTipoCondicion"
+                                       class="ng-valid ng-dirty" checked ng-disabled="FlagEditing==false" />
+                                <label>{{$root.DatosFormulario.RegistroACEscalonado.DatosACE.CondicionFCL}}</label>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 0px !important;">
+                            <div class="col-md-6">
+                                <input type="radio"
+                                       ng-enter="Enter()"
+                                       name="HBLLCL"
+                                       value={{$root.DatosFormulario.RegistroACEscalonado.DatosACE.CodigoCondicionLCL}}
+                                       ng-model="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.CodigoTipoCondicion"
+                                       class="ng-valid ng-dirty" ng-disabled="FlagEditing==false" />
+                                <label>{{$root.DatosFormulario.RegistroACEscalonado.DatosACE.CondicionLCL}}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        -->
+
+                        </div>
+                        <div class="col-md-5">
+                            <div style="margin-right: 2px;">
+                                <div class="col-md-12 row" style="margin-top: 5%; margin-left: 0.3%;">
+                                    <div class="block_cab block_cab_active" style="width: 100%">
+                                        <h2>
+                                            <span>Sucursal</span>
+                                        </h2>
+                                        <h3></h3>
+                                        <div class="acordeon">
+                                        </div>
+                                    </div>
+                                    <div id="ContentListadoListaSucursales" class="block_content" style="width: 100%">
+                                        <div class="form_section" style="width: 100%">
+                                            <div class='forms2'>
+                                                <div class='table-responsive' style="overflow: hidden">
+                                                    <ng-jqgrid config="config"
+                                                        addnew="true"
+                                                        modeldata="$root.DatosFormulario.RegistroACEscalonado.ListaSucursal"
+                                                        gridid="grillaListaSucursales"
+                                                        pagerid="grillaListaSucursales_pager"
+                                                        api="gridapiListaSucursales"
+                                                        flgocultarbarrapaginado="1"
+                                                        idgrilla="2ADD56F7-5319-442F-98A8-E5AA9FA5A866"
+                                                        altogrilla="100px"
+                                                        idmarcarprimerresgistro="0" url=""
+                                                        flgcargargrilla="1">
+                                    <table id="grillaListaSucursales"></table>
+                                    <div id="grillaListaSucursales_pager"></div>
+                                </ng-jqgrid>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="caja11 msgerror listaSucursal">
+                                        <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 row" style="margin-top: 5%; margin-left: 0.3%;">
+                                    <div class="block_cab block_cab_active" style="width: 100%">
+                                        <h2>
+                                            <span>Terminal Portuario</span>
+                                        </h2>
+                                        <h3></h3>
+                                        <div class="acordeon">
+                                        </div>
+                                    </div>
+                                    <div id="ContentListadoListaTerminalPortuario" class="block_content" style="width: 100%">
+                                        <div class="form_section" style="width: 100%">
+                                            <div class='forms2'>
+                                                <div class='table-responsive' style="overflow: hidden">
+                                                    <ng-jqgrid config="config"
+                                                        addnew="true"
+                                                        modeldata="$root.DatosFormulario.RegistroACEscalonado.ListaTerminalPortuario"
+                                                        gridid="grillaListaTerminalPortuario"
+                                                        pagerid="grillaListaTerminalPortuario_pager"
+                                                        api="gridapiListaTerminalPortuario"
+                                                        flgocultarbarrapaginado="1"
+                                                        idgrilla="B3276A11-E706-4FD6-ACAA-62569334D411"
+                                                        altogrilla="100px"
+                                                        idmarcarprimerresgistro="0" url=""
+                                                        flgcargargrilla="1">
+
+                                    <table id="grillaListaTerminalPortuario"></table>
+                                    <div id="grillaListaTerminalPortuario_pager"></div>
+                                </ng-jqgrid>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="caja11 msgerror listaTerminalPortuario">
+                                        <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+
+                    <div>
+                    </div>
+
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Rate Agreement - Demo</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+
+                    <form id="frmACE_Rate" name="frmACE_Rate" data-codigoseccion="RateAgreement">
+                        <div class="block_content table-responsive" style="overflow: hidden; max-width: 800px; border: 0px">
+                            <ng-jqgrid config="config"
+                                addnew="true"
+                                modeldata="$root.DatosFormulario.RegistroACEscalonado.ListaRate"
+                                gridid="grillaAceListaRate"
+                                pagerid="grillaAceListaRate_pager"
+                                api="gridapigrillaAceListaRate"
+                                flgocultarbarrapaginado="1"
+                                idgrilla="5F5DE01A-661A-4DDA-A5F4-94F42D8A458A"
+                                titulosinresultados=""
+                                ocultarexportar="1"
+                                altogrilla="50px"
+                                idmarcarprimerresgistro="0" url=""
+                                ngclickagregar="$parent.AgregarRate()"
+                                flgcargargrilla="0">
+                            <table id="grillaAceListaRate"></table>
+                            <div id="grillaAceListaRate_pager"></div>
+                        </ng-jqgrid>
+                        </div>
+                        <div class="caja11 msgerror listaRate">
+                            <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                        </div>
+                    </form>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-4">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Vigencia</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+
+                    <div>
+                        <form id="VigenciaFrm" name="VigenciaFrm">
+                            <div class="" style="width: 100%">
+                                <div class="col-md-12 row">
+                                    <div class="col-md-2 caja9">
+                                        Fecha de Inicio:
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input class="InputTEXT_04Fecha"
+                                            maxlength="10" type="text"
+                                            ng-model="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.InicioVigencia"
+                                            data-bind="dateValue: $root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.InicioVigencia, datePattern: 'dd/MM/yyyy'"
+                                            data-val="true"
+                                            data-val-required="Fecha Inicio es Requerido."
+                                            data-val-date="El campo Fecha Inicio debe ser una fecha."
+                                            id="FechaInicio"
+                                            ng-enter="Enter()"
+                                            name="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.InicioVigencia"
+                                            required control_max_date="FechaFin"
+                                            ng-disabled="FlagEditing==false" />
+                                        <div class="caja11 msgerror FechaInicio">
+                                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.InicioVigencia" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 caja9">
+                                        Fecha de Termino:
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input class="InputTEXT_04Fecha" maxlength="10"
+                                            type="text"
+                                            ng-model="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.FinVigencia"
+                                            data-bind="dateValue: $root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.FinVigencia, datePattern: 'dd/MM/yyyy'"
+                                            data-val="true"
+                                            data-val-required="Fecha Fin es Requerido."
+                                            data-val-date="El campo Fecha Fin debe ser una fecha."
+                                            id="FechaFin"
+                                            ng-enter="Enter()"
+                                            name="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.FinVigencia"
+                                            required control_min_date="FechaInicio"
+                                            ng-disabled="FlagEditing==false" />
+                                        <div class="caja11 msgerror FechaFin">
+                                            <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.RegistroACEscalonado.DatosRegistroACE.FinVigencia" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="seccion-5">
+
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>CONCESIÓN POR PUERTOS- Demo</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+
+                    <div class="block_menu block_content" data-codigoseccion="Puertos">
+                        <div style="max-width: 100%; height: 100%">
+
+                            <div class="col-md-12 row">
+                                <div class="col-xs-2">
+                                    <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarPuerto();" style="" ng-disabled="FlagEditing==false">
+                                        <span class="boton1Span">
+                                            <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                        </span>
+                                        <span class="boton1txt">Agregar</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="col-xs-12 col-md-12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ContentListadogrillaAceListaPuertos" class="block_content">
+                        <div class="form_section" style="width: 100%">
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow: hidden;">
+                                    <ng-jqgrid config="config"
+                                        addnew="true"
+                                        modeldata="$root.DatosFormulario.RegistroACEscalonado.ListaPuertos"
+                                        gridid="grillaAceListaPuertos"
+                                        pagerid="grillaAceListaPuertos_pager"
+                                        api="gridapigrillaAceListaPuertos"
+                                        flgocultarbarrapaginado="1"
+                                        idgrilla="3ED969EE-7CED-4349-BB5D-A86E669A9670"
+                                        titulosinresultados=""
+                                        ocultarexportar="1"
+                                        altogrilla="50px"
+                                        idmarcarprimerresgistro="0" url=""
+                                        flgcargargrilla="0">
+                                        <table id="grillaAceListaPuertos"></table>
+                                        <div id="grillaAceListaPuertos_pager"></div>
+                                    </ng-jqgrid>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caja11 msgerror listaPuertos">
+                            <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="seccion-6" style="display: none;">
+
+            <div>
+                <div class="block_cab">
+                    <h2>
+                        <span>Concesión por cliente BL Master</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+                    <div style="max-width: 100%; height: 100%">
+
+                        <div class="col-md-12 row">
+                            <div class="col-xs-2">
+                                <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarCliente();" style="" ng-disabled="FlagEditing==false">
+                                    <span class="boton1Span">
+                                        <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                    </span>
+                                    <span class="boton1txt">Agregar</span>
+                                </button>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="col-xs-12 col-md-12">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ContentListadogrillaAceListaClienteBLMaster" class="block_content">
+                    <div class="form_section" style="width: 100%">
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden;">
+                                <ng-jqgrid config="config"
+                                    addnew="true"
+                                    modeldata="$root.DatosFormulario.RegistroACEscalonado.ListaClientesMaster"
+                                    gridid="grillaAceListaClienteBLMaster"
+                                    pagerid="grillaAceListaClienteBLMaster_pager"
+                                    api="gridapigrillaAceListaClienteBLMaster"
+                                    flgocultarbarrapaginado="1"
+                                    idgrilla=" A514509D-E6BF-4B3F-B577-C457EACBBF65"
+                                    titulosinresultados=""
+                                    ocultarexportar="1"
+                                    altogrilla="50px"
+                                    idmarcarprimerresgistro="0" url=""
+                                    flgcargargrilla="0">
+                                    <table id="grillaAceListaClienteBLMaster"></table>
+                                    <div id="grillaAceListaClienteBLMaster_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                            <div class="caja11 msgerror ListaClientesMaster">
+                                <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-7" style="display: none;">
+            <div>
+                <div class="block_cab">
+                    <h2>
+                        <span>Responsable de Pago BL Master</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+                    <div style="max-width: 100%; height: 100%">
+
+                        <div class="col-md-12 row">
+                            <div class="col-xs-2">
+                                <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarAgenteBLMaster();" style="" ng-disabled="FlagEditing==false">
+                                    <span class="boton1Span">
+                                        <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                    </span>
+                                    <span class="boton1txt">Agregar</span>
+                                </button>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="col-xs-12 col-md-12">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ContentListado8ff8abc7-82ae-4066-a67d-e40d4a1d3464" class="block_content">
+                    <div class="form_section" style="width: 100%">
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden;">
+                                <ng-jqgrid config="config"
+                                    addnew="true"
+                                    modeldata="$root.DatosFormulario.RegistroACEscalonado.ListaAgenteBLMaster"
+                                    gridid="grillaAceListaAgenteBLMaster"
+                                    pagerid="grillaAceListaAgenteBLMaster_pager"
+                                    api="gridapigrillaAceListaAgenteBLMaster"
+                                    flgocultarbarrapaginado="1"
+                                    idgrilla="951B51DE-027E-4EA1-AD4A-5DCEE4513D7E"
+                                    titulosinresultados=""
+                                    ocultarexportar="1"
+                                    altogrilla="50px"
+                                    idmarcarprimerresgistro="0" url=""
+                                    flgcargargrilla="0" />
+                                <table id="grillaAceListaAgenteBLMaster"></table>
+                                <div id="grillaAceListaAgenteBLMaster_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="seccion-8" style="display: none;">
+            <div>
+                <div class="block_cab">
+                    <h2>
+                        <span>Concesión por cliente BL House</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+                    <div style="max-width: 100%; height: 100%">
+                        <div class="col-md-12 row">
+                            <div class="col-xs-2">
+                                <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarClienteBLHome();" style="" ng-disabled="FlagEditing==false">
+                                    <span class="boton1Span">
+                                        <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                    </span>
+                                    <span class="boton1txt">Agregar</span>
+                                </button>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="col-xs-12 col-md-12">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-mx-12 row">
+                    <div class="col-md-12">
+                        <div id="ContentListadogrillaAceListaClienteBLHome" class="block_content">
+                            <div class="form_section" style="width: 100%">
+                                <div class="forms2">
+                                    <div class="table-responsive" style="overflow: hidden;">
+                                        <ng-jqgrid config="config"
+                                            addnew="true"
+                                            modeldata="$root.DatosFormulario.RegistroACEscalonado.ListaClienteBLHome"
+                                            gridid="grillaAceListaClienteBLHome"
+                                            pagerid="grillaAceListaClienteBLHome_pager"
+                                            api="gridapigrillaAceListaClienteBLHome"
+                                            flgocultarbarrapaginado="1"
+                                            idgrilla="AAE0851E-E1C7-4CCC-8AAB-EEE2D525E440"
+                                            titulosinresultados=""
+                                            ocultarexportar="1"
+                                            altogrilla="50px"
+                                            idmarcarprimerresgistro="0" url=""
+                                            flgcargargrilla="0" />
+                                        <table id="grillaAceListaClienteBLHome"></table>
+                                        <div id="grillaAceListaClienteBLHome_pager"></div>
+                                        </ng-jqgrid>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
+    <div class="col-md-4">
+        <fieldset class="scheduler-border" style="width:100%">
+            <legend style="width:25% !important;">Condición</legend>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="radio"
+                           name="HBLFCL"
+                           ng-change="CondicionChange($root.DatosFormulario.RegistroACEscalonado.DatosACE.CodigoTipoCondicion)"
+                           value={{$root.DatosFormulario.RegistroACEscalonado.DatosACE.CodigoCondicionFCL}}
+                           ng-model="$root.DatosFormulario.RegistroACEscalonado.DatosACE.CodigoTipoCondicion"
+                           class="ng-valid ng-dirty" checked ng-disabled="FlagEditing==false" />
+                    <label>{{$root.DatosFormulario.RegistroACEscalonado.DatosACE.CondicionFCL}}</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="radio"
+                           name="HBLLCL"
+                           ng-change="CondicionChange($root.DatosFormulario.RegistroACEscalonado.DatosACE.CodigoTipoCondicion)"
+                           value={{$root.DatosFormulario.RegistroACEscalonado.DatosACE.CodigoCondicionLCL}}
+                           ng-model="$root.DatosFormulario.RegistroACEscalonado.DatosACE.CodigoTipoCondicion"
+                           class="ng-valid ng-dirty" ng-disabled="FlagEditing==false" />
+                    <label>{{$root.DatosFormulario.RegistroACEscalonado.DatosACE.CondicionLCL}}</label>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+  -->
+
+                </div>
+
+            </div>
+        </div>
+        <div id="seccion-9" style="display: none;">
+            <div>
+                <div class="block_cab">
+                    <h2>
+                        <span>Responsable de Pago BL House</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+                    <div style="max-width: 100%; height: 100%">
+
+                        <div class="col-md-12 row">
+                            <div class="col-xs-2">
+                                <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarAgenteBLMaster();" style="" ng-disabled="FlagEditing==false">
+                                    <span class="boton1Span">
+                                        <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                    </span>
+                                    <span class="boton1txt">Agregar</span>
+                                </button>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="col-xs-12 col-md-12">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ContentListado8ff8abc7-82ae-4066-a67d-e40d4a1d3464" class="block_content">
+                    <div class="form_section" style="width: 100%">
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden;">
+                                <ng-jqgrid config="config"
+                                    addnew="true"
+                                    modeldata="$root.DatosFormulario.RegistroACEscalonado.ListaAgenteBLMaster"
+                                    gridid="grillaAceListaAgenteBLMaster"
+                                    pagerid="grillaAceListaAgenteBLMaster_pager"
+                                    api="gridapigrillaAceListaAgenteBLMaster"
+                                    flgocultarbarrapaginado="1"
+                                    idgrilla="951B51DE-027E-4EA1-AD4A-5DCEE4513D7E"
+                                    titulosinresultados=""
+                                    ocultarexportar="1"
+                                    altogrilla="50px"
+                                    idmarcarprimerresgistro="0" url=""
+                                    flgcargargrilla="0" />
+                                <table id="grillaAceListaAgenteBLMaster"></table>
+                                <div id="grillaAceListaAgenteBLMaster_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div id="seccion-10" style="display: none;">
+            <div>
+                <div class="block_cab">
+                    <h2>
+                        <span>Concesión por Servicio a la Nave</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+                    <div class="block_menu block_content">
+                        <div style="max-width: 100%; height: 100%">
+
+                            <div class="col-md-12 row">
+                                <div class="col-xs-2">
+                                    <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarServicioNave();" style="" ng-disabled="FlagEditing==false">
+                                        <span class="boton1Span">
+                                            <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                        </span>
+                                        <span class="boton1txt">Agregar</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="col-xs-12 col-md-12">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="ContentListado8ff8abc7-82ae-4066-a67d-e40d4a1d3464" class="block_content">
+                        <div class="form_section" style="width: 100%">
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow: hidden;">
+
+                                    <ng-jqgrid config="config"
+                                        addnew="true"
+                                        modeldata="$root.DatosFormulario.RegistroAC.ListaServicioNave"
+                                        gridid="grillaListaServicioNave"
+                                        pagerid="grillaListaServicioNave_pager"
+                                        api="gridapiListaServicioNave"
+                                        flgocultarbarrapaginado="1"
+                                        idgrilla="6FF3C33E-DCC2-46C7-9DFC-DE0085FCA102"
+                                        titulosinresultados=""
+                                        ocultarexportar="1"
+                                        altogrilla="50px"
+                                        idmarcarprimerresgistro="0" url=""
+                                        flgcargargrilla="0" />
+                                    <table id="grillaListaServicioNave"></table>
+                                    <div id="grillaListaServicioNave_pager"></div>
+                                    </ng-jqgrid>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div id="seccion-11" style="display: none;">
+            <div>
+                <div class="block_cab">
+                    <h2>
+                        <span>Concesión por Servicio al bl</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+                    <div class="block_menu block_content">
+                        <div style="max-width: 100%; height: 100%">
+
+                            <div class="col-md-12 row">
+                                <div class="col-xs-2">
+                                    <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarServiciosBL();" style="" ng-disabled="FlagEditing==false">
+                                        <span class="boton1Span">
+                                            <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                        </span>
+                                        <span class="boton1txt">Agregar</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="col-xs-12 col-md-12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ContentListadogrillaAceListaServiciosBL" class="block_content">
+                        <div class="form_section" style="width: 100%">
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow: hidden;">
+                                    <ng-jqgrid config="config"
+                                        addnew="true"
+                                        modeldata="$root.DatosFormulario.RegistroACEscalonado.ListaServiciosBL"
+                                        gridid="grillaAceListaServiciosBL"
+                                        pagerid="grillaAceListaServiciosBL_pager"
+                                        api="gridapigrillaAceListaServiciosBL"
+                                        flgocultarbarrapaginado="1"
+                                        idgrilla="F9EE530F-F93E-44C0-BA88-BC6A74DEE420"
+                                        titulosinresultados=""
+                                        ocultarexportar="1"
+                                        altogrilla="50px"
+                                        idmarcarprimerresgistro="0" url=""
+                                        flgcargargrilla="0" />
+                                    <table id="grillaAceListaServiciosBL"></table>
+                                    <div id="grillaAceListaServiciosBL_pager"></div>
+                                    </ng-jqgrid>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="seccion-12">
+
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>MATCHCODE-CLIENTE- Demo</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+
+                    <form id="frmACE_MatchCode" name="frmACE_MatchCode" data-codigoseccion="MatchCode">
+                        <div class="block_menu block_content" style="Border: 0px">
+                            <div class="col-md-12 row">
+                                <div class="col-xs-2">
+                                    <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarMatchcode_Click();" style="" ng-disabled="FlagEditing==false">
+                                        <span class="boton1Span">
+                                            <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                        </span>
+                                        <span class="boton1txt">Agregar</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="col-xs-12 col-md-12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block_content table-responsive">
+                            <ng-jqgrid config="config"
+                                addnew="true"
+                                modeldata="$root.DatosFormulario.RegistroACEscalonado.ListaMatchCode"
+                                gridid="grillaAceListaMatchCode"
+                                pagerid="grillaAceListaMatchCode_pager"
+                                api="gridapigrillaAceListaMatchCode"
+                                flgocultarbarrapaginado="1"
+                                idgrilla="D9E7DB25-36B9-4237-9B99-8369F7444C09"
+                                titulosinresultados=""
+                                ocultarexportar="1"
+                                altogrilla="90px"
+                                idmarcarprimerresgistro="0" url=""
+                                flgcargargrilla="0">
+                                <table id="grillaAceListaMatchCode"></table>
+                                <div id="grillaAceListaMatchCode_pager"></div>
+    		            </ng-jqgrid>
+                        </div>
+                        <div class="caja11 msgerror ListaClienteMatchcode">
+                            <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+        <div id="seccion-13">
+
+            <div>
+
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>CONCESIÓN ESPECIFICA- Demo</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+               <div class="block_content" style="width: 100%">
+                    <div class="block_menu block_content" data-codigoseccion="BL">
+                        <div style="max-width: 100%; height: 100%">
+
+                            <div class="col-md-12 row">
+                                <div class="col-xs-2">
+                                    <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarDatosCarga();" style="" ng-disabled="FlagEditing==false">
+                                        <span class="boton1Span">
+                                            <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                        </span>
+                                        <span class="boton1txt">Agregar</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="col-xs-12 col-md-12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ContentListadogrillaAceListaDatosCarga" class="block_content">
+                        <div class="form_section" style="width: 100%">
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow: hidden;">
+
+                                    <ng-jqgrid config="config"
+                                        addnew="true"
+                                        modeldata="$root.DatosFormulario.RegistroACEscalonado.ListaDatosCarga"
+                                        gridid="grillaAceListaDatosCarga"
+                                        pagerid="grillaAceListaDatosCarga_pager"
+                                        api="gridapigrillaAceListaDatosCarga"
+                                        flgocultarbarrapaginado="1"
+                                        idgrilla="F5C12E86-36DF-49E7-8FAA-452F84AEEEFE"
+                                        titulosinresultados=""
+                                        ocultarexportar="1"
+                                        altogrilla="130px"
+                                        idmarcarprimerresgistro="0" url=""
+                                        flgcargargrilla="0" />
+                                    <table id="grillaAceListaDatosCarga"></table>
+                                    <div id="grillaAceListaDatosCarga_pager"></div>
+                                    </ng-jqgrid>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div id="seccion-14">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>HS - PARTIDA ARANCELARIA- Demo</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+
+
+                <div class="block_content" style="width: 100%">
+                    <form id="frmACE_PartidaArancelaria" name="frmACE_PartidaArancelaria" data-codigoseccion="PartidaArancelaria">
+                        <div class="block_menu ">
+                            <div class="col-md-12 row">
+                                <div class="col-xs-2">
+                                    <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarPartidaArancelaria();" style="" ng-disabled="FlagEditing==false">
+                                        <span class="boton1Span">
+                                            <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                        </span>
+                                        <span class="boton1txt">Agregar</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="col-xs-12 col-md-12">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 row">
+                                <div class="col-md-6">
+
+                                    <div class="block_content table-responsive">
+                                        <ng-jqgrid config="config"
+                                            addnew="true"
+                                            modeldata="$root.DatosFormulario.RegistroACEscalonado.ListaPartidaArancelaria"
+                                            gridid="grillaAceListaPartidaArancelaria"
+                                            pagerid="grillaAceListaPartidaArancelaria_pager"
+                                            api="gridapigrillaAceListaPartidaArancelaria"
+                                            flgocultarbarrapaginado="1"
+                                            idgrilla="B512F494-5283-4E62-A352-58460CB8419F"
+                                            titulosinresultados=""
+                                            ocultarexportar="1"
+                                            altogrilla="130px"
+                                            idmarcarprimerresgistro="0" url=""
+                                            flgcargargrilla="0">
+										<table id="grillaAceListaPartidaArancelaria"></table>
+										<div id="grillaAceListaPartidaArancelaria_pager"></div>
+									</ng-jqgrid>
+                                    </div>
+                                    <div class="caja11 msgerror ListaPartidaArancelaria">
+                                        <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div id="seccion-15">
+
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Configuración de Tarifas</span></h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width: 100%">
+
+                    <div class="block_menu block_content">
+                        <div style="max-width: 100%; height: 100%">
+                            <div class="col-md-12 row">
+                                <div class="col-xs-2">
+                                    <button class="SeparatorLeft boton1Style boton1" ng-click="BuscarTarifa_Click();" style="" ng-disabled="FlagEditing==false">
+                                        <span class="boton1Span">
+                                            <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                        </span>
+                                        <span class="boton1txt">Agregar</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="col-xs-12 col-md-12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ContentListadogrillaAceListaTarifa" class="block_content">
+                        <div class="form_section" style="width: 100%">
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow: hidden;">
+                                    <ng-jqgrid config="config"
+                                        addnew="true"
+                                        modeldata="$root.DatosFormulario.RegistroACEscalonado.ListaTarifa"
+                                        gridid="grillaAceListaTarifa"
+                                        pagerid="grillaAceListaTarifa_pager"
+                                        api="gridapigrillaAceListaTarifa"
+                                        flgocultarbarrapaginado="1"
+                                        idgrilla="B2100848-3778-49BE-AA7C-179687F2AF00"
+                                        titulosinresultados=""
+                                        ocultarexportar="1"
+                                        altogrilla="150px"
+                                        idmarcarprimerresgistro="0" url=""
+                                        flgcargargrilla="0">
+                                        <table id="grillaAceListaTarifa"></table>
+                                        <div id="grillaAceListaTarifa_pager"></div>
+                                    </ng-jqgrid>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caja11 msgerror ListaTarifa">
+                            <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>

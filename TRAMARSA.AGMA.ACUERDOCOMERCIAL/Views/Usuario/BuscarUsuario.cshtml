@@ -1,0 +1,126 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style="max-width:800px;">
+    <div ng-app="app" ng-controller="BuscarUsuarioController" class="ng-scope">
+        @Html.Partial("~/Views/Botonera/BotoneraBusquedaClásicaconBotonSalir.cshtml")
+
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Criterios de Búsqueda</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="BusquedaUsuarioFrm" name="BusquedaUsuarioFrm">
+                    <div class="block_content" style="width: 100%">
+
+                        <div class="col-md-12">
+                            <div class="row col-md-12">
+                                <div class="col-md-6">
+                                    Línea Naviera
+                                </div>
+                                <div class="col-md-6">
+                                    <select ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarUsuarioFiltro.CodigoLinea"
+                                            data-bind="value: $root.DatosFormulario.DatosGenerales.DataBuscarUsuarioFiltro.CodigoLinea"
+                                            ng-disabled="$root.DatosFormulario.DatosGenerales.DataBuscarUsuarioFiltro.Habilitado=='False'"
+                                            ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.DatosBusquedaUsuario.Linea" class="InputSELECT_01 required"
+                                            id="$root.DatosFormulario.DatosGenerales.DataBuscarUsuarioFiltro.CodigoLinea"
+                                            data-val="true"
+                                            data-val-required="Cod. Línea es requerido."
+                                            name="$root.DatosFormulario.DatosGenerales.DataBuscarUsuarioFiltro.CodigoLinea"
+                                            required>
+                                        <option value="">[Seleccione]</option>
+                                    </select>
+                                    <div class="caja11 msgerror CodigoLinea">
+                                        <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DatosGenerales.DataBuscarUsuarioFiltro.CodigoLinea" data-valmsg-replace="true">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="row col-md-12">
+                                <div class="col-md-6">
+                                    Nombre Usuario
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="InputTEXT_05 "
+                                           type="text"
+                                           maxlength="200"
+                                           ng-enter="Enter()"
+                                           ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarUsuarioFiltro.NombreUsuario"
+                                           style="max-width: 300px; width: 100%" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row col-md-12">
+                                <div class="col-md-6">
+                                    Rol
+                                </div>
+                                <div class="col-md-6">
+                                    <select ng-model="$root.DatosFormulario.DatosGenerales.DataBuscarUsuarioFiltro.IdRol"
+                                            ng-options="rol.IdRol as rol.NombreRol for rol in $root.DatosFormulario.DatosBusquedaUsuario.Rol" class="InputSELECT_01">
+                                        <option value="">[Seleccione]</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="caja11 msgerror Objeto"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado7ec38f82-e3b0-4757-b362-5c8f7ebe4fc9" class="block_content">
+                    <div class="form_section" style="width:100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config" 
+                                           addnew="true" 
+                                           modeldata="$root.DatosFormulario.grillaListaUsuario" 
+                                           gridid="grillaListaUsuario" 
+                                           pagerid="grillaListaUsuario_pager" 
+                                           api="gridapigrillaListaUsuario" 
+                                           flgocultarbarrapaginado="0" 
+                                           idgrilla="7ec38f82-e3b0-4757-b362-5c8f7ebe4fc9" 
+                                           titulosinresultados="" 
+                                           ocultarexportar="0" 
+                                           altogrilla="150px" 
+                                           idmarcarprimerresgistro="0" 
+                                           ngclickagregar="" 
+                                           urllistar="/SeguridadAgma/BusquedaUsuario" 
+                                           flgcargargrilla="1">
+                                    <table id="grillaListaUsuario"></table>
+                                    <div id="grillaListaUsuario_pager"></div>
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

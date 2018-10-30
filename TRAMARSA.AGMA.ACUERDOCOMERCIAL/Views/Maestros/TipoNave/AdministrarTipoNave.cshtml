@@ -1,0 +1,90 @@
+﻿@{
+    Layout = null;
+}
+<div class="block" style="">
+    <div ng-app="app" ng-controller="AdministrarTipoNaveController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraBusquedaAcuerdoComercial.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>ADMINISTRAR TIPO DE NAVE</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarTipoNaveFrm" name="AdministrarTipoNaveFrm">
+                    <div class="block_content" style="width: 100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Codigo Sunat
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 solonumeros"
+                                                type="text" ng-enter="Enter()" maxlength="4"
+                                                ng-model="$root.DatosFormulario.AdministrarTipoNave.Filtro.CodigoTipoNaveSunat" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Nombre Tipo Nave
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_01"
+                                                type="text" ng-enter="Enter()" maxlength="50"
+                                                ng-model="$root.DatosFormulario.AdministrarTipoNave.Filtro.NombreTipoNave" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width: 100%; float: left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado1a0b5f06-bb91-4713-aa00-966ef96ad992" class="block_content">
+                    <div class="form_section" style="width: 100%">
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden">
+                                <ng-jqgrid config="config"
+                                    addnew="true"
+                                    modeldata="$root.DatosFormulario.AdministrarTipoNave.ListaMaestroTipoNave"
+                                    gridid="grillaListaMaestroTipoNave"
+                                    pagerid="grillaListaMaestroTipoNave_pager"
+                                    api="gridapigrillaListaMaestroTipoNave"
+                                    flgocultarbarrapaginado="0"
+                                    idgrilla="1a0b5f06-bb91-4713-aa00-966ef96ad992"
+                                    titulosinresultados=""
+                                    ocultarexportar="0"
+                                    altogrilla="150px"
+                                    idmarcarprimerresgistro="0"
+                                    ngclickagregar=""
+                                    urllistar="/TipoNave/ConsultaTipoNave"
+                                    flgcargargrilla="0">
+                                    <table id="grillaListaMaestroTipoNave"></table>
+                                    <div id="grillaListaMaestroTipoNave_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

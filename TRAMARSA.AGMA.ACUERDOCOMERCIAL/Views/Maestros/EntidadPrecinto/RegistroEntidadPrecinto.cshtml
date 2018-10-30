@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="RegistroEntidadPrecintoController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraGrabarMaestro.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos Condicion de Precinto</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarEntidadPrecintoFrm" name="AdministrarEntidadPrecintoFrm">
+                    <div class="block_content" style="width: 100%">
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Codigo Sunat
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05"
+                                    type="text" ng-enter="Enter()" maxlength="2"
+                                    ng-model="$root.DatosFormulario.AdministrarEntidadPrecinto.RegistroDatos.CodigoEntidadPrecintoSunat" />
+                                <div class="caja11 msgerror CodigoEntidadPrecintoSunat">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarEntidadPrecinto.RegistroDatos.CodigoEntidadPrecintoSunat" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Nombre Condicion de Precinto
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_01" maxlength="40"
+                                    type="text" ng-enter="Enter()"
+                                    ng-model="$root.DatosFormulario.AdministrarEntidadPrecinto.RegistroDatos.NombreEntidadPrecinto" />
+                                <div class="caja11 msgerror NombreEntidadPrecinto">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarEntidadPrecinto.RegistroDatos.NombreEntidadPrecinto" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

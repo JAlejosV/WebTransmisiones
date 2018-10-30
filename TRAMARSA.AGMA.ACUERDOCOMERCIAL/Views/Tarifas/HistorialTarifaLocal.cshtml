@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style="max-width:800px;">
+    <div ng-app="app" ng-controller="HistorialTarifaLocalController" class="ng-scope">
+        @Html.Partial("~/Views/Botonera/AC_BotoneraHistorial.cshtml")
+
+        <div id="seccion-2">
+            <div style="width:100%;float:left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado95f77b50-18a0-43f0-9b0c-62505e57f695" class="block_content">
+                    <div class="form_section" style="width:100%">
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config" 
+                                           addnew="true" 
+                                           modeldata="" 
+                                           gridid="grillaHistorialTarifaLocal" 
+                                           pagerid="grillaHistorialTarifaLocal_pager" 
+                                           api="gridapigrillaHistorialTarifaLocal" 
+                                           flgocultarbarrapaginado="0" 
+                                           idgrilla="95f77b50-18a0-43f0-9b0c-62505e57f695" 
+                                           titulosinresultados="" 
+                                           ocultarexportar="0" 
+                                           altogrilla="150px" 
+                                           idmarcarprimerresgistro="0" 
+                                           ngclickagregar="" 
+                                           urllistar="/TarifaPlana/ConsultarHistorialTarifaLocal" 
+                                           flgcargargrilla="1" >
+                                    <table id="grillaHistorialTarifaLocal"></table>
+                                    <div id="grillaHistorialTarifaLocal_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

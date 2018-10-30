@@ -1,0 +1,70 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block" style="">
+    <div ng-app="app" ng-controller="RegistroTipoFleteController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraGrabarMaestro.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos TipoFlete</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="AdministrarTipoFleteFrm" name="AdministrarTipoFleteFrm">
+                    <div class="block_content" style="width:100%">
+
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Nombre Tipo de Flete
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05"
+                                       type="text" ng-enter="Enter()" maxlength="80"
+                                       ng-model="$root.DatosFormulario.AdministrarTipoFlete.RegistroDatos.NombreTipoFlete" />
+                                <div class="caja11 msgerror NombreTipoFlete">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarTipoFlete.RegistroDatos.NombreTipoFlete" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Codigo de Aduana
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_01 solonumeros" maxlength="6"
+                                       type="text" ng-enter="Enter()"
+                                       ng-model="$root.DatosFormulario.AdministrarTipoFlete.RegistroDatos.CodigoAduanaTipoFlete" />
+                                <div class="caja11 msgerror CodigoAduanaTipoFlete">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarTipoFlete.RegistroDatos.CodigoAduanaTipoFlete" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-4">
+                                Codigo de Equivalencia
+                            </div>
+                            <div class="col-md-8">
+                                <input class="InputTEXT_05" maxlength="6"
+                                       type="text" ng-enter="Enter()"
+                                       ng-model="$root.DatosFormulario.AdministrarTipoFlete.RegistroDatos.CodigoEquivalencia" />
+                                <div class="caja11 msgerror CodigoEquivalencia">
+                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.AdministrarTipoFlete.RegistroDatos.CodigoEquivalencia" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

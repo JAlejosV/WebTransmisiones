@@ -1,0 +1,147 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style="">
+    <div ng-app="app" ng-controller="ReporteTarifaLocalController" class="ng-scope">
+        @Html.Partial("~/Views/Botonera/AC_Reporte_BotoneraReporte.cshtml")
+
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Reporte de Tarifa Local</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="ReporteTarifaLocalFrm" name="ReporteTarifaLocalFrm">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Línea Naviera
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.ReporteTarifaLocal.Filtro.CodigoLinea"
+                                                    data-val="true"
+                                                    data-bind="value: $root.DatosFormulario.ReporteTarifaLocal.Filtro.CodigoLinea"
+                                                    ng-disabled="$root.DatosFormulario.ReporteTarifaLocal.Datos.Habilitado=='False'"
+                                                    ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.ReporteTarifaLocal.Datos.Linea"
+                                                    ng-change="CargarSucursal()"
+                                                    class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoLinea">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.ReporteTarifaLocal.Filtro.CodigoLinea" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Sucursal
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.ReporteTarifaLocal.Filtro.CodigoSucursal"
+                                                    ng-options="sucursal.Codigo as sucursal.Nombre for sucursal in $root.DatosFormulario.ReporteTarifaLocal.Datos.Sucursal"
+                                                    class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Moneda
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select class="InputSELECT_01"
+                                                    ng-model="$root.DatosFormulario.ReporteTarifaLocal.Filtro.CodigoMoneda"
+                                                    ng-options="moneda.Codigo as moneda.Nombre for moneda in $root.DatosFormulario.ReporteTarifaLocal.Datos.Moneda">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Descripción Tarifa
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.ReporteTarifaLocal.Filtro.CodigoTarifaLocal" />
+                                            <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-enter="Enter()"
+                                                   ng-model="$root.DatosFormulario.ReporteTarifaLocal.Datos.NombreTarifa"
+                                                   ng-disabled="true" />
+                                            <input type="image" ng-click="BuscarTarifa_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <!--
+                                        <div class="col-md-2">
+                                            <input type="checkbox" ng-enter="Enter()" ng-model="$root.DatosFormulario.ReporteTarifaLocal.Filtro.FlagVigente" />Vigentes
+                                        </div>
+                                        <div class="col-md-10">
+                                        </div>
+                                            -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+
+
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado7275950d-31ee-44db-9336-fb5ab8f153e3" class="block_content">
+                    <div class="form_section" style="width:100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config"
+                                           addnew="true"
+                                           modeldata="$root.DatosFormulario.ReporteTarifaLocal.ListaReporteTarifaLocal"
+                                           gridid="grillaListaReporteTarifaLocal"
+                                           pagerid="grillaListaReporteTarifaLocal_pager"
+                                           api="gridapigrillaListaReporteTarifaLocal"
+                                           flgocultarbarrapaginado="0"
+                                           idgrilla="7275950d-31ee-44db-9336-fb5ab8f153e3"
+                                           titulosinresultados=""
+                                           ocultarexportar="0"
+                                           altogrilla="150px"
+                                           idmarcarprimerresgistro="0"
+                                           ngclickagregar=""
+                                           urllistar="/ReporteTarifaLocal/ConsultarReporteTarifaLocal"
+                                           flgcargargrilla="0">
+                                    <table id="grillaListaReporteTarifaLocal"></table>
+                                    <div id="grillaListaReporteTarifaLocal_pager"></div>
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

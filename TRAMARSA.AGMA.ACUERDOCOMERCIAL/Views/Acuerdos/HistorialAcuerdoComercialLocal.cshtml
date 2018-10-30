@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style="max-width: 800px;">
+    <div ng-app="app" ng-controller="HistorialACLocalController" class="ng-scope">
+        @Html.Partial("~/Views/Botonera/AC_BotoneraHistorial.cshtml")
+
+        <div id="seccion-2">
+            <div style="width: 100%; float: left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListado95f77b50-18a0-43f0-9b0c-62505e57f69r" class="block_content">
+                    <div class="form_section" style="width: 100%">
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow: hidden">
+
+                                <ng-jqgrid
+                                    config="config"
+                                    addnew="true"
+                                    modeldata=""
+                                    gridid="grillaHistorialACLocal"
+                                    pagerid="grillaHistorialACLocal_pager"
+                                    api="gridapigrillaHistorialACLocal"
+                                    flgocultarbarrapaginado="0"
+                                    idgrilla="b91c77db-bcf3-426f-8105-00aa6566194d"
+                                    titulosinresultados=""
+                                    ocultarexportar="0"
+                                    altogrilla="150px"
+                                    idmarcarprimerresgistro="0"
+                                    ngclickagregar=""
+                                    urllistar="/AcuerdoComercialLocal/ConsultarHistorialACLocal"
+                                    flgcargargrilla="0">
+                                    <table id="grillaHistorialACLocal"></table>
+                                    <div id="grillaHistorialACLocal_pager"></div>
+                                </ng-jqgrid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

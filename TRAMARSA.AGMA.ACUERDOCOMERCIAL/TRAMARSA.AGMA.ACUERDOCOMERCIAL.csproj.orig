@@ -1,0 +1,1450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AC9EC12-9A96-4F63-AAF7-9295DD26E377}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TRAMARSA.AGMA.ACUERDOCOMERCIAL</RootNamespace>
+    <AssemblyName>TRAMARSA.AGMA.ACUERDOCOMERCIAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=1.0.0.155, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LibreriasCompartidas\AutoMapper\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLL\DLL _ REPORTVIWER 11\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LibreriasCompartidas\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\LibreriasCompartidas\DLL\System.Net.Http.Formatting.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting.resources, Version=4.0.0.0, Culture=es, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LibreriasCompartidas\DLL\System.Net.Http.Formatting.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.resources, Version=4.0.0.0, Culture=es, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LibreriasCompartidas\DLL\System.Net.Http.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LibreriasCompartidas\DLL\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LibreriasCompartidas\DLL\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LibreriasCompartidas\DLL\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LibreriasCompartidas\DLL\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LibreriasCompartidas\DLL\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LibreriasCompartidas\DLL\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LibreriasCompartidas\DLL\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LibreriasCompartidas\DLL\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agente\BL\AcuerdoComercialAgente.cs" />
+    <Compile Include="Agente\BL\DepositoDefaultAgente.cs" />
+    <Compile Include="Agente\BL\MaestrosAgente.cs" />
+    <Compile Include="Agente\BL\MonitorCoparnAgente.cs" />
+    <Compile Include="Agente\BL\NotificacionIntegracionAgente.cs" />
+    <Compile Include="Agente\BL\SeguridadAgente.cs" />
+    <Compile Include="Agente\BL\TarifasAgente.cs" />
+    <Compile Include="Agente\DTO\ActualizaAcuerdoComercialLocalRequestDTO.cs" />
+    <Compile Include="Agente\DTO\ActualizarAcuerdoComercialEscalonadoDTO.cs" />
+    <Compile Include="Agente\DTO\ActualizarDetalleGrupoPuertoExternoDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoAgenteBLHouseDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoAgenteBLHouseRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoAgenteBLMasterDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoAgenteBLMasterRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoCargaDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoCargaRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoClienteBLHouseDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoClienteBLHouseRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoClienteBLMasterDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoClienteBLMasterRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoHistorialDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoMatchCodeDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoPartidaArancelariaDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoPuertoDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoPuertoRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoRADTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoRARequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoServicioBLDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoServicioBLRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoServicioNaveDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoServicioNaveRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoSucursalDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoSucursalRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoSucursalTerminalDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoSucursalTerminalRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoTarifaDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoTarifaLigadaDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoTarifaLigadaRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoTarifaPeriodoDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoTarifaPeriodoRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialEscalonadoTarifaRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalAgenteBLHouseRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalAgenteBLMasterRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalCargaRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalClienteBLHouseRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalClienteBLMasterRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalConsultaMatchCodeDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalConsultaPartidaArancelariaDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalHistorialDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalMatchCodeDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalPartidaArancelariaDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalPuertoRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalRARequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalServicioBLRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalServicioNaveRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalSucursalRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalSucursalTerminalRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalTarifaLigadaRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalTarifaRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalTipoCargaRequestDTO.cs" />
+    <Compile Include="Agente\DTO\AcuerdoComercialLocalTipoContenedorRequestDTO.cs" />
+    <Compile Include="Agente\DTO\BlNotificacionDTO.cs" />
+    <Compile Include="Agente\DTO\ClaseContenedorDTO.cs" />
+    <Compile Include="Agente\DTO\CodigoClienteRolDTO.cs" />
+    <Compile Include="Agente\DTO\ConfiguracionLinea\ConfiguracionLineaPantallaSeccionDTO.cs" />
+    <Compile Include="Agente\DTO\ConfiguracionLinea\ConfiguracionLineaSucursalDTO.cs" />
+    <Compile Include="Agente\DTO\ConfiguracionLinea\ConfiguracionLineaSucursalTerminalDTO.cs" />
+    <Compile Include="Agente\DTO\ConfiguracionLinea\LineaConfiguracionDTO.cs" />
+    <Compile Include="Agente\DTO\ConfiguracionLinea\Request\RequestActualizarConfiguracionLineaDTO.cs" />
+    <Compile Include="Agente\DTO\ConfiguracionLinea\Request\RequestObtenerConfiguracionLineaDTO.cs" />
+    <Compile Include="Agente\DTO\ConfiguracionLinea\ResponseConfiguracionLineaDTO.cs" />
+    <Compile Include="Agente\DTO\ConfiguracionLinea\Response\ResponseActualizarConfiguracionLineaDTO.cs" />
+    <Compile Include="Agente\DTO\ConfiguracionLinea\Response\ResponseObtenerConfiguracionLineaDTO.cs" />
+    <Compile Include="Agente\DTO\ConsultarDetalleAcuerdosComerciales\AcuerdoComercialLocalAgenteBLHouseDTO.cs" />
+    <Compile Include="Agente\DTO\ConsultarDetalleAcuerdosComerciales\AcuerdoComercialLocalAgenteBLMasterDTO.cs" />
+    <Compile Include="Agente\DTO\ConsultarDetalleAcuerdosComerciales\AcuerdoComercialLocalCargaDTO.cs" />
+    <Compile Include="Agente\DTO\ConsultarDetalleAcuerdosComerciales\AcuerdoComercialLocalClienteBLHouseDTO.cs" />
+    <Compile Include="Agente\DTO\ConsultarDetalleAcuerdosComerciales\AcuerdoComercialLocalClienteBLMasterDTO.cs" />
+    <Compile Include="Agente\DTO\ConsultarDetalleAcuerdosComerciales\AcuerdoComercialLocalPuertoDTO.cs" />
+    <Compile Include="Agente\DTO\ConsultarDetalleAcuerdosComerciales\AcuerdoComercialLocalRADTO.cs" />
+    <Compile Include="Agente\DTO\ConsultarDetalleAcuerdosComerciales\AcuerdoComercialLocalServicioBLDTO.cs" />
+    <Compile Include="Agente\DTO\ConsultarDetalleAcuerdosComerciales\AcuerdoComercialLocalServicioNaveDTO.cs" />
+    <Compile Include="Agente\DTO\ConsultarDetalleAcuerdosComerciales\AcuerdoComercialLocalSucursalDTO.cs" />
+    <Compile Include="Agente\DTO\ConsultarDetalleAcuerdosComerciales\AcuerdoComercialLocalSucursalTerminalDTO.cs" />
+    <Compile Include="Agente\DTO\ConsultarDetalleAcuerdosComerciales\AcuerdoComercialLocalTarifaDTO.cs" />
+    <Compile Include="Agente\DTO\ConsultarDetalleAcuerdosComerciales\AcuerdoComercialLocalTarifaLigadaDTO.cs" />
+    <Compile Include="Agente\DTO\ConsultarDetalleAcuerdosComerciales\AcuerdoComercialLocalTipoContenedorDTO.cs" />
+    <Compile Include="Agente\DTO\ConsultarDetalleAcuerdosComerciales\DetalleAcuerdoComercialLocalDTO.cs" />
+    <Compile Include="Agente\DTO\DepositoDefault\ConsultaDepositoDefaultDTO.cs" />
+    <Compile Include="Agente\DTO\DepositoDefault\ListaAlmacenDTO.cs" />
+    <Compile Include="Agente\DTO\DepositoDefault\Request\ActualizaDepositoDefaultRequestDTO.cs" />
+    <Compile Include="Agente\DTO\DepositoDefault\Request\AgregaDepositoDefaultRequestDTO.cs" />
+    <Compile Include="Agente\DTO\DepositoDefault\Request\ConsultaDepositoDefaultRequestDTO.cs" />
+    <Compile Include="Agente\DTO\DepositoDefault\Request\ValidaDepositoDefaultRequestDTO.cs" />
+    <Compile Include="Agente\DTO\DepositoDefault\Response\ActualizarDepositoDefaultResponseDTO.cs" />
+    <Compile Include="Agente\DTO\DepositoDefault\Response\AgregarDepositoDefaultResponseDTO.cs" />
+    <Compile Include="Agente\DTO\DepositoDefault\Response\ConsultaAlmacenResponseDTO.cs" />
+    <Compile Include="Agente\DTO\DepositoDefault\Response\ConsultaDepositoDefaultResponseDTO.cs" />
+    <Compile Include="Agente\DTO\DepositoDefault\Response\ValidaDepositoDefaultResponseDTO.cs" />
+    <Compile Include="Agente\DTO\DetalleAcuerdoComercialEscalonadoDTO.cs" />
+    <Compile Include="Agente\DTO\DetalleArriboNaveDTO.cs" />
+    <Compile Include="Agente\DTO\DetalleGrupoPuertoExternoDTO.cs" />
+    <Compile Include="Agente\DTO\DetalleTarifaEscalonadaDTO.cs" />
+    <Compile Include="Agente\DTO\DetalleTarifaLocalDTO.cs" />
+    <Compile Include="Agente\DTO\DetalleTipoContenedorExternoDTO.cs" />
+    <Compile Include="Agente\DTO\DistribucionTarifaDTO.cs" />
+    <Compile Include="Agente\DTO\HistorialTarifaEscalonadaDTO.cs" />
+    <Compile Include="Agente\DTO\IngresoMasivoRAPTDTO.cs" />
+    <Compile Include="Agente\DTO\LiquidacionesNoDevueltasDTO.cs" />
+    <Compile Include="Agente\DTO\ListaAcuerdoComercialEscalonadoDTO.cs" />
+    <Compile Include="Agente\DTO\ListaAcuerdoComercialLocalDTO.cs" />
+    <Compile Include="Agente\DTO\ListaClienteDTO.cs" />
+    <Compile Include="Agente\DTO\ListaConfiguracionLineaDTO.cs" />
+    <Compile Include="Agente\DTO\ListaDetalleCatalagoDTO.cs" />
+    <Compile Include="Agente\DTO\ListaDocumentoOrigenDTO.cs" />
+    <Compile Include="Agente\DTO\ListaGrupoPuertoExternoDTO.cs" />
+    <Compile Include="Agente\DTO\ListaLineaDTO.cs" />
+    <Compile Include="Agente\DTO\ListaMonedaDTO.cs" />
+    <Compile Include="Agente\DTO\ListaNaveDTO.cs" />
+    <Compile Include="Agente\DTO\ListaParametroNegocioDTO.cs" />
+    <Compile Include="Agente\DTO\ListaPuertoDTO.cs" />
+    <Compile Include="Agente\DTO\ListaRolClienteDTO.cs" />
+    <Compile Include="Agente\DTO\ListaSucursalDTO.cs" />
+    <Compile Include="Agente\DTO\ListaTarifaDTO.cs" />
+    <Compile Include="Agente\DTO\ListaTarifaEscalonadaDTO.cs" />
+    <Compile Include="Agente\DTO\ListaTarifaPlanaDTO.cs" />
+    <Compile Include="Agente\DTO\ListaTerminalPortuarioDTO.cs" />
+    <Compile Include="Agente\DTO\ListaTipoCambio.cs" />
+    <Compile Include="Agente\DTO\ListaTipoContenedorDTO.cs" />
+    <Compile Include="Agente\DTO\MatchCodeClienteDTO.cs" />
+    <Compile Include="Agente\DTO\MonitorCoparn\ConsultaMonitorCoparnDTO.cs" />
+    <Compile Include="Agente\DTO\MonitorCoparn\Request\ConsultaMonitorCoparnRequestDTO.cs" />
+    <Compile Include="Agente\DTO\MonitorCoparn\Response\ConsultaMonitorCoparnResponseDTO.cs" />
+    <Compile Include="Agente\DTO\NotificacionIntegracion\ListaBandejaNotificacionIntegracionDTO.cs" />
+    <Compile Include="Agente\DTO\NotificacionIntegracion\ListaDetalleNotificacionIntegracionDTO.cs" />
+    <Compile Include="Agente\DTO\NotificacionIntegracion\Request\ActualizaNotificacionIntegracionRequestDTO.cs" />
+    <Compile Include="Agente\DTO\NotificacionIntegracion\Request\ConsultaBandejaNotificacionIntegracionRequestDTO.cs" />
+    <Compile Include="Agente\DTO\NotificacionIntegracion\Request\ConsultaDetalleNotificacionIntegracionRequestDTO.cs" />
+    <Compile Include="Agente\DTO\NotificacionIntegracion\Request\RegistroNotificacionIntegracionRequestDTO.cs" />
+    <Compile Include="Agente\DTO\NotificacionIntegracion\Response\ConsultaBandejaNotificacionIntegracionResponseDTO.cs" />
+    <Compile Include="Agente\DTO\NotificacionIntegracion\Response\ConsultaDetalleNotificacionIntegracionResponseDTO.cs" />
+    <Compile Include="Agente\DTO\PartidaArancelariaDTO.cs" />
+    <Compile Include="Agente\DTO\PesoVariableDTO.cs" />
+    <Compile Include="Agente\DTO\RAPTItemDTO.cs" />
+    <Compile Include="Agente\DTO\RAPTResultDTO.cs" />
+    <Compile Include="Agente\DTO\ReporteAcuerdoComercialEscalonadoDTO.cs" />
+    <Compile Include="Agente\DTO\ReporteAcuerdoComercialLocalDTO.cs" />
+    <Compile Include="Agente\DTO\ReporteTarifaEscalonadaDTO.cs" />
+    <Compile Include="Agente\DTO\ReporteTarifaLocalDTO.cs" />
+    <Compile Include="Agente\DTO\RequestActualizarTarifaEscalonada.cs" />
+    <Compile Include="Agente\DTO\ResponseConsultaHistorialACEscalonado.cs" />
+    <Compile Include="Agente\DTO\SeguimientoAcuerdoComercialEscalonadoDTO.cs" />
+    <Compile Include="Agente\DTO\SeguimientoAcuerdoComercialLocalDTO.cs" />
+    <Compile Include="Agente\DTO\ServicioDTO.cs" />
+    <Compile Include="Agente\DTO\TarifaEscalonadaSucursalDTO.cs" />
+    <Compile Include="Agente\DTO\TarifaEscalonadaVigenciaDTO.cs" />
+    <Compile Include="Agente\DTO\TarifaEscalonada\RequestRegistrarTarifaEscalonada.cs" />
+    <Compile Include="Agente\DTO\TarifaEscalonada\TarifaEscalonadaLigadaDTO.cs" />
+    <Compile Include="Agente\DTO\TarifaEscalonada\TarifaEscalonadaPeriodoDTO.cs" />
+    <Compile Include="Agente\DTO\TarifaEscalonada\TarifaLocalSucursalDTO.cs" />
+    <Compile Include="Agente\DTO\TarifaLocalHistorialDTO.cs" />
+    <Compile Include="Agente\DTO\TarifaLocalLigadaDTO.cs" />
+    <Compile Include="Agente\DTO\TarifaLocalSucursalTerminalDTO.cs" />
+    <Compile Include="Agente\DTO\TarifaLocalTerminalDTO.cs" />
+    <Compile Include="Agente\DTO\TarifaLocalVigenciaDTO.cs" />
+    <Compile Include="Agente\DTO\TipoContenedorExternoDTO.cs" />
+    <Compile Include="Agente\DTO\UsuarioSeguridadDTO.cs" />
+    <Compile Include="Agente\Request\BaseRequest.cs" />
+    <Compile Include="Agente\Request\RequesRegistrarTipoContenedorExterno.cs" />
+    <Compile Include="Agente\Request\RequestActualizarGrupoPuertoExterno.cs" />
+    <Compile Include="Agente\Request\RequestActualizarNotificacion.cs" />
+    <Compile Include="Agente\Request\RequestActualizarPartidaArancelaria.cs" />
+    <Compile Include="Agente\Request\RequestActualizarPesoVariable.cs" />
+    <Compile Include="Agente\Request\RequestActualizarTarifaLocal.cs" />
+    <Compile Include="Agente\Request\RequestActualizarTipoContenedor.cs" />
+    <Compile Include="Agente\Request\RequestActualizarTipoContenedorExterno.cs" />
+    <Compile Include="Agente\Request\RequestAcuerdoComercialEscalonadoTarifa.cs" />
+    <Compile Include="Agente\Request\RequestAgregarGrupoPuertoExterno.cs" />
+    <Compile Include="Agente\Request\RequestBusquedaACEscalonado.cs" />
+    <Compile Include="Agente\Request\RequestBusquedaACLocal.cs" />
+    <Compile Include="Agente\Request\RequestBusquedaClienteLiberacion.cs" />
+    <Compile Include="Agente\Request\RequestBusquedaConfiguracionLinea.cs" />
+    <Compile Include="Agente\Request\RequestBusquedaDistribucionTarifa.cs" />
+    <Compile Include="Agente\Request\RequestBusquedaDocumentoOrigen.cs" />
+    <Compile Include="Agente\Request\RequestBusquedaLiberacionBL.cs" />
+    <Compile Include="Agente\Request\RequestBusquedaTarifaEscalonada.cs" />
+    <Compile Include="Agente\Request\RequestBusquedaTarifaLocal.cs" />
+    <Compile Include="Agente\Request\RequestBusquedaTipoCambio.cs" />
+    <Compile Include="Agente\Request\RequestCambiarClaveUsuario.cs" />
+    <Compile Include="Agente\Request\RequestConsultaCliente.cs" />
+    <Compile Include="Agente\Request\RequestConsultaClienteMatchCode.cs" />
+    <Compile Include="Agente\Request\RequestConsultaDetalleAcuerdoComercialEscalonado.cs" />
+    <Compile Include="Agente\Request\RequestConsultaDetalleAcuerdoComercialLocal.cs" />
+    <Compile Include="Agente\Request\RequestConsultaDetalleCatalago.cs" />
+    <Compile Include="Agente\Request\RequestConsultaDetalleNotificacion.cs" />
+    <Compile Include="Agente\Request\RequestConsultaDetalleTarifaEscalonada.cs" />
+    <Compile Include="Agente\Request\RequestConsultaDetalleTarifaLocal.cs" />
+    <Compile Include="Agente\Request\RequestConsultaGrupoPuerto.cs" />
+    <Compile Include="Agente\Request\RequestConsultaHistorialACEscalonado.cs" />
+    <Compile Include="Agente\Request\RequestConsultaHistorialACLocal.cs" />
+    <Compile Include="Agente\Request\RequestConsultaHistorialTarifaEscalonada.cs" />
+    <Compile Include="Agente\Request\RequestConsultaHistorialTarifaLocal.cs" />
+    <Compile Include="Agente\Request\RequestConsultaNave.cs" />
+    <Compile Include="Agente\Request\RequestConsultaParametroNegocio.cs" />
+    <Compile Include="Agente\Request\RequestConsultaPartidaArancelaria.cs" />
+    <Compile Include="Agente\Request\RequestConsultaPuerto.cs" />
+    <Compile Include="Agente\Request\RequestConsultarDetalleGrupoPuertoExterno.cs" />
+    <Compile Include="Agente\Request\RequestConsultarDetalleTipoContenedorExterno.cs" />
+    <Compile Include="Agente\Request\RequestConsultaRolCliente.cs" />
+    <Compile Include="Agente\Request\RequestConsultarPesoVariable.cs" />
+    <Compile Include="Agente\Request\RequestConsultarTipoContenedorExterno.cs" />
+    <Compile Include="Agente\Request\RequestConsultaServicioBL.cs" />
+    <Compile Include="Agente\Request\RequestConsultaTarifa.cs" />
+    <Compile Include="Agente\Request\RequestConsultaTarifaEscalonadaLigadaXVigenciaLigada.cs" />
+    <Compile Include="Agente\Request\RequestConsultaTarifaLocalLigadaXVigencia.cs" />
+    <Compile Include="Agente\Request\RequestEliminarGrupoPuertoExterno.cs" />
+    <Compile Include="Agente\Request\RequestEliminarPesoVariable.cs" />
+    <Compile Include="Agente\Request\RequestEliminarTipoContenedor.cs" />
+    <Compile Include="Agente\Request\RequestEliminarTipoContenedorExterno.cs" />
+    <Compile Include="Agente\Request\RequestGenerarClaveUsuario.cs" />
+    <Compile Include="Agente\Request\RequestListarGrupoPuertoExterno.cs" />
+    <Compile Include="Agente\Request\RequestModificarDetalleGrupoPuertoExterno.cs" />
+    <Compile Include="Agente\Request\RequestModificarDetalleTipoContenedorExterno.cs" />
+    <Compile Include="Agente\Request\RequestRegistrarPesoVariable.cs" />
+    <Compile Include="Agente\Request\RequestRegistrarTarifaLocal.cs" />
+    <Compile Include="Agente\Request\RequestRegistrarTipoContenedor.cs" />
+    <Compile Include="Agente\Request\RequestReporteACEscalonado.cs" />
+    <Compile Include="Agente\Request\RequestReporteACLocal.cs" />
+    <Compile Include="Agente\Request\RequestReporteContenedorNoDevuelto.cs" />
+    <Compile Include="Agente\Request\RequestReporteTarifaEscalonada.cs" />
+    <Compile Include="Agente\Request\RequestReporteTarifaLocal.cs" />
+    <Compile Include="Agente\Request\RequestSeguimientoACEscalonado.cs" />
+    <Compile Include="Agente\Request\RequestSeguimientoACLocal.cs" />
+    <Compile Include="Agente\Response\ResponseActualizarGrupoPuertoExterno.cs" />
+    <Compile Include="Agente\Response\ResponseActualizarNotificacion.cs" />
+    <Compile Include="Agente\Response\ResponseActualizarPartidaArancelaria.cs" />
+    <Compile Include="Agente\Response\ResponseActualizarPesoVariable.cs" />
+    <Compile Include="Agente\Response\ResponseActualizarTarifaLocal.cs" />
+    <Compile Include="Agente\Response\ResponseActualizarTipoContenedor.cs" />
+    <Compile Include="Agente\Response\ResponseActualizarTipoContenedorExterno.cs" />
+    <Compile Include="Agente\Response\ResponseAcuerdoComercialEscalonadoTarifa.cs" />
+    <Compile Include="Agente\Response\ResponseAgregarGrupoPuertoExterno.cs" />
+    <Compile Include="Agente\Response\ResponseBusquedaACEscalonado.cs" />
+    <Compile Include="Agente\Response\ResponseBusquedaACLocal.cs" />
+    <Compile Include="Agente\Response\ResponseBusquedaCliente.cs" />
+    <Compile Include="Agente\Response\ResponseBusquedaClienteMatchCode.cs" />
+    <Compile Include="Agente\Response\ResponseBusquedaConfiguracionLinea.cs" />
+    <Compile Include="Agente\Response\ResponseBusquedaDistribucionTarifa.cs" />
+    <Compile Include="Agente\Response\ResponseBusquedaDocumentoOrigen.cs" />
+    <Compile Include="Agente\Response\ResponseBusquedaNave.cs" />
+    <Compile Include="Agente\Response\ResponseBusquedaPartidaArancelaria.cs" />
+    <Compile Include="Agente\Response\ResponseBusquedaPuerto.cs" />
+    <Compile Include="Agente\Response\ResponseBusquedaServicioBl.cs" />
+    <Compile Include="Agente\Response\ResponseBusquedaTarifa.cs" />
+    <Compile Include="Agente\Response\ResponseBusquedaTarifaEscalonada.cs" />
+    <Compile Include="Agente\Response\ResponseBusquedaTarifaLocal.cs" />
+    <Compile Include="Agente\Response\ResponseCambiarClaveUsuario.cs" />
+    <Compile Include="Agente\Response\ResponseCargaMasiva.cs" />
+    <Compile Include="Agente\Response\ResponseConsultaDetalleNotificacion.cs" />
+    <Compile Include="Agente\Response\ResponseConsultaDetalleTarifaEscalonada.cs" />
+    <Compile Include="Agente\Response\ResponseConsultaHistorialACLocal.cs" />
+    <Compile Include="Agente\Response\ResponseConsultaHistorialTarifaEscalonada.cs" />
+    <Compile Include="Agente\Response\ResponseConsultaHistorialTarifaLocal.cs" />
+    <Compile Include="Agente\Response\ResponseConsultaLigadaPeriodoTarifaEscalonada.cs" />
+    <Compile Include="Agente\Response\ResponseConsultaLigadasTarifaLocal.cs" />
+    <Compile Include="Agente\Response\ResponseConsultarDetalleAcuerdoComercialEscalonado.cs" />
+    <Compile Include="Agente\Response\ResponseConsultarDetalleAcuerdoComercialLocal.cs" />
+    <Compile Include="Agente\Response\ResponseConsultarDetalleGrupoPuertoExterno.cs" />
+    <Compile Include="Agente\Response\ResponseConsultarDetalleTarifaLocal.cs" />
+    <Compile Include="Agente\Response\ResponseConsultarDetalleTipoContenedorExterno.cs" />
+    <Compile Include="Agente\Response\ResponseConsultarPesoVariable.cs" />
+    <Compile Include="Agente\Response\ResponseConsultarTipoContenedorExterno.cs" />
+    <Compile Include="Agente\Response\ResponseEliminarGrupoPuertoExterno.cs" />
+    <Compile Include="Agente\Response\ResponseEliminarPesoVariable.cs" />
+    <Compile Include="Agente\Response\ResponseEliminarTipoContenedor.cs" />
+    <Compile Include="Agente\Response\ResponseEliminarTipoContenedorExterno.cs" />
+    <Compile Include="Agente\Response\ResponseGenerarClaveUsuario.cs" />
+    <Compile Include="Agente\Response\ResponseLimpiarCache.cs" />
+    <Compile Include="Agente\Response\ResponseListaDetalleCatalogo.cs" />
+    <Compile Include="Agente\Response\ResponseListarClaseContenedor.cs" />
+    <Compile Include="Agente\Response\ResponseListarGrupoPuertoExterno.cs" />
+    <Compile Include="Agente\Response\ResponseListarLinea.cs" />
+    <Compile Include="Agente\Response\ResponseListarMoneda.cs" />
+    <Compile Include="Agente\Response\ResponseListarParametrosNegocios.cs" />
+    <Compile Include="Agente\Response\ResponseListarPuerto.cs" />
+    <Compile Include="Agente\Response\ResponseListarRolCiente.cs" />
+    <Compile Include="Agente\Response\ResponseListarSucursal.cs" />
+    <Compile Include="Agente\Response\ResponseListarTarifa.cs" />
+    <Compile Include="Agente\Response\ResponseListarTerminalPortuario.cs" />
+    <Compile Include="Agente\Response\ResponseListarTipoCambio.cs" />
+    <Compile Include="Agente\Response\ResponseListarTipoContenedor.cs" />
+    <Compile Include="Agente\Response\ResponseModificarDetalleGrupoPuertoExterno.cs" />
+    <Compile Include="Agente\Response\ResponseModificarDetalleTipoContenedorExterno.cs" />
+    <Compile Include="Agente\Response\ResponseRegistrarAcuerdoComercialEscalonado.cs" />
+    <Compile Include="Agente\Response\ResponseRegistrarPesoVariable.cs" />
+    <Compile Include="Agente\Response\ResponseRegistrarTarifaEscalonada.cs" />
+    <Compile Include="Agente\Response\ResponseRegistrarTarifaLocal.cs" />
+    <Compile Include="Agente\Response\ResponseRegistrarTipoContenedor.cs" />
+    <Compile Include="Agente\Response\ResponseRegistrarTipoContenedorExterno.cs" />
+    <Compile Include="Agente\Response\ResponseReporteACEscalonado.cs" />
+    <Compile Include="Agente\Response\ResponseReporteACLocal.cs" />
+    <Compile Include="Agente\Response\ResponseReporteTarifaEscalonada.cs" />
+    <Compile Include="Agente\Response\ResponseReporteTarifaLocal.cs" />
+    <Compile Include="Agente\Response\ResponseSeguimientoACEscalonado.cs" />
+    <Compile Include="Agente\Response\ResponseSeguimientoACLocal.cs" />
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Comun\Grid.cs" />
+    <Compile Include="Comun\MyWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Comun\ProxyBaseRest.cs" />
+    <Compile Include="Comun\Result.cs" />
+    <Compile Include="Comun\UtilitarioRest.cs" />
+    <Compile Include="Content\Reportes\ContenedoresNoDevueltos.cs">
+      <DependentUpon>ContenedoresNoDevueltos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Reportes\ContenedoresNoDevueltos.Designer.cs">
+      <DependentUpon>ContenedoresNoDevueltos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Reportes\ContenedoresNoDevueltos2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContenedoresNoDevueltos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Reportes\ReporteContendoresNoDevueltos.aspx.cs">
+      <DependentUpon>ReporteContendoresNoDevueltos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Reportes\ReporteContendoresNoDevueltos.aspx.designer.cs">
+      <DependentUpon>ReporteContendoresNoDevueltos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AcuerdoComercialEscalonadoController.cs" />
+    <Compile Include="Controllers\AcuerdoComercialLocalController.cs" />
+    <Compile Include="Controllers\BienvenidoController.cs" />
+    <Compile Include="Controllers\BuscarTarifaController.cs" />
+    <Compile Include="Controllers\CargaMasivaController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\ConfiguracionLineaController.cs" />
+    <Compile Include="Controllers\ConfiguracionPeriodoACEscalonadoController.cs" />
+    <Compile Include="Controllers\ConfiguracionPeriodoTarifaEscalonadaController.cs" />
+    <Compile Include="Controllers\ConfiguracionTarifaLigadaController.cs" />
+    <Compile Include="Controllers\DemoController.cs" />
+    <Compile Include="Controllers\DepositoDefaultController.cs" />
+    <Compile Include="Controllers\DetalleGrupoPuertoExternoController.cs" />
+    <Compile Include="Controllers\DetalleTipoContenedorExternoController.cs" />
+    <Compile Include="Controllers\DocumentoOrigenController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\GrupoPuertoExternoController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MaestrosController.cs" />
+    <Compile Include="Controllers\MonitorCoparnController.cs" />
+    <Compile Include="Controllers\NaveController.cs" />
+    <Compile Include="Controllers\NotificacionContenedorController.cs" />
+    <Compile Include="Controllers\NotificacionController.cs" />
+    <Compile Include="Controllers\PartidaArancelariaController.cs" />
+    <Compile Include="Controllers\PesoVariableController.cs" />
+    <Compile Include="Controllers\PuertoController.cs" />
+    <Compile Include="Controllers\ReporteACEscalonadoController.cs" />
+    <Compile Include="Controllers\ReporteACLocalController.cs" />
+    <Compile Include="Controllers\ReporteContenedorNoDevueltoController.cs" />
+    <Compile Include="Controllers\ReporteTarifaEscalonadaController.cs" />
+    <Compile Include="Controllers\ReporteTarifaLocalController.cs" />
+    <Compile Include="Controllers\SeguridadAgmaController.cs" />
+    <Compile Include="Controllers\ServicioBlController.cs" />
+    <Compile Include="Controllers\TarifaEscalonadaController.cs" />
+    <Compile Include="Controllers\TarifaGeneralesController.cs" />
+    <Compile Include="Controllers\TarifaPlanaController.cs" />
+    <Compile Include="Controllers\TipoContenedorController.cs" />
+    <Compile Include="Controllers\TipoContenedorExternoController.cs" />
+    <Compile Include="Filters\AutenticacionUsuarioAttribute.cs" />
+    <Compile Include="Filters\ChildActionOutputCache.cs" />
+    <Compile Include="Filters\CustomExceptionFilter.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HelperSeguridad\HelperSeguridad.cs" />
+    <Compile Include="HelperSeguridad\WebConfigReader.cs" />
+    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Helper\HelperCtrl.cs" />
+    <Compile Include="Helper\HelperDataScriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helper\ResponseUsuarioAgmaDTO.cs" />
+    <Compile Include="Models\Comun\OrdenamientoDTO.cs" />
+    <Compile Include="Models\Comun\PaginacionBL.cs" />
+    <Compile Include="Models\Comun\PaginacionDTO.cs" />
+    <Compile Include="Models\Comun\RequestBaseDTO.cs" />
+    <Compile Include="Models\DTO\ActualizarDetalleGrupoPuertoExternoViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercialEscalonadoHistorialViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercialHistorialViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\ActualizaAcuerdoComercialLocalRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoAgenteBLHouseRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoAgenteBLMasterViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoCargaViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoClienteBLHouseViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoConsultaMatchCodeViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoConsultaPartidaArancelariaViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadolClienteBLMasterViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoMatchCodeViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoPartidaArancelariaViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoPuertoViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoRAViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoServicioBLViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoServicioNaveViewMode.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoSucursalTerminalViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoSucursalViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoTarifaLigadaViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoTarifaPeriodoViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialEscalonadoTarifaViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalAgenteBLHouseRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalAgenteBLMasterRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalCargaRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalClienteBLHouseRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalClienteBLMasterRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalConsultaMatchCodeViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalConsultaPartidaArancelariaViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalMatchCodeViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalPartidaArancelariaViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalPuertoRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalRARequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalServicioBLRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalServicioNaveRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalSucursalRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalSucursalTerminalRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalTarifaLigadaRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalTarifaRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalTipoCargaRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\AcuerdoComercialLocalTipoContenedorRequestViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\BusquedaConfiguracionLineaViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\BusquedaPuertoIndexViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\BusquedaPuertoViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\DetalleAcuerdoComercialViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\ListaBusquedaClienteViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\ListaRolClienteViewModel.cs" />
+    <Compile Include="Models\DTO\AcuerdoComercial\RegistrarAcuerdoComercialViewModel.cs" />
+    <Compile Include="Models\DTO\AdministrarTipoContenedorBusquedaViewModel.cs" />
+    <Compile Include="Models\DTO\BL\MaestrosAgente.cs" />
+    <Compile Include="Models\DTO\BL\TarifasAgente.cs" />
+    <Compile Include="Models\DTO\BusquedaACEscalonadoViewModel.cs" />
+    <Compile Include="Models\DTO\BusquedaACLocalViewModel.cs" />
+    <Compile Include="Models\DTO\BusquedaClienteMatchCodeViewModel.cs" />
+    <Compile Include="Models\DTO\BusquedaClienteViewModel.cs" />
+    <Compile Include="Models\DTO\BusquedaDetalleCatalogoViewModel.cs" />
+    <Compile Include="Models\DTO\BusquedaDistribucionTarifaViewModel.cs" />
+    <Compile Include="Models\DTO\BusquedaDocumentoOrigenViewModel.cs" />
+    <Compile Include="Models\DTO\BusquedaGrupoPuertoExternoViewModel.cs" />
+    <Compile Include="Models\DTO\BusquedaNaveViewModel.cs" />
+    <Compile Include="Models\DTO\BusquedaPartidaArancelariaViewModel.cs" />
+    <Compile Include="Models\DTO\BusquedaServicioBlViewModel.cs" />
+    <Compile Include="Models\DTO\BusquedaTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\DTO\BusquedaTarifaLocalViewModel.cs" />
+    <Compile Include="Models\DTO\BusquedaTarifaViewModel.cs" />
+    <Compile Include="Models\DTO\BusquedaTipoContenedorViewModel.cs" />
+    <Compile Include="Models\DTO\BusquedaUsuarioViewModel.cs" />
+    <Compile Include="Models\DTO\CargaMasivaAcuerdoComercialViewModel.cs" />
+    <Compile Include="Models\DTO\ConfiguracionLineaIndexViewModel.cs" />
+    <Compile Include="Models\DTO\ConfiguracionLinea\ConfiguracionLineaPantallaSeccionViewModel.cs" />
+    <Compile Include="Models\DTO\ConfiguracionLinea\ConfiguracionLineaSucursalTerminalViewModel.cs" />
+    <Compile Include="Models\DTO\ConfiguracionLinea\ConfiguracionLineaSucursalViewModel.cs" />
+    <Compile Include="Models\DTO\ConfiguracionLinea\Request\RequestActualizarConfiguracionLineaViewModel.cs" />
+    <Compile Include="Models\DTO\ConfiguracionLinea\Request\RequestObtenerConfiguracionLineaViewModel.cs" />
+    <Compile Include="Models\DTO\ConfiguracionLinea\Response\ResponseActualizarConfiguracionLineaViewModel.cs" />
+    <Compile Include="Models\DTO\ConfiguracionLinea\Response\ResponseObtenerConfiguracionLineaViewModel.cs" />
+    <Compile Include="Models\DTO\ConfiguracionTarifaLigadaViewModel.cs" />
+    <Compile Include="Models\DTO\ConsultaDetalleNotificacionViewModel.cs" />
+    <Compile Include="Models\DTO\ConsultaDetalleTarifaEscalonadaLigadaViewModel.cs" />
+    <Compile Include="Models\DTO\ConsultaDetalleTarifaEscalonadaPeriodoViewModel.cs" />
+    <Compile Include="Models\DTO\ConsultaDetalleTarifaEscalonadaSucursalViewModel.cs" />
+    <Compile Include="Models\DTO\ConsultaDetalleTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\DTO\ConsultaHistorialTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\DTO\ConsultaHistorialTarifaLocalViewModel.cs" />
+    <Compile Include="Models\DTO\ConsultaLigadaPeriodoTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\DTO\ConsultarDetalleAcuerdoComercialEscalonadoViewModel.cs" />
+    <Compile Include="Models\DTO\ConsultarDetalleGrupoPuertoExternoViewModel.cs" />
+    <Compile Include="Models\DTO\ConsultarDetalleTipoContenedorExternoViewModel.cs" />
+    <Compile Include="Models\DTO\ConsultarPesoVariableViewModel.cs" />
+    <Compile Include="Models\DTO\ConsultarTipoContenedorExternoViewModel.cs" />
+    <Compile Include="Models\DTO\DepositoDefault\ConsultaDepositoDefaultViewModel.cs" />
+    <Compile Include="Models\DTO\DepositoDefault\ListaAlmacenViewModel.cs" />
+    <Compile Include="Models\DTO\DepositoDefault\ListaDepositoDefaultViewModel.cs" />
+    <Compile Include="Models\DTO\DepositoDefault\Request\RequestActualizarDepositoDefaultViewModel.cs" />
+    <Compile Include="Models\DTO\DepositoDefault\Request\RequestAgregarDepositoDefaultViewModel.cs" />
+    <Compile Include="Models\DTO\DepositoDefault\Request\RequestConsultaDepositoDefaultViewModel.cs" />
+    <Compile Include="Models\DTO\DepositoDefault\Request\RequestValidaDepositoDefaultViewModel.cs" />
+    <Compile Include="Models\DTO\DepositoDefault\Response\ResponseActualizarDepositoDefaultViewModel.cs" />
+    <Compile Include="Models\DTO\DepositoDefault\Response\ResponseAgregarDepositoDefaultViewModel.cs" />
+    <Compile Include="Models\DTO\DepositoDefault\Response\ResponseConsultaAlmacenViewModel.cs" />
+    <Compile Include="Models\DTO\DepositoDefault\Response\ResponseConsultarDepositoDefaultIndexViewModel.cs" />
+    <Compile Include="Models\DTO\DepositoDefault\Response\ResponseConsultarDepositoDefaultViewModel.cs" />
+    <Compile Include="Models\DTO\DepositoDefault\Response\ResponseRegistrarDepositoDefaultIndexViewModel.cs" />
+    <Compile Include="Models\DTO\DepositoDefault\Response\ResponseValidaDepositoDefaultViewModel.cs" />
+    <Compile Include="Models\DTO\DetalleAcuerdoComercialEscalonadoViewModel.cs" />
+    <Compile Include="Models\DTO\DetalleAcuerdoComercialLocalViewModel.cs" />
+    <Compile Include="Models\DTO\DetalleArriboNaveViewModel.cs" />
+    <Compile Include="Models\DTO\DetalleGrupoPuertoExternoViewModel.cs" />
+    <Compile Include="Models\DTO\DetalleTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\DTO\DetalleTarifaLocalViewModel.cs" />
+    <Compile Include="Models\DTO\DetalleTipoContenedorExternoViewModel.cs" />
+    <Compile Include="Models\DTO\DistribucionTarifaViewModel.cs" />
+    <Compile Include="Models\DTO\HistorialACEscalonadoViewModel.cs" />
+    <Compile Include="Models\DTO\HistorialACLocalViewModel.cs" />
+    <Compile Include="Models\DTO\ListaAcuerdoComercialEscalonadoViewModel.cs" />
+    <Compile Include="Models\DTO\ListaAcuerdoComercialLocalViewModel.cs" />
+    <Compile Include="Models\DTO\ListaBusquedaTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\DTO\ListaBusquedaTarifaGeneralesViewModel.cs" />
+    <Compile Include="Models\DTO\ListaBusquedaTarifaLocalViewModel.cs" />
+    <Compile Include="Models\DTO\ListaBusquedaTarifaViewModel.cs" />
+    <Compile Include="Models\DTO\ListaClaseContenedorViewModel.cs" />
+    <Compile Include="Models\DTO\ListaConfiguracionLineaViewModel.cs" />
+    <Compile Include="Models\DTO\ListaDetalleCatalagoViewModel.cs" />
+    <Compile Include="Models\DTO\ListaGrupoPuertoExternoViewModel.cs" />
+    <Compile Include="Models\DTO\ListaLineaViewModel.cs" />
+    <Compile Include="Models\DTO\ListaMonedaViewModel.cs" />
+    <Compile Include="Models\DTO\ListaNaveViewModel.cs" />
+    <Compile Include="Models\DTO\ListaPuertoViewModel.cs" />
+    <Compile Include="Models\DTO\ListaRegimenViewModel.cs" />
+    <Compile Include="Models\DTO\ListaRegistraTarifaViewModel.cs" />
+    <Compile Include="Models\DTO\ListaSucursalViewModel.cs" />
+    <Compile Include="Models\DTO\ListaTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\DTO\ListaTarifaPlanaViewModel.cs" />
+    <Compile Include="Models\DTO\ListaTerminalPortuarioViewModel.cs" />
+    <Compile Include="Models\DTO\ListaTipoCambioViewModel.cs" />
+    <Compile Include="Models\DTO\ListaUsuarioViewModel.cs" />
+    <Compile Include="Models\DTO\MonitorCoparn\ConsultaMonitorCoparnViewModel.cs" />
+    <Compile Include="Models\DTO\MonitorCoparn\ListaMonitorCoparnViewModel.cs" />
+    <Compile Include="Models\DTO\MonitorCoparn\Request\RequestConsultaMonitorCoparnViewModel.cs" />
+    <Compile Include="Models\DTO\MonitorCoparn\Response\ResponseConsultaMonitorCoparnIndexViewModel.cs" />
+    <Compile Include="Models\DTO\MonitorCoparn\Response\ResponseConsultaMonitorCoparnViewModel.cs" />
+    <Compile Include="Models\DTO\NotificacionIntegracion\ConsultaNotificacionIntegracionViewModel.cs" />
+    <Compile Include="Models\DTO\NotificacionIntegracion\ListaBandejaNotificacionIntegracionViewModel.cs" />
+    <Compile Include="Models\DTO\NotificacionIntegracion\ListaDetalleNotificacionIntegracionViewModel.cs" />
+    <Compile Include="Models\DTO\NotificacionIntegracion\Request\RequestActualizaNotificacionIntegracionViewModel.cs" />
+    <Compile Include="Models\DTO\NotificacionIntegracion\Request\RequestConsultaBandejaNotificacionIntegracionViewModel.cs" />
+    <Compile Include="Models\DTO\NotificacionIntegracion\Request\RequestConsultaDetalleNotificacionIntegracionViewModel.cs" />
+    <Compile Include="Models\DTO\NotificacionIntegracion\Request\RequestRegistroNotificacionIntegracionViewModel.cs" />
+    <Compile Include="Models\DTO\NotificacionIntegracion\Response\ResponseConsultaBandejaNotificacionIntegracionIndexViewModel.cs" />
+    <Compile Include="Models\DTO\NotificacionIntegracion\Response\ResponseConsultaBandejaNotificacionIntegracionViewModel.cs" />
+    <Compile Include="Models\DTO\NotificacionIntegracion\Response\ResponseConsultaDetalleNotificacionIntegracionViewModel.cs" />
+    <Compile Include="Models\DTO\PesoVariableViewModel.cs" />
+    <Compile Include="Models\DTO\RegistrarAcuerdoComercialEscalonadoConfiguracionTarifaViewModel.cs" />
+    <Compile Include="Models\DTO\RegistrarAcuerdoComercialEscalonadoViewModel.cs" />
+    <Compile Include="Models\DTO\RegistrarConfiguracionLineaIndexViewModel.cs" />
+    <Compile Include="Models\DTO\ReporteACEscalonadoIndexViewModel.cs" />
+    <Compile Include="Models\DTO\ReporteACEscalonadoRequestViewModel.cs" />
+    <Compile Include="Models\DTO\ReporteACLocalIndexViewModel.cs" />
+    <Compile Include="Models\DTO\ReporteACLocalRequestViewModel.cs" />
+    <Compile Include="Models\DTO\ReporteAcuerdoComercialEscalonadoViewModel.cs" />
+    <Compile Include="Models\DTO\ReporteAcuerdoComercialLocalViewModel.cs" />
+    <Compile Include="Models\DTO\ReporteContenedorNoDevueltoIndexViewModel.cs" />
+    <Compile Include="Models\DTO\ReporteContenedorNoDevueltoRequestViewModel.cs" />
+    <Compile Include="Models\DTO\ReporteContenedorNoDevueltoViewModel.cs" />
+    <Compile Include="Models\DTO\ReporteTarifaEscalonadaIndexViewModel.cs" />
+    <Compile Include="Models\DTO\ReporteTarifaEscalonadaRequestViewModel.cs" />
+    <Compile Include="Models\DTO\ReporteTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\DTO\ReporteTarifaLocalIndexViewModel.cs" />
+    <Compile Include="Models\DTO\ReporteTarifaLocalRequestViewModel.cs" />
+    <Compile Include="Models\DTO\ReporteTarifaLocalViewModel.cs" />
+    <Compile Include="Models\DTO\RequestActualizarTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\DTO\RequestActualizarTarifaLocaViewModel.cs" />
+    <Compile Include="Models\DTO\RequestRegistrarTarifaLocaViewModell.cs" />
+    <Compile Include="Models\DTO\ResponseBusquedaDocumentoOrigenIndexViewModel.cs" />
+    <Compile Include="Models\DTO\ResponseListaDetalleCatalogoViewModel.cs" />
+    <Compile Include="Models\DTO\SeguimientoACEscalonadoViewModel.cs" />
+    <Compile Include="Models\DTO\SeguimientoACLocalViewModel.cs" />
+    <Compile Include="Models\DTO\SeguimientoAcuerdoComercialEscalonadoViewModel.cs" />
+    <Compile Include="Models\DTO\SeguimientoAcuerdoComercialLocalViewModel.cs" />
+    <Compile Include="Models\DTO\Seguridad\UsuarioAgmaDTO.cs" />
+    <Compile Include="Models\DTO\TarifaEscalonadaHistorialViewModel.cs" />
+    <Compile Include="Models\DTO\TarifaEscalonadaSucursalViewModel.cs" />
+    <Compile Include="Models\DTO\TarifaEscalonada\ConsultaDetalleTarifaEscalonadaVigenciaViewModel.cs" />
+    <Compile Include="Models\DTO\TarifaEscalonada\ListaRegistraTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\DTO\TarifaEscalonada\RequestRegistrarTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\DTO\TarifaEscalonada\TarifaEscalonadaLigadaViewModel.cs" />
+    <Compile Include="Models\DTO\TarifaEscalonada\TarifaEscalonadaPeriodoViewModel.cs" />
+    <Compile Include="Models\DTO\TarifaEscalonada\TarifaEscalonadaVigenciaViewModel.cs" />
+    <Compile Include="Models\DTO\TarifaLocalHistorialViewModel.cs" />
+    <Compile Include="Models\DTO\TarifaLocalLigadaViewModel.cs" />
+    <Compile Include="Models\DTO\TarifaLocalSucursalViewModel.cs" />
+    <Compile Include="Models\DTO\TarifaLocalTerminalViewModel.cs" />
+    <Compile Include="Models\DTO\TarifaLocalVigenciaViewModel.cs" />
+    <Compile Include="Models\DTO\TipoContenedorExternoViewModel.cs" />
+    <Compile Include="Models\DTO\TipoContenedorViewModel.cs" />
+    <Compile Include="Models\DTO\UsuarioSeguridadViewModel.cs" />
+    <Compile Include="Models\Request\RequesAcrualizarPartidaArancelariaViewModel.cs" />
+    <Compile Include="Models\Request\RequesRegistrarTipoContenedorExternoViewModel.cs" />
+    <Compile Include="Models\Request\RequestActualizarGrupoPuertoExternoViewModel.cs" />
+    <Compile Include="Models\Request\RequestActualizarPesoVariableViewModel.cs" />
+    <Compile Include="Models\Request\RequestActualizarTipoContenedorExternoViewModel.cs" />
+    <Compile Include="Models\Request\RequestActualizarTipoContenedorViewModel.cs" />
+    <Compile Include="Models\Request\RequestAdministrarTipoContenedorBusquedaViewModel.cs" />
+    <Compile Include="Models\Request\RequestAgregarGrupoPuertoExternoViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaACEscalonadoViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaACLocallViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaClienteMatchCodeViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaClienteViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaConfiguracionLineaViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaDistribucionTarifaViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaDocumentoOrigenViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaGrupoPuertoExternoViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaNaveViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaPartidaArancelariaViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaPuertoViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaServicioBLViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaTarifaLocalViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaTarifaViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaTipoContenedorViewModel.cs" />
+    <Compile Include="Models\Request\RequestBusquedaUsuarioViewModel.cs" />
+    <Compile Include="Models\Request\RequestCambiarClaveUsuarioViewModel.cs" />
+    <Compile Include="Models\Request\RequestCargaMasivaViewModel.cs" />
+    <Compile Include="Models\Request\RequestConsultaDetalleAcuerdoComercialEscalonadoViewModel.cs" />
+    <Compile Include="Models\Request\RequestConsultaDetalleAcuerdoComercialViewModel.cs" />
+    <Compile Include="Models\Request\RequestConsultaDetalleCatalogoViewModel.cs" />
+    <Compile Include="Models\Request\RequestConsultaDetalleNotificacionViewModel.cs" />
+    <Compile Include="Models\Request\RequestConsultaDetalleTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\Request\RequestConsultaDetalleTarifaLocalViewModel.cs" />
+    <Compile Include="Models\Request\RequestConsultaHistorialTarifaLocalViewModel.cs" />
+    <Compile Include="Models\Request\RequestConsultaNoProcesadosViewModel.cs" />
+    <Compile Include="Models\Request\RequestConsultaPuertoViewModel.cs" />
+    <Compile Include="Models\Request\RequestConsultarDetalleGrupoPuertoExternoViewModel.cs" />
+    <Compile Include="Models\Request\RequestConsultarDetalleTipoContenedorExternoViewModel.cs" />
+    <Compile Include="Models\Request\RequestConsultarPesoVariableViewModel.cs" />
+    <Compile Include="Models\Request\RequestConsultarTipoContenedorExternoViewModel.cs" />
+    <Compile Include="Models\Request\RequestConsultaSucursalViewModel.cs" />
+    <Compile Include="Models\Request\RequestConsultaTerminalPortuarioViewModel.cs" />
+    <Compile Include="Models\Request\RequestDetalleGrupoPuertoExternoViewModel.cs" />
+    <Compile Include="Models\Request\RequestDetalleTipoContenedorExternoViewModel.cs" />
+    <Compile Include="Models\Request\RequestEliminarGrupoPuertoExternoViewModel.cs" />
+    <Compile Include="Models\Request\RequestEliminarPesoVariableViewModel.cs" />
+    <Compile Include="Models\Request\RequestEliminarTipoContenedorExternoViewModel.cs" />
+    <Compile Include="Models\Request\RequestEliminarTipoContenedorViewModel.cs" />
+    <Compile Include="Models\Request\RequestGenerarClaveUsuarioViewModel.cs" />
+    <Compile Include="Models\Request\RequestHistorialACEscalonadoViewModel.cs" />
+    <Compile Include="Models\Request\RequestHistorialACLocalViewModel.cs" />
+    <Compile Include="Models\Request\RequestRegistrarAcuerdoComercialEscalonadoViewModel.cs" />
+    <Compile Include="Models\Request\RequestRegistrarGrupoPuertoExternoViewModel.cs" />
+    <Compile Include="Models\Request\RequestRegistrarPesoVariableViewModel.cs" />
+    <Compile Include="Models\Request\RequestRegistrarTipoContenedorViewModel.cs" />
+    <Compile Include="Models\Request\RequestRegistroNotificacionViewModel.cs" />
+    <Compile Include="Models\Request\RequestReporteACEscalonadoViewModel.cs" />
+    <Compile Include="Models\Request\RequestReporteACLocalViewModel.cs" />
+    <Compile Include="Models\Request\RequestReporteContenedorNoDevueltoViewModel.cs" />
+    <Compile Include="Models\Request\RequestReporteTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\Request\RequestReporteTarifaLocalViewModel.cs" />
+    <Compile Include="Models\Request\RequestSeguimientoACEscalonadoViewModel.cs" />
+    <Compile Include="Models\Request\RequestSeguimientoACLocalViewModel.cs" />
+    <Compile Include="Models\Request\ResquestConsultaHistorialTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\Response\AcuerdoComercialEscalonadoBaseViewModel.cs" />
+    <Compile Include="Models\Response\ResponseBusquedaACEscalonadoIndexViewModel.cs" />
+    <Compile Include="Models\Response\ResponseBusquedaACEscalonadoViewModel.cs" />
+    <Compile Include="Models\Response\ResponseBusquedaACLocalIndexViewModel.cs" />
+    <Compile Include="Models\Response\ResponseBusquedaACLocalViewModel.cs.cs" />
+    <Compile Include="Models\Response\ResponseBusquedaConfiguracionLineaViewModel.cs" />
+    <Compile Include="Models\Response\ResponseBusquedaTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\Response\ResponseBusquedaTarifaLocalViewModel.cs" />
+    <Compile Include="Models\Response\ResponseBusquedaUsuarioIndexlViewModel.cs" />
+    <Compile Include="Models\Response\ResponseBusquedaUsuarioViewModel.cs" />
+    <Compile Include="Models\Response\ResponseCargaInicial.cs" />
+    <Compile Include="Models\Response\ResponseCargaMasivaIndexViewModel.cs" />
+    <Compile Include="Models\Response\ResponseCargaMasivaViewModel.cs" />
+    <Compile Include="Models\Response\ResponseConfiguracionPeriodoACEscalonadoViewModel.cs" />
+    <Compile Include="Models\Response\ResponseConsultaDetalleNotificacionViewModel.cs" />
+    <Compile Include="Models\Response\ResponseConsultaDetalleTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\Response\ResponseConsultaHistorialACLocalViewModel.cs" />
+    <Compile Include="Models\Response\ResponseConsultaHistorialTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\Response\ResponseConsultaHistorialTarifaLocalViewModel.cs" />
+    <Compile Include="Models\Response\ResponseConsultaLigadaPeriodoTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\Response\ResponseConsultaNoProcesadosViewModel.cs" />
+    <Compile Include="Models\Response\ResponseConsultarAcuerdoComercialEscalonadoHistorialViewModel.cs" />
+    <Compile Include="Models\Response\ResponseConsultarDetalleAcuerdoComercialEscalonadoViewModel.cs" />
+    <Compile Include="Models\Response\ResponseConsultarDetalleAcuerdoComercialLocalViewModel.cs" />
+    <Compile Include="Models\Response\ResponseConsultarDetalleGrupoPuertoExternoViewModel.cs" />
+    <Compile Include="Models\Response\ResponseConsultarDetalleTipoContenedorExternoViewModel.cs" />
+    <Compile Include="Models\Response\ResponseConsultarPesoVariableViewModel.cs" />
+    <Compile Include="Models\Response\ResponseConsultarTipoContenedorExternoViewModel.cs" />
+    <Compile Include="Models\Response\ResponseGrupoPuertoExternoIndexViewModel.cs" />
+    <Compile Include="Models\Response\ResponseListaNaveViewModel.cs" />
+    <Compile Include="Models\Response\ResponseListaPuertoViewModel.cs" />
+    <Compile Include="Models\Response\ResponseListarGrupoPuertoExternoViewModel.cs" />
+    <Compile Include="Models\Response\ResponseNotificarContenedor.cs" />
+    <Compile Include="Models\Response\ResponseRegistrarTarifaLocalViewModel.cs" />
+    <Compile Include="Models\Response\ResponseRegistroNotificacionIndex.cs" />
+    <Compile Include="Models\Response\ResponseRegistroPesoVariableIndexViewModel.cs" />
+    <Compile Include="Models\Response\ResponseRegistroTipoContenedorExternoIndexViewModel.cs" />
+    <Compile Include="Models\Response\ResponseRegistroTipoContenedorIndexViewModel.cs" />
+    <Compile Include="Models\Response\ResponseReporteACEscalonadoViewModel.cs" />
+    <Compile Include="Models\Response\ResponseReporteACLocalViewModel.cs" />
+    <Compile Include="Models\Response\ResponseReporteContenedorNoDevuelto.cs" />
+    <Compile Include="Models\Response\ResponseReporteContenedorNoDevueltoViewModel.cs" />
+    <Compile Include="Models\Response\ResponseReporteTarifaEscalonadaViewModel.cs" />
+    <Compile Include="Models\Response\ResponseReporteTarifaLocalViewModel.cs" />
+    <Compile Include="Models\Response\ResponseSeguimientoACEscalonadoIndexViewModel.cs" />
+    <Compile Include="Models\Response\ResponseSeguimientoACEscalonadoViewModel.cs" />
+    <Compile Include="Models\Response\ResponseSeguimientoACLocalIndexViewModel.cs" />
+    <Compile Include="Models\Response\ResponseSeguimientoACLocalViewModel.cs" />
+    <Compile Include="Models\Response\ResponseSucursalViewModel.cs" />
+    <Compile Include="Models\Response\ResponseTipoContenedorViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\AcuerdosComercialesProxyrest.cs" />
+    <Compile Include="Proxy\BaseAgenteServicio.cs" />
+    <Compile Include="Resource\ResourceGrillas.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Configuracion\RegistroTipoContenedorExterno.json" />
+    <Content Include="Content\css\3.2.0\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap-modal-bs3patch.css" />
+    <Content Include="Content\css\bootstrap-modal.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\EasyTab.css" />
+    <Content Include="Content\css\jquery-te-1.4.0.css" />
+    <Content Include="Content\css\jquery-te.png" />
+    <Content Include="Content\css\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="Content\css\multiple-select.css" />
+    <Content Include="Content\css\multiple-select.png" />
+    <Content Include="Content\css\Site.css" />
+    <Content Include="Content\css\slick-theme.css" />
+    <Content Include="Content\css\slick.css" />
+    <Content Include="Content\Images\arrow_down.png" />
+    <Content Include="Content\Images\arrow_up.png" />
+    <Content Include="Content\Images\bg_content.png" />
+    <Content Include="Content\Images\bg_menu3.png" />
+    <Content Include="Content\Images\bg_th_over.png" />
+    <Content Include="Content\Images\bg_tr.png" />
+    <Content Include="Content\Images\blank.gif" />
+    <Content Include="Content\Images\CHECK2.png" />
+    <Content Include="Content\Images\colorpicker_background.png" />
+    <Content Include="Content\Images\colorpicker_hex.png" />
+    <Content Include="Content\Images\colorpicker_hsb_b.png" />
+    <Content Include="Content\Images\colorpicker_hsb_h.png" />
+    <Content Include="Content\Images\colorpicker_hsb_s.png" />
+    <Content Include="Content\Images\colorpicker_indic.gif" />
+    <Content Include="Content\Images\colorpicker_overlay.png" />
+    <Content Include="Content\Images\colorpicker_rgb_b.png" />
+    <Content Include="Content\Images\colorpicker_rgb_g.png" />
+    <Content Include="Content\Images\colorpicker_rgb_r.png" />
+    <Content Include="Content\Images\colorpicker_select.gif" />
+    <Content Include="Content\Images\colorpicker_submit.png" />
+    <Content Include="Content\Images\custom_background.png" />
+    <Content Include="Content\Images\custom_hex.png" />
+    <Content Include="Content\Images\custom_hsb_b.png" />
+    <Content Include="Content\Images\custom_hsb_h.png" />
+    <Content Include="Content\Images\custom_hsb_s.png" />
+    <Content Include="Content\Images\custom_indic.gif" />
+    <Content Include="Content\Images\custom_rgb_b.png" />
+    <Content Include="Content\Images\custom_rgb_g.png" />
+    <Content Include="Content\Images\custom_rgb_r.png" />
+    <Content Include="Content\Images\custom_submit.png" />
+    <Content Include="Content\Images\Hourglass.png" />
+    <Content Include="Content\Images\icos_error.png" />
+    <Content Include="Content\Images\icos_pregunta.png" />
+    <Content Include="Content\Images\PagarSoles.png" />
+    <Content Include="Content\Images\select.png" />
+    <Content Include="Content\Images\select2.png" />
+    <Content Include="Content\Images\select_arrow_down.png" />
+    <Content Include="Content\Images\sep_header_grilla.gif" />
+    <Content Include="Content\Images\slider.png" />
+    <Content Include="Content\Images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\Images\VerDetalle.png" />
+    <Content Include="Content\jqueryui\bg_th_over.png" />
+    <Content Include="Content\jqueryui\bg_tr.png" />
+    <Content Include="Content\jqueryui\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\jqueryui\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Content\jqueryui\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Content\jqueryui\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\jqueryui\ui-bg_gloss-wave_55_5c9ccc_500x100.jpg" />
+    <Content Include="Content\jqueryui\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\jqueryui\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\jqueryui\ui-icons_217bc0_256x240.png" />
+    <Content Include="Content\jqueryui\ui-icons_469bdd_256x240.png" />
+    <Content Include="Content\css\ui.jqgrid.css" />
+    <Content Include="Content\jqueryui\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Content\jqueryui\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\Reportes\ReporteContendoresNoDevueltos.aspx" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="DLL\a\Viatecla.Factory.Scriptor.dll" />
+    <Content Include="DLL\a\Viatecla.Factory.Scriptor.ModularSite.Administration.dll" />
+    <Content Include="DLL\a\Viatecla.Factory.Scriptor.ModularSite.dll" />
+    <Content Include="DLL\a\Viatecla.Factory.Web.dll" />
+    <Content Include="DLL\Google.GData.Client.dll" />
+    <Content Include="DLL\Google.GData.Extensions.dll" />
+    <Content Include="DLL\Google.GData.YouTube.dll" />
+    <Content Include="DLL\GR.Scriptor.Frameworks.dll" />
+    <Content Include="DLL\HtmlAgilityPack.dll" />
+    <Content Include="DLL\log4net.dll" />
+    <Content Include="DLL\MailChimp.dll" />
+    <Content Include="DLL\Microsoft.ApplicationServer.Caching.Client.dll" />
+    <Content Include="DLL\Microsoft.ApplicationServer.Caching.Core.dll" />
+    <Content Include="DLL\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="DLL\Microsoft.WindowsFabric.Common.dll" />
+    <Content Include="DLL\Microsoft.WindowsFabric.Data.Common.dll" />
+    <Content Include="DLL\MiniProfiler.dll" />
+    <Content Include="DLL\ModuloMultimarca.dll" />
+    <Content Include="DLL\Newtonsoft.Json.dll" />
+    <Content Include="DLL\Newtonsoft.Json.Net20.dll" />
+    <Content Include="DLL\Scriptor.dll" />
+    <Content Include="DLL\ScriptorNet.dll" />
+    <Content Include="DLL\ServiceStack.Text.dll" />
+    <Content Include="DLL\ServiceStack.Text.XML" />
+    <Content Include="DLL\System.Net.Http.dll" />
+    <Content Include="DLL\System.Net.Http.Formatting.dll" />
+    <Content Include="DLL\System.Net.Http.Formatting.resources.dll" />
+    <Content Include="DLL\System.Net.Http.resources.dll" />
+    <Content Include="DLL\System.Web.Helpers.dll" />
+    <Content Include="DLL\System.Web.Http.dll" />
+    <Content Include="DLL\System.Web.Http.WebHost.dll" />
+    <Content Include="DLL\System.Web.Mvc.dll" />
+    <Content Include="DLL\System.Web.Razor.dll" />
+    <Content Include="DLL\System.Web.WebPages.Deployment.dll" />
+    <Content Include="DLL\System.Web.WebPages.dll" />
+    <Content Include="DLL\System.Web.WebPages.Razor.dll" />
+    <Content Include="DLL\Viatecla.Factory.Geo.dll" />
+    <Content Include="DLL\Viatecla.Factory.Scriptor.dll" />
+    <Content Include="DLL\Viatecla.Factory.Scriptor.ModularSite.Administration.dll" />
+    <Content Include="DLL\Viatecla.Factory.Scriptor.ModularSite.dll" />
+    <Content Include="DLL\Viatecla.Factory.Scriptor.ModularSite.Membership.dll" />
+    <Content Include="DLL\Viatecla.Factory.Web.dll" />
+    <Content Include="favicon.ico" />
+    <Content Include="Images\descargar.png" />
+    <Content Include="Content\Images\icos_alerta.png" />
+    <Content Include="Images\pdf-icon.png" />
+    <Content Include="Scripts\ControladorasAngular\controller-adminCambiarContrasena.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-adminConfiguracionLinea.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-adminGrupoPuertoExterno.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-adminNuevoGrupoPuerto.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-adminPartidaArancelaria.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-adminRecuperarClave.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-adminTipoContenedor.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarACEscalonado.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarACLocal.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarCliente.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarClienteMatchCode.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarDetalleGrupoPEXController.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarDetalleTCExternoController.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarDocumentoOrigen.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarNave.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarPartidaArancelaria.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarPuerto.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarServiciosBL.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarTarifa.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarTarifaEscalonada.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarTarifaEscalonadaGeneral.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarTarifaLocal.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarTarifasGenerales.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarTipoContenedor.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-buscarUsuario.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-busquedaBL.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-busquedaPesoVariableController.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-busquedaTCExternoController.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-cargaMasivaAC.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-configuracionPeriodo.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-configuracionPeriodoACE.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-configuracionTarifaACE.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-configuracionTarifaLigada.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-consultaagentes.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-ConsultaDepositoDefault.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-ConsultaMonitorCoparn.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-ConsultaNotificacionIntegracion.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-historialACEscalonado.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-historialACLocal.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-historialTarifaEscalonada.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-historialTarifaLocal.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-ListadoRegistroPago.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-notificarContenedores.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-RegistrarDepositoDefault.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-registroConfiguracionLinea.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-registroDetalleGrupoPEXController.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-registroDetalleTipoCEController.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-registroNotificacion.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-registroNotificacionIntegracion.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-RegistroPago.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-registroPartidaArancelaria.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-registroPesoVariableController.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-registroTCExternoController.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-registroTipoContenedor.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-reporteACEscalonado.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-reporteACLocal.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-reporteContenedorNoDevuelto.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-reporteTarifaEscalonada.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-reporteTarifaLocal.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-resgistroACEscalonado.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-resgistroACLocal_ConTarifa.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-resgistroAcuerdoComercialLocal.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-resgistroTarifaEscalonada.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-resgistroTarifaLocal.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-seguimientoACEscalonado.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-seguimientoACLocal.js" />
+    <Content Include="Scripts\ControladorasAngular\servicios-NaveConector.js" />
+    <Content Include="Scripts\Externos\colorpicker.js" />
+    <Content Include="Scripts\Externos\eye.js" />
+    <Content Include="Scripts\Externos\jquery-te-1.4.0.min.js" />
+    <Content Include="Scripts\Externos\jquery.fileupload-angular.js" />
+    <Content Include="Scripts\Externos\jquery.fileupload-image.js" />
+    <Content Include="Scripts\Externos\jquery.fileupload-jquery-ui.js" />
+    <Content Include="Scripts\Externos\jquery.fileupload-process.js" />
+    <Content Include="Scripts\Externos\jquery.fileupload-ui.js" />
+    <Content Include="Scripts\Externos\jquery.fileupload-validate.js" />
+    <Content Include="Scripts\Externos\jquery.fileupload.js" />
+    <Content Include="Scripts\Externos\jquery.iframe-transport.js" />
+    <Content Include="Scripts\Externos\jquery.js" />
+    <Content Include="Scripts\Externos\jquery.plugin.js" />
+    <Content Include="Scripts\Externos\jquery.timeentry.js" />
+    <Content Include="Scripts\Externos\jquery.ui.widget.js" />
+    <Content Include="Scripts\Externos\layout.js" />
+    <Content Include="Scripts\Externos\utils.js" />
+    <Content Include="Views\favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\slick\fonts\slick.woff" />
+    <Content Include="Content\slick\fonts\slick.ttf" />
+    <Content Include="Images\arrow_up.png" />
+    <Content Include="Images\bg_content.png" />
+    <Content Include="Images\bg_menu3.png" />
+    <Content Include="Images\calprev.png" />
+    <Content Include="Images\errorIcon.png" />
+    <Content Include="Images\IcoModify.png" />
+    <Content Include="Images\Imagen_1.jpg" />
+    <Content Include="Images\Imagen_3.jpg" />
+    <Content Include="Images\Botonera\shopping-cart-plus.png" />
+    <Content Include="Images\Botonera\shopping-cart.png" />
+    <Content Include="Images\Imagen_2.jpg" />
+    <Content Include="Images\Logo.png" />
+    <Content Include="Images\buscar.png" />
+    <Content Include="Images\calendar.png" />
+    <Content Include="Images\editar.png" />
+    <Content Include="Images\eliminar.png" />
+    <Content Include="Images\formatmap32x32.png" />
+    <Content Include="Scripts\ControladorasAngular\controller-bienvenidos.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-formulariobase.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-formulariobasepopup.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-homepagecontroller.js" />
+    <Content Include="Scripts\ControladorasAngular\controller-layoutcontroller.js" />
+    <Content Include="Scripts\ControladorasAngular\servicios-Conector.js" />
+    <Content Include="Scripts\Externos\angular-idle.js" />
+    <Content Include="Scripts\Externos\angular-resource.js" />
+    <Content Include="Scripts\Externos\angular-route.js" />
+    <Content Include="Scripts\Externos\angular.js" />
+    <Content Include="Scripts\Externos\apps.js" />
+    <Content Include="Scripts\Externos\bootstrap-modal.js" />
+    <Content Include="Scripts\Externos\bootstrap-modalmanager.js" />
+    <Content Include="Scripts\Externos\bootstrap.js" />
+    <Content Include="Scripts\Externos\enum.js" />
+    <Content Include="Scripts\Externos\from.js" />
+    <Content Include="Scripts\Externos\General.js" />
+    <Content Include="Scripts\Externos\grid.locale-es.js" />
+    <Content Include="Scripts\Externos\helpers.js" />
+    <Content Include="Scripts\Externos\ie-emulation-modes-warning.js" />
+    <Content Include="Scripts\Externos\jquery-ui-1.9.1.custom.js" />
+    <Content Include="Scripts\Externos\jquery.blockUI.js" />
+    <Content Include="Scripts\Externos\jquery.easytabs.min.js" />
+    <Content Include="Scripts\Externos\jquery.format.1.05.js" />
+    <Content Include="Scripts\Externos\jquery.jqGrid.Generator.js" />
+    <Content Include="Scripts\Externos\jquery.jqGrid.js" />
+    <Content Include="Scripts\Externos\jquery.maskedinput-1.2.2.js" />
+    <Content Include="Scripts\Externos\jquery.numeric.min.js" />
+    <Content Include="Scripts\Externos\jquery.ui.datepicker-es.js" />
+    <Content Include="Scripts\Externos\jquery.validate.min.js" />
+    <Content Include="Scripts\Externos\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Externos\jquery1.8.3.min.js" />
+    <Content Include="Scripts\Externos\json2.min.js" />
+    <Content Include="Scripts\Externos\main.js" />
+    <Content Include="Scripts\Externos\master.js" />
+    <Content Include="Scripts\Externos\multiple-select.js" />
+    <Content Include="Scripts\Externos\ng-chosen.js" />
+    <Content Include="Scripts\Externos\ng-click.js" />
+    <Content Include="Scripts\Externos\ng-enter.js" />
+    <Content Include="Scripts\Externos\ng-focus.js" />
+    <Content Include="Scripts\Externos\ng-jqgrid.js" />
+    <Content Include="Scripts\Externos\ng-load.js" />
+    <Content Include="Scripts\Externos\parse-html.js" />
+    <Content Include="Scripts\Externos\routes.js" />
+    <Content Include="Scripts\Externos\slick.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LayoutAnonimo.cshtml" />
+    <Content Include="Views\Demo\Demo.cshtml" />
+    <Content Include="Views\Shared\Referencias.cshtml" />
+    <Content Include="Views\Shared\Header.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Shared\HomePage.cshtml" />
+    <Content Include="Views\SeguridadAgma\Seguridad.cshtml" />
+    <Content Include="Views\Home\HomeAuxiliar.cshtml" />
+    <Content Include="Views\Home\home.cshtml" />
+    <Content Include="Views\Bienvenido\bienvenido.cshtml" />
+    <Content Include="Views\Error\Error.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GR.Frameworks\GR.Frameworks.csproj">
+      <Project>{0be99cc0-965c-4002-972c-b5ef0de4379a}</Project>
+      <Name>GR.Frameworks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GR.Msc.Memberships\GR.Msc.Memberships.csproj">
+      <Project>{3fc0d686-442b-4d37-a065-b22f6c5bb6af}</Project>
+      <Name>GR.Msc.Memberships</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Reportes\ContenedoresNoDevueltos.xsc">
+      <DependentUpon>ContenedoresNoDevueltos.xsd</DependentUpon>
+    </Content>
+    <Content Include="Content\Configuracion\buscar-acescalonado.json" />
+    <Content Include="Content\Configuracion\buscar-aclocal.json" />
+    <Content Include="Content\Configuracion\BuscarClienteMatchCode.json" />
+    <Content Include="Content\Configuracion\BuscarCliente.json" />
+    <Content Include="Content\Configuracion\BuscarDocumentoOrigen.json" />
+    <Content Include="Content\Configuracion\BuscarNave.json" />
+    <Content Include="Content\Configuracion\BuscarPartidaArancelaria.json" />
+    <Content Include="Content\Configuracion\BuscarPuertos.json" />
+    <Content Include="Content\Configuracion\BuscarTarifaEscalonadaGeneral.json" />
+    <Content Include="Content\Configuracion\buscar-tarifa-escalonada.json" />
+    <Content Include="Content\Configuracion\buscar-tarifa-local.json" />
+    <Content Include="Content\Configuracion\BuscarTarifa.json" />
+    <Content Include="Content\Configuracion\BuscarTarifaGenerales.json" />
+    <Content Include="Content\Configuracion\BuscarTipoContenedorVista.json" />
+    <Content Include="Content\Configuracion\BuscarUsuario.json" />
+    <Content Include="Content\Configuracion\carga-masiva.json" />
+    <Content Include="Content\Configuracion\ConfiguracionPeridoACE.json" />
+    <Content Include="Content\Configuracion\ConfigurarRangos.json" />
+    <Content Include="Content\Configuracion\ConfigurarTarifaLigada.json" />
+    <Content Include="Content\Configuracion\RegistrarConfiguracionTarifaAcEscalonado.json" />
+    <Content Include="Content\Configuracion\notificar-contenedores.json" />
+    <Content Include="Content\Configuracion\registro-de-acuerdo-comercial-escalonado.json" />
+    <Content Include="Content\Configuracion\registro-de-acuerdo-comercial-local.json" />
+    <Content Include="Content\Configuracion\registro-de-tarifa-local.json" />
+    <Content Include="Content\Configuracion\registro-de-tarifa-escalonada.json" />
+    <Content Include="Content\Configuracion\seguimiento-ac-escalonado.json" />
+    <Content Include="Content\Configuracion\seguimiento-ac-local.json" />
+    <Content Include="Content\Configuracion\HistorialTarifaLocal.json" />
+    <Content Include="Content\Configuracion\HistorialTarifaEscalonada.json" />
+    <Content Include="Content\Configuracion\bienvenido.json" />
+    <Content Include="Content\Configuracion\no_encontrado.json" />
+    <Content Include="Content\Configuracion\BuscarServicioBL.json" />
+    <Content Include="Content\Configuracion\HistorialAcuerdoComercialLocal.json" />
+    <Content Include="Content\Configuracion\HistorialAcuerdoEscalonado.json" />
+    <Content Include="Content\Configuracion\RegistrarConfiguracionTarifa.json" />
+    <Content Include="Content\Configuracion\acuerdo-comercial-escalonado.json" />
+    <Content Include="Content\Configuracion\acuerdo-comercial-local.json" />
+    <Content Include="Content\Configuracion\contenedor-no-devuelto.json" />
+    <Content Include="Content\Configuracion\tarifa-escalonada.json" />
+    <Content Include="Content\Configuracion\tarifa-local.json" />
+    <Content Include="Content\Configuracion\tipo-de-contenedor.json" />
+    <Content Include="Content\Configuracion\RegistroTipoContenedor.json" />
+    <Content Include="Content\Configuracion\tipo-contenedor-externo.json" />
+    <Content Include="Content\Configuracion\consulta-deposito-default.json" />
+    <Content Include="Content\Configuracion\RegistrarDepositoDefault.json" />
+    <Content Include="Content\Configuracion\consulta-notificacion-integracion.json" />
+    <Content Include="Content\Configuracion\RegistroNotificacionIntegracion.json" />
+    <Content Include="Content\Configuracion\consulta-monitor-coparn.json" />
+    <Content Include="Content\Configuracion\DetalleTipoContenedorExterno.json" />
+    <Content Include="Content\Configuracion\cambiar-contrasena.json" />
+    <Content Include="Content\Configuracion\registro-notificacion.json" />
+    <Content Include="Content\Configuracion\peso-variable.json" />
+    <Content Include="Content\Configuracion\RegistroPesoVariable.json" />
+    <Content Include="Content\Configuracion\partida-arancelaria.json" />
+    <Content Include="Content\Configuracion\RegistroPartidaArancelaria.json" />
+    <None Include="Content\Reportes\ContenedoresNoDevueltos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ContenedoresNoDevueltos2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Content\Reportes\ContenedoresNoDevueltos.xss">
+      <DependentUpon>ContenedoresNoDevueltos.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\dd.pubxml" />
+    <None Include="Properties\PublishProfiles\Jose.pubxml" />
+    <Content Include="Views\Botonera\BotoneraBusquedaClásicaconBotonSalir.cshtml" />
+    <Content Include="Views\SeguridadAgma\RecuperarClave.cshtml" />
+    <Content Include="Views\Botonera\AC_BotoneraBusquedaTarifa.cshtml" />
+    <Content Include="Views\Tarifas\BuscarTarifaLocal.cshtml" />
+    <Content Include="Views\Tarifas\RegistrarTarifaLocal.cshtml" />
+    <Content Include="Views\Botonera\AC_tarifalocal_botonera.cshtml" />
+    <Content Include="Views\Tarifas\BuscarTarifa.cshtml" />
+    <Content Include="Views\Usuario\BuscarUsuario.cshtml" />
+    <Content Include="Views\Tarifas\ConfigurarTarifaLigada.cshtml" />
+    <Content Include="Views\Botonera\AC_BotonerarConfiguracionTarifaLigada.cshtml" />
+    <Content Include="Views\Tarifas\BuscarTarifaGenerales.cshtml" />
+    <Content Include="Views\Tarifas\HistorialTarifaLocal.cshtml" />
+    <Content Include="Views\Botonera\AC_BotoneraHistorial.cshtml" />
+    <Content Include="Views\Tarifas\BuscarTarifaEscalonada.cshtml" />
+    <Content Include="Views\Tarifas\RegistrarTarifaEscalonada.cshtml" />
+    <Content Include="Views\Botonera\AC_tarifaescalonada_botonera.cshtml" />
+    <Content Include="Views\Tarifas\ConfigurarRangos.cshtml" />
+    <Content Include="Views\Botonera\AC_TarifaEscalonada_ConfiguracionPeriodo.cshtml" />
+    <Content Include="Views\Tarifas\HistorialTarifaEscalonada.cshtml" />
+    <Content Include="Views\Acuerdos\BuscarAcuerdoLocal.cshtml" />
+    <Content Include="Views\Botonera\AC_BotoneraBusquedaAcuerdoComercial.cshtml" />
+    <Content Include="Views\Acuerdos\BuscarDocumentoOrigen.cshtml" />
+    <Content Include="Views\Botonera\AC_BotoneraBusquedaDocumentoOrigen.cshtml" />
+    <Content Include="Views\Acuerdos\BuscarNave.cshtml" />
+    <Content Include="Views\Cliente\BuscarCliente.cshtml" />
+    <Content Include="Views\Acuerdos\RegistrarAcuerdoLocal.cshtml" />
+    <Content Include="Views\Botonera\AC_BotoneraRegAcuerdoComercial.cshtml" />
+    <Content Include="Views\Acuerdos\BuscarPuertos.cshtml" />
+    <Content Include="Views\Acuerdos\BuscarTipoContenedor.cshtml" />
+    <Content Include="Views\Botonera\AC_BotoneraBusquedaTipoContenedor.cshtml" />
+    <Content Include="Views\Acuerdos\BuscarClienteMatchCode.cshtml" />
+    <Content Include="Views\Acuerdos\BuscarPartidaArancelaria.cshtml" />
+    <Content Include="Views\Acuerdos\RegistrarConfiguracionTarifa.cshtml" />
+    <Content Include="Views\Botonera\NewCalculadorWeb_BotoneraGrabar.cshtml" />
+    <Content Include="Views\Acuerdos\SeguimientoAcuerdoLocal.cshtml" />
+    <Content Include="Views\Botonera\AC_BotoneraSeguimientoAcuerdosComerciales.cshtml" />
+    <Content Include="Views\Acuerdos\BuscarAcuerdoEscalonado.cshtml" />
+    <Content Include="Views\Acuerdos\RegistrarAcuerdoEscalonado.cshtml" />
+    <Content Include="Views\Acuerdos\SeguimientoAcuerdoEscalonado.cshtml" />
+    <Content Include="Views\Botonera\AC_BotoneraCargaMasiva.cshtml" />
+    <Content Include="Views\Acuerdos\CargaMasivaSobreestadia.cshtml" />
+    <Content Include="Views\NotificacionContenedor\NotificarContenedores.cshtml" />
+    <Content Include="Views\ServicioBl\BuscarServicioBL.cshtml" />
+    <Content Include="Views\Acuerdos\HistorialAcuerdoComercialLocal.cshtml" />
+    <Content Include="Views\Acuerdos\HistorialAcuerdoEscalonado.cshtml" />
+    <Content Include="Views\Botonera\AC_BotoneraConfiguracionTarifaACE.cshtml" />
+    <Content Include="Views\Acuerdos\RegistrarConfiguracionTarifaAcEscalonado.cshtml" />
+    <Content Include="Views\Tarifas\BuscarTarifaEscalonadaGeneral.cshtml" />
+    <Content Include="Views\ConfiguracionPeriodoACEscalonado\ConfiguracionPeridoACE.cshtml" />
+    <Content Include="Views\Botonera\AC_BotoneraConfiguracionPeriodoACE.cshtml" />
+    <Content Include="Resource\ResourceGrillas.Designer.cs.orig" />
+    <Content Include="Views\Reporte\TarifaLocal.cshtml" />
+    <Content Include="Views\Reporte\TarifaEscalonada.cshtml" />
+    <Content Include="Views\Reporte\AcuerdoComercialLocal.cshtml" />
+    <Content Include="Views\Reporte\ContenedorNoDevuelto.cshtml" />
+    <Content Include="Views\Reporte\AcuerdoComercialEscalonado.cshtml" />
+    <Content Include="Views\Botonera\AC_Reporte_BotoneraReporte.cshtml" />
+    <Content Include="Views\Maestros\TipoContenedor\AdministrarTipoContenedor.cshtml" />
+    <Content Include="Views\Maestros\TipoContenedor\RegistroTipoContenedor.cshtml" />
+    <Content Include="Views\Botonera\AC_Reporte_BotoneraReporteDirecto.cshtml" />
+    <Content Include="Views\Botonera\AC_BotoneraGrabarMaestro.cshtml" />
+    <Content Include="Views\Maestros\TipoContenedorExterno\AdministrarTipoContenedorExterno.cshtml" />
+    <Content Include="Views\Maestros\TipoContenedorExterno\RegistroTipoContenedorExterno.cshtml" />
+    <Content Include="Views\Maestros\DepositoDefault\ConsultaDepositoDefault.cshtml" />
+    <Content Include="Views\Botonera\AC_Botonera_Buscar_Nuevo_Limpiar_Salir.cshtml" />
+    <Content Include="Views\Maestros\DepositoDefault\RegistrarDepositoDefault.cshtml" />
+    <Content Include="Views\Botonera\AC_Botonera_Guardar_Modif_Deshab_Salir.cshtml" />
+    <Content Include="Views\Notificacion\ConsultaNotificacionIntegracion.cshtml" />
+    <Content Include="Views\Notificacion\RegistroNotificacionIntegracion.cshtml" />
+    <Content Include="Views\MonitorCoparn\MonitorCoparn.cshtml" />
+    <Content Include="Views\Maestros\TipoContenedorExterno\DetalleTipoContenedorExterno.cshtml" />
+    <Content Include="Views\Botonera\AC_Botonera_Nuevo_Salir.cshtml" />
+    <Content Include="Views\Notificacion\RegistroNotificacion.cshtml" />
+    <Content Include="Views\Usuario\CambiarContrasena.cshtml" />
+    <Content Include="Views\Botonera\AC_Cuentas_Botonera_Cambio_Contrasena.cshtml" />
+    <Content Include="Views\Maestros\PesoVariable\AdministrarPesoVariable.cshtml" />
+    <Content Include="Views\Maestros\PesoVariable\RegistroPesoVariable.cshtml" />
+    <Content Include="Views\Maestros\PartidaArancelaria\AdministrarPartidaArancelaria.cshtml" />
+    <Content Include="Views\Maestros\PartidaArancelaria\RegistroPartidaArancelaria.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\Reportes\Contenedores.rdlc" />
+    <EmbeddedResource Include="Resource\ResourceGrillas.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61658</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:35229/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

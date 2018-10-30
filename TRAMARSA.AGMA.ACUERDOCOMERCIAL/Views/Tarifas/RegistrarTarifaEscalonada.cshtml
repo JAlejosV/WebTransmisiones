@@ -1,0 +1,453 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style="">
+    <div ng-app="app" ng-controller="RegistroTarifaEscalonadaController">
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_tarifaescalonada_botonera.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Datos Generales</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width:100%">
+                    <form id="RegistroTarifaEscalonadaFrm" name="RegistroTarifaEscalonadaFrm">
+                        <div style="max-width: 100%; height: 100%">
+                            <div class="col-md-12 row">
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.CodigoTarifaEscalonada" />
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.DatosTarifaEscalonada.DatosTE.TarifaEscalonadaFlagEditar" />
+                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.DatosTarifaEscalonada.DatosTE.UrlOrigen" />
+                            </div>
+                        </div>
+                        <div style="max-width: 100%; height: 100%">
+                            <div class="col-md-12 row">
+                                <div class="col-md-7 row">
+
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Línea Naviera:
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.CodigoLinea"
+                                                    data-val="true"
+                                                    data-bind="value: $root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.CodigoLinea"
+                                                    id="idLinea"
+                                                    ng-change="ChangeLineaNaviera($root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.CodigoLinea)"
+                                                    ng-disabled="$root.DatosFormulario.DatosTarifaEscalonada.DatosTE.Habilitado=='False'  || FlagEditing==false"
+                                                    ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.DatosTarifaEscalonada.DatosTE.ListaLineas" class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="descTarifa" class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Descripción Tarifa:
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.CodigoTarifa" />
+                                            <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-model="$root.DatosFormulario.DatosTarifaEscalonada.DatosTE.DescripcionTarifa"
+                                                   data-bind="value: $root.DatosFormulario.DatosTarifaEscalonada.DatosTE.DescripcionTarifa"
+                                                   data-val="true"
+                                                   data-val-required="Descripción Tarifa es requerido."
+                                                   id="$root.DatosFormulario.DatosTarifaEscalonada.DatosTE.DescripcionTarifa"
+                                                   name="$root.DatosFormulario.DatosTarifaEscalonada.DatosTE.DescripcionTarifa"
+                                                   ng-disabled="true"
+                                                   required />
+
+                                            <input type="image" ng-disabled="FlagEditing==false" ng-click="BuscarTarifa_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+
+                                            <div class="caja11 msgerror DescripcionTarifa">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DatosTarifaEscalonada.DatosTE.DescripcionTarifa" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Unidad de cálculo:
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.CodigoConcepto" />
+                                            <select class="InputSELECT_01"
+                                                    ng-model="$root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.CodigoUnidadCalculo"
+                                                    data-bind="value: $root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.CodigoUnidadCalculo"
+                                                    ng-options="unidadcalculo.Codigo as unidadcalculo.Descripcion for unidadcalculo in
+                                            $root.DatosFormulario.DatosTarifaEscalonada.DatosTE.ListaUnidadCalculo"
+                                                    id="$root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.CodigoUnidadCalculo"
+                                                    data-val="true"
+                                                    ng-disabled="FlagEditing==false"
+                                                    data-val-required="Unidad de cálculo es requerido."
+                                                    name="$root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.CodigoUnidadCalculo"
+                                                    required>
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoUnidadCalculo">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.CodigoUnidadCalculo" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Autorizado por:
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.CodigoUsuarioAutorizador" />
+                                            <input class="InputTEXT_06" style="height: 23px; width: 280px;"
+                                                   type="text"
+                                                   ng-model="$root.DatosFormulario.DatosTarifaEscalonada.DatosTE.Autorizado"
+                                                   value="{{$root.DatosFormulario.DatosTarifaEscalonada.DatosTE.Autorizado}}"
+                                                   data-bind="value: $root.DatosFormulario.DatosTarifaEscalonada.DatosTE.Autorizado"
+                                                   data-val="true"
+                                                   data-val-required="Autorizado por es requerido."
+                                                   id="$root.DatosFormulario.DatosTarifaEscalonada.DatosTE.Autorizado"
+                                                   name="$root.DatosFormulario.DatosTarifaEscalonada.DatosTE.Autorizado"
+                                                   disabled="disabled"
+                                                   required />
+                                            <input type="image" ng-disabled="FlagEditing==false" ng-click="BuscarAutorizado_Click();" value="Buscar" src="\Images\buscar.png" class=""
+                                                   style="border-width: 0px; width: 25px; margin-bottom: -10px;">
+
+                                            <div class="caja11 msgerror CodigoUsuarioAutorizador">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DatosTarifaEscalonada.DatosTE.Autorizado" data-valmsg-
+                                                      replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-5 row">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-12 row">
+                                            <div class="col-md-4">
+                                                Estado:
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input class="InputTEXT_05"
+                                                       type="text"
+                                                       ng-model="$root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.EstadoRegistro"
+                                                       data-bind="value: $root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.EstadoRegistro"
+                                                       data-val="true"
+                                                       data-val-required="EstadoRegistro"
+                                                       id="$root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.EstadoRegistro"
+                                                       name="$root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.EstadoRegistro"
+                                                       disabled="disabled"
+                                                       required />
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="col-md-12 row">
+                                            <div class="col-md-4">
+                                                Régimen:
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="ng-hide" ng-model="$root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.CodigoRegimen" />
+                                                <input class="InputTEXT_05"
+                                                       type="text"
+                                                       ng-model="$root.DatosFormulario.DatosTarifaEscalonada.DatosTE.Regimen"
+                                                       data-bind="value: $root.DatosFormulario.DatosTarifaEscalonada.DatosTE.Regimen"
+                                                       data-val="true"
+                                                       data-val-required="Régimen es requerido."
+                                                       id="$root.DatosFormulario.DatosTarifaEscalonada.DatosTE.Regimen"
+                                                       name="$root.DatosFormulario.DatosTarifaEscalonada.DatosTE.Regimen"
+                                                       disabled="disabled"
+                                                       required />
+                                                <div class="caja11 msgerror CodigoRegimen">
+                                                    <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.DatosTarifaEscalonada.DatosRegistro.CodigoRegimen" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="col-md-12 row" style="margin-top: 5%; margin-left: 0.3%;">
+                                            <div class="block_cab block_cab_active" style="width: 100%">
+                                                <h2>
+                                                    <span>Sucursal</span>
+                                                </h2>
+                                                <h3></h3>
+                                                <div class="acordeon">
+                                                </div>
+                                            </div>
+                                            <div id="ContentListadoListaSucursales" class="block_content" style="width: 100%">
+                                                <div class="form_section" style="width: 100%">
+                                                    <div class='forms2'>
+                                                        <div class='table-responsive' style="overflow: hidden">
+                                                            <ng-jqgrid config="config"
+                                                                       addnew="true"
+                                                                       modeldata="$root.DatosFormulario.DatosTarifaEscalonada.ListaSucursales"
+                                                                       gridid="grillaListaSucursales"
+                                                                       pagerid="grillaListaSucursales_pager"
+                                                                       api="gridapiListaSucursales"
+                                                                       flgocultarbarrapaginado="1"
+                                                                       idgrilla="2ADD56F7-5319-442F-98A8-E5AA9FA5A866"
+                                                                       altogrilla="100px"
+                                                                       idmarcarprimerresgistro="0" url=""
+                                                                       flgcargargrilla="1">
+
+                                                                <table id="grillaListaSucursales"></table>
+                                                                <div id="grillaListaSucursales_pager"></div>
+                                                            </ng-jqgrid>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caja11 msgerror listaSucursal">
+                                                <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Vigencia</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width:100%">
+                    <div class="block_menu block_content">
+                        <div style="max-width: 100%; height: 100%">
+                            <div class="col-md-12 row">
+                                <div class="col-xs-2">
+                                    <button class="SeparatorLeft boton1Style boton1" ng-click="AgregarVigencia_Click();" style="" ng-disabled="FlagEditing==false">
+                                        <span class="boton1Span">
+                                            <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                        </span>
+                                        <span class="boton1txt">Agregar</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="col-xs-12 col-md-12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ContentListadogrillaVigencia" class="block_content">
+                        <div class="form_section" style="width:100%">
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow:hidden;">
+                                    <ng-jqgrid config="config"
+                                               addnew="true"
+                                               modeldata="$root.DatosFormulario.DatosTarifaEscalonada.ListaTarifaEscalonadaVigencia"
+                                               gridid="grillaTarifaEscalonadaVigencia"
+                                               pagerid="grillaTarifaEscalonadaVigencia_pager"
+                                               api="gridapigrillaTarifaEscalonadaVigencia"
+                                               flgocultarbarrapaginado="1"
+                                               idgrilla="C3BE6E5E-EDD1-46D5-9531-5BD49F94A690"
+                                               titulosinresultados=""
+                                               ocultarexportar="1"
+                                               altogrilla="150px"
+                                               idmarcarprimerresgistro="0" url=""
+                                               flgcargargrilla="0">
+                                        <table id="grillaTarifaEscalonadaVigencia"></table>
+                                        <div id="grillaTarifaEscalonadaVigencia_pager"></div>
+                                    </ng-jqgrid>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caja11 msgerror ListaVigencia">
+                            <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-4">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Configuración de Periodos</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width:100%">
+                    <form id="RegistroTarifaEscalonadaPeriodoFrm" name="RegistroTarifaEscalonadaPeriodoFrm">
+                        <div class="block_menu block_content">
+                            <div style="max-width: 100%; height: 100%">
+
+                                <div class="col-md-12 row">
+                                    <div class="col-xs-2">
+                                        <button class="SeparatorLeft boton1Style boton1" ng-disabled="FlagEditing==false" ng-click="AgregarConfiguracionPeriodo();" style="">
+                                            <span class="boton1Span">
+                                                <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                            </span>
+                                            <span class="boton1txt">Agregar</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-xs-10">
+                                        <div class="col-xs-12 col-md-12">
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="ContentListado8ff8abc7-82ae-4066-a67d-e40d4a1d3464" class="block_content">
+                            <div class="form_section" style="width: 100%">
+                                <div class="forms2">
+                                    <div class="table-responsive" style="overflow: hidden;">
+
+                                        <ng-jqgrid config="config"
+                                                   addnew="true"
+                                                   modeldata="$root.DatosFormulario.DatosTarifaEscalonada.ListaConfiguracionPeriodo"
+                                                   gridid="grillaListaConfiguracionPeriodo"
+                                                   pagerid="grillaListaConfiguracionPeriodo_pager"
+                                                   api="gridapiListaConfiguracionPeriodo"
+                                                   flgocultarbarrapaginado="1"
+                                                   idgrilla="ECF63F5C-6866-45B7-B21E-407CE57702F5"
+                                                   titulosinresultados=""
+                                                   ocultarexportar="1"
+                                                   altogrilla="80px"
+                                                   idmarcarprimerresgistro="0" url=""
+                                                   flgcargargrilla="0" />
+                                        <table id="grillaListaConfiguracionPeriodo"></table>
+                                        <div id="grillaListaConfiguracionPeriodo_pager"></div>
+                                        </ng-jqgrid>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caja11 msgerror ListaConfiguracionPeriodo">
+                                <span class="field-validation-valid msgerror" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-5">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Tarifas Ligadas</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width:100%">
+                    <div class="block_menu block_content">
+                        <div style="max-width: 100%; height: 100%">
+                            <div class="col-md-12 row">
+                                <div class="col-xs-2">
+                                    <button class="SeparatorLeft boton1Style boton1" ng-disabled="FlagEditing==false" ng-click="AgregarTarifaLigada_Click();" style="">
+                                        <span class="boton1Span">
+                                            <img class="boton1Img csBtnAgregar" alt="Agregar" src="/Images/formatmap32x32.png">
+                                        </span>
+                                        <span class="boton1txt">Agregar</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="col-xs-12 col-md-12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ContentListado_RegTE_Ligada" class="block_content">
+                        <div class="form_section" style="width:100%">
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow:hidden;">
+                                    <ng-jqgrid config="config"
+                                               addnew="true"
+                                               modeldata="$root.DatosFormulario.DatosTarifaEscalonada.ListaTarifaEscalonadaLigada"
+                                               gridid="grillaListaTarifaEscalonadaLigada"
+                                               pagerid="grillaListaTarifaEscalonadaLigada_pager"
+                                               api="gridapiListaTarifaEscalonadaLigada"
+                                               flgocultarbarrapaginado="1"
+                                               idgrilla="6A6CEAF0-D22B-444C-B4E7-B36E132AB298"
+                                               titulosinresultados=""
+                                               ocultarexportar="1"
+                                               altogrilla="150px"
+                                               idmarcarprimerresgistro="0" url=""
+                                               flgcargargrilla="0" />
+                                    <table id="grillaListaTarifaEscalonadaLigada"></table>
+                                    <div id="grillaListaTarifaEscalonadaLigada_pager"></div>
+                                    </ng-jqgrid>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="caja11 msgerror ListaTarifaEscalonadaLigada"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="seccion-6">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Distribución de Tarifas</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div class="block_content" style="width:100%">
+                    <div id="ContentListadogrillaDistribucionTarifas" class="block_content">
+                        <div class="form_section" style="width: 100%">
+                            <div class="forms2">
+                                <div class="table-responsive" style="overflow: hidden;">
+                                    <ng-jqgrid config="config"
+                                               addnew="true"
+                                               modeldata="$root.DatosFormulario.DatosTarifaEscalonada.ListaDistribucionTarifas"
+                                               gridid="grillaDistribucionTarifas"
+                                               pagerid="grillaDistribucionTarifas_pager"
+                                               api="gridapigrillaDistribucionTarifas"
+                                               flgocultarbarrapaginado="1"
+                                               idgrilla="2964D0B2-F9F5-4270-8F3E-F9E249FF6560"
+                                               titulosinresultados=""
+                                               ocultarexportar="1"
+                                               altogrilla="100px"
+                                               idmarcarprimerresgistro="0" url=""
+                                               flgcargargrilla="0" />
+                                    <table id="grillaDistribucionTarifas"></table>
+                                    <div id="grillaDistribucionTarifas_pager"></div>
+                                    </ng-jqgrid>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

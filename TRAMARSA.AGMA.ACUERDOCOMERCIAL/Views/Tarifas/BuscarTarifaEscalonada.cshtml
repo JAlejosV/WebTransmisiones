@@ -1,0 +1,143 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="block ng-scope" style="">
+    <div ng-app="app" ng-controller="BuscarTarifaEscalonadaController" >
+        <div id="seccion-1">
+            @Html.Partial("~/Views/Botonera/AC_BotoneraBusquedaTarifa.cshtml")
+        </div>
+        <div id="seccion-2">
+            <div>
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>Administración de Tarifas</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <form id="BusquedaTarifaEscalonadaFrm" name="BusquedaTarifaEscalonadaFrm">
+                    <div class="block_content" style="width:100%">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Descripción Tarifa
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="InputTEXT_05 " maxlength="70" type="text" ng-enter="Enter()" ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaEscalonada.Filtro.DescripcionTarifa" />
+                                            <div class="caja11msgerrorRuc">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaTarifaEscalonada.Filtro.DescripcionTarifa" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Línea Naviera
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaEscalonada.Filtro.CodigoLinea"
+                                                    ng-options="linea.Codigo as linea.Nombre for linea in $root.DatosFormulario.FiltrosBusquedaTarifaEscalonadaCargaInicial.Linea"
+                                                    class="InputSELECT_01 required"
+                                                    id="$root.DatosFormulario.FiltrosBusquedaTarifaEscalonada.Filtro.CodigoLinea"
+                                                    data-val="true"
+                                                    data-val-required="Línea naviera es requerido."
+                                                    name="$root.DatosFormulario.FiltrosBusquedaTarifaEscalonada.Filtro.CodigoLinea"
+                                                    ng-disabled="$root.DatosFormulario.FiltrosBusquedaTarifaEscalonadaCargaInicial.Habilitado=='False'"
+                                                    required>
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                            <div class="caja11 msgerror CodigoLineaEscalonada">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaTarifaEscalonada.Filtro.CodigoLinea" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 row">
+                                        <div class="col-md-4">
+                                            Tipo Contenedor
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaEscalonada.Filtro.CodigoTipoContenedor"
+                                                    ng-options="contenedor.CodigoTipoContenedor as contenedor.Descripcion for contenedor in $root.DatosFormulario.FiltrosBusquedaTarifaEscalonadaCargaInicial.Contenedor" class="InputSELECT_01">
+                                                <option value="">[Seleccione]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row col-md-12">
+                                        <input type="checkbox" id="TarifaLigadaEscalonada" ng-enter="Enter()" ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaEscalonada.Filtro.FlagTarifaLigada" />Tarifa Ligada
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <input type="checkbox" id="VigenteTarifaEscalonada" ng-enter="Enter()" ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaEscalonada.Filtro.FlagVigente" />Vigentes
+                                        </div>
+                                        <div class="col-md-10">
+                                            Fecha Vigencia
+                                            <input class="InputTEXT_04Fecha"
+                                                   maxlength="10" type="text"
+                                                   ng-model="$root.DatosFormulario.FiltrosBusquedaTarifaEscalonada.Filtro.FechaVigencia"
+                                                   data-bind="dateValue: $root.DatosFormulario.FiltrosBusquedaTarifaEscalonada.Filtro.FechaVigencia,datePattern: 'dd/MM/yyyy'"
+                                                   data-val="true"
+                                                   ng-enter="Enter()"
+                                                   data-val-date="El campo Fecha Vigencia debe ser una fecha."
+                                                   id="FechaVigencia"
+                                                   name="$root.DatosFormulario.FiltrosBusquedaTarifaEscalonada.Filtro.FechaVigencia" />
+                                            <div class="caja11 msgerror FechaVigencia">
+                                                <span class="field-validation-valid msgerror" data-valmsg-for="$root.DatosFormulario.FiltrosBusquedaTarifaEscalonada.Filtro.FechaVigencia" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seccion-3">
+            <div style="width:100%;float:left">
+                <div class="block_cab block_cab_active">
+                    <h2>
+                        <span>RESULTADO DE BUSQUEDA</span>
+                    </h2>
+                    <h3></h3>
+                    <div class="acordeon">
+                    </div>
+                </div>
+                <div id="ContentListadocba3af78-2490-4083-97b9-b47adbc46be1" class="block_content">
+                    <div class="form_section" style="width:100%">
+
+                        <div class="forms2">
+                            <div class="table-responsive" style="overflow:hidden">
+
+                                <ng-jqgrid config="config" 
+                                           addnew="true" 
+                                           modeldata="$root.DatosFormulario.FiltrosBusquedaTarifaEscalonada.ListaTarifaEscalonada" 
+                                           gridid="grillaListaTarifaEscalonada" 
+                                           pagerid="grillaListaTarifaEscalonada_pager" 
+                                           api="gridapigrillaListaTarifaEscalonada" 
+                                           flgocultarbarrapaginado="0" 
+                                           idgrilla="cba3af78-2490-4083-97b9-b47adbc46be1" 
+                                           titulosinresultados="" 
+                                           ocultarexportar="0" 
+                                           altogrilla="150px" 
+                                           idmarcarprimerresgistro="0" 
+                                           ngclickagregar="" 
+                                           urllistar="/TarifaEscalonada/BusquedaTarifaEscalonada" 
+                                           flgcargargrilla="1">
+                                    <table id="grillaListaTarifaEscalonada"></table>
+                                    <div id="grillaListaTarifaEscalonada_pager"></div>
+                                </ng-jqgrid>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
